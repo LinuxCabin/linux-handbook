@@ -1,6 +1,6 @@
 # 关于我们
 
-Linux Handbook是由[@Fangcat_Dev](https://space.bilibili.com/588672425)与[@13-trixie](https://space.bilibili.com/3546375293765862)所发起的项目，致力于改善Linux“使用难”的顽疾。
+LinuxCabin是由[@Fangcat_Dev](https://space.bilibili.com/588672425)与[@13-trixie](https://space.bilibili.com/3546375293765862)所发起的项目，致力于改善Linux“使用难”的顽疾。
 
 项目目前处于未完成状态，各位敬请期待！
 
