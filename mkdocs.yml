@@ -1,0 +1,9 @@
+site_name: Linux Handbook
+theme:
+  name: material
+
+nav:
+  - index.md
+  - 开始:
+    - getting-started/purpose.md
+  - 关于: about.md
