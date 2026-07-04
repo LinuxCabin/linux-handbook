@@ -1,0 +1,58 @@
+name: Deploy MkDocs to GitHub
+
+on:
+  # 推送到 main 分支时自动触发
+  push:
+    branches:
+      - main
+    paths:
+      - 'docs/**'
+      - 'mkdocs.yml'
+      - '.github/workflows/mkdocs-deploy.yml'
+  
+  # 支持手动触发
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 源码
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: 设置 Python 环境
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+          cache: 'pip'
+
+      - name: 安装 MkDocs 及依赖
+        run: |
+          python -m pip install --upgrade pip
+          pip install mkdocs mkdocs-material
+
+      - name: 构建 MkDocs 站点
+        run: mkdocs build
+
+      - name: 推送到目标仓库
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          # 目标仓库地址，格式：用户名/仓库名
+          deploy_key: ${{ secrets.DEPLOY_KEY }}
+          external_repository: LinuxCabin/handbook-website
+          # 目标仓库的分支
+          publish_branch: main
+          # 构建产物目录
+          publish_dir: ./site
+          # 保留目标分支的历史提交（可选）
+          keep_files: false
+          # 提交用户信息
+          user_name: 'github-actions[bot]'
+          user_email: 'github-actions[bot]@users.noreply.github.com'

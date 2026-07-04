@@ -1,9 +1,32 @@
 site_name: LinuxCabin
+site_description: A Linux handbook especially designed for Chinese users.
+repo_name: LinuxCabin/linux-handbook
+repo_url: https://github.com/LinuxCabin/linux-handbook
 theme:
   name: material
+  language: zh
+  features:
+    - search.suggest
+    - search.highlight
+    - navigation.footer
+
+
+plugins:
+  - search
+
+
+copyright: |
+  Licensed under <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International</a><img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/nc.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/nd.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;">
 
 nav:
   - index.md
   - 开始:
     - getting-started/purpose.md
+    - getting-started/before-installing.md
+
+  - 发行版:
+    - Debian系:
+      - distros/debian/ubuntu.md
+    - 红帽系:
+      - distros/rhel/fedora.md
   - 关于: about.md

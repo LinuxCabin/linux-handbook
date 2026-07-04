@@ -5,16 +5,17 @@ LinuxCabin是由[@Fangcat_Dev](https://space.bilibili.com/588672425)与[@13-trix
 项目目前处于未完成状态，各位敬请期待！
 
 ## 联系方式
- - Fangcat_Dev
-  
-  QQ: 2950966704
-  
-  Matrix: @fangcat-dev:fedora.im
 
-  E-Mail: [f20091219@outlook.com](mailto:f20091219@outlook.com)
+### Fangcat_Dev
+  
+QQ: 2950966704
+  
+Matrix: @fangcat-dev:fedora.im
 
- - 13-trixie
+E-Mail: [f20091219@outlook.com](mailto:f20091219@outlook.com)
+
+### 13-trixie
   
-  QQ: 1513463007
+QQ: 1513463007
   
-  Matrix: @13-trixie:matrix.org
+Matrix: @13-trixie:matrix.org
