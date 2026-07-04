@@ -23,6 +23,7 @@ nav:
   - 开始:
     - getting-started/purpose.md
     - getting-started/before-installing.md
+    - getting-started/install.md
 
   - 发行版:
     - Debian系:
