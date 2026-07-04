@@ -22,6 +22,9 @@ concurrency:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - name: Checkout 源码
         uses: actions/checkout@v4
@@ -42,7 +45,6 @@ jobs:
       - name: 构建 MkDocs 站点
         run: mkdocs build
 
-      # 官方标准Pages部署步骤，无需跨仓库
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact
