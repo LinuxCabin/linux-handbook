@@ -1,7 +1,6 @@
 name: Deploy MkDocs to GitHub
 
 on:
-  # 推送到 main 分支时自动触发
   push:
     branches:
       - main
@@ -9,14 +8,16 @@ on:
       - 'docs/**'
       - 'mkdocs.yml'
       - '.github/workflows/mkdocs-deploy.yml'
-  
-  # 支持手动触发
   workflow_dispatch:
 
 permissions:
   contents: read
   pages: write
   id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
 
 jobs:
   build-and-deploy:
@@ -41,18 +42,13 @@ jobs:
       - name: 构建 MkDocs 站点
         run: mkdocs build
 
-      - name: 推送到目标仓库
-        uses: peaceiris/actions-gh-pages@v4
+      # 官方标准Pages部署步骤，无需跨仓库
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          # 目标仓库地址，格式：用户名/仓库名
-          personal_token: ${{ secrets.DEPLOY_KEY }}
-          external_repository: LinuxCabin/handbook-website
-          # 目标仓库的分支
-          publish_branch: main
-          # 构建产物目录
-          publish_dir: ./site
-          # 保留目标分支的历史提交（可选）
-          keep_files: false
-          # 提交用户信息
-          user_name: 'github-actions[bot]'
-          user_email: 'github-actions[bot]@users.noreply.github.com'
+          path: ./site
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v5
