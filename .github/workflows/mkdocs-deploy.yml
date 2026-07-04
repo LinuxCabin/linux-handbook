@@ -45,7 +45,7 @@ jobs:
         uses: peaceiris/actions-gh-pages@v4
         with:
           # 目标仓库地址，格式：用户名/仓库名
-          deploy_key: ${{ secrets.DEPLOY_KEY }}
+          personal_token: ${{ secrets.DEPLOY_KEY }}
           external_repository: LinuxCabin/handbook-website
           # 目标仓库的分支
           publish_branch: main
