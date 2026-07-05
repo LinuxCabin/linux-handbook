@@ -94,10 +94,11 @@
 在下载对应镜像后，您需要下载对应的烧录软件来将系统镜像烧录到U盘中。下面是一些比较热门的烧录软件。
 
  - [Ventoy](https://www.ventoy.net/en/download.html)
+ - [Rufus]
  - [balenaEtcher](https://etcher.balena.io/)
  - [Raspberry Pi Imager](https://www.raspberrypi.com/software/)
 
-**在烧录前，请确保您的U盘中没有重要资料！U盘的所有文件将被清空！！！**
+**在烧录前，请确保您的U盘中没有重要资料！U盘的所有文件将被清空且几乎不可逆！！！**
 
 ---
 好的，一切准备工作完成！打开下一章，开始踏入Linux吧！
