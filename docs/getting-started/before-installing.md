@@ -11,25 +11,57 @@
 
 发行版选择至关重要，这会从根本上决定您的日常使用体验。我们建议您参考网络资料与用户评价进行选择。
 
-下面是一些由我们排序的发行版，您可以点开各自的链接来**了解并比较**。
+下面是一些由我们排序的发行版，这里仅仅是一个简单难易度和激进程度的对比，具体的其他优势请查阅其他资料，您也可以点开各自的链接来**了解并比较**。
 
-（越靠左越前沿，越靠上越困难）
+<table border="1" cellspacing="0" cellpadding="10" style="border-collapse:collapse; text-align:center;">
+  <tr>
+    <td style="background: linear-gradient(to top right, transparent 49%, #333 49%, #333 51%, transparent 51%); position: relative; width: 70px; height: 40px;">
+      <span style="position: absolute; left: 2px; bottom: 2px;">难易度</span>
+      <span style="position: absolute; right: 2px; top: 2px;">激进度</span>
+    </td>
+    <td>激进</td>
+    <td>偏激进</td>
+    <td>偏保守</td>
+    <td>保守</td>
+  </tr>
+  <tr>
+    <td>困难</td>
+    <td>Arch Linux / Artix Linux / NixOS Unstable</td>
+    <td>Guix Linux</td>
+    <td>Gentoo Linux / NixOS Stable</td>
+    <td>LFS (Linux From Scratch)</td>
+  </tr>
+  <tr>
+    <td>较困难</td>
+    <td>Void Linux / Alpine Linux Edge</td>
+    <td>openSUSE Tumbleweed</td>
+    <td>Slackware</td>
+    <td>Alpine Linux Stable</td>
+  </tr>
+  <tr>
+    <td>较简单</td>
+    <td>Debian Sid / EndeavourOS</td>
+    <td>Debian Testing / Fedora / Manjaro / openSUSE Slowroll</td>
+    <td>CentOS Stream</td>
+    <td>Debian Stable / Rocky Linux / Alma Linux / openSUSE Leap</td>
+  </tr>
+  <tr>
+    <td>简单</td>
+    <td>Everynight Vista</td>
+    <td>openSUSE Aeon / Fedora Silverblue / Deepin</td>
+    <td>Ubuntu Release / Linux Mint Release</td>
+    <td>Ubuntu LTS /KDE neon / LMDE</td>
+  </tr>
+</table>
 
-|困难&前沿 | 困难&保守
-| --- | --- |
-| NixOS, Arch Linux| Gentoo |
 
-|简单&前沿 | 简单&适中 | 简单&保守
-| --- | --- | ---
-| [Fedora](../distros/rhel/fedora.md) | [Ubuntu/Kubuntu](../distros/debian/ubuntu.md), Linux Mint, Deepin/UOS | RHEL/Rocky Linux
-
-或者，你也可以试试我们制作的[趣味测试](https://lati-fun.pages.dev/)。 （部署于Cloudflare Pages，访问可能缓慢）
+或者，你也可以试试我们制作的[趣味测试](https://lati-fun.pages.dev/)，虽然只是个demo版本。 （部署于Cloudflare Pages，访问可能缓慢）
 
 ## 调配分区
 
-我们建议您通过专业的分区工具（如[DiskGenius](https://www.diskgenius.cn/)）进行分区。您需要用分区工具在电脑硬盘上腾出40GB或以上（建议值）的**空闲**空间。我们不建议直接创建分区，而是在安装时由安装程序进行创建，这可以保证系统的稳定性。
+我们建议您通过专业的分区工具（如[DiskGenius](https://www.diskgenius.cn/)和Windows的磁盘管理单元）进行分区。您需要用分区工具在电脑硬盘上腾出60GB以上（建议值）的**空闲**空间。我们不建议直接创建分区，而是在安装时由安装程序进行创建，这可以保证系统的稳定性和分区一致性。
 
-**请不要将Linux安装到任何NTFS文件系统的分区！Linux对NTFS的支持尚不完善！我们不建议使用Linux来调整NTFS分区！！！**
+**请不要将Linux安装到任何NTFS文件系统的分区，这将导致你的系统完全无法启动！Linux对NTFS的支持尚不完善！我们不建议使用Linux来调整NTFS分区！！！**
 
 **任何分区操作都存在风险，请您在操作之前确保已经备份了重要数据！！！**
 
