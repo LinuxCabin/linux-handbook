@@ -28,6 +28,15 @@ nav:
   - 发行版:
     - Debian系:
       - distros/debian/ubuntu.md
+      - distros/debian/linuxmint.md
     - 红帽系:
       - distros/rhel/fedora.md
+      - distros/rhel/rhel.md
+      - distros/rhel/rocky.md
+      - distros/rhel/almalinux.md
+    - Arch系:
+      - distros/arch/archlinux.md
+      - distros/arch/artixlinux.md
+      - distros/arch/cachy.md
+
   - 关于: about.md

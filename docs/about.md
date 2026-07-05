@@ -14,7 +14,7 @@ Matrix: @fangcat-dev:fedora.im
 
 E-Mail: [f20091219@outlook.com](mailto:f20091219@outlook.com)
 
-Bilibili account: [Fangcat_Dev](https://space.bilibili.com/588672425)
+Bilibili: [Fangcat_Dev](https://space.bilibili.com/588672425)
 
 ### 13-trixie
   
@@ -22,11 +22,11 @@ QQ: 1513463007
   
 Matrix: @13-trixie:matrix.org
 
-- Outlook Main E-Mail（recommend）: [HFhaofan@outlook.com](mailto:HFhaofan@outlook.com)
-- Google E-Mail（recommend）: [breezearch11@gmail.com](mailto:breezearch11@gmail.com)
+- Outlook Main E-Mail（recommended）: [HFhaofan@outlook.com](mailto:HFhaofan@outlook.com)
+- Google E-Mail（recommended）: [breezearch11@gmail.com](mailto:breezearch11@gmail.com)
 - Outlook Spare E-Mail: [usHFhaofan@outlook.com](mailto:usHFhaofan@outlook.com)
 - Netease E-Mail: [chengxuanrong@126.com](mailto:chengxuanrong@126.com)
 
 Wechat: 13-trixie haofan110704
 
-BiliBili account: [13-trixie](https://space.bilibili.com/3546375293765862)
+BiliBili: [13-trixie](https://space.bilibili.com/3546375293765862)

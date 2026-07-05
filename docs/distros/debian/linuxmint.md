@@ -1,8 +1,10 @@
 # Linux Mint
 
+![Logo](https://www.linuxmint.com/web/img/logo.svg)
+
 ## 简介
 
-Linux Mint 是公认对 Windows 迁移用户最友好的 Linux 发行版。它主要基于 Ubuntu 稳定版构建，但彻底摒弃了 Ubuntu 激进且饱受争议的 Snap 软件包机制，坚持传统的 APT 和 Flatpak 核心。它预装了极其精致、符合传统 Windows 操作习惯的 Cinnamon 桌面，拥有出色的图形化驱动管理和开箱即用体验，省心、省力、极其稳定。
+Linux Mint 是公认对 Windows 迁移用户最友好的 Linux 发行版。它主要基于 Ubuntu 稳定版构建，但彻底摒弃了 Ubuntu 激进且饱受争议的 Snap 软件包机制，坚持传统的 APT 和 Flatpak 核心。它预装了极其精致、符合传统 Windows 操作习惯的 Cinnamon 桌面，并且默认不启用Wayland来保证兼容性，拥有出色的图形化驱动管理和开箱即用体验，省心、省力、极其稳定。
 
 ## 详细信息
 

@@ -11,6 +11,8 @@
 
 发行版选择至关重要，这会从根本上决定您的日常使用体验。我们建议您参考网络资料与用户评价进行选择。
 
+如果您初入Linux，我们建议您选择Debian系或红帽系发行版试水。**我们不建议任何新手用户直接使用Arch Linux！！！**
+
 下面是一些由我们排序的发行版，这里仅仅是一个简单难易度和激进程度的对比，具体的其他优势请查阅其他资料，您也可以点开各自的链接来**了解并比较**。
 
 <table border="1" cellspacing="0" cellpadding="10" style="border-collapse:collapse; text-align:center;">
@@ -26,7 +28,7 @@
   </tr>
   <tr>
     <td>困难</td>
-    <td>Arch Linux / Artix Linux / NixOS Unstable</td>
+    <td><a href=/distros/arch/archlinux>Arch Linux</a> / <a href=/distros/arch/artixlinux>Artix Linux</a> / NixOS Unstable</td>
     <td>Guix Linux</td>
     <td>Gentoo Linux / NixOS Stable</td>
     <td>LFS (Linux From Scratch)</td>
@@ -41,16 +43,16 @@
   <tr>
     <td>较简单</td>
     <td>Debian Sid / EndeavourOS</td>
-    <td>Debian Testing / Fedora / Manjaro / openSUSE Slowroll</td>
+    <td>Debian Testing / <a href=/distros/rhel/fedora>Fedora</a> / Manjaro / openSUSE Slowroll</td>
     <td>CentOS Stream</td>
-    <td>Debian Stable / Rocky Linux / Alma Linux / openSUSE Leap</td>
+    <td>Debian Stable / <a href=/distros/rhel/rocky>Rocky Linux</a>  / <a href=/distros/rhel/almalinux>Alma Linux</a>  / openSUSE Leap</td>
   </tr>
   <tr>
     <td>简单</td>
     <td>Everynight Vista</td>
-    <td>openSUSE Aeon / Fedora Silverblue / Deepin</td>
-    <td>Ubuntu Release / Linux Mint Release</td>
-    <td>Ubuntu LTS /KDE neon / LMDE</td>
+    <td>openSUSE Aeon / <a href=/distros/rhel/fedora>Fedora Silverblue</a> / Deepin</td>
+    <td><a href=/distros/debian/ubuntu>Ubuntu Release</a>  / <a href=/distros/debian/linuxmint>Linux Mint Release</a></td>
+    <td><a href=/distros/debian/ubuntu>Ubuntu LTS</a> /KDE neon / LMDE</td>
   </tr>
 </table>
 
@@ -93,8 +95,8 @@
 
 在下载对应镜像后，您需要下载对应的烧录软件来将系统镜像烧录到U盘中。下面是一些比较热门的烧录软件。
 
- - [Ventoy](https://www.ventoy.net/en/download.html)
- - [Rufus]
+ - [Ventoy](https://www.ventoy.net/cn/download.html)
+ - [Rufus](https://rufus.ie/zh/)
  - [balenaEtcher](https://etcher.balena.io/)
  - [Raspberry Pi Imager](https://www.raspberrypi.com/software/)
 

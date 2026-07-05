@@ -1,6 +1,6 @@
 # Arch Linux
 
-![Logo](https://upload.wikimedia.org/wikipedia/commons/a/a5/Archlinux-logo.svg)
+![Logo](https://wiki.archlinuxcn.org/wzh/images/logo.svg)
 
 ## 简介
 
@@ -11,7 +11,7 @@ Arch Linux 是 Linux 社区中最受欢迎的独立滚动更新（Rolling Releas
  - 派系：Arch系
  - 发行者：Arch Linux Project / 社区维护
  - 官网：https://archlinux.org/
- - 支持的系统架构：x86_64 v1（官方官方仅支持x86_64，ARM架构由社区项目 Arch Linux ARM 维护）
+ - 支持的系统架构：x86_64/arm64 (由社区维护)
  - 自由软件：是（非全自由）
  - 镜像下载地址：
  - - TUNA: https://mirrors.tuna.tsinghua.edu.cn/archlinux/iso/
@@ -27,16 +27,10 @@ Arch Linux 是 Linux 社区中最受欢迎的独立滚动更新（Rolling Releas
 
 ## 风味
 
-### Community Edition
- - EndeavourOS: 延续 Arch 原生血统的衍生版，提供图形化安装界面和优化的终端工具，被誉为“带图形界面的 Arch”。
- - Manjaro: 基于 Arch 生态但拥有独立筛选软件库的发行版，主打稳定、多核兼容与新手友好，开箱即用。
- - Garuda Linux: 专注于游戏性能和炫酷外观（默认酷炫的机械风/RGB风格桌面）的衍生版，默认使用 Btrfs 文件系统。
- - Artix Linux: 移除 systemd 替换为 OpenRC、runit 或 s6 等传统初始化系统的硬核 Arch 衍生版。
-
 ### Server
 
-- 不推荐，但确实有一部分服务器运行于Arch上。
+- Arch Linux Server: 不推荐，但确实有一部分服务器运行于Arch上。
 
 ### Core
 
-- ArchLinux本身为极简发行版。
+- Arch Linux Core: Arch Linux本身为极简发行版。
