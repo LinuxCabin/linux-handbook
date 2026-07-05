@@ -12,14 +12,14 @@ Arch Linux 是 Linux 社区中最受欢迎的独立滚动更新（Rolling Releas
  - 发行者：Arch Linux Project / 社区维护
  - 官网：https://archlinux.org/
  - 支持的系统架构：x86_64 v1（官方官方仅支持x86_64，ARM架构由社区项目 Arch Linux ARM 维护）
- - 自由软件：是
+ - 自由软件：是（非全自由）
  - 镜像下载地址：
  - - TUNA: https://mirrors.tuna.tsinghua.edu.cn/archlinux/iso/
  - - USTC: https://mirrors.ustc.edu.cn/archlinux/iso/
  - - CERNET: https://mirrors.cernet.edu.cn/archlinux/iso/
  - 包管理器：pacman
    > 注意！Arch 严禁“部分升级”（Partial Upgrade）。请勿在未同步升级全系统的情况下单独安装或更新某个软件，否则极易导致系统依赖断裂造成所谓的 **“滚挂”** ！此外，推荐配置 **AUR (Arch User Repository)** 并配合 yay 或 paru 等助手使用。
- - 更新方式：滚动更新 (Rolling Release)
+ - 更新方式：传统
  - 换源教程：
  - - TUNA: https://mirrors.tuna.tsinghua.edu.cn/help/archlinux/
  - - USTC: https://mirrors.ustc.edu.cn/help/archlinux.html
