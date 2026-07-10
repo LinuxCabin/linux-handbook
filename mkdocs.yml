@@ -24,7 +24,12 @@ nav:
     - getting-started/purpose.md
     - getting-started/before-installing.md
     - getting-started/install.md
-
+  - 概念:
+    - Linux基础:
+      - concepts/linux/free_software.md
+    - 操作系统:
+      - concepts/operating_system/partition.md
+      - concepts/operating_system/file_systems.md
   - 发行版:
     - Debian系:
       - distros/debian/ubuntu.md
