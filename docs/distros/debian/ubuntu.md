@@ -18,7 +18,8 @@ Ubuntu是当今最受认可的Linux发行版，也是中国国家操作系统基
  - - USTC: https://mirrors.ustc.edu.cn/ubuntu-cdimage/
  - - CERNET: https://mirrors.cernet.edu.cn/ubuntu-cdimage/
  - 包管理器：apt
-   > 注意！使用apt安装部分软件时可能[被Snap劫持](https://www.zhihu.com/question/47659130)！
+!!! warning "警告"
+    注意！使用apt安装部分软件时可能[被Snap劫持](https://www.zhihu.com/question/47659130)！
  - 更新方式：传统
  - 换源教程：
  - - TUNA: https://mirrors.tuna.tsinghua.edu.cn/help/ubuntu-ports/

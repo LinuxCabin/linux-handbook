@@ -11,6 +11,12 @@ theme:
     - navigation.footer
 
 
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+
 plugins:
   - search
 
@@ -27,6 +33,8 @@ nav:
   - 概念:
     - Linux基础:
       - concepts/linux/free_software.md
+      - concepts/linux/distro.md
+      - concepts/linux/de.md
     - 操作系统:
       - concepts/operating_system/partition.md
       - concepts/operating_system/file_systems.md
