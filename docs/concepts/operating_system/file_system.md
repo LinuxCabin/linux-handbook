@@ -8,7 +8,7 @@
 
 ???+ note "常见的文件系统"
     - Ext3 (Linux可用，已基本废弃)
-    - Ext4 (Linux常用)
+    - Ext4 (Linux常用，推荐使用)
     - Brtfs (Linux可用，有众多高级特性，但不建议新手涉足)
-    - NTFS (Windows常用)
+    - NTFS (Windows常用，Linux上仅可挂载读写)
     -Xfs (Linux常用，大文件传输优化，不支持缩容)

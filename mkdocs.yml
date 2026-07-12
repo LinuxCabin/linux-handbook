@@ -52,9 +52,12 @@ nav:
     - Linux基础:
       - concepts/linux/free_software.md
       - concepts/linux/distro.md
+      - concepts/linux/lvm.md
       - concepts/linux/de.md
       - concepts/linux/wm.md
     - 操作系统:
+      - concepts/operating_system/bios.md
+      - concepts/operating_system/disk_partition_table.md
       - concepts/operating_system/partition.md
       - concepts/operating_system/file_system.md
   - 发行版:
