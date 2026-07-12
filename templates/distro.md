@@ -18,7 +18,7 @@
  - > 此处“镜像”指iso等文件。
  - - TUNA:
  - - USTC:
- - - CERNET:
+ - - MirrorZ:
  - 包管理器：apt/dnf/pacman/...
  - 更新方式：版本/滚动/Nix/OSTree/AB分区/...
  - 换源教程：
@@ -26,7 +26,7 @@
  - > 若镜像站无iso下载地址，但是有镜像，请您填写“无，镜像地址: https://example.com/”
  - - TUNA:
  - - USTC:
- - - CERNET:
+ - - MirrorZ:
 
 ## 风味
 
