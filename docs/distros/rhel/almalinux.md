@@ -16,10 +16,10 @@ ALmaLinux与Rocky Linux一样，是RHEL的开源衍生版本。作为企业级 L
  - 镜像下载地址：
  - - TUNA: 无
  - - USTC: 无
- - - CERNET: https://mirrors.cernet.edu.cn/almalinux/
+ - - MirrorZ: https://mirrors.cernet.edu.cn/almalinux/
  - 包管理器：dnf
  - 更新方式：传统
  - 换源教程：
  - - TUNA: 无
  - - USTC: 无
- - - CERNET: 无
+ - - MirrorZ: 无

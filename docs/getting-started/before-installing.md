@@ -81,11 +81,15 @@
 
     - 发行版
     - 桌面环境
+    - 窗口管理器
+    - 平铺/滚动式桌面
 
 
 ## 调配分区
 
 我们建议您通过专业的分区工具（如[DiskGenius](https://www.diskgenius.cn/)和Windows的磁盘管理单元）进行分区。您需要用分区工具在电脑硬盘上腾出60GB以上（建议值）的**空闲**空间。我们不建议直接在DiskGenius等WIndows下软件创建分区，而是在安装时由安装程序进行创建，这可以保证系统的稳定性和分区一致性。
+
+我们建议您在操作完分区后用其他设备记录您磁盘的分区图示/顺序，这在安装系统时非常有用。
 
 !!! warning "警告"
     请不要将Linux安装到任何NTFS文件系统的分区，这将导致你的系统完全无法启动！Linux对NTFS的支持尚不完善！我们不建议使用Linux来调整NTFS分区！！！
@@ -94,7 +98,11 @@
 
 ## 下载镜像
 
-您需要先到各发行版介绍中找到“镜像下载链接”下载系统镜像，我们建议您选择最新，并且预装您所需要的桌面环境的版本。
+您需要先到各发行版的官网找到下载按钮，并下载对应系统镜像，但由于中国大陆网络环境，我们并不推荐直接到官网下载。
+
+或者，您可以通过开源镜像站进行下载。您可以在“发行版”章节对应选项卡中找到“镜像下载链接”下载系统镜像。
+
+我们建议您选择最新，并且预装您所需要的桌面环境的版本。
 
 ???+ note "一些常见的发行版标签"
     - x86-64/amd64: 大多数PC（一般选这个）
@@ -102,7 +110,7 @@
     - desktop: 带桌面环境的系统（推荐）
     - server: 服务器用系统，无桌面环境
 
-???+ note "一些桌面环境"
+???+ note "一些桌面环境/窗口管理器"
     - KDE (K Desktop Environment): 贴近Windows操作逻辑，有高度的自定义性与丰富主题
       ![KDE](https://fedoraproject.org/assets/images/kde-edition/background_plasma.png)
     - GNOME: 贴近macOS界面，优雅、简洁，有多样的扩展（可能需要安装某些扩展、软件包来获得较好的桌面体验）
@@ -118,8 +126,8 @@
 
 在下载对应镜像后，您需要下载对应的烧录软件来将系统镜像烧录到U盘中。
 ???+ note "一些比较热门的烧录软件"
-    - [Ventoy](https://www.ventoy.net/cn/download.html)（recommend）
-    - [Rufus](https://rufus.ie/zh/)（recommend）
+    - [Ventoy](https://www.ventoy.net/cn/download.html)（推荐）
+    - [Rufus](https://rufus.ie/zh/)（推荐）
     - [balenaEtcher](https://etcher.balena.io/)
     - [Raspberry Pi Imager](https://www.raspberrypi.com/software/)
 

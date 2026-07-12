@@ -16,7 +16,7 @@ Ubuntu是当今最受认可的Linux发行版，也是中国国家操作系统基
  - 镜像下载地址：
  - - TUNA: https://mirrors.tuna.tsinghua.edu.cn/ubuntu-cdimage/
  - - USTC: https://mirrors.ustc.edu.cn/ubuntu-cdimage/
- - - CERNET: https://mirrors.cernet.edu.cn/ubuntu-cdimage/
+ - - MirrorZ: https://mirrors.cernet.edu.cn/ubuntu-cdimage/
  - 包管理器：apt
 !!! warning "警告"
     注意！使用apt安装部分软件时可能[被Snap劫持](https://www.zhihu.com/question/47659130)！
@@ -24,7 +24,7 @@ Ubuntu是当今最受认可的Linux发行版，也是中国国家操作系统基
  - 换源教程：
  - - TUNA: https://mirrors.tuna.tsinghua.edu.cn/help/ubuntu-ports/
  - - USTC: https://mirrors.ustc.edu.cn/help/ubuntu-ports.html
- - - CERNET: https://help.mirrors.cernet.edu.cn/ubuntu-ports/
+ - - MirrorZ: https://help.mirrors.cernet.edu.cn/ubuntu-ports/
 
 ## 风味
 

@@ -16,13 +16,13 @@
  - 镜像下载地址：
  - - TUNA: 无
  - - USTC: 无
- - - CERNET: 无
+ - - MirrorZ: 无
  - 包管理器：dnf
  - 更新方式：传统
  - 换源教程：
  - - TUNA: 无
  - - USTC: 无
- - - CERNET: 无
+ - - MirrorZ: 无
 
 ## 风味
 

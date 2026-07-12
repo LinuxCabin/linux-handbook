@@ -13,7 +13,7 @@
     ![GNOME](https://fedoraproject.org/assets/images/workstation_framework.webp)
     - COSMIC: 拥有优秀的窗口管理机制，自定义性强
     ![COSMIC](https://fedoraproject.org/assets/images/spins/screenshot-cosmic.jpg)
-    - Hyprland: 平铺窗口管理器，具有炫酷的视觉效果，并拥有Wayland的最新特性，不过配置复杂，并且只建议在Arch Linux上获得最佳体验
-    ![Hyprland](https://hypr.land/ricing_competitions/1/flicko.webp)
-    - Niri: 滚动窗口管理器，比Hyprland更适合生产环境与触控板逻辑，同样配置复杂，但发行版覆盖范围广
-    ![Niri](https://www.phoronix.net/image.php?id=2026&image=niri_2604_2)
+    
+    **Hyprland与Niri不是桌面环境，而是窗口管理器。**
+
+    **DMS与Noctalia不是桌面环境，而是桌面外壳。**
