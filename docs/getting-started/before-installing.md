@@ -11,14 +11,14 @@
 各品牌、型号电脑关闭安全启动的方法不同，如果与提供的路径不同，我们建议您使用AI辅助或搜索具体解决方案。
 
 !!! warning "警告"
-    BIOS是电脑的核心配置部分，如果您没有经验，我们建议您寻求AI或他人帮助，而不是自行修改！！！
+    BIOS是电脑的核心配置部分，如果您没有经验，我们建议您寻求AI或他人帮助，而不是自行修改，这可能导致你的操作系统无法启动！！！
 
 ## 选择发行版
 
-发行版选择至关重要，这会从根本上决定您的日常使用体验。我们建议您参考网络资料与用户评价进行选择。
+发行版选择至关重要，这会从根本上决定您的日常使用体验。我们建议您参考网络资料与用户评价进行选择，或者被其他人“带师”。
 
 !!! warning "警告"
-    如果您初入Linux，我们建议您选择Debian系或红帽系发行版试水。**我们不建议任何新手用户直接使用Arch Linux！！！**
+    如果您初入Linux，我们建议您选择Debian系或RHEL系发行版试水。**我们不建议任何新手用户直接使用Arch Linux！！！**
 
 下面是一些由我们排序的发行版，这里仅仅是一个简单难易度和激进程度的对比，具体的其他优势请查阅其他资料，您也可以点开各自的链接来**了解并比较**。
 
@@ -26,7 +26,7 @@
 
 <table border="1" cellspacing="0" cellpadding="10" style="border-collapse:collapse; text-align:center;">
   <tr>
-    <td style="background: linear-gradient(to top right, transparent 49%, #333 49%, #333 51%, transparent 51%); position: relative; width: 70px; height: 40px;">
+    <td style="background: linear-gradient(to top right, transparent 49%, #333 49%, #333 51%, transparent 51%); position: relative; width: 83px; height: 45px;">
       <span style="position: absolute; left: 2px; bottom: 2px;">难易度</span>
       <span style="position: absolute; right: 2px; top: 2px;">激进度</span>
     </td>
@@ -85,12 +85,12 @@
 
 ## 调配分区
 
-我们建议您通过专业的分区工具（如[DiskGenius](https://www.diskgenius.cn/)和Windows的磁盘管理单元）进行分区。您需要用分区工具在电脑硬盘上腾出60GB以上（建议值）的**空闲**空间。我们不建议直接创建分区，而是在安装时由安装程序进行创建，这可以保证系统的稳定性和分区一致性。
+我们建议您通过专业的分区工具（如[DiskGenius](https://www.diskgenius.cn/)和Windows的磁盘管理单元）进行分区。您需要用分区工具在电脑硬盘上腾出60GB以上（建议值）的**空闲**空间。我们不建议直接在DiskGenius等WIndows下软件创建分区，而是在安装时由安装程序进行创建，这可以保证系统的稳定性和分区一致性。
 
 !!! warning "警告"
     请不要将Linux安装到任何NTFS文件系统的分区，这将导致你的系统完全无法启动！Linux对NTFS的支持尚不完善！我们不建议使用Linux来调整NTFS分区！！！
     
-    任何分区操作都存在风险，请您在操作之前确保已经备份了重要数据！！！
+    任何分区操作都存在风险，请您在操作之前确保已经备份所用磁盘中的重要数据到可靠的外部存储！！！
 
 ## 下载镜像
 
@@ -98,16 +98,16 @@
 
 ???+ note "一些常见的发行版标签"
     - x86-64/amd64: 大多数PC（一般选这个）
-    - arm64/aarch64: 树莓派、IoT等设备
+    - arm64/aarch64/armv8l/armv8a: 树莓派、IoT等设备
     - desktop: 带桌面环境的系统（推荐）
     - server: 服务器用系统，无桌面环境
 
 ???+ note "一些桌面环境"
     - KDE (K Desktop Environment): 贴近Windows操作逻辑，有高度的自定义性与丰富主题
       ![KDE](https://fedoraproject.org/assets/images/kde-edition/background_plasma.png)
-    - GNOME: 贴近macOS界面，优雅、简洁，有多样的扩展（可能需要安装某些扩展、软件包来获得正常桌面体验）
+    - GNOME: 贴近macOS界面，优雅、简洁，有多样的扩展（可能需要安装某些扩展、软件包来获得较好的桌面体验）
       ![GNOME](https://fedoraproject.org/assets/images/workstation_framework.webp)
-    - COSMIC: 拥有优秀的窗口管理机制，自定义性强
+    - COSMIC: 拥有优秀的窗口管理机制，自定义性强，是下一代的前卫Wayland桌面环境
       ![COSMIC](https://fedoraproject.org/assets/images/spins/screenshot-cosmic.jpg)
     - Hyprland: 平铺窗口管理器，具有炫酷的视觉效果，并拥有Wayland的最新特性，不过配置复杂，并且只建议在Arch Linux上获得最佳体验
       ![Hyprland](https://hypr.land/ricing_competitions/1/flicko.webp)
@@ -118,8 +118,8 @@
 
 在下载对应镜像后，您需要下载对应的烧录软件来将系统镜像烧录到U盘中。
 ???+ note "一些比较热门的烧录软件"
-    - [Ventoy](https://www.ventoy.net/cn/download.html)
-    - [Rufus](https://rufus.ie/zh/)
+    - [Ventoy](https://www.ventoy.net/cn/download.html)（recommend）
+    - [Rufus](https://rufus.ie/zh/)（recommend）
     - [balenaEtcher](https://etcher.balena.io/)
     - [Raspberry Pi Imager](https://www.raspberrypi.com/software/)
 
