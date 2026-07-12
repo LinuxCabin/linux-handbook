@@ -34,4 +34,21 @@
 
     **本方案与以上方案选择一个即可，请不要两个同时操作。**
 
+## 文件互通（双系统）
 
+### Win -> Linux
+
+若您的Linux使用ext文件系统，则Windows会由于不支持ext而无法访问Linux的文件。
+
+您只需在Windows下载安装[Ext4Fsd](https://www.accum.se/~bosse/ext2fsd/0.71/Ext2Fsd-0.71-setup.exe)即可解决。
+
+### Linux -> Win
+
+若您在Linux下无法访问/读写Windows的NTFS文件系统，请您在Linux上通过包管理器安装`ntfs-3g`软件包。
+
+???+ note "挂载NTFS的问题"
+    若您在挂载NTFS分区时出现类似"bad superblock"等错误，有可能是因为您的NTFS文件系统存在错误。
+
+    要解决该问题，请在Windows的命令提示符中运行`chkdsk X: /f`并**重启至少两次**进行修复。若依然失败，请运行`chkdsk X: /r`进行更为彻底的修复。
+
+    **请将上图命令中的X:替换为自己的盘符。**
