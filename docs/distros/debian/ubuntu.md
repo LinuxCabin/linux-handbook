@@ -12,7 +12,7 @@ Ubuntu是当今最受认可的Linux发行版，也是中国国家操作系统基
  - 发行者：Canonical
  - 官网：https://cn.ubuntu.com/
  - 支持的系统架构：x86_64/arm64
- - 自由软件：是（非全自由）
+ - 自由软件：是（部分自由）
  - 镜像下载地址：
  - - TUNA: https://mirrors.tuna.tsinghua.edu.cn/ubuntu-cdimage/
  - - USTC: https://mirrors.ustc.edu.cn/ubuntu-cdimage/
@@ -20,7 +20,7 @@ Ubuntu是当今最受认可的Linux发行版，也是中国国家操作系统基
  - 包管理器：apt
 !!! warning "警告"
     注意！使用apt安装部分软件时可能[被Snap劫持](https://www.zhihu.com/question/47659130)！
- - 更新方式：传统
+ - 更新方式：版本
  - 换源教程：
  - - TUNA: https://mirrors.tuna.tsinghua.edu.cn/help/ubuntu-ports/
  - - USTC: https://mirrors.ustc.edu.cn/help/ubuntu-ports.html
