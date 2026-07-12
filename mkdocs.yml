@@ -53,6 +53,7 @@ nav:
       - concepts/linux/free_software.md
       - concepts/linux/distro.md
       - concepts/linux/lvm.md
+      - concepts/linux/btrfs.md
       - concepts/linux/de.md
       - concepts/linux/wm.md
     - 操作系统:
@@ -60,6 +61,7 @@ nav:
       - concepts/operating_system/disk_partition_table.md
       - concepts/operating_system/partition.md
       - concepts/operating_system/file_system.md
+      - concepts/operating_system/mounting.md
   - 发行版:
     - Debian系:
       - distros/debian/ubuntu.md
