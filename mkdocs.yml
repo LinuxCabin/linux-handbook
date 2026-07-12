@@ -2,6 +2,9 @@ site_name: LinuxCabin
 site_description: A Linux handbook especially designed for Chinese users.
 repo_name: LinuxCabin/linux-handbook
 repo_url: https://github.com/LinuxCabin/linux-handbook
+edit_uri: edit/main/docs/
+
+
 theme:
   name: material
   language: zh
@@ -9,6 +12,10 @@ theme:
     - search.suggest
     - search.highlight
     - navigation.footer
+    - revision.date
+    - content.action.edit
+    - content.action.view
+
 
 
 markdown_extensions:
@@ -19,6 +26,15 @@ markdown_extensions:
 
 plugins:
   - search
+  - git-revision-date-localized:
+      type: datetime
+      locale: zh
+      fallback_to_build_date: true
+
+  - git-committers:
+      repository: LinuxCabin/linux-handbook
+      branch: main
+      token: !ENV DEPLOY_KEY
 
 
 copyright: |
