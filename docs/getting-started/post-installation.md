@@ -19,6 +19,28 @@
 
 各个发行版的换源教程，我们已经整理到了对应发行版的选项卡下，您可以自行查阅。（若没有，您也可以登录镜像站官网进行查找。）
 
+## Flatpak
+
+Flatpak是新一代Linux软件管理工具。其采用沙箱式设计，使得软件能够兼容多数发行版。并且，基于Flatpak的Flathub是Linux上极其重要的应用商店，深度集成于KDE Discover, GNOME。
+
+**对于用户软件，我们推荐您使用Flatpak进行安装。**
+
+您可以通过包管理器安装Flatpak。同样的，Flathub也需要换源。
+
+???+ info "Flathub缓存"
+    国内目前仅USTC与SJTUG有Flathub缓存。
+
+     - USTC: https://mirrors.ustc.edu.cn/help/flathub.html
+    
+     - MirrorZ: https://help.mirrors.cernet.edu.cn/flathub
+
+!!! warning "已知问题"
+    Flatpak与宿主机互通目前不够完善，例如QQ的剪贴板问题等。
+
+    要解决这一问题，请使用Flatpak安装Flatseal后，找到对应软件，关闭“回退到X11”。
+    
+    不过尽管如此，大多数软件的表现均与包管理器版本无较大差别。
+
 ## 时间制（双系统）
 
 如果您使用的是Windows与Linux双系统，您会发现在从Linux切换至Windows时，时间会发生错位。
