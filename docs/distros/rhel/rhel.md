@@ -12,7 +12,7 @@
  - 发行者：Red Hat
  - 官网：https://www.redhat.com/zh-cn
  - 支持的系统架构：x86_64/arm64/ppc64le/s390x
- - 自由软件：是（非全自由）
+ - 自由软件：是（部分自由）
  - 镜像下载地址：
  - - TUNA: 无
  - - USTC: 无

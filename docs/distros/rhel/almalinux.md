@@ -12,7 +12,7 @@ ALmaLinux与Rocky Linux一样，是RHEL的开源衍生版本。作为企业级 L
  - 发行者：AlmaLinux OS Foundation
  - 官网：https://almalinux.org/zh-hans/
  - 支持的系统架构：x86_64 v2/x86_64 v3/arm64/ppc64le/s390x
- - 自由软件：是（非全自由）
+ - 自由软件：是（部分自由）
  - 镜像下载地址：
  - - TUNA: 无
  - - USTC: 无
