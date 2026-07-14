@@ -7,6 +7,7 @@
 Btrfs即B-tree文件系统，通常念成Butter FS，Better FS或B-tree FS，一种支持写入时复制（COW），以B-tree为核心数据结构的文件系统，运行在Linux操作系统。Btrfs有着众多的高级功能。以下为btrfs的功能列表
 
 已实现
+
 - 联机碎片整理
 - 联机卷生长和收缩
 - 联机块设备增加和删除
@@ -26,6 +27,7 @@ Btrfs即B-tree文件系统，通常念成Butter FS，Better FS或B-tree FS，一
 - 能够处理交换文件和交换分区
 
 已实现但不建议在生产环境中使用
+
 - 分层的每个子卷配额
 - RAID 5，RAID 6
 
