@@ -24,6 +24,7 @@ markdown_extensions:
   - pymdownx.highlight
   - pymdownx.inlinehilite
   - pymdownx.magiclink
+  - pymdownx.superfences 
 
 plugins:
   - search
@@ -48,6 +49,7 @@ nav:
     - getting-started/before-installing.md
     - getting-started/install.md
     - getting-started/post-installation.md
+    - getting-started/input-method.md
   - 概念:
     - Linux基础:
       - concepts/linux/free_software.md
