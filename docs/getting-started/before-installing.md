@@ -58,7 +58,7 @@
   </tr>
   <tr>
     <td>简单</td>
-    <td>Everynight Vista</td>
+    <td>Evernight Vista (处于测试中)</td>
     <td>openSUSE Aeon / <a href=/distros/rhel/fedora>Fedora Silverblue</a> / Deepin</td>
     <td><a href=/distros/debian/ubuntu>Ubuntu Release</a>  / <a href=/distros/debian/linuxmint>Linux Mint Release</a></td>
     <td><a href=/distros/debian/ubuntu>Ubuntu LTS</a> /KDE neon / LMDE</td>
@@ -66,7 +66,7 @@
 </table>
 
 
-或者，你也可以试试我们制作的[趣味测试](https://lati-fun.pages.dev/)，虽然只是个demo版本。 （部署于Cloudflare Pages，访问可能缓慢）
+或者，你也可以试试[Distrochooser（英文）](https://distrochooser.de/)或是我们制作的[趣味测试](https://lati-fun.pages.dev/)，虽然只是个demo版本。 （部署于Cloudflare Pages，访问可能缓慢）
 
 
 ???+ note "发行版=外观？"
