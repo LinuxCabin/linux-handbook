@@ -6,6 +6,7 @@ edit_uri: edit/main/docs/
 
 theme:
   name: material
+  custom_dir: overrides
   language: zh
   features:
     - search.suggest
@@ -80,5 +81,6 @@ nav:
       - distros/arch/archlinux.md
       - distros/arch/artixlinux.md
       - distros/arch/cachy.md
+    -  distros/nixos.md
 
   - 关于: about.md

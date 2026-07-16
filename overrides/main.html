@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block content %}
+{{ super() }}
+<div id="waline-container" style="margin-top: 80px; padding-top: 12px;"></div>
+{% endblock %}
+
+{% block styles %}
+{{ super() }}
+<link rel="stylesheet" href="https://unpkg.com/@waline/client@v2/dist/waline.css" />
+<style>
+  .md-grid {
+    max-width: 1200px;
+  }
+</style>
+{% endblock %}
+
+{% block scripts %}
+{{ super() }}
+<script src="https://unpkg.com/@waline/client@v2/dist/waline.js"></script>
+<script>
+  Waline.init({
+    el: '#waline-container',
+    serverURL: "http://lcapi.091209.xyz",
+  })
+</script>
+{% endblock %}
