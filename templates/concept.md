@@ -1,6 +1,6 @@
 # 概念名称
 
-英文：The name of the concept
+英文/全称：The name of the concept
 
 ## 解释
 

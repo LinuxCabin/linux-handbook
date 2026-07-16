@@ -4,7 +4,6 @@ repo_name: LinuxCabin/linux-handbook
 repo_url: https://github.com/LinuxCabin/linux-handbook
 edit_uri: edit/main/docs/
 
-
 theme:
   name: material
   language: zh
@@ -15,8 +14,6 @@ theme:
     - revision.date
     - content.action.edit
     - content.action.view
-
-
 
 markdown_extensions:
   - admonition
@@ -50,6 +47,7 @@ nav:
     - getting-started/install.md
     - getting-started/post-installation.md
     - getting-started/input-method.md
+    - getting-started/common-command.md
   - 概念:
     - Linux基础:
       - concepts/linux/free_software.md
@@ -64,6 +62,11 @@ nav:
       - concepts/operating_system/partition.md
       - concepts/operating_system/file_system.md
       - concepts/operating_system/mounting.md
+    - 包管理器:
+      - concepts/package_managers/apt.md
+      - concepts/package_managers/dnf.md
+      - concepts/package_managers/pacman.md
+      - concepts/package_managers/flatpak.md
   - 发行版:
     - Debian系:
       - distros/debian/ubuntu.md
