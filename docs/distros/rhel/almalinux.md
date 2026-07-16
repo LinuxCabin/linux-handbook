@@ -23,3 +23,26 @@ ALmaLinux与Rocky Linux一样，是RHEL的开源衍生版本。作为企业级 L
  - - TUNA: 无
  - - USTC: 无
  - - MirrorZ: 无
+
+## 注意事项
+
+### Rpm Fusion
+
+红帽系发行版由于版权限制，无法内置H264/H265编解码器，因此需要手动添加源来安装。
+
+???+ info "镜像源帮助"
+     - TUNA: https://mirrors.tuna.tsinghua.edu.cn/help/rpmfusion/
+     - USTC: https://mirrors.ustc.edu.cn/help/rpmfusion.html
+     - MirrorZ: https://help.mirrors.cernet.edu.cn/rpmfusion/
+
+在添加源后，请在终端运行`sudo dnf group install Multimedia`来安装编解码器。
+
+### EPEL (Extra Packages for Enterprise Linux)
+
+EPEL为企业Linux提供服务，内置了部分官方软件源没有内置的软件包。如果您发现某些软件包没有找到，您可以通过添加EPEL来尝试。
+
+???+ info "镜像源帮助"
+     - TUNA: https://mirrors.tuna.tsinghua.edu.cn/help/epel/
+     - USTC: https://mirrors.ustc.edu.cn/help/epel.html
+     - MirrorZ: https://help.mirrors.cernet.edu.cn/epel/
+

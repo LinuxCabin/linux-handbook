@@ -1,8 +1,8 @@
 # 输入法
 
 Linux下的输入法框架主要有以下两种选择：
- - fcitx5 (包名`fcitx5`): 轻量，启动快，建议KDE、Sway、Hyprland等用户使用
-  
+
+ - fcitx5 (包名`fcitx5`): 轻量，启动快，建议KDE、Sway、Hyprland等用户使用  
  - ibus (包名`ibus`): 自定义功能有限，但与GNOME深度集成，建议GNOME用户使用
 
 您可以通过您的包管理器安装这两种输入法框架。
