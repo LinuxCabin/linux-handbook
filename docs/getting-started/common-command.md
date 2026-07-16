@@ -35,7 +35,7 @@
 例如：`cd /home/me` 将工作目录切换到`/home/me`。
 
 ???+ note "Permission Denied"
-    若尝试切换工作目录时出现权限不足，请进入root用户Shell后切换
+    若尝试切换工作目录时出现权限不足，请进入root用户Shell后切换。
 
 ### ls
 
