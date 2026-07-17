@@ -2,7 +2,7 @@
 
 {% block content %}
 {{ super() }}
-<div id="waline-container" style="margin-top: 80px; padding-top: 12px;"></div>
+<div id="waline" style="margin-top: 80px; padding-top: 12px;"></div>
 {% endblock %}
 
 {% block styles %}
@@ -17,10 +17,10 @@
 
 {% block scripts %}
 {{ super() }}
-<script src="https://unpkg.com/@waline/client@latest/dist/waline.js"></script>
-<script>
-  Waline.init({
-    el: '#waline-container',
+<script type="module">
+  import { init } from 'https://unpkg.com/@waline/client@latest/dist/waline.js';
+  init({
+    el: '#waline',
     serverURL: "https://lcapi.091209.xyz",
   })
 </script>
