@@ -1,5 +1,6 @@
 site_name: LinuxCabin
-site_description: A Linux handbook especially designed for Chinese users.
+site_description: 为中国用户打造的Linux手册 | A Linux handbook especially designed for Chinese users.
+site_url: https://hb.091209.xyz
 repo_name: LinuxCabin/linux-handbook
 repo_url: https://github.com/LinuxCabin/linux-handbook
 edit_uri: edit/main/docs/
@@ -26,6 +27,7 @@ markdown_extensions:
 
 plugins:
   - search
+#  - rss
   - git-revision-date-localized:
       type: datetime
       locale: zh
