@@ -84,5 +84,6 @@ nav:
       - distros/arch/artixlinux.md
       - distros/arch/cachy.md
     -  distros/nixos.md
-
+  - 桌面:
+      - dde/gnome.md
   - 关于: about.md
