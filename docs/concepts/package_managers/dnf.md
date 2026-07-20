@@ -1,6 +1,7 @@
 # Dnf
 
 全称：Dandified Yum
+包格式：dnf
 
 ## 解释
 

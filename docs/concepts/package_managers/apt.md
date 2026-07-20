@@ -1,6 +1,7 @@
 # Apt
 
 全称：Advanced Packaging Tool
+包格式：deb
 
 ## 解释
 
