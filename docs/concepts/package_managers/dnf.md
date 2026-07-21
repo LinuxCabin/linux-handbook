@@ -1,7 +1,7 @@
 # Dnf
 
 全称：Dandified Yum
-包格式：dnf
+包格式：rpm
 
 ## 解释
 
