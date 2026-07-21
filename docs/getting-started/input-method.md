@@ -2,8 +2,8 @@
 
 Linux下的输入法框架主要有以下两种选择：
 
- - fcitx5 (包名`fcitx5`): 轻量，启动快，建议KDE、Sway、Hyprland等用户使用  
- - ibus (包名`ibus`): 自定义功能有限，但与GNOME深度集成，建议GNOME用户使用
+ - Fcitx (包名`fcitx5`): 轻量，启动快，建议KDE、Sway、Hyprland等用户使用  
+ - Ibus (包名`ibus`): 自定义功能有限，但与GNOME深度集成，建议GNOME用户使用
 
 您可以通过您的包管理器安装这两种输入法框架之一。
 
@@ -29,38 +29,38 @@ Linux下的输入法框架主要有以下两种选择：
 
     或者，您可以参考这篇[知乎教程](https://zhuanlan.zhihu.com/p/690062589)。
 
-### fcitx
+### Fcitx
 
-安装后，请打开fcitx5配置，点击右侧加号、箭头来添加Rime或调整输入法顺序。若没有出现，请您重启系统。
+安装后，请打开Fcitx5配置，点击右侧加号、箭头来添加Rime或调整输入法顺序。若没有出现，请您重启系统。
 
-若您是KDE用户，请打开KDE设置，搜索虚拟键盘，并选中“fcitx5”。
+若您是KDE用户，请打开KDE设置，搜索虚拟键盘，并选中“Fcitx5”。
 
-若您是GNOME用户，您需要额外安装`gnome-tweaks`，在“优化-开机启动程序”中添加“fcitx5”。我们同时建议您安装这个[GNOME扩展](https://extensions.gnome.org/extension/261/kimpanel/)。
+若您是GNOME用户，您需要额外安装`gnome-tweaks`，在“优化-开机启动程序”中添加“Fcitx5”。我们同时建议您安装这个[GNOME扩展](https://extensions.gnome.org/extension/261/kimpanel/)。
 
-若您是其他桌面环境用户，您也可以通过设置XDG自动启动或编辑配置文件的方式来使得fcitx5开机自启。（WIP）
+若您是其他桌面环境用户，您也可以通过设置XDG自动启动或编辑配置文件的方式来使得Fcitx5开机自启。（WIP）
 
 
-### ibus
+### Ibus
 
-ibus会自动与GNOME集成，所以GNOME用户无须进行额外操作。
+Ibus会自动与GNOME集成，所以GNOME用户无须进行额外操作。
 
-若您是KDE用户，请打开KDE设置，搜索虚拟键盘，并选中“ibus”。
+若您是KDE用户，请打开KDE设置，搜索虚拟键盘，并选中“Ibus”。
 
 ---
 
 ## 中文输入法框架
 
-对于中文输入法框架，由于ibus默认的拼音输入差强人意，并且其他输入框架也大多字库不全或过时。因此，我们推荐您使用中州韵 (Rime)，其能够安装多种词库，并且有强大的输入引擎。
+对于中文输入法框架，由于Ibus默认的拼音输入差强人意，并且其他输入框架也大多字库不全或过时。因此，我们推荐您使用中州韵 (Rime)，其能够安装多种词库，并且有强大的输入引擎。
 
 ### 安装Rime
 
-若您使用fcitx，您需要安装：
+若您使用Fcitx，您需要安装：
 
 ```bash
 fcitx5-chinese-addons fcitx5-rime
 ```
 
-若您使用ibus，您需要安装：
+若您使用Ibus，您需要安装：
 
 ```bash
 ibus-rime
@@ -127,6 +127,21 @@ bash rime-install iDvel/rime-ice:others/recipes/grammar:schema=rime_ice
 
 首先，您需要通过[加速链接](https://mirror.nju.edu.cn/github-release/iDvel/rime-ice/LatestRelease/full.zip)或[官方链接](https://github.com/iDvel/rime-ice/releases/latest/download/full.zip)下载雾凇拼音的最新构建。
 
-之后，请您进入您的用户目录（iBus位于`~/.config/ibus/rime`，Fcitx5位于`~/.local/share/fcitx5/rime`），删除目录中所有内容，并将压缩包中的文件复制进去。
+之后，请您进入您的用户目录（Ibus位于`~/.config/ibus/rime`，Fcitx5位于`~/.local/share/fcitx5/rime`），删除目录中所有内容，并将压缩包中的文件复制进去。
 
 之后，您需要重新部署Rime（位于状态栏中），或者更简单，注销系统再重新登录。
+
+???+ note "如何关闭注音？"
+    雾凇拼音的默认设置下，所有候选词都会被全拼注音。
+    
+    如果你的用户目录里有`rime_ice.schema.yaml`这个文件，打开，将`spelling_hints`和`always_show_comments`两行注释，像下面这样。
+    ```yaml
+    # 主翻译器，拼音
+    translator:
+    dictionary: rime_ice           # 挂载词库 rime_ice.dict.yaml
+    #  spelling_hints: 8              # corrector.lua ：为了让错音错字提示的 Lua 同时适配全拼双拼，将拼音显示在 comment 中
+    #  always_show_comments: true     # corrector.lua ：Rime 默认在 preedit 等于 comment 时取消显示 comment，这里强制一直显示，供 corrector.lua 做判断用。
+    initial_quality: 1.2           # 拼音的权重应该比英文大
+    ```
+
+    （来自[每一个选项都被全拼注音，如何关闭？](https://github.com/orgs/rime/discussions/1366)）
