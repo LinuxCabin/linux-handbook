@@ -1,5 +1,7 @@
 # GNOME
 
+全称：GNU Network Object Model Environment
+
 ![GNOME](https://www.gnome.org/img/apple-touch-icon.png)
 
 ## 概述
@@ -15,7 +17,7 @@ GNOME桌面设计以简洁专注为核心理念，采用活动概览替代传统
 
 ### gnome-tweaks
 
-GNOME桌面下的窗口默认不带最小化、最大化按钮，并且不提供字体、鼠标的自定义选项，因此需要您使用包管理器安装`gnome-tweaks`来实现该效果。
+GNOME桌面下的窗口默认不带最小化、最大化按钮，并且不提供字体、鼠标等本应能够自定义选项，因此需要您使用包管理器安装`gnome-tweaks`来实现该效果。
 
 安装好后的`gnome-tweaks`在应用列表中呈现为“优化”应用，您可以在其中自定义您的桌面。
 

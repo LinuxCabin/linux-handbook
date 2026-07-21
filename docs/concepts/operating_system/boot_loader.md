@@ -32,5 +32,6 @@
          ├── bootuuid.cfg
          ├── grub.cfg
          └── grubenv
+    ```
 
 

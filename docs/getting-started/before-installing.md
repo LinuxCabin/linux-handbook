@@ -58,7 +58,7 @@
   </tr>
   <tr>
     <td>简单</td>
-    <td>Evernight Vista (处于测试中)</td>
+    <td></td>
     <td>openSUSE Aeon / <a href=/distros/rhel/fedora>Fedora Silverblue</a> / Deepin</td>
     <td><a href=/distros/debian/ubuntu>Ubuntu Release</a>  / <a href=/distros/debian/linuxmint>Linux Mint Release</a></td>
     <td><a href=/distros/debian/ubuntu>Ubuntu LTS</a> /KDE neon / LMDE</td>
