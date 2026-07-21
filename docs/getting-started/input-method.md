@@ -3,7 +3,7 @@
 Linux下的输入法框架主要有以下两种选择：
 
  - Fcitx (包名`fcitx5`): 轻量，启动快，建议KDE、Sway、Hyprland等用户使用  
- - Ibus (包名`ibus`): 自定义功能有限，但与GNOME深度集成，建议GNOME用户使用
+ - IBus (包名`ibus`): 自定义功能有限，但与GNOME深度集成，建议GNOME用户使用
 
 您可以通过您的包管理器安装这两种输入法框架之一。
 
@@ -40,17 +40,17 @@ Linux下的输入法框架主要有以下两种选择：
 若您是其他桌面环境用户，您也可以通过设置XDG自动启动或编辑配置文件的方式来使得Fcitx5开机自启。（WIP）
 
 
-### Ibus
+### IBus
 
-Ibus会自动与GNOME集成，所以GNOME用户无须进行额外操作。
+IBus会自动与GNOME集成，所以GNOME用户无须进行额外操作。
 
-若您是KDE用户，请打开KDE设置，搜索虚拟键盘，并选中“Ibus”。
+若您是KDE用户，请打开KDE设置，搜索虚拟键盘，并选中“IBus”。
 
 ---
 
 ## 中文输入法框架
 
-对于中文输入法框架，由于Ibus默认的拼音输入差强人意，并且其他输入框架也大多字库不全或过时。因此，我们推荐您使用中州韵 (Rime)，其能够安装多种词库，并且有强大的输入引擎。
+对于中文输入法框架，由于IBus默认的拼音输入差强人意，并且其他输入框架也大多字库不全或过时。因此，我们推荐您使用中州韵 (Rime)，其能够安装多种词库，并且有强大的输入引擎。
 
 ### 安装Rime
 
@@ -60,7 +60,7 @@ Ibus会自动与GNOME集成，所以GNOME用户无须进行额外操作。
 fcitx5-chinese-addons fcitx5-rime
 ```
 
-若您使用Ibus，您需要安装：
+若您使用IBus，您需要安装：
 
 ```bash
 ibus-rime
@@ -77,7 +77,7 @@ ibus-rime
 
 对于简体中文的输入，我们推荐您使用[雾凇拼音](https://github.com/iDvel/rime-ice)。
 
-您可以手动添加Rime配方，也可以通过其提供的Plum工具来添加。在安装配方后，请通过状态栏或在输入框中按“Ctrl+`”来切换输入方案。
+您可以手动添加Rime配方，也可以通过其提供的Plum工具来添加。在安装配方后，请通过状态栏或在输入框中按“Ctrl+`”或F4来切换输入方案。
 
 #### 使用Plum
 
@@ -127,14 +127,22 @@ bash rime-install iDvel/rime-ice:others/recipes/grammar:schema=rime_ice
 
 首先，您需要通过[加速链接](https://mirror.nju.edu.cn/github-release/iDvel/rime-ice/LatestRelease/full.zip)或[官方链接](https://github.com/iDvel/rime-ice/releases/latest/download/full.zip)下载雾凇拼音的最新构建。
 
-之后，请您进入您的用户目录（Ibus位于`~/.config/ibus/rime`，Fcitx5位于`~/.local/share/fcitx5/rime`），删除目录中所有内容，并将压缩包中的文件复制进去。
+之后，请您进入您的用户目录（IBus位于`~/.config/ibus/rime`，Fcitx5位于`~/.local/share/fcitx5/rime`），删除目录中所有内容，并将压缩包中的文件复制进去。
 
 之后，您需要重新部署Rime（位于状态栏中），或者更简单，注销系统再重新登录。
 
-???+ note "如何关闭注音？"
-    雾凇拼音的默认设置下，所有候选词都会被全拼注音。
-    
-    如果你的用户目录里有`rime_ice.schema.yaml`这个文件，打开，将`spelling_hints`和`always_show_comments`两行注释，像下面这样。
+???+ note "如何进行关闭注音、更改候选词数等设置？"
+    Rime不提供GUI界面修改配置，因而所有配置均需要在配置文件中进行更改。
+
+    对于候选词数，请找到用户目录下`default.yaml`中如下配置进行更改：
+
+    ```yaml
+    # 菜单
+    menu:
+    page_size: 5  # 候选词个数
+    ```
+    雾凇拼音的默认设置下，所有候选词都会被全拼注音。如果你的用户目录里有`rime_ice.schema.yaml`这个文件，打开，将`spelling_hints`和`always_show_comments`两行注释，像下面这样。
+
     ```yaml
     # 主翻译器，拼音
     translator:
@@ -145,3 +153,8 @@ bash rime-install iDvel/rime-ice:others/recipes/grammar:schema=rime_ice
     ```
 
     （来自[每一个选项都被全拼注音，如何关闭？](https://github.com/orgs/rime/discussions/1366)）
+
+
+    每次修改完配置文件，请重新部署Rime（位于状态栏中），或者更简单，注销系统再重新登录。
+
+    更多配置项，您可以参考[Dvel的这篇博客](https://dvel.me/posts/rime-ice/)。

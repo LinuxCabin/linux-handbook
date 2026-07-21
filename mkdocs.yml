@@ -1,5 +1,5 @@
 site_name: LinuxCabin
-site_description: 为中国用户打造的Linux手册 | A Linux handbook especially designed for Chinese users.
+site_description: 为中国用户打造的 Linux 手册 | A Linux handbook especially designed for Chinese users.
 site_url: https://hb.091209.xyz
 repo_name: LinuxCabin/linux-handbook
 repo_url: https://github.com/LinuxCabin/linux-handbook
@@ -9,13 +9,39 @@ theme:
   name: material
   custom_dir: overrides
   language: zh
+  palette:
+    - scheme: default
+      primary: teal
+      accent: green
+      toggle:
+        icon: material/brightness-7
+        name: 夜间模式
+    - scheme: slate
+      primary: black
+      accent: teal
+      toggle:
+        icon: material/brightness-4
+        name: 日间模式
+  icon:
+    logo: material/book-open-page-variant
+    repo: fontawesome/brands/github
+    edit: material/pencil
+    view: material/eye
   features:
+    - navigation.footer
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.top
+    - navigation.indexes
+    - toc.integrate
     - search.suggest
     - search.highlight
-    - navigation.footer
-    - revision.date
+    - search.share
     - content.action.edit
     - content.action.view
+    - content.code.copy
+    - content.tooltips
+    - announce.dismiss
 
 markdown_extensions:
   - admonition
@@ -23,27 +49,38 @@ markdown_extensions:
   - pymdownx.highlight
   - pymdownx.inlinehilite
   - pymdownx.magiclink
-  - pymdownx.superfences 
+  - pymdownx.superfences
+  - pymdownx.tabbed
+  - pymdownx.tasklist
+  - pymdownx.emoji
+  - attr_list
+  - tables
+  - footnotes
+  - toc:
+      permalink: true
 
 plugins:
-  - search
-#  - rss
+  - search:
+      lang: zh
+      separator: '[\s\-，。]+'
   - git-revision-date-localized:
       type: datetime
       locale: zh
       fallback_to_build_date: true
-
   - git-committers:
       repository: LinuxCabin/linux-handbook
       branch: main
       token: !ENV DEPLOY_KEY
-
+  - minify:
+      minify_html: true
+      minify_css: true
+      minify_js: true
 
 copyright: |
   Licensed under <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International</a><img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/nc.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/nd.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;">
 
 nav:
-  - index.md
+  - 主页: index.md
   - 开始:
     - getting-started/purpose.md
     - getting-started/before-installing.md
@@ -66,6 +103,7 @@ nav:
       - concepts/operating_system/partition.md
       - concepts/operating_system/file_system.md
       - concepts/operating_system/mounting.md
+      - concepts/operating_system/boot_loader.md
     - 包管理器:
       - concepts/package_managers/apt.md
       - concepts/package_managers/dnf.md
@@ -84,7 +122,7 @@ nav:
       - distros/arch/archlinux.md
       - distros/arch/artixlinux.md
       - distros/arch/cachy.md
-    -  distros/nixos.md
+    - distros/nixos.md
   - 桌面:
       - dde/gnome.md
   - 关于: about.md
