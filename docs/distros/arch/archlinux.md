@@ -14,15 +14,17 @@ Arch Linux 是 Linux 社区中最受欢迎的独立滚动更新（Rolling Releas
  - 支持的系统架构：x86_64/arm64 (由社区维护)
  - 自由软件：是（部分自由）
  - 镜像下载地址：
- - - TUNA: https://mirrors.tuna.tsinghua.edu.cn/archlinux/iso/
- - - USTC: https://mirrors.ustc.edu.cn/archlinux/iso/
- - - MirrorZ: https://mirrors.cernet.edu.cn/archlinux/iso/
+    - TUNA: https://mirrors.tuna.tsinghua.edu.cn/archlinux/iso/
+    - USTC: https://mirrors.ustc.edu.cn/archlinux/iso/
+    - MirrorZ: https://mirrors.cernet.edu.cn/archlinux/iso/
  - 包管理器：pacman
 !!! warning "警告"
     Arch 严禁“部分升级”（Partial Upgrade）。请勿在未同步升级全系统的情况下单独安装或更新某个软件，否则极易导致系统依赖断裂造成所谓的 **“滚挂”** ！此外，推荐配置 **AUR (Arch User Repository)** 并配合 yay 或 paru 等助手使用，可以提升使用体验。
  - 更新方式：滚动
+ - 自动换源：是
+ - 图形安装界面：否
  - 换源教程：
- - - TUNA: https://mirrors.tuna.tsinghua.edu.cn/help/archlinux/
- - - USTC: https://mirrors.ustc.edu.cn/help/archlinux.html
- - - MirrorZ: https://help.mirrors.cernet.edu.cn/archlinux/
+    - TUNA: https://mirrors.tuna.tsinghua.edu.cn/help/archlinux/
+    - USTC: https://mirrors.ustc.edu.cn/help/archlinux.html
+    - MirrorZ: https://help.mirrors.cernet.edu.cn/archlinux/
 

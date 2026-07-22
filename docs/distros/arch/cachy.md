@@ -15,15 +15,17 @@ CachyOS 是一个基于 Arch Linux 优化的高性能滚动更新发行版。它
    > 注：特别要求 CPU 支持 x86-64-v3 或以上以发挥最大性能
  - 自由软件：是（部分自由）
  - 镜像下载地址：
- - - TUNA: 无
- - - USTC: https://mirrors.ustc.edu.cn/cachyos/ISO/
- - - MirrorZ: https://mirrors.cernet.edu.cn/cachyos/ISO/
+    - TUNA: 无
+    - USTC: https://mirrors.ustc.edu.cn/cachyos/ISO/
+    - MirrorZ: https://mirrors.cernet.edu.cn/cachyos/ISO/
  - 包管理器：pacman
  - 更新方式：滚动
+ - 自动换源：是
+ - 图形安装界面：是
  - 换源教程：
- - - TUNA: 无
- - - USTC: https://mirrors.ustc.edu.cn/help/cachyos.html
- - - MirrorZ: 无
+    - TUNA: 无
+    - USTC: https://mirrors.ustc.edu.cn/help/cachyos.html
+    - MirrorZ: 无
 
 ## 风味
 

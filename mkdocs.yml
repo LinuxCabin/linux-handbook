@@ -109,8 +109,10 @@ nav:
       - concepts/package_managers/dnf.md
       - concepts/package_managers/pacman.md
       - concepts/package_managers/flatpak.md
-  - 发行版:
-    - Debian系:
+  - 发行版: 
+    - distros/distro.md
+    - Debian系: 
+      - distros/debian/debian.md
       - distros/debian/ubuntu.md
       - distros/debian/linuxmint.md
     - 红帽系:

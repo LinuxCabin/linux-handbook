@@ -14,15 +14,17 @@
  - 支持的系统架构：x86_64/arm64/ppc64le/s390x
  - 自由软件：是（部分自由）
  - 镜像下载地址：
- - - TUNA: 无
- - - USTC: 无
- - - MirrorZ: 无
+    - TUNA: 无
+    - USTC: 无
+    - MirrorZ: 无
  - 包管理器：dnf
  - 更新方式：传统
+ - 自动换源：否
+ - 图形安装界面：是
  - 换源教程：
- - - TUNA: 无
- - - USTC: 无
- - - MirrorZ: 无
+    - TUNA: 无
+    - USTC: 无
+    - MirrorZ: 无
 
 ## 风味
 

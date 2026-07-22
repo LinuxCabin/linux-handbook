@@ -14,15 +14,17 @@ NixOS是在Nix基础上，将系统层面进一步原子化所产生的极客系
  - 支持的系统架构：x86_64/arm64
  - 自由软件：是（部分自由）
  - 镜像下载地址：
- - - TUNA: https://mirrors.tuna.tsinghua.edu.cn/nixos-images/
- - - USTC: 无
- - - MirrorZ: https://mirrors.cernet.edu.cn/nixos-images/
+    - TUNA: https://mirrors.tuna.tsinghua.edu.cn/nixos-images/
+    - USTC: 无
+    - MirrorZ: https://mirrors.cernet.edu.cn/nixos-images/
  - 包管理器：nix
  - 更新方式：Nix
+ - 自动换源：否
+ - 图形安装界面：是
  - 换源教程：
- - - TUNA: https://mirrors.tuna.tsinghua.edu.cn/help/nix-channels/
- - - USTC: https://mirrors.ustc.edu.cn/help/nix-channels.html
- - - MirrorZ: https://mirrors.cernet.edu.cn/nix-channels/
+    - TUNA: https://mirrors.tuna.tsinghua.edu.cn/help/nix-channels/
+    - USTC: https://mirrors.ustc.edu.cn/help/nix-channels.html
+    - MirrorZ: https://mirrors.cernet.edu.cn/nix-channels/
 
 ## 注意事项
 

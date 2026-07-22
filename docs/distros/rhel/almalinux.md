@@ -14,15 +14,17 @@ ALmaLinux与Rocky Linux一样，是RHEL的开源衍生版本。作为企业级 L
  - 支持的系统架构：x86_64 v2/x86_64 v3/arm64/ppc64le/s390x
  - 自由软件：是（部分自由）
  - 镜像下载地址：
- - - TUNA: 无
- - - USTC: 无
- - - MirrorZ: https://mirrors.cernet.edu.cn/almalinux/
+    - TUNA: 无
+    - USTC: 无
+    - MirrorZ: https://mirrors.cernet.edu.cn/almalinux/
  - 包管理器：dnf
  - 更新方式：传统
+ - 自动换源：302
+ - 图形安装界面：是
  - 换源教程：
- - - TUNA: 无
- - - USTC: 无
- - - MirrorZ: 无
+    - TUNA: 无
+    - USTC: 无
+    - MirrorZ: 无
 
 ## 注意事项
 
