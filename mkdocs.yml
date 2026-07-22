@@ -86,6 +86,7 @@ nav:
     - getting-started/before-installing.md
     - getting-started/install.md
     - getting-started/post-installation.md
+    - getting-started/drivers.md
     - getting-started/input-method.md
     - getting-started/applications.md
     - getting-started/common-command.md
