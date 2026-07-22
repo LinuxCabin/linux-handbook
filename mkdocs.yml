@@ -126,6 +126,6 @@ nav:
       - distros/arch/cachy.md
     - distros/nixos.md
   - 桌面:
-      - dde/kde.md
-      - dde/gnome.md
+      - de/kde.md
+      - de/gnome.md
   - 关于: about.md
