@@ -51,15 +51,15 @@
   </tr>
   <tr>
     <td>较简单</td>
-    <td>Debian Sid / EndeavourOS</td>
-    <td>Debian Testing / <a href=/distros/rhel/fedora>Fedora</a> / Manjaro / openSUSE Slowroll</td>
+    <td><a href=/distros/debian/debian>Debian Sid</a> / EndeavourOS</td>
+    <td><a href=/distros/debian/debian>Debian Testing</a> / <a href=/distros/rhel/fedora>Fedora</a> / Manjaro / openSUSE Slowroll</td>
     <td>CentOS Stream</td>
-    <td>Debian Stable / <a href=/distros/rhel/rocky>Rocky Linux</a>  / <a href=/distros/rhel/almalinux>Alma Linux</a>  / openSUSE Leap</td>
+    <td><a href=/distros/debian/debian>Debian Stable</a> / <a href=/distros/rhel/rocky>Rocky Linux</a>  / <a href=/distros/rhel/almalinux>Alma Linux</a>  / openSUSE Leap</td>
   </tr>
   <tr>
     <td>简单</td>
     <td></td>
-    <td>openSUSE Aeon / <a href=/distros/rhel/fedora>Fedora Silverblue</a> / Deepin</td>
+    <td>openSUSE Aeon / <a href=/distros/rhel/fedora>Fedora Silverblue</a> / <a href=/distros/debian/deepin>Deepin</a></td>
     <td><a href=/distros/debian/ubuntu>Ubuntu Release</a>  / <a href=/distros/debian/linuxmint>Linux Mint Release</a></td>
     <td><a href=/distros/debian/ubuntu>Ubuntu LTS</a> /KDE neon / LMDE</td>
   </tr>
@@ -111,9 +111,9 @@
     - server: 服务器用系统，无桌面环境
 
 ???+ note "一些桌面环境/窗口管理器"
-    - KDE (K Desktop Environment): 贴近Windows操作逻辑，有高度的自定义性与丰富主题
+    - [KDE](../de/kde.md) (K Desktop Environment): 贴近Windows操作逻辑，有高度的自定义性与丰富主题
       ![KDE](https://fedoraproject.org/assets/images/kde-edition/background_plasma.png)
-    - GNOME: 贴近macOS界面，优雅、简洁，有多样的扩展（可能需要安装某些扩展、软件包来获得较好的桌面体验）
+    - [GNOME](../de/gnome.md): 贴近macOS界面，优雅、简洁，有多样的扩展（可能需要安装某些扩展、软件包来获得较好的桌面体验）
       ![GNOME](https://fedoraproject.org/assets/images/workstation_framework.webp)
     - COSMIC: 拥有优秀的窗口管理机制，自定义性强，是下一代的前卫Wayland桌面环境
       ![COSMIC](https://fedoraproject.org/assets/images/spins/screenshot-cosmic.jpg)

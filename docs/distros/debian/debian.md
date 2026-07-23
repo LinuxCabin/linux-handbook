@@ -10,7 +10,7 @@
 
  - 派系：Debian系
  - 发行者：Owner 
- - 官网：https://example.com
+ - 官网：https://www.debian.org/
  - 支持的系统架构：x86_64/arm64/...
  - 自由软件：是/否
  - 镜像下载地址：
@@ -18,7 +18,7 @@
     - USTC: https://mirrors.ustc.edu.cn/debian-cd/
     - MirrorZ: https://mirrors.cernet.edu.cn/debian-cd/
  - 包管理器：apt
- - 更新方式：版本
+ - 更新方式：版本/滚动
  - 自动换源：302
  - 图形安装界面：是
  - 换源教程：
@@ -31,6 +31,14 @@
     - MirrorZ:
         - debian: https://help.mirrors.cernet.edu.cn/debian/
         - debian-security: https://help.mirrors.cernet.edu.cn/debian-security/
+
+## 风味
+
+Debian官方维护三个并行的发行版本。
+
+- Debian Stable（稳定版）: 最稳定，经过测试，推荐普通用户使用。
+- Debian Testing（测试版）: 下一个 Stable 版本的开发中状态。
+- Debian Sid（不稳定版）: 滚动更新，作为Debian的日常开发阵地。
 
 ## 注意事项
 

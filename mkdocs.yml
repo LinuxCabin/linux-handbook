@@ -117,6 +117,7 @@ nav:
       - distros/debian/debian.md
       - distros/debian/ubuntu.md
       - distros/debian/linuxmint.md
+      - distros/debian/deepin.md
     - 红帽系:
       - distros/rhel/fedora.md
       - distros/rhel/rhel.md
