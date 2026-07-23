@@ -54,7 +54,7 @@
 不过，如果单纯是因为视觉效果而入坑，您一定要做好以下的心理准备：
 
 1. 可能与终端打一点小交道
-2. 你的配置效果很有可能让你感到不尽人意
+2. 你的配置效果很有可能不尽人意
 3. 我们的教程并不全面，只是为入坑而写，如果需要更深入的知识推荐去[Arch Wiki](https://wiki.archlinux.org/title/Main_page) | [Arch Wiki 中文版](https://wiki.archlinuxcn.org/wiki/%E9%A6%96%E9%A1%B5)深造
 
 并且，您一定要明辨下面的几个概念：

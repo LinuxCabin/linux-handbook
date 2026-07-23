@@ -131,4 +131,9 @@ nav:
   - 桌面:
       - de/kde.md
       - de/gnome.md
+  - 兼容性:
+      - Win & Linux:
+        - compatibility/windows/wine.md
+#      - 跨发行版:
+    
   - 关于: about.md

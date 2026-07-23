@@ -48,3 +48,7 @@ GNOME有十分丰富的[扩展商店](https://extensions.gnome.org/)，并且部
 - [Desktop Lyric](https://extensions.gnome.org/extension/4006/desktop-lyric/)（桌面歌词，可与浏览器、音乐客户端联动）
 - [GSConnect](https://extensions.gnome.org/extension/1319/gsconnect/)（手机连接，需配合KDE Connect使用）
 - [Daily Bing Wallpaper and Accent Color](https://extensions.gnome.org/extension/8108/daily-bing-wallpaper/)（必应每日壁纸）
+
+### 顽固图标
+
+若您的GNOME应用栏中出现因卸载终端或其他原因导致的顽固图标，您可以进入`~/Desktop`、`~/.local/share/applications`、`/usr/share/applications`等目录，寻找并删除您不需要的图标所对应的`.desktop`文件。

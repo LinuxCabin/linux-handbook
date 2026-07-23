@@ -11,7 +11,7 @@ Deepin（深度操作系统）是一款源自中国、享誉全球的Linux发行
 ## 详细信息
 
  - 派系：Debian系
- - 发行者：武汉深之度科技有限公司/统信软件技术有限公司
+ - 发行者：武汉深之度科技有限公司 / 统信软件技术有限公司
  - 官网：https://www.deepin.org / https://www.chinauos.com/
  - 支持的系统架构：x86_64/arm64/Loong64/RISC-V等
  - 自由软件：是（部分自由）（Deepin）/ 否（统信UOS）

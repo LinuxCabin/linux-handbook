@@ -28,6 +28,9 @@
 ???+ note "预装"
     在大多数发行版中，sudo为预装软件包。若没有找到，您可能需要通过包管理器自行安装。
 
+???+ note "sudoers"
+    若在使用`sudo`时，遇到权限不足提示，您需要将当前用户添加至`wheel`组中，或者编辑`/etc/sudoers`，找到`root    ALL=(ALL)       ALL`，在下方添加`用户名    ALL=(ALL)       ALL`。
+
 
 ### cd 
 
