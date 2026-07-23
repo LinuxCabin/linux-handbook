@@ -41,7 +41,7 @@ GNOME有十分丰富的[扩展商店](https://extensions.gnome.org/)，并且部
 - [Blur my Shell](https://extensions.gnome.org/extension/3193/blur-my-shell/)（用于桌面毛玻璃效果）
 - [Dash to Dock](https://extensions.gnome.org/extension/307/dash-to-dock/)（将应用栏转为悬浮坞，与下面一个扩展二选一即可）
 - [Dash to Panel](https://extensions.gnome.org/extension/1160/dash-to-panel/)（将应用栏转化为Windows样式）
-- [Input Method Panel](https://extensions.gnome.org/extension/261/kimpanel/)（fcitx5用户必装）
+- [Input Method Panel](https://extensions.gnome.org/extension/261/kimpanel/)（Fcitx5用户必装）
 
 我们在此也推荐一些好用的扩展：
 
