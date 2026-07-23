@@ -37,6 +37,7 @@ Ubuntu是当今最受认可的Linux发行版，也是中国国家操作系统基
  - Ubuntu Budgie: 预装Budgie桌面
  - Ubuntu Cinnamon: 预装Cinnamon桌面
  - Ubuntu Kylin（优麒麟）: 中国特供版，预装UKUI桌面
+ - Ubuntu MATE: 预装MATE桌面
  - Ubuntu Studio: 内容创作
  - Ubuntu Unity: 预装Unity桌面
  - Xubuntu: 预装Xfce桌面
