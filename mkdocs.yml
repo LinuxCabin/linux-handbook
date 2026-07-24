@@ -5,6 +5,8 @@ repo_name: LinuxCabin/linux-handbook
 repo_url: https://github.com/LinuxCabin/linux-handbook
 edit_uri: edit/main/docs/
 
+strict: true
+
 theme:
   name: material
   custom_dir: overrides
@@ -129,8 +131,9 @@ nav:
       - distros/arch/cachy.md
     - distros/nixos.md
   - 桌面:
-      - de/kde.md
-      - de/gnome.md
+      - 桌面环境:
+        - desktop/de/kde.md
+        - desktop/de/gnome.md
   - 兼容性:
       - Win & Linux:
         - compatibility/windows/wine.md
