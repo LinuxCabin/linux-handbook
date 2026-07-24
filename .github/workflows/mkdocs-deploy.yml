@@ -45,7 +45,8 @@ jobs:
 
       - name: 构建 MkDocs 站点
         run: mkdocs build --strict
-
+        env:
+          DEPLOY_KEY: ${{ secrets.DEPLOY_KEY }}
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact
