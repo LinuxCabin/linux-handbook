@@ -134,6 +134,7 @@ nav:
   - 兼容性:
       - Win & Linux:
         - compatibility/windows/wine.md
+#        - compatibility/windows/steam.md
 #      - 跨发行版:
     
   - 关于: about.md

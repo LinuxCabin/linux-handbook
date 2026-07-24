@@ -55,6 +55,7 @@
 
 - [NetEase Cloud Music Gtk4](https://flathub.org/zh-Hans/apps/com.github.gmg137.netease-cloud-music-gtk)：Gtk界面，功能强大。
 - [Qcm](https://flathub.org/zh-Hans/apps/io.github.hypengw.Qcm)：Material You设计，并且支持Jellyfin。
+- [SPlayer](https://github.com/SPlayer-Dev/SPlayer) / [SPlayer Next](https://github.com/SPlayer-Dev/SPlayer-Next)：跨平台桌面音乐播放器，支持丰富的歌词展现形式与广泛的音频格式
 - [CloudMusicPlayer](https://flathub.org/zh-Hans/apps/io.github.b1ngggg.CloudMusicPlayer)
 
 对于桌面歌词，您可以使用[Desktop Lyric](https://github.com/tuberry/desktop-lyric)（GNOME用户可以直接使用[扩展](https://extensions.gnome.org/extension/4006/desktop-lyric/)）或者[Waylyrics](https://flathub.org/zh-Hans/apps/io.github.waylyrics.Waylyrics)。
