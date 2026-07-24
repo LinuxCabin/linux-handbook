@@ -111,9 +111,9 @@
     - server: 服务器用系统，无桌面环境
 
 ???+ note "一些桌面环境/窗口管理器"
-    - [KDE](../de/kde.md) (K Desktop Environment): 贴近Windows操作逻辑，有高度的自定义性与丰富主题
+    - [KDE](../desktop/de/kde.md) (K Desktop Environment): 贴近Windows操作逻辑，有高度的自定义性与丰富主题
       ![KDE](https://fedoraproject.org/assets/images/kde-edition/background_plasma.png)
-    - [GNOME](../de/gnome.md): 贴近macOS界面，优雅、简洁，有多样的扩展（可能需要安装某些扩展、软件包来获得较好的桌面体验）
+    - [GNOME](../desktop/de/gnome.md): 贴近macOS界面，优雅、简洁，有多样的扩展（可能需要安装某些扩展、软件包来获得较好的桌面体验）
       ![GNOME](https://fedoraproject.org/assets/images/workstation_framework.webp)
     - COSMIC: 拥有优秀的窗口管理机制，自定义性强，是下一代的前卫Wayland桌面环境
       ![COSMIC](https://fedoraproject.org/assets/images/spins/screenshot-cosmic.jpg)
@@ -127,8 +127,130 @@
 在下载对应镜像后，您需要下载对应的烧录软件来将系统镜像烧录到U盘中。
 ???+ note "一些比较热门的烧录软件"
     - [Ventoy](https://www.ventoy.net/cn/download.html)（推荐）
+    ??? note "Ventoy使用指南"
+        在开始本教程之前，请准备一个**足够大**的 U 盘。足够大意味着**可以保存您要使用的的全部系统镜像。**请注意，**这将清除 U 盘上的所有数据**。
+
+        ## 第一步：下载 Ventoy
+
+        打开[这个网站](https://ventoy.net)，并点击上方的 **Downloads**。
+
+        ![图 1](https://freeswzhcn.codeberg.page/site/posts/%E4%BD%BF%E7%94%A8%20Ventoy%20%E5%88%9B%E5%BB%BA%E5%A4%9A%E5%8A%9F%E8%83%BD%E5%90%AF%E5%8A%A8%E7%9B%98/pic01.png)
+
+        选择要下载的版本。如果您正在使用 GNU/Linux，点击 linux 结尾的文件名。如果您正在使用 Microsoft Windows，点击 windows 结尾的文件名。这与您要安装的发行版本身无关，下载哪个版本取决于您现在正在使用的系统，
+
+        ![图 2](https://freeswzhcn.codeberg.page/site/posts/%E4%BD%BF%E7%94%A8%20Ventoy%20%E5%88%9B%E5%BB%BA%E5%A4%9A%E5%8A%9F%E8%83%BD%E5%90%AF%E5%8A%A8%E7%9B%98/pic02.png)
+
+        跳转到 SourceForge 之后再次选择要下载的版本。
+
+        ![图 3](https://freeswzhcn.codeberg.page/site/posts/%E4%BD%BF%E7%94%A8%20Ventoy%20%E5%88%9B%E5%BB%BA%E5%A4%9A%E5%8A%9F%E8%83%BD%E5%90%AF%E5%8A%A8%E7%9B%98/pic03.png)
+
+        等待下载完成。
+
+        ## 第二步：打开 Ventoy
+
+        将要用于制作启动盘的 U 盘插入电脑。将下载好的压缩包解压，打开目录。
+
+        如果您现在使用的是 GNU/Linux，请双击运行 **VentoyGUI.x86_64**。如果是 Microsoft Windows，请运行 **Ventoy2Disk.exe**。本人使用的是 GNU/Linux，这里选择 VentoyGUI.x86_64。
+
+        ![图 4](https://freeswzhcn.codeberg.page/site/posts/%E4%BD%BF%E7%94%A8%20Ventoy%20%E5%88%9B%E5%BB%BA%E5%A4%9A%E5%8A%9F%E8%83%BD%E5%90%AF%E5%8A%A8%E7%9B%98/pic04.png)
+
+        如果要求输入密码，请输入**用户的登录密码**。
+
+        ![图 5](https://freeswzhcn.codeberg.page/site/posts/%E4%BD%BF%E7%94%A8%20Ventoy%20%E5%88%9B%E5%BB%BA%E5%A4%9A%E5%8A%9F%E8%83%BD%E5%90%AF%E5%8A%A8%E7%9B%98/pic05.png)
+
+        ## 第三步：制作启动盘
+
+        到了最关键的一步，**请务必确认是否选择了正确的 U 盘，操作将会清除 U 盘所有数据。**为了保险起见，我的建议是**确保列表中只有一个 U 盘，也就是您要操作的那个 U 盘。**
+
+        ![图 6](https://freeswzhcn.codeberg.page/site/posts/%E4%BD%BF%E7%94%A8%20Ventoy%20%E5%88%9B%E5%BB%BA%E5%A4%9A%E5%8A%9F%E8%83%BD%E5%90%AF%E5%8A%A8%E7%9B%98/pic06.png)
+
+        选择了正确的 U 盘后，点击 **Install** 继续。
+
+        ![图 7](https://freeswzhcn.codeberg.page/site/posts/%E4%BD%BF%E7%94%A8%20Ventoy%20%E5%88%9B%E5%BB%BA%E5%A4%9A%E5%8A%9F%E8%83%BD%E5%90%AF%E5%8A%A8%E7%9B%98/pic07.png)
+
+        完成两次确认。**这将清除所有数据。**
+
+        ![图 8](https://freeswzhcn.codeberg.page/site/posts/%E4%BD%BF%E7%94%A8%20Ventoy%20%E5%88%9B%E5%BB%BA%E5%A4%9A%E5%8A%9F%E8%83%BD%E5%90%AF%E5%8A%A8%E7%9B%98/pic08.png)
+
+        ![图 9](https://freeswzhcn.codeberg.page/site/posts/%E4%BD%BF%E7%94%A8%20Ventoy%20%E5%88%9B%E5%BB%BA%E5%A4%9A%E5%8A%9F%E8%83%BD%E5%90%AF%E5%8A%A8%E7%9B%98/pic09.png)
+
+        Ventoy 将自动制作启动盘。
+
+        ![图 10](https://freeswzhcn.codeberg.page/site/posts/%E4%BD%BF%E7%94%A8%20Ventoy%20%E5%88%9B%E5%BB%BA%E5%A4%9A%E5%8A%9F%E8%83%BD%E5%90%AF%E5%8A%A8%E7%9B%98/pic10.png)
+
+        完成之后将看到下面的窗口，关闭窗口即可，拔出 U 盘。
+
+        ![图 11](https://freeswzhcn.codeberg.page/site/posts/%E4%BD%BF%E7%94%A8%20Ventoy%20%E5%88%9B%E5%BB%BA%E5%A4%9A%E5%8A%9F%E8%83%BD%E5%90%AF%E5%8A%A8%E7%9B%98/pic11.png)
+
+        ## 第四步：将镜像复制到启动盘
+
+        重新插入 U 盘。您应该可以看到一个名字叫做 **Ventoy** 的可移动磁盘。
+
+        将下载好的镜像文件（文件名应该以 iso 结尾）复制到这个可移动磁盘中。复制完之后不要忘记**弹出**再拔掉 U 盘。
+
+        ## 第五步：从启动盘启动
+
+        参考 [GNU/Linux 综合指南](https://freeswzhcn.codeberg.page/site/posts/GNU-Linux%20%E7%BB%BC%E5%90%88%E6%8C%87%E5%8D%97%E5%AF%BC%E8%88%AA%E9%A1%B5/) 中从启动盘启动的教程。
+
+        应该看到这个界面。选择要启动的镜像启动即可。
+
+        ![图 12](https://freeswzhcn.codeberg.page/site/posts/%E4%BD%BF%E7%94%A8%20Ventoy%20%E5%88%9B%E5%BB%BA%E5%A4%9A%E5%8A%9F%E8%83%BD%E5%90%AF%E5%8A%A8%E7%9B%98/pic12.png)
+
+        （内容来自[使用 Ventoy 创建多功能启动盘](https://freeswzhcn.codeberg.page/site/posts/%E4%BD%BF%E7%94%A8%20Ventoy%20%E5%88%9B%E5%BB%BA%E5%A4%9A%E5%8A%9F%E8%83%BD%E5%90%AF%E5%8A%A8%E7%9B%98/)，本部分内容使用CC BY-SA 4.0协议分发）
+
     - [Rufus](https://rufus.ie/zh/)（推荐）
     - [balenaEtcher](https://etcher.balena.io/)
+    ??? note "balenaEtcher使用指南"
+        本教程将教大家使用 balenaEtcher 制作 GNU/Linux 启动盘。
+        
+        ## 第一步：下载 balenaEtcher
+
+        打开 balenaEtcher 的 [GitHub 页面](https://github.com/balena-io/etcher)，打开 Releases 中的 Release。
+
+        ![图 1](https://freeswzhcn.codeberg.page/site/posts/%E4%BD%BF%E7%94%A8%20balenaEtcher%20%E5%88%B6%E4%BD%9C%20GNU-Linux%20%E5%90%AF%E5%8A%A8%E7%9B%98/pic01.png)
+
+        如果您当前使用的是 Microsoft Windows，下载包含 win32 字样的压缩包。如果您当前使用的是 GNU/Linux，下载包含 linux 字样的压缩包。
+
+        ![图 2](https://freeswzhcn.codeberg.page/site/posts/%E4%BD%BF%E7%94%A8%20balenaEtcher%20%E5%88%B6%E4%BD%9C%20GNU-Linux%20%E5%90%AF%E5%8A%A8%E7%9B%98/pic02.png)
+
+        ## 第二步：制作启动盘
+
+        压缩包解压。插入用于制作启动盘的 U 盘。Windows 双击运行 balenaEtcher.exe。GNU/Linux 双击运行 balena-etcher。
+
+        点击 Change。
+
+        ![图 3](https://freeswzhcn.codeberg.page/site/posts/%E4%BD%BF%E7%94%A8%20balenaEtcher%20%E5%88%B6%E4%BD%9C%20GNU-Linux%20%E5%90%AF%E5%8A%A8%E7%9B%98/pic03.png)
+
+        在这里**务必选择正确的 U 盘。这将清除全部数据。**然后点击 Select。
+
+        ![图 4](https://freeswzhcn.codeberg.page/site/posts/%E4%BD%BF%E7%94%A8%20balenaEtcher%20%E5%88%B6%E4%BD%9C%20GNU-Linux%20%E5%90%AF%E5%8A%A8%E7%9B%98/pic04.png)
+
+        点击 Flash from file。
+
+        ![图 5](https://freeswzhcn.codeberg.page/site/posts/%E4%BD%BF%E7%94%A8%20balenaEtcher%20%E5%88%B6%E4%BD%9C%20GNU-Linux%20%E5%90%AF%E5%8A%A8%E7%9B%98/pic05.png)
+
+        选择要写入的镜像文件（格式为 iso）。
+
+        ![图 6](https://freeswzhcn.codeberg.page/site/posts/%E4%BD%BF%E7%94%A8%20balenaEtcher%20%E5%88%B6%E4%BD%9C%20GNU-Linux%20%E5%90%AF%E5%8A%A8%E7%9B%98/pic06.png)
+
+        点击 **Flash!**。请三思，**这将清除全部数据。**
+
+        ![图 7](https://freeswzhcn.codeberg.page/site/posts/%E4%BD%BF%E7%94%A8%20balenaEtcher%20%E5%88%B6%E4%BD%9C%20GNU-Linux%20%E5%90%AF%E5%8A%A8%E7%9B%98/pic07.png)
+
+        如果要求输入密码，请输入**用户的登录密码**。
+
+        ![图 8](https://freeswzhcn.codeberg.page/site/posts/%E4%BD%BF%E7%94%A8%20balenaEtcher%20%E5%88%B6%E4%BD%9C%20GNU-Linux%20%E5%90%AF%E5%8A%A8%E7%9B%98/pic08.png)
+
+        等待写入完成。
+
+        ![图 9](https://freeswzhcn.codeberg.page/site/posts/%E4%BD%BF%E7%94%A8%20balenaEtcher%20%E5%88%B6%E4%BD%9C%20GNU-Linux%20%E5%90%AF%E5%8A%A8%E7%9B%98/pic09.png)
+
+        看到这个页面后，拔出 U 盘。您现在可以从这个 U 盘启动了。
+
+        ![图 10](https://freeswzhcn.codeberg.page/site/posts/%E4%BD%BF%E7%94%A8%20balenaEtcher%20%E5%88%B6%E4%BD%9C%20GNU-Linux%20%E5%90%AF%E5%8A%A8%E7%9B%98/pic10.png)
+
+        （内容来自[使用 balenaEtcher 制作 GNU/Linux 启动盘](https://freeswzhcn.codeberg.page/site/posts/%E4%BD%BF%E7%94%A8%20balenaEtcher%20%E5%88%B6%E4%BD%9C%20GNU-Linux%20%E5%90%AF%E5%8A%A8%E7%9B%98/)，本部分内容使用CC BY-SA 4.0协议分发）
+
     - [Raspberry Pi Imager](https://www.raspberrypi.com/software/)
 
 !!! warning "警告"

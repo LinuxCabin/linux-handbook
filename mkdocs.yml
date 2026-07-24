@@ -5,7 +5,10 @@ repo_name: LinuxCabin/linux-handbook
 repo_url: https://github.com/LinuxCabin/linux-handbook
 edit_uri: edit/main/docs/
 
-strict: true
+validation:
+  nav:
+    omitted_files: info
+
 
 theme:
   name: material
