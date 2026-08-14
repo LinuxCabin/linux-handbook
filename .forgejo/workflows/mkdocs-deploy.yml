@@ -50,15 +50,13 @@ jobs:
       - name: Deploy to target repository
         if: github.event_name == 'push' || github.event_name == 'workflow_dispatch'
         env:
-          TARGET_REPO: https://codeberg.org/LinuxCabin/handbook-site
-          TARGET_BRANCH: pages
           DEPLOY_TOKEN: ${{ secrets.DEPLOY_TOKEN }}
         run: |
           cd site
           echo "hb.linuxcabin.top" > CNAME
           git init
-          git config user.name "${{ github.actor }}"
-          git config user.email "${{ github.actor }}@noreply.codeberg.org"
+          git config user.name "Fangcat_Dev"
+          git config user.email "f20091219@outlook.com"
           git add .
           git commit -m "Deploy site $(date -u '+%Y-%m-%d %H:%M:%S UTC')"
-          git push --force https://oauth2:${DEPLOY_TOKEN}@${TARGET_REPO#https://} HEAD:${TARGET_BRANCH}
+          git push --force "https://Fangcat_Dev:${DEPLOY_TOKEN}@codeberg.org/LinuxCabin/handbook-site.git" HEAD:pages
