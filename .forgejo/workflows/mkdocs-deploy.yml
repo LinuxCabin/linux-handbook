@@ -8,7 +8,7 @@ on:
       - 'docs/**'
       - 'mkdocs.yml'
       - 'overrides/**'
-      - '.github/workflows/mkdocs-deploy.yml'
+      - '.forgejo/workflows/mkdocs-deploy.yml'
   workflow_dispatch:
 
 permissions:
@@ -40,21 +40,18 @@ jobs:
 
       - name: Build MkDocs site
         run: mkdocs build --strict
-        env:
-          DEPLOY_KEY: ${{ secrets.DEPLOY_KEY }}
 
       - name: Deploy to target repository
         env:
-          TARGET_REPO: https://github.com/LinuxCabin/handbook-site
-          TARGET_BRANCH: gh-pages
-          DEPLOY_TOKEN: ${{ secrets.DEPLOY_KEY }}
-          CUSTOM_DOMAIN: hb.linuxcabin.top
+          TARGET_REPO: https://codeberg.org/LinuxCabin/handbook-site
+          TARGET_BRANCH: pages
+          DEPLOY_TOKEN: ${{ secrets.DEPLOY_TOKEN }}
         run: |
           cd site
-          echo "${{ env.CUSTOM_DOMAIN }}" > CNAME
+          echo "hb.linuxcabin.top" > CNAME
           git init
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git config user.name "forgejo-actions[bot]"
+          git config user.email "forgejo-actions[bot]@users.noreply.github.com"
           git add .
           git commit -m "Deploy site $(date -u '+%Y-%m-%d %H:%M:%S UTC')"
           git push --force https://x-access-token:${DEPLOY_TOKEN}@${TARGET_REPO#https://} HEAD:${TARGET_BRANCH}
