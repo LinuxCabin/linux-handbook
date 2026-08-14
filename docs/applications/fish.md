@@ -6,15 +6,15 @@
 
 [官方文档](https://fishshell.com/docs/current/index.html)
 
-[fish语言教程](https://fishshell.com/docs/current/tutorial.html)
+[Fish语言教程](https://fishshell.com/docs/current/tutorial.html)
 
-**默认配置文件在~/.config/fish下,其名称为config.fish**
+**默认配置文件在`~/.config/fish`下,其名称为`config.fish`**
 
 ## 概述
 
-Fish是一个[Shell](https://hb.linuxcabin.top/concepts/linux/shell/),它有着功能丰富,开箱即用,脚本编写简便的特点
+Fish是一个[Shell](https://hb.linuxcabin.top/concepts/linux/shell/),它有着功能丰富,开箱即用,脚本编写简便的特点。
 
-**但它不兼容[POSIX标准](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html),这意味着Bash无法运行Fish的脚本**
+**但它不兼容[POSIX标准](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html),这意味着Bash无法运行Fish的脚本，反之亦然**。
 
 ## 安装
 
@@ -56,7 +56,7 @@ Fish是一个[Shell](https://hb.linuxcabin.top/concepts/linux/shell/),它有着�
 
 - 使用`alt-u`将光标后面的所有字母大写
 
-**Fish默认使用Emacs快捷键,您可以使用`fish_vi_key_bindings`切换到vi模式,使用`fish_default_key_bindings`,切换回去**
+**Fish默认使用Emacs快捷键,您可以使用`fish_vi_key_bindings`切换到vi模式,使用`fish_default_key_bindings`,切换回去**。
 
 ## 配置
 
