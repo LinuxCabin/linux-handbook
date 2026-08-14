@@ -134,7 +134,9 @@ nav:
       - concepts/package_managers/appimage.md
     - 文件系统:
       - concepts/file_system/lvm.md
-      - concepts/file_system/btrfs.md
+      - Btrfs:
+        - concepts/file_system/btrfs/btrfs.md
+        - concepts/file_system/btrfs/linux_on_btrfs.md
     - 桌面:
       - concepts/desktop/de.md
       - concepts/desktop/tiling_desktop.md
