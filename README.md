@@ -29,8 +29,6 @@ LinuxCabin是一个志愿者组织，本教程由对Linux抱有热情的用户�
 
 贡献前必看：[CONTRIBUTING.md](CONTRIBUTING.md)
 
-## 贡献者们
+## 项目架构
 
-<a href="https://github.com/LinuxCabin/linux-handbook/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=LinuxCabin/linux-handbook" />
-</a>
+![flowchart](images/flowchart.png)

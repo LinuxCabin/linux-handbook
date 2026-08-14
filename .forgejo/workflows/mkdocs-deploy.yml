@@ -29,6 +29,7 @@ concurrency:
 jobs:
   build-and-deploy:
     runs-on: build-env
+    # Using nikolaik/python-nodejs:python3.14-nodejs26 to avoid the setup conflict between Python and Node.js
     steps:
       - name: Checkout source code
         uses: https://gitea.cn/actions/checkout@v4
@@ -60,4 +61,4 @@ jobs:
           git config user.email "${{ github.actor }}@noreply.codeberg.org"
           git add .
           git commit -m "Deploy site $(date -u '+%Y-%m-%d %H:%M:%S UTC')"
-          git push --force https://x-access-token:${DEPLOY_TOKEN}@${TARGET_REPO#https://} HEAD:${TARGET_BRANCH}
+          git push --force https://oauth2:${DEPLOY_TOKEN}@${TARGET_REPO#https://} HEAD:${TARGET_BRANCH}
