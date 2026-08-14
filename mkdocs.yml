@@ -180,6 +180,7 @@ nav:
     - applications/emacs.md
     - applications/vim.md
     - applications/zsh.md
+    - applications/fish.md
     - applications/ssh.md
     - applications/openclaw.md
     - 开发相关:
