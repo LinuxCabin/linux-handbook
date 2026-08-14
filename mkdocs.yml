@@ -2,7 +2,7 @@ site_name: LinuxCabin
 site_description: 为中国用户打造的 Linux 手册 | A Linux handbook especially designed for Chinese users.
 site_url: https://hb.linuxcabin.top
 repo_name: LinuxCabin/linux-handbook
-repo_url: https://github.com/LinuxCabin/linux-handbook
+repo_url: https://codeberg.org/LinuxCabin/linux-handbook
 edit_uri: edit/main/docs/
 
 validation:

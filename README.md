@@ -1,3 +1,6 @@
+**Github上的朋友们，我们的仓库已经正式迁移至[Codeberg](https://codeberg.org/LinuxCabin/linux-handbook)，欢迎您与我们一同在更自由的平台构建文档！**
+
+---
 # LinuxCabin Handbook
 
 <div align="center">
@@ -25,10 +28,6 @@ LinuxCabin是一个志愿者组织，本教程由对Linux抱有热情的用户�
 我们广泛欢迎各位志愿者贡献文档。
 
 贡献前必看：[CONTRIBUTING.md](CONTRIBUTING.md)
-
-双向镜像：https://git.091209.xyz/LinuxCabin/linux-handbook （由@FangcatChina提供服务）
-
-构建状态请在 https://git.13-trixie.top/LinuxCabin/linux-handbook/actions 查看。（构建由@13-trixie提供服务，目前暂停）
 
 ## 贡献者们
 
