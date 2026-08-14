@@ -1,3 +1,6 @@
+
+# Note: This workflow is specially optimized for building the site in Mainland China.
+
 name: Deploy MkDocs to Another Repository
 
 on:
@@ -9,10 +12,15 @@ on:
       - 'mkdocs.yml'
       - 'overrides/**'
       - '.forgejo/workflows/mkdocs-deploy.yml'
+  pull_request:
+    branches:
+      - main
+    paths:
+      - 'docs/**'
+      - 'mkdocs.yml'
+      - 'overrides/**'
+      - '.forgejo/workflows/mkdocs-deploy.yml'
   workflow_dispatch:
-
-permissions:
-  contents: read
 
 concurrency:
   group: "pages"
@@ -20,28 +28,26 @@ concurrency:
 
 jobs:
   build-and-deploy:
-    runs-on: ubuntu-latest
+    runs-on: build-env
     steps:
       - name: Checkout source code
-        uses: actions/checkout@v4
+        uses: https://gitea.cn/actions/checkout@v4
         with:
           fetch-depth: 0
 
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.13'
-          cache: 'pip'
-
       - name: Install MkDocs dependencies
         run: |
+          python -m pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
+          
           python -m pip install --upgrade pip
+          
           pip install -r requirements.txt
 
       - name: Build MkDocs site
         run: mkdocs build --strict
 
       - name: Deploy to target repository
+        if: github.event_name == 'push' || github.event_name == 'workflow_dispatch'
         env:
           TARGET_REPO: https://codeberg.org/LinuxCabin/handbook-site
           TARGET_BRANCH: pages
@@ -50,8 +56,8 @@ jobs:
           cd site
           echo "hb.linuxcabin.top" > CNAME
           git init
-          git config user.name "forgejo-actions[bot]"
-          git config user.email "forgejo-actions[bot]@users.noreply.github.com"
+          git config user.name "${{ github.actor }}"
+          git config user.email "${{ github.actor }}@noreply.codeberg.org"
           git add .
           git commit -m "Deploy site $(date -u '+%Y-%m-%d %H:%M:%S UTC')"
           git push --force https://x-access-token:${DEPLOY_TOKEN}@${TARGET_REPO#https://} HEAD:${TARGET_BRANCH}
