@@ -160,6 +160,7 @@ nav:
       - distros/arch/artixlinux.md
       - distros/arch/cachy.md
     - distros/nixos.md
+    - distros/gentoo.md
   - 桌面:
     - 首页: desktop/desktop.md
     - 桌面环境:
