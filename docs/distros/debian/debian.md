@@ -11,13 +11,14 @@ Debian是一个由全球志愿者社区维护的自由开源操作系统。它�
  - 派系：Debian系
  - 发行者：Debian计划
  - 官网：https://www.debian.org/
- - 支持的系统架构：x86_64
- - 自由软件：是（部分自由）
+ - 支持的系统架构：x86_64(amd64)/arm64/armhf/ppc64el/s390x/riscv64
+ - 自由软件：是（仅main源）
  - 镜像下载地址：
     - TUNA: https://mirrors.tuna.tsinghua.edu.cn/debian-cd/
     - USTC: https://mirrors.ustc.edu.cn/debian-cd/
     - MirrorZ: https://mirrors.cernet.edu.cn/debian-cd/
- - 包管理器：[apt](../../concepts/package_managers/apt.md)
+    - 官方（较慢）: https://cdimage.debian.org/debian-cd/
+ - 包管理器：[apt](../../concepts/package_managers/apt.md) ,  dpkg（底层）
  - 更新方式：版本/滚动
  - 自动换源：302
  - 图形安装界面：是
@@ -37,7 +38,7 @@ Debian是一个由全球志愿者社区维护的自由开源操作系统。它�
 Debian官方维护三个并行的发行版本。
 
 - Debian Stable（稳定版）: 最稳定，经过测试，推荐普通用户使用。
-- Debian Testing（测试版）: 下一个 Stable 版本的开发中状态。
+- Debian Testing（测试版）: 下一个 Stable 版本的开发中状态，与 Debian Sid（不稳定版）保持通常 2 - 10 天的间隔，软件在验证无大碍后从 Sid 进入到 Testing。
 - Debian Sid（不稳定版）: 滚动更新，作为Debian的日常开发阵地。
 
 ## 注意事项
@@ -75,7 +76,7 @@ Debian官方维护三个并行的发行版本。
         - ``bookworm``
         - ``trixie``
 
-        目前暂无专用于 ``testing`` 和 ``sid`` 的仓库。
+        目前暂无专用于 ``forky``， ``testing`` 和 ``sid`` 的仓库。
 
         #### 彻底移除社区软件源
 
