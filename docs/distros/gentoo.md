@@ -22,40 +22,38 @@ Gentoo Linux 是一个高度可定制的，基于源码的操作系统。Gentoo 
 - 官网：https://www.gentoo.org/
 - 支持的系统架构：x86_64(amd64)/ia64/x86(i486,i686)/arm64/arm32(arm)/ppc64/ppc32(ppc)/risc-v/mips/alpha/hppa/sparc/s390/m68k ...
 - 自由软件：是（可选择许可证类型）
-- 初始化进程  (init)
+- 初始化进程  (init):
     - ``OpenRC``        ( ``sysvinit`` / ``openrc-init`` )
     - ``systemd``
 ???+ note "有关初始化进程（init）的选择"
      Gentoo Linux 官方只支持 ``OpenRC`` 和 ``systemd`` ，但是完全可以在 Gentoo Linux 上配置 ``runit``, ``dinit``, ``s6`` 等初始化进程，只不过可能需要自己写配置。
-- Stage 3 下载地址 (amd64, desktop, openrc)：
-    - NJU: https://mirror.nju.edu.cn/gentoo/releases/amd64/autobuilds/current-stage3-amd64-desktop-openrc/
+- Stage 3 下载地址：
+    - TUNA: https://mirror.tuna.tsinghua.edu.cn/gentoo/releases/amd64/autobuilds/current-stage3-amd64-desktop-openrc/
     - USTC: https://mirrors.ustc.edu.cn/gentoo/releases/amd64/autobuilds/current-stage3-amd64-desktop-openrc/
-    - 官方（内地较慢）: https://distfiles.gentoo.org/releases/amd64/autobuilds/current-stage3-amd64-desktop-openrc/
-
-<!-- 清华TUNA把我家IP给Ban了，能推导出TUNA的地址但是我没法fact check。看到这条注释的人可以把我们有史以来最喜欢封IP的镜像站补回来。 -->
-
-- Live ISO 下载地址 (amd64, desktop, openrc)：
-    - NJU: https://mirrors.nju.edu.cn/gentoo/releases/amd64/autobuilds/current-livegui-amd64/
+    - MirrorZ: https://mirrors.cernet.edu.cn/gentoo/releases/amd64/autobuilds/current-stage3-amd64-desktop-openrc/
+- Live ISO 下载地址：
+    - TUNA: https://mirrors.tuna.tsinghua.edu.cn/gentoo/releases/amd64/autobuilds/current-livegui-amd64/
     - USTC: https://mirrors.ustc.edu.cn/gentoo/releases/amd64/autobuilds/current-livegui-amd64/
-    - 官方（内地较慢）: https://distfiles.gentoo.org/releases/amd64/autobuilds/current-livegui-amd64/
-
+    - MirrorZ: https://mirrors.cernet.edu.cn/gentoo/releases/amd64/autobuilds/current-livegui-amd64/
 - 包管理器：Portage
 - 更新方式：滚动
 ???+ note "有关“部分升级”"
      不像其他滚动发行版，Gentoo Linux 允许“部分升级”（Partial Upgrade)。Portage 使用单软件包的依赖关系图，SLOT 系统 和 preserved-rebuild 功能来避免软件包冲突。这当然不是说一直处在“部分升级”的状态是个好主意，还是建议有空完全升级。
 
 - 图形安装界面：否
-- 换源教程（软件源）：
-    - NJU: https://help.mirror.nju.edu.cn/gentoo/?mirror=NJU
-    - USTC: https://mirrors.ustc.edu.cn/help/gentoo.html
-- 换源教程（Ebuild源）：
-    - NJU: https://help.mirror.nju.edu.cn/gentoo-portage/?mirror=NJU
-    - USTC: https://mirrors.ustc.edu.cn/help/gentoo-portage.html
-
+- 换源教程:
+    - 软件源：
+        - TUNA: https://mirrors.tuna.tsinghua.edu.cn/help/gentoo
+        - USTC: https://mirrors.ustc.edu.cn/help/gentoo.html
+        - MirrorZ: https://help.mirrors.cernet.edu.cn/gentoo
+    - Ebuild：
+        - TUNA: https://mirrors.tuna.tsinghua.edu.cn/help/gentoo-portage
+        - USTC: https://mirrors.ustc.edu.cn/help/gentoo-portage.html
+        - MirrorZ: https://help.mirrors.cernet.edu.cn/gentoo-portage
 
 ## 注意事项
 
-#### gentoo-zh Overlay
+### gentoo-zh Overlay
 ![Markdown Logo](https://gentoozh.org/img/logo.webp)
 
 gentoo-zh 由 Gentoo 中文社区维护，收录大量中文用户常用的软件包。
