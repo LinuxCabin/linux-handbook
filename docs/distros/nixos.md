@@ -1,6 +1,6 @@
 # NixOS
 
-![Logo](https://brand.nixos.org/logos/nixos-logo-default-gradient-black-regular-horizontal-recommended.svg)
+![Logo](https://brand.nixos.org/logos/nixos-logo-default-gradient-black-regular-horizontal-recommended.svg){width=300}
 
 ## 简介
 

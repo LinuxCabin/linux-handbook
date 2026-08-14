@@ -1,6 +1,6 @@
 # Fedora
 
-![Logo](https://fedoraproject.org/assets/images/logos/fedora-logo.svg)
+![Logo](https://fedoraproject.org/assets/images/logos/fedora-logo.svg){width=300}
 
 ## 简介
 
