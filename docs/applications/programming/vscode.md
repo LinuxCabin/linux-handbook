@@ -38,4 +38,5 @@ Arch用户可以通过AUR安装`vscodium-bin`。
 
 VSCode的扩展市场涵盖编程语言支持、界面语言支持、IDE插件、界面主题等等扩展（一切皆扩展），您可以根据自己的工作情况按需安装。
 
-对于中文用户来说，您可能需要安装[中文（简体）界面语言包](https://marketplace.visualstudio.com/items?itemName=MS-CEINTL.vscode-language-pack-zh-hans)。
+???+ note "本地化"
+    对于中文用户来说，您可能需要安装[中文（简体）界面语言包](https://marketplace.visualstudio.com/items?itemName=MS-CEINTL.vscode-language-pack-zh-hans)。
