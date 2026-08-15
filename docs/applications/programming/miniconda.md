@@ -26,7 +26,7 @@ source ~/.bashrc
 
 ## 镜像源
 
-访问这个链接进行配置即可（中科大源）： <https://mirrors.ustc.edu.cn/help/anaconda.html>
+访问[中科大源](https://mirrors.ustc.edu.cn/help/anaconda.html)进行配置即可
 
 创建一个`~/.condarc`文件然后把channels开头的文本复制粘贴进去即可。
 
@@ -37,5 +37,4 @@ touch ~/.condarc
 nano ~/.condarc
 ```
 
-此外，还需要配置pip源，建议访问这个网址进行配置（中科大源） <https://mirrors.ustc.edu.cn/help/pypi.html>
-
+此外，还需要配置pip源，建议访问[中科大源](https://mirrors.ustc.edu.cn/help/pypi.html)进行配置
