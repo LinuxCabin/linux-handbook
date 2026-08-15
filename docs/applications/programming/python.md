@@ -1,62 +1,25 @@
-# Python
+# Python开发套件
 
-## 安装 Python
+## Python3
 
-Linux 上装Python还是非常轻松的，因为不用装，大部分发行版自带。
+### 安装
 
-Linux 里面一般都是 `python3`。
-如果你想要用 `python` 这个命令， 可以装一个 `python-is-python3`, 来用软链接骗过操作系统(开个玩笑)。
+除个别极简发行版外（如Arch），大多数发行版已自带。
 
-- Debian: `sudo apt install python-is-python3 -y`
-- Fedora: `sudo dnf install python-is-python3 -y`
-
-## 编写第一个脚本
-
-- 创建一个脚本
-
+Arch系：
 ```bash
-touch hello.py
+sudo pacman -S python
 ```
 
-- 写入内容
+### 使用
 
-```bash
-echo "print('hello python')" > hello.py
-```
+Linux里面一般以`python3`命令使用Python。
 
-- 查看内容
+???+ tip "通过`python`使用"
+    如果你想要用 `python` 这个命令， 可以装一个 `python-is-python3`, 来用软链接骗过操作系统(开个玩笑)。
 
-```bash
-cat hello.py
-
-# 会输出
-# print('hello python')
-```
-
-## 运行
-
-有很多Windows来的同志不知道怎么运行，但实际上非常简单。
-
-用法:
-
-```bash
-# python <要运行的脚本路径>
-
-python hello.py
-```
-
-这样你就成功运行起 Python 脚本了。
-实际上就是给 Python 指定需要运行的文件， 就这么简单。
-
-恭喜你在Linux上成功运行了Python脚本。
-
-## 编辑器
-
-- 如果你使用WSL, 推荐使用 VSCode 的 WSL 插件来连接写代码, 当然勇敢牛牛可以尝试 LazyVim 写代码
-- 如果你使用原生 Linux, 还是这两种推荐haha
-
-VSCode 资料很多， 我也用的比较少，可以直接上Bilibili搜索VSCode Python环境搭建
-[LazyVim入坑视频](https://www.bilibili.com/video/BV1TJCvYFE2T?t=286.5)
+    - Debian: `sudo apt install python-is-python3 -y`
+    - Fedora: `sudo dnf install python-is-python3 -y`
 
 ## 库
 
@@ -75,11 +38,11 @@ Python拥有规模庞大的PyPi库。通常，我们使用`pip`进行安装。�
     ╰─> To install Python packages system-wide, try 'pacman -S
         python-xyz', where xyz is the package you are trying to
         install.
-        
+
         If you wish to install a non-Arch-packaged Python package,
         create a virtual environment using 'python -m venv path/to/venv'.
         Then use path/to/venv/bin/python and path/to/venv/bin/pip.
-        
+
         If you wish to install a non-Arch packaged Python application,
         it may be easiest to use 'pipx install xyz', which will manage a
         virtual environment for you. Make sure you have python-pipx
@@ -89,5 +52,5 @@ Python拥有规模庞大的PyPi库。通常，我们使用`pip`进行安装。�
     hint: See PEP 668 for the detailed specification.
     ```
     由于系统的部分组件依赖Python的依赖，因而外来库可能破坏系统本身的依赖关系。
-    
+
     这个时候，我们建议您使用`venv`创建虚拟环境，或者寻找发行版的软件源是否有对应的库可供安装（一般包名为`python3-库`或`python-库`）。

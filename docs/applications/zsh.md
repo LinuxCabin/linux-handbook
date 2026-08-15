@@ -1,5 +1,7 @@
 # Zsh
 
+## 概述
+
 Zsh是一款拥有高度自定义性的[Shell](../concepts/linux/shell.md)，它具有强大的自动补全、语法高亮，并且由于Oh My Zsh的支持，拥有海量主题与插件，特别适合用于美化。
 
 ## 安装
@@ -8,13 +10,25 @@ Zsh是一款拥有高度自定义性的[Shell](../concepts/linux/shell.md)，它
 
 以下命令用于安装Zsh与部分推荐扩展。
 
-- Debian: `sudo apt install zsh zsh-autosuggestions zsh-syntax-highlighting`
-- Fedora: `sudo dnf install zsh zsh-autosuggestions zsh-syntax-highlighting`
-- Arch: `sudo pacman -S zsh zsh-completions zsh-autosuggestions zsh-syntax-highlighting`
+Debian系:
+```bash
+sudo apt install zsh zsh-autosuggestions zsh-syntax-highlighting
+```
+
+红帽系
+```bash
+sudo dnf install zsh zsh-autosuggestions zsh-syntax-highlighting
+```
+
+Arch系
+```bash
+sudo pacman -S zsh zsh-autosuggestions zsh-syntax-highlighting
+```
 
 安装好后，您可以运行`chsh -s /bin/zsh`来设置Zsh为默认终端。
 
-部分发行版源的`zsh`包，在初次运行`zsh`时，会询问您想要如何配置`.zshrc`（Zsh的配置文件）。我们建议您输入2来选择`(2)  Populate your ~/.zshrc with the configuration recommended by the system administrator and exit (you will need to edit the file by hand, if so desired).`（默认推荐配置）。
+???+info "注意"
+    部分发行版源的`zsh`包，在初次运行`zsh`时，会询问您想要如何配置`.zshrc`（Zsh的配置文件）。我们建议您输入2来选择`(2)  Populate your ~/.zshrc with the configuration recommended by the system administrator and exit (you will need to edit the file by hand, if so desired).`（默认推荐配置）。
 
 ### Oh My Zsh
 
