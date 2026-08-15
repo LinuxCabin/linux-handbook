@@ -18,7 +18,7 @@ Visual Studio Code是由微软开发的开源IDE，因其庞大的扩展市场�
 
 ### VSCode
 
-微软官方提供了[Linux版的安装教程]，该教程主要通过添加微软官方软件源的方式来进行安装。您也可以到[VSCode官网](https://code.visualstudio.com/)下载预编译包来安装。社区也构建了其[Flatpak版本](https://flathub.org/zh-Hans/apps/com.visualstudio.code)。
+微软官方提供了[Linux版的安装教程](https://code.visualstudio.com/docs/setup/linux)，该教程主要通过添加微软官方软件源的方式来进行安装。您也可以到[VSCode官网](https://code.visualstudio.com/)下载预编译包来安装。社区也构建了其[Flatpak版本](https://flathub.org/zh-Hans/apps/com.visualstudio.code)。
 
 Arch用户可以通过AUR安装`visual-studio-code-bin`。
 
@@ -32,7 +32,7 @@ Arch用户可以通过AUR安装`vscodium-bin`。
 
 ## 使用
 
-您可以按下`Ctrl+Shift+P`打开功能面板，进行切换语言、预览Markdown等操作。
+您可以按下`Ctrl+Shift+P`打开功能面板，进行打开终端、切换语言、预览Markdown等操作。
 
 ### 扩展
 
