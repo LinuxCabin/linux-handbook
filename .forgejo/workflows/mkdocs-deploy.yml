@@ -1,4 +1,3 @@
-
 # Note: This workflow is specially optimized for building the site in Mainland China.
 
 name: Deploy MkDocs to Another Repository
@@ -32,7 +31,7 @@ jobs:
     # Using nikolaik/python-nodejs:python3.14-nodejs26 to avoid the setup conflict between Python and Node.js
     steps:
       - name: Checkout source code
-        uses: https://gitea.cn/actions/checkout@v4
+        uses: https://gitee.com/actions-mirror/checkout@v4
         with:
           fetch-depth: 0
 
