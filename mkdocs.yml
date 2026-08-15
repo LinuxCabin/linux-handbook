@@ -189,4 +189,6 @@ nav:
       - applications/programming/cpp.md
       - applications/programming/python.md
       - applications/programming/miniconda.md
+  - 进阶:
+
   - 关于: about.md
