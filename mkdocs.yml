@@ -178,6 +178,7 @@ nav:
     - applications/emacs.md
     - applications/vim.md
     - applications/zsh.md
+    - applications/bash.md
     - applications/fish.md
     - applications/ssh.md
     - applications/git.md
