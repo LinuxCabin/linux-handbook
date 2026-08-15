@@ -4,7 +4,7 @@
     这篇指南面向对 Linux 已有所经验的用户，对分区表，Linux 文件系统，引导的了解是硬性要求。不建议任何第一次安装和使用 Linux 的用户参照此指南。误操作可能导致数据损失。
 
 !!! note "为什么我想使用 Btrfs"
-    可以将 Linux 根目录下的不同文件夹（例如 ``/home`` ``/var`` ``/srv`` ...）挂载到不同的 Btrfs 子卷。相比传统使用 ext4 的布局，Btrfs 子卷有共享文件系统的储存空间的特性，可以不浪费分卷内未使用的空间从而使单一挂载点不易“爆满”。Btrfs 的快照功能还允许在不复制物理数据的前提下备份。
+    可以将 Linux 根目录下的不同文件夹（例如 ``/home`` ``/var`` ``/srv`` ...）挂载到不同的 Btrfs 子卷。相比传统使用 ext4 的布局，Btrfs 子卷有共享文件系统的储存空间的特性，可以不浪费子卷内未使用的空间从而使单一挂载点不易“爆满”。Btrfs 的快照功能还允许在不复制物理数据的前提下备份。
 
 !!! note "为什么我在一些情况下不该使用 Btrfs"
     Btrfs 的 RAID 功能非常不稳定，请不要使用 Btrfs 自带的 RAID 功能。同时，因为 Btrfs 才用写时复制（CoW），在处理修改大文件（如 数据库，BitTorrent）时会产生严重的碎片，特别是机械硬盘。
@@ -12,7 +12,7 @@
 
 ## 准备工作
 
-提前想好分卷的布局是个好主意。
+提前想好子卷的布局是个好主意。
 
 主流的布局里有以下几种：
 
@@ -115,12 +115,12 @@ Linux 是自由的，任何布局只要有 ``/`` 的挂载点都行得通。但�
 /dev/sda1 on /target/boot/efi type vfat ( ... )
 ```
 
-我们看到 ``/dev/sda6`` 是 Btrfs 分区，默认的分卷是 ``@rootfs``，``/dev/sda1`` 是 EFI 分区。
+我们看到 ``/dev/sda6`` 是 Btrfs 分区，默认的子卷是 ``@rootfs``，``/dev/sda1`` 是 EFI 分区。
 
 ???+ note "参数的不同写法"
      ``subvol=/@abcxyz`` 与 ``subvol=@abcxyz`` 在大部分情况下是等价的。
 
-为了创建分卷，我们要卸载这两个卷并挂载 Btrfs 根卷到一个位置。
+为了创建子卷，我们要卸载这两个卷并挂载 Btrfs 母卷到一个位置。
 
 ```bash
 ~ # umount /target/boot/efi
@@ -133,10 +133,10 @@ Linux 是自由的，任何布局只要有 ``/`` 的挂载点都行得通。但�
 /dev/sda6 on /mnt/btrfs type btrfs ( ... subvol=/)
 ```
 
-现在开始创建分卷，以仅单独 ``@home`` 布局为例。为了保持兼容性以使用 Timeshift 等工具，我们将默认的 ``@rootfs`` 分卷移动到 ``@`` 。
+现在开始创建子卷，以仅单独 ``@home`` 布局为例。为了保持兼容性以使用 Timeshift 等工具，我们将默认的 ``@rootfs`` 子卷移动到 ``@`` 。
 
-???+ note "有关在根目录上挂载的分卷的名字"
-     Debian 默认使用 ``subvol=/@rootfs`` 作为根目录使用的分卷，而大多数主流发行版倾向使用 ``subvol=/@``。如果使用 Ubuntu 等发行版并正按照本指南操作，不需要移动分卷。
+???+ note "有关在根目录上挂载的子卷的名字"
+     Debian 默认使用 ``subvol=/@rootfs`` 作为根目录使用的子卷，而大多数主流发行版倾向使用 ``subvol=/@``。如果使用 Ubuntu 等发行版并正按照本指南操作，不需要移动子卷。
 
 ```bash
 cd /mnt/btrfs
@@ -154,7 +154,7 @@ Create subvolume './@home'
 @        @home
 ```
 
-分卷创建好后，我们将根卷卸载并把文件系统挂载回 ``/target`` 下 。如果有 EFI 分区，别忘了挂载它（ ``/boot/efi`` ）。
+子卷创建好后，我们将母卷卸载并把文件系统挂载回 ``/target`` 下 。如果有 EFI 分区，别忘了挂载它（ ``/boot/efi`` ）。
 
 ???- info "有关压缩"
     如果想设置压缩，应该现在设置。
@@ -261,7 +261,7 @@ mkfs.btrfs /dev/sda3 -L Arch
 mkswap /dev/sda2 -L swap
 ```
 
-挂载 Btrfs 分区以添加分卷。
+挂载 Btrfs 分区以添加子卷。
 ```bash
 mount --mkdir /dev/sda3 /mnt/btrfs
 cd /mnt/btrfs

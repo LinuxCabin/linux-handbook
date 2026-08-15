@@ -39,23 +39,36 @@ Btrfs已经成为了大多数发行版安装程序的默认选项，而其存在
 
 子卷相当于将单个分区进一步细分管理，其拥有独立的文件与目录结构，能够灵活挂载访问。
 
-- 创建子卷：`sudo btrfs subvolume create 挂载点`
-- 删除子卷：`sudo btrfs subvolume delete 挂载点`
-- 列出子卷：`sudo btrfs subvolume list 挂载点`
-- 查看子卷信息：`sudo btrfs subvolume show 挂载点`
+- 创建子卷：`sudo btrfs subvolume create 子卷路径`
+- 删除子卷：`sudo btrfs subvolume delete 子卷路径`
+- 列出子卷：`sudo btrfs subvolume list 子卷路径`
+- 查看子卷信息：`sudo btrfs subvolume show 子卷路径`
 
 ### 压缩
 
 压缩对于应用程序来说是透明的，可以节省硬盘空间。
-Btrfs 支持 ``zlib``，``lzo``，和 ``zstd`` 压缩算法。
+Btrfs 支持 ``zlib``，``lzo``， ``zstd`` 压缩算法。
 
-使用 ``compress=算法[:等级]`` 参数挂载以启用压缩，等级越高压缩越强。
+使用 ``compress=算法[:等级]`` 参数挂载 Btrfs 卷以启用压缩，等级越高压缩越强。
+
+如果不知道选哪个，建议使用默认等级（3）的 ``zstd`` 。
+
+???- note "例子"
+    挂载 ``/dev/sda3`` 到 ``/home``，采用默认级 ``zstd`` 压缩。
+    ```bash
+    mount /dev/sda3 /home -o compress=zstd
+    ```
+    
+    挂载 ``/dev/sdb1`` 中的 ``/@data`` 子卷到 ``/srv``，采用 3 级 ``zlib`` 压缩。
+    ```bash
+    mount /dev/sdb1 /srv -o subvol=@data,compress=zlib:3
+    ```
 
 
 ### 禁用写时复制
 
 !!! warning "警告"
-    禁用写时复制会禁用数据校验，Btrfs 将无法验证其完整性。不应该在生产环境下开启。
+    禁用写时复制会禁用数据校验，Btrfs 将无法验证其完整性。不应该在生产环境中开启。
 
 在新的文件或文件夹上禁用写时复制：
 ```bash

@@ -1,4 +1,5 @@
 # 指南： 迁移已有的 Linux 安装至 Btrfs
+并设置 Btrfs 子卷
 
 !!! warning "警告"
     这篇指南面向对 Linux 已有所经验的用户，对分区表，Linux 文件系统，引导的了解是硬性要求。不建议任何第一次使用 Linux 的用户参照此指南。误操作可能导致数据损失。
@@ -88,21 +89,21 @@ root@livecd ~ # mount
 /dev/sda2 on /mnt/newpart type btrfs ( ... ,subvol=/)
 ```
 
-可以看到 ``btrfs-convert`` 将原分区的文件系统直接放到根卷（``subvol=/``）下。这更像原来 ext4 的做法，但因为我们要设置分卷，不能采用这样的方案。
-我们要把文件系统镜像到它应该在的分卷里，用 Btrfs 的快照功能。
+可以看到 ``btrfs-convert`` 将原分区的文件系统直接放到母卷（``subvol=/``）下。这更像原来 ext4 的做法，但因为我们要设置子卷，不能采用这样的方案。
+我们要把文件系统镜像到它应该在的子卷里，用 Btrfs 的快照功能。
 
-???+ note "分卷名"
-     在这个例子里，文件系统源自 ``/`` ，所以快照到 ``@`` 分卷。如果我们选择了保留 ``/home`` 分区，应该快照到 ``@home`` 分区，以此类推...
+???+ note "子卷名"
+     在这个例子里，文件系统源自 ``/`` ，所以快照到 ``@`` 子卷。如果我们选择了保留 ``/home`` 分区，应该快照到 ``@home`` 分区，以此类推...
 
 ```bash
 root@livecd ~ # btrfs subvolume snapshot /mnt/newpart /mnt/newpart/@
 Create snapshot of '/mnt/newpart' in '/mnt/newpart/@'
 ```
 
-确认新分卷包含了原有的文件系统，我们就可以安全地删除根卷下重复的文件了。
+确认新子卷包含了原有的文件系统，我们就可以安全地删除母卷下重复的文件了。
 
 !!! warning "警告"
-    确认新的分卷正常工作。如果快照出了问题，继续删除会丢失所有的数据。
+    确认新的子卷正常工作。如果快照出了问题，继续删除会丢失所有的数据。
 
 ```bash
 root@livecd ~ # ls /mnt/newpart/@
@@ -122,7 +123,7 @@ root@livecd ~ # ls -A /mnt/newpart
 ```
 
 ???- note "如果这是唯一的分区..."
-     您也许想把一些目录分卷存放，例如 ``/home``。这种情况下，创建新分卷并直接从 ``@`` 分卷移动。
+     您也许想把一些目录子卷存放，例如 ``/home``。这种情况下，创建新子卷并直接从 ``@`` 子卷移动。
      ```bash
      btrfs subvolume create /mnt/newpart/@home
      mv /mnt/newpart/@/home/* /mnt/newpart/@home
@@ -131,12 +132,12 @@ root@livecd ~ # ls -A /mnt/newpart
 
 这一分区的工作已经完成了，接下来拷贝其余分区的数据。
 
-### 转移其余分区的数据至 Btrfs 分卷
+### 转移其余分区的数据至 Btrfs 子卷
 
-在新的 Btrfs 分区上新建分卷，作为数据迁移的目的地。
+在新的 Btrfs 分区上新建子卷，作为数据迁移的目的地。
 
 ???+ note "root lives matter"
-     如果一开始没有选择保留根分区（挂载到 ``/`` 的分区），别忘了建一个 ``@`` 分卷。我们需要它来存放根目录下的文件。
+     如果一开始没有选择保留根分区（挂载到 ``/`` 的分区），别忘了建一个 ``@`` 子卷。我们需要它来存放根目录下的文件。
      ```bash
      root@livecd ~ # btrfs subvolume create /mnt/newpart/@
      ```
@@ -147,14 +148,14 @@ Create subvolume '/mnt/newpart/@home'
 ...
 ```
 
-按照文件系统结构挂载 Btrfs 的所有分卷。
+按照文件系统结构挂载 Btrfs 的所有子卷。
 ```bash
 root@livecd ~ # mount --mkdir /dev/sda2 /mnt/newroot -o subvol=@
 root@livecd ~ # mount /dev/sda2 /mnt/newroot/home -o subvol=@home
 ...
 ```
 
-按照原来的文件系统结构挂载原有要删除的分区到一个地方并拷贝数据到 Btrfs 分卷。
+按照原来的文件系统结构挂载原有要删除的分区到一个地方并拷贝数据到 Btrfs 子卷。
 ```bash
 root@livecd ~ # mount --mkdir /dev/sda5 /mnt/oldparts/home
 ...
@@ -274,9 +275,9 @@ root@archiso ~ # blkid
 
 用喜欢的文本编辑器打开硬盘上 Linux 安装根目录的 ``etc/fstab`` （在这个例子里是 ``/mnt/newroot/etc/fstab`` ），把带有 ``ext4`` 的整行注释或删除，并加上以下
 ```
-UUID=ce58a65d-7b6f-486c-837f-962fed1604c1	/			btrfs		defaults,subvol=/@			0 1
+UUID=ce58a65d-7b6f-486c-837f-962fed1604c1	/			btrfs		defaults,subvol=/@			0 0
 
-UUID=ce58a65d-7b6f-486c-837f-962fed1604c1	/home		btrfs		defaults,subvol=/@home		0 2
+UUID=ce58a65d-7b6f-486c-837f-962fed1604c1	/home		btrfs		defaults,subvol=/@home		0 0
 
 ...
 ```
