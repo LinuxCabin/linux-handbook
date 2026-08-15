@@ -8,7 +8,7 @@
 
  - [Vercel](https://vercel.hb.linuxcabin.top)
  - [Github Pages](https://hb.linuxcabin.top)
- - [Codeberg Pages](https://linuxcabin.codeberg.page)
+ - [Codeberg Pages](https://cb.hb.linuxcabin.top)
  - [Cloudflare Pages](https://cf.hb.linuxcabin.top)
 
 ## 想要入门？看这里！
