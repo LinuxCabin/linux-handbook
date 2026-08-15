@@ -6,8 +6,10 @@
 
 访问慢？换条线路试试！😉
 
- - [Github Pages](https://hb.091209.xyz)
- - [Vercel](https://vercel.hb.091209.xyz)
+ - [Vercel](https://vercel.hb.linuxcabin.top)
+ - [Github Pages](https://hb.linuxcabin.top)
+ - [Codeberg Pages](https://cb.hb.linuxcabin.top)
+ - [Cloudflare Pages](https://cf.hb.linuxcabin.top)
 
 ## 想要入门？看这里！
 

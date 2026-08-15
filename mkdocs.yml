@@ -132,9 +132,6 @@ nav:
       - concepts/package_managers/pacman.md
       - concepts/package_managers/flatpak.md
       - concepts/package_managers/appimage.md
-    - 文件系统:
-      - concepts/file_system/lvm.md
-      - concepts/file_system/btrfs.md
     - 桌面:
       - concepts/desktop/de.md
       - concepts/desktop/tiling_desktop.md
@@ -189,4 +186,9 @@ nav:
       - applications/programming/cpp.md
       - applications/programming/python.md
       - applications/programming/miniconda.md
+      - applications/programming/vscode.md
+  - 进阶:
+    - advanced/lvm.md
+    - advanced/btrfs.md
+    - advanced/boot_loader.md
   - 关于: about.md
