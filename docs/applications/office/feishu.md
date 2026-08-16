@@ -1,5 +1,7 @@
 # 飞书
 
-- [官网](https://www.feishu.cn/download)
-- [Flathub](https://flathub.org/zh-Hans/apps/cn.feishu.Feishu)
-- AUR、Nix等版本，较为完备，推荐对应发行版用户优先使用该方式。
+## 安装
+
+- [官网](https://www.feishu.cn/download): 提供`deb`与`rpm`格式
+- AUR: `yay -S feishu-bin`
+- [Flathub版本](https://flathub.org/zh-Hans/apps/cn.feishu.Feishu): `sudo flatpak install cn.feishu.Feishu`
