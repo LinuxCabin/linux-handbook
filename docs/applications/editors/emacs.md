@@ -4,7 +4,9 @@
 
 ## 概述
 
-Emacs是一个[自由](https://www.gnu.org/philosophy/free-sw.html)的编辑器，采用[GPL-v3](https://www.gnu.org/licenses/gpl-3.0.en.html)发布，采用Elisp作为配置语言，Emacs功能强大(包括但不限于发邮件，使用irc聊天，阅读新闻和RSS订阅，玩俄罗斯方块)，常被与vim/nvim比较，最早由Richard Stallman编写发布，Emacs是[自由软件运动](https://www.gnu.org/)的一部分。
+Emacs 是一个文本编辑器，采用 Emacs Lisp 作为配置语言。作为 Lisp 解释器，Emacs 功能强大 (包括但不限于发邮件，使用irc聊天，阅读新闻和RSS订阅，玩俄罗斯方块) 。
+
+Emacs 是[自由](https://www.gnu.org/philosophy/free-sw.html)软件，采用[GPL-v3](https://www.gnu.org/licenses/gpl-3.0.html)发布。Emacs 是[自由软件运动](https://www.gnu.org/)的一部分。
 
 ## 安装
 
@@ -27,6 +29,11 @@ sudo dnf install emacs
 Arch系：
 ```bash
 sudo pacman -S emacs
+```
+
+虽然不建议，Emacs 可以使用 [Flatpak](../../concepts/package_managers/flatpak.md) 安装
+```bash
+flatpak install org.gnu.emacs
 ```
 
 ## 使用
@@ -66,7 +73,7 @@ sudo pacman -S emacs
 `C-h t` 官方快速指南   -->
 
 ???+ info "注意"
-     显然这些不是所有的官方配置快捷键，事实上用户可以自己更改快捷键，受限于篇幅和难度这里不多赘述。请参阅 #关于更多。
+     显然这些不是所有的官方配置快捷键，事实上用户可以自己更改快捷键，受限于篇幅和难度这里不多赘述。请参阅 [#关于更多](#_14)。
 
 
 ### 一篇简短的 Emacs 入门教程
@@ -97,10 +104,9 @@ emacs emacs.md
 
 #### 移动光标
 
-(TODO: hyperlink)
 屏幕上闪烁的“小黑方框”就是我们的光标。我们用上下左右键来移动光标。
 
-一个字一个字地移动光标很慢，有没有快点的移动方法呢？有的兄弟，有的
+一个字一个字地移动光标很慢，有没有快点的移动方法？有的兄弟，有的
 
 - 纵向移动一个段落：`M`-`{` , `M`-`}`
 - 横向移动一个单词：`M`-`b` , `M`-`f`
@@ -122,7 +128,7 @@ emacs emacs.md
 
 
 
-现在试试 `C`-`<backspace>`，这个组合键能删除一整个单词，用它删掉 `Hello world!`
+试试 `C`-`<backspace>`，这个组合键能删除一整个单词，用它删掉 `Hello world!`
 
 delete me d e l e t e m e a b c d e f g h j k l
 
@@ -131,7 +137,7 @@ delete me d e l e t e m e a b c d e f g h j k l
 按下 `C-/`，它能撤销刚刚做的更改（在这里是删除）。
 
 ???- tip "更多组合键"
-     用 `C`-`d` 或 `<delete>` 就能向后删除。
+     用 `C`-`d` 或 `<delete>` 就能向后删除，`C`-`<delete>` 向后删除一个单词。
 
 #### 选中，拷贝和粘贴
 
@@ -145,7 +151,7 @@ delete me d e l e t e m e a b c d e f g h j k l
 
 
 ???+ tips "提示"
-     #移动光标 的内容可以在这里用哦
+     [#移动光标](#_6) 的内容可以在这里用哦
 
 
 连续按两下 `C`-`SPC` 以退出选区。
@@ -192,10 +198,15 @@ Emacs 的 ``revert-buffer`` 命令能删除所有没保存的内容，但是默�
 
 ## 关于更多
 
-受限于我们的专门性，我们建议您到其他专门性教程进行学习。
+受限于我们的专门性，我们不能提供详尽的教程。如果对 GNU Emacs 感到有兴趣，可以前往其他专业性教程进行学习。
 
-1. [Emacs轻奢之路](https://www.bilibili.com/video/BV1T64y1R7EL/)
-2. [21天学会Emacs 2022年版本](https://www.bilibili.com/video/BV12P4y1j7EL/)
-3. [Emacs高手修炼手册](https://www.bilibili.com/video/BV13g4y167Zn/)
-4. [专业 Emacs 入门教程](https://www.zhihu.com/column/c_1440829147212279808)
-5. [官方文档](https://www.gnu.org/software/emacs/manual/emacs.html)
+- 社区文档
+	- [Emacs轻奢之路](https://www.bilibili.com/video/BV1T64y1R7EL/)
+	- [21天学会Emacs 2022年版本](https://www.bilibili.com/video/BV12P4y1j7EL/)
+	- [Emacs高手修炼手册](https://www.bilibili.com/video/BV13g4y167Zn/)
+	- [专业 Emacs 入门教程](https://www.zhihu.com/column/c_1440829147212279808)
+	- [Emacs Lisp 简明教程](https://smacs.github.io/elisp/)
+
+- [官方文档](https://www.gnu.org/software/emacs/manual/emacs.html)
+
+- [什么是自由软件](https://www.fsf.org/about/what-is-free-software)
