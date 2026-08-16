@@ -24,9 +24,9 @@ Hyprland拥有相对惊艳的视觉效果，并支持动态平铺窗口，能够
 
 ## 安装
 
-在安装之前，我们建议您首先选择好适合的[桌面外壳](../../concepts/desktop/desktop_shell.md)。
+在安装之前，我们建议您首先选择好适合的桌面外壳。
 
 我们建议您参照[Hyprland的官方Wiki（英文）](https://wiki.hypr.land/Getting-Started/Installation/)进行安装。在安装Hyprland后，您需要一并安装好桌面外壳。
 
 ???+ tip "DMS福利"
-    如果您选择DMS作为桌面外壳，您可以直接通过其一键脚本连带安装Hyprland。详情见[桌面外壳](../../concepts/desktop/desktop_shell.md)。
+    如果您选择DMS作为桌面外壳，您可以直接通过其一键脚本连带安装Hyprland。详情见[桌面外壳](../desktop.md#_5)。

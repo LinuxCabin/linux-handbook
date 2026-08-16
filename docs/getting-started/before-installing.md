@@ -85,12 +85,7 @@
 
     我用某个发行版并不代表我必须使用某个桌面环境。与Windows不同，Linux的组件之间具有极其高的耦合度！您完全可以选用更加简单的发行版来体验您心仪的桌面环境。
 
-    在继续之前，我们建议您阅读并**分辨**以下概念章节：
-
-    - [发行版](../concepts/linux/distro.md)
-    - [桌面环境](../concepts/desktop/de.md)
-    - [窗口管理器](../concepts/desktop/wm.md)
-    - [平铺式桌面](../concepts/desktop/tiling_desktop.md)
+    在继续之前，我们建议您首先阅读[桌面](../desktop/desktop.md)章节。
 
 ## 调配分区
 
