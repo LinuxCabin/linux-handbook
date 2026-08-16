@@ -108,7 +108,6 @@ nav:
       - getting-started/devices/drivers.md
       - getting-started/devices/others.md
     - getting-started/input-method.md
-    - getting-started/applications.md
     - getting-started/common-command.md
     - getting-started/network.md
   - 概念:
@@ -170,18 +169,41 @@ nav:
     - 跨发行版:
       - compatibility/inter-distros/distrobox.md
   - 应用与工具:
-    - applications/emacs.md
-    - applications/vim.md
-    - applications/zsh.md
-    - applications/fish.md
-    - applications/ssh.md
-    - applications/git.md
-    - applications/openclaw.md
-    - 开发相关:
-      - applications/programming/cpp.md
+    - applications/apps.md
+    - 生产力:
+      - applications/productivity/qq.md
+      - applications/productivity/wechat.md
+      - applications/productivity/openclaw.md
+    - 办公与协作:
+      - applications/office/dingtalk.md
+      - applications/office/feishu.md
+      - applications/office/libreoffice.md
+      - applications/office/onlyoffice.md
+      - applications/office/wps.md
+    - 娱乐:
+      - applications/entertainment/qqmusic.md
+      - applications/entertainment/ncm.md
+      - applications/entertainment/tencent.md
+      - applications/entertainment/iqiyi.md
+    - 编辑器:
+      - applications/editors/emacs.md
+      - applications/editors/vim.md
+      - applications/editors/vscode.md
+    - 多媒体处理:
+      - applications/multimedia/gimp.md
+      - applications/multimedia/krita.md
+      - applications/multimedia/kdenlive.md
+      - applications/multimedia/davinci.md
+      - applications/multimedia/others.md
+    - 编程与开发:
+      - applications/programming/git.md
+      - applications/programming/ssh.md
       - applications/programming/python.md
       - applications/programming/miniconda.md
-      - applications/programming/vscode.md
+      - applications/programming/cpp.md
+    - Shell:
+      - applications/shell/zsh.md
+      - applications/shell/fish.md
   - 进阶:
     - advanced/lvm.md
     - advanced/btrfs.md

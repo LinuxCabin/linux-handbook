@@ -4,7 +4,7 @@
 
 ## 概述
 
-Fish是一个[Shell](../concepts/linux/shell.md),它有着功能丰富,开箱即用,脚本编写简便的特点。
+Fish是一个[Shell](../../concepts/linux/shell.md),它有着功能丰富,开箱即用,脚本编写简便的特点。
 
 **但它不兼容[POSIX标准](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html),这意味着Bash无法运行Fish的脚本，反之亦然**。
 
