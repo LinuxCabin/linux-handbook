@@ -4,30 +4,47 @@
 
 ## 概述
 
-Emacs是一个[自由](https://www.gnu.org/philosophy/free-sw.html)的编辑器,采用[GPL-v3](https://www.gnu.org/licenses/gpl-3.0.en.html)发布,采用Elisp作为配置语言,Emacs功能强大(包括但不限于发邮件,使用irc聊天,阅读新闻和RSS订阅,玩俄罗斯方块),常被与vim/nvim比较,最早由Richard Stallman编写发布,Emacs是[自由软件运动](https://www.gnu.org/)的一部分。
+Emacs是一个[自由](https://www.gnu.org/philosophy/free-sw.html)的编辑器，采用[GPL-v3](https://www.gnu.org/licenses/gpl-3.0.en.html)发布，采用Elisp作为配置语言，Emacs功能强大(包括但不限于发邮件，使用irc聊天，阅读新闻和RSS订阅，玩俄罗斯方块)，常被与vim/nvim比较，最早由Richard Stallman编写发布，Emacs是[自由软件运动](https://www.gnu.org/)的一部分。
 
 ## 安装
 
-Debian系:
+Debian系：
 ```bash
 sudo apt install emacs
 ```
 
-红帽系:
+???- info "如果正在使用 Wayland..."
+     默认的 `emacs-gtk` 在 Wayland 下可能会导致各种问题。使用 `emacs-pgtk`：
+     ```bash
+     sudo apt install emacs emacs-gtk- emacs-pgtk+ --purge
+     ```
+
+红帽系：
 ```bash
 sudo dnf install emacs
 ```
 
-Arch系:
+Arch系：
 ```bash
 sudo pacman -S emacs
 ```
 
-## 使用(默认快捷键)
+## 使用
 
-**Emacs的使用高度依赖C键(及Control键)和Meta键(及Alt键),下文用C与M代替**。
+### 快捷键
 
-**由于Emacs的功能关于繁杂无法将所有快捷键列出,强烈建议您阅读官方文档**。
+???+ note "Emacs 风味的组合键描述"
+     - `C`-`...`： `C` 是 Ctrl
+     - `M`-`...`： `M` 是 Alt
+     - `s`-`...`： `s` 是 Super，或者在大多数键盘上，Windows
+     - `...`-`SPC`： `SPC` 是 space，空格
+
+     最后一项是基础键，前面的全都是修饰键。 `C`-`c` 是 Ctrl + C； `M`-`c` 是 Alt + C； `C`-`M`-`c` 是 Ctrl + Alt + C ...
+     
+     你可能想问 Shift 去哪里了？没有 Shift！在 Emacs 里我们用已经“被大写”的字符来代替 Shift。比如
+     
+     - `M`-`<`： Alt + Shift + ,
+     - `M`-`,`： Alt + ,
 
 `C-x C-c` 退出Emacs  
 `M-x` 输入命令  
@@ -37,16 +54,141 @@ sudo pacman -S emacs
 `C-a/e` 移动到行头或行尾  
 `M-</>` 移动到文件头或文件尾  
 `C-k` 删除光标后面的所有文本  
-`C-/` 撤销操作(C-x u和C-_也可已,详情见官方文档9.4)  
-`C-x C-f` 跳转到另一个文件(旧文件会被放入一个buffer中)  
+`C-/` 撤销操作（`C-x` `u`和 `C-_` 也可已，详情见官方文档9.4）
+`C-x C-f` 跳转到另一个文件（旧文件会被放入一个buffer中）
 `C-x b` 切换到另一个Buffer  
-`C-x C-b` 打开Buffer列表(?获得帮助)  
+`C-x C-b` 打开Buffer列表（?获得帮助）
 `C-x o` 切换到另一个Window  
 `C-x 0` 关闭Window  
 `C-x k` 关闭一个Buffer  
 `C-h C-f` Emacs常见问题解答  
-`C-h r` 官方手册(需要安装info)  
-`C-h t` 官方快速指南   
+`C-h r` 官方手册（需要安装info）
+`C-h t` 官方快速指南   -->
+
+???+ info "注意"
+     显然这些不是所有的官方配置快捷键，事实上用户可以自己更改快捷键，受限于篇幅和难度这里不多赘述。请参阅 #关于更多。
+
+
+### 一篇简短的 Emacs 入门教程
+
+<!-- emacs, 或vim, 在我看来最大的问题在于0基础入门的难度，小白看到一个连怎么保存退出都不会的编辑器第一反应只会是“早有耳闻，原来这么难”、“我不适合这个”等。写这篇教程想的理念是，一般用户怎么用nano，windows记事本，我们就教他相同的操作在emacs里怎么做，不涉及概念，不涉及架构，甚至不指望小白能记住所有快捷键。我想把emacs“去神化”，告诉他们一般人也能用emacs。只要证明了最基础的，像nano一样使用emacs，一部分人就会留下，想着然后学习怎么更好地使用emacs。就像Linux。
+希望正在审稿的维护者能理解我的观点。
+我认为这篇教程不违反 J4W，不算冷门，没有不常见内容，不涉及底层不添加概念，使用人性化的语言于方法引导，不是 AI 生成。我认为这篇教程完全符合 COC。 (Aug 16 6:30 PM EDT)
+-->
+
+???+ note "注意"
+     这篇文章的标题不是 “emacs：从入门到精通”，本篇文章只介绍 Emacs 作为文本编辑器最基础的部分。如果读者想要一篇综合的，完整的教程，看看 #关于更多 (TODO: hyperlink)
+
+虽然非常强大，Emacs 出了名地难以学习。笔者想“纸上得来终觉浅”，反观枯燥的概念堆砌，为什么不用一个小教程 - 使用 Emacs 编辑本文 - 来介绍 Emacs 的基本用法呢？
+
+???- info "我不熟悉 Markdown ..."
+     没有关系！我们不要求读者理解 Markdown 的语法。
+
+#### 下载并打开这篇文章
+
+用终端运行以下命令：
+```bash
+# 下载
+curl https://codeberg.org/LinuxCabin/linux-handbook/raw/branch/main/docs/applications/editors/emacs.md --output emacs.md
+# 打开
+emacs emacs.md
+```
+如果看到 Emacs 打开并载入了这篇文档，恭喜你，你的 Emacs 安装没有问题！
+
+#### 移动光标
+
+(TODO: hyperlink)
+屏幕上闪烁的“小黑方框”就是我们的光标。我们用上下左右键来移动光标。
+
+一个字一个字地移动光标很慢，有没有快点的移动方法呢？有的兄弟，有的
+
+- 纵向移动一个段落：`M`-`{` , `M`-`}`
+- 横向移动一个单词：`M`-`b` , `M`-`f`
+
+???- tip "更多组合键"
+     - 纵向移动一整页：`M`-`v` , `C`-`v`
+     - 移动到行首或行尾：`C`-`a` , `C`-`e`
+     - 移动到整个文件的开头和末尾：`M`-`<` , `M`-`>`
+
+现在试试把光标移到这一行吧。按住下箭头，或者感到足够勇敢，按几次 `M`-`}`。
+
+#### 写入，删除与撤销
+
+和 GNU Nano 很相似，直接打字就可以在 Emacs 里写东西，按退格键就可以删除。
+
+现在把光标移到这一行下面，写下 `Hello world!`
+
+
+
+
+
+现在试试 `C`-`<backspace>`，这个组合键能删除一整个单词，用它删掉 `Hello world!`
+
+delete me d e l e t e m e a b c d e f g h j k l
+
+把光标移到 ``delete me`` 这一行，按下 `C`-`a` `C`-`k`，这个组合键能删除一整行。
+
+按下 `C-/`，它能撤销刚刚做的更改（在这里是删除）。
+
+???- tip "更多组合键"
+     用 `C`-`d` 或 `<delete>` 就能向后删除。
+
+#### 选中，拷贝和粘贴
+
+想象我们在图形化的编辑器里。要选中一段文字，我们会把鼠标指针移到这段文字的头部，按下鼠标，再把指针移到尾部
+
+在 Emacs 里也是这样的，只不过我们用键盘移动光标到头部，按下 `C`-`SPC`，再移动光标到尾部。试试看吧：
+
+选中这句文字。
+
+
+
+
+???+ tips "提示"
+     #移动光标 的内容可以在这里用哦
+
+
+连续按两下 `C`-`SPC` 以退出选区。
+
+`C`-`w` 是剪切，`C`-`y` 是粘贴。现在选中上面那段文字，按下 `C`-`w`，再按下 `C`-`y` 试试。
+
+`M`-`w` 是拷贝。把 `C`-`w` 换成 `M`-`w`，重复上面的步骤试试。
+
+
+#### 查找与替换
+
+##### 查找
+
+- 向后查找：`C`-`s`
+- 向前查找：`C`-`r`
+
+现在试试向前查找 ``backspace`` 吧。按 `C`-`r`，输入 ``backspace``，回车。
+
+???- tip "回到搜索前的位置..."
+     按 `C`-`u` `C`-`SPC` 就可以回到上一个标记的位置，而搜索会留下标记，所以可以回到上一个搜索前的位置。
+
+##### 替换
+
+下面的 Emacs 有拼写错误，我们使用 `M`-`%` 查找并替换它。按下 `M`-`%` ，输入 ``Eamcs`` ，再输入 ``Emacs``  ，输入 ``y`` 确认替换。
+
+???- tip "如果不想逐个确认..."
+     Eamcs 有一个命令，叫 ``replace-string``，但是默认不绑定至任何键位。如果要运行它，我们先按 `M`-`x` ，再手动输入 `replace-string`。
+
+#### 保存和退出
+
+现在我们已经做好了所有更改，是时候保存了。按下 `C`-`x` `C`-`s` ，Emacs 就会保存未更改的内容。
+
+如果要退出 Emacs，按下 `C`-`x` `C`-`c`。
+
+???+ tip "退出且不保存"
+     当有东西没保存但是按了退出键时，Emacs 会问你需不需要保存，此时输入 ``n`` 就可以不保存并退出。
+
+##### 重置所有内容
+
+Emacs 的 ``revert-buffer`` 命令能删除所有没保存的内容，但是默认不绑定至任何键位。先按 `M`-`x` ，手动输入 ``revert-buffer`` 来执行它。
+
+
+
 
 ## 关于更多
 

@@ -171,8 +171,8 @@ nav:
   - 应用与工具:
     - applications/apps.md
     - 聊天软件:
-      - applications/chat/qq.md
-      - applications/chat/wechat.md
+      - applications/im/qq.md
+      - applications/im/wechat.md
     - 办公与协作:
       - applications/office/dingtalk.md
       - applications/office/feishu.md
