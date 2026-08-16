@@ -63,12 +63,7 @@
 2. 你的配置效果很有可能不尽人意
 3. 我们的教程并不全面，只是为入坑而写，如果需要更深入的知识推荐去[Arch Wiki](https://wiki.archlinux.org/title/Main_page) | [Arch Wiki 中文版](https://wiki.archlinuxcn.org/wiki/%E9%A6%96%E9%A1%B5)深造
 
-并且，您一定要明辨下面的几个概念：
-
- - [桌面环境 (DE)](../concepts/desktop/de.md)
- - [发行版](../concepts/linux/distro.md)
- - [窗口管理器 (WM)](../concepts/desktop/wm.md)
- - 更新模式
+在继续之前，我们建议您首先阅读[桌面](../desktop/desktop.md)章节。
 
 好啦，既然你已经准备好了，那我们就向下继续吧！
 
