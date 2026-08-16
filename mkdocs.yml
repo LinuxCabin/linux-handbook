@@ -177,8 +177,8 @@ nav:
     - applications/ssh.md
     - applications/git.md
     - applications/openclaw.md
-    - 视频，音频与图像编辑:
-      - applications/vai/obs_studio.md
+    - 多媒体处理:
+      - applications/multimedia/obs_studio.md
     - 开发相关:
       - applications/programming/cpp.md
       - applications/programming/python.md
