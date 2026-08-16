@@ -1,4 +1,5 @@
 # OBS Studio
+<!-- TODO: L75, L115 -->
 
 ![Markdown Logo](https://obsproject.com/assets/images/new_icon_small-r.png)
 
@@ -11,17 +12,17 @@ OBS Studio 同时是一款视频录制器和一款推流器。它还有“合成
 OBS Studio 完全免费，灵活可定制，还有庞大的插件库和社区支持。
 
 ## 安装
-可以通过 Flatpak 和 Snap 安装 OBS Stuio，也可以通过包管理器直接安装 OBS Studio。
+可以通过 [Flatpak](../../concepts/package_managers/flatpak.md) 和 Snap 安装 OBS Stuio，也可以通过传统包管理器直接安装 OBS Studio。
 
-???+ info "注意"
-    应该先在应用商店（如果有的话）里搜一下 ``OBS Studio``。如果搜到了，最安全的方法是安装应用商店里的那个，因为通常来说发行版会管理好一切，开箱即用。
+???+ note "一键安装..."
+    在应用商店（如果有的话）里搜一下 ``OBS Studio``。如果搜到了，最安全的方法是安装应用商店里的那个，因为通常来说发行版会管理好一切，开箱即用。
 
 ### Flatpak（推荐）
 ```bash
 flatpak install com.obsproject.Studio
 ```
 
-### Snap（在 Ubuntu 下推荐）
+### Snap
 ```bash
 sudo snap install obs-studio
 ```
@@ -63,9 +64,9 @@ OBS Studio 默认输出 1080p ，（视您的硬件）最高 6000 kbps 的视频
 
 ## 使用
 
-点击**开始录制**或**开始直播**，在完成后点击**停止录制**或**停止直播**。
+点击 **开始录制** 或 **开始直播** ，在完成后点击** 停止录制** 或 **停止直播** 。
 
-如想暂停录制，点击 **停止录制** *旁边* 的暂停键以暂停。再点一下以继续录制，或点击**停止录制**来结束。
+如想暂停录制，点击 **停止录制** *旁边* 的暂停键以暂停。再点一下以继续录制，或点击** 停止录制** 来结束。
 
 ## 高级
 
@@ -74,7 +75,7 @@ OBS Studio 默认输出 1080p ，（视您的硬件）最高 6000 kbps 的视频
 <!-- so nvidia fk u
 我没有nv显卡，无法测试。-->
 
-如果 OBS Studio 使用包管理器安装，安装 ``ffmpeg`` 。
+如果 OBS Studio 使用传统包管理器安装，安装 ``ffmpeg`` 。
 ```bash
 sudo apt install ffmpeg
 # 或
@@ -111,7 +112,7 @@ flatpak install com.obsproject.Studio.Plugin.WaylandHotkeys
 
      打开系统设置，导航至 **键盘** - **快捷键**，在列表里选择 **OBS Studio** 。
 
-<!-- 我需要使用中文操作系统的人帮我验证翻译名。-->
+<!-- TODO: 我需要使用中文操作系统的人帮我验证翻译名。-->
 
 ## 关于更多
 
