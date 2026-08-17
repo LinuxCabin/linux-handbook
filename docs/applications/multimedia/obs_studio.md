@@ -85,7 +85,7 @@ sudo yum install ffmpeg
 
 如果 OBS Studio 使用 Flatpak 或 Snap 安装，不用任何操作，依赖已经被管理好了。
 
-??? info "可是我看不到硬件加速的选项耶？"
+??? question "可是我看不到硬件加速的选项耶？"
      把输出模式改成 **高级** ，在 **直播** 和 **录像** 的视频编码器里选择 **"FFmpeg VAAPI"** 开头的选项。
 
 ### Wayland 下的快捷键
