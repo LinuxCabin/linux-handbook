@@ -170,7 +170,7 @@ nav:
       - compatibility/inter-distros/distrobox.md
   - 应用与工具:
     - applications/apps.md
-    - 聊天软件:
+    - 即时通讯:
       - applications/im/qq.md
       - applications/im/wechat.md
     - 办公与协作:
@@ -200,7 +200,7 @@ nav:
       - applications/programming/python.md
       - applications/programming/miniconda.md
       - applications/programming/cpp.md
-    - AI相关:
+    - AI:
       - applications/ai/openclaw.md
     - Shell:
       - applications/shell/bash.md
