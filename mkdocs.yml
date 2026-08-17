@@ -203,6 +203,7 @@ nav:
     - AI:
       - applications/ai/openclaw.md
     - Shell:
+      - applications/shell/bash.md
       - applications/shell/zsh.md
       - applications/shell/fish.md
   - 进阶:
