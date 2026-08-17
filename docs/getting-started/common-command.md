@@ -216,9 +216,14 @@ man [options] [section] page
 
 ### nano
 
+???+ info "想要了解 nano？"
+     nano 在**应用与工具**栏目中有独立的页面，内容涵盖了快捷键和使用方法。前往 [nano](../applications/editors/nano.md)。
+
 nano（包名`nano`）是广受赞誉的终端文本编辑器，拥有简单易操作的界面，适合新手用来通过终端编辑系统配置文件。
 
 例如：`sudo nano /etc/sudoers`指以超级管理员权限，用nano修改`/etc/sudoers`。
+
+<!-- 这个例子不好。在arch系（和也许redhat系？）中你应该用visudo来编辑sudoers。-->
 
 ???+ note "权限"
     编辑部分配置文件时需要`sudo`提权。

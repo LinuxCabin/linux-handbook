@@ -185,6 +185,7 @@ nav:
       - applications/entertainment/tencent.md
       - applications/entertainment/iqiyi.md
     - 编辑器:
+      - applications/editors/nano.md
       - applications/editors/emacs.md
       - applications/editors/vim.md
       - applications/editors/vscode.md

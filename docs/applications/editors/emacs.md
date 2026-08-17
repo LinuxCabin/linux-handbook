@@ -4,9 +4,10 @@
 
 ## 概述
 
-Emacs 是一个文本编辑器，采用 Emacs Lisp 作为配置语言。作为 Lisp 解释器，Emacs 功能强大 (包括但不限于发邮件，使用irc聊天，阅读新闻和RSS订阅，玩俄罗斯方块) 。
+GNU Emacs ，简称 Emacs ，是一个文本编辑器，采用 Emacs Lisp 作为配置语言。作为 Lisp 解释器，Emacs 功能强大 (包括但不限于发邮件，使用irc聊天，阅读新闻和RSS订阅，玩俄罗斯方块) 。
 
-Emacs 是[自由](https://www.gnu.org/philosophy/free-sw.html)软件，采用[GPL-v3](https://www.gnu.org/licenses/gpl-3.0.html)发布。Emacs 是[自由软件运动](https://www.gnu.org/)的一部分。
+Emacs 是[自由软件](https://www.gnu.org/philosophy/free-sw.html)，是 [GNU 操作系统](https://www.gnu.org/) 的一部分。
+Emacs 采用 [GPL-3.0](https://www.gnu.org/licenses/gpl-3.0) 协议发布。
 
 ## 安装
 
@@ -220,4 +221,4 @@ Emacs 的 ``revert-buffer`` 命令能删除所有没保存的内容，但是默�
 
 - [官方文档](https://www.gnu.org/software/emacs/manual/emacs.html)
 
-- [什么是自由软件](https://www.fsf.org/about/what-is-free-software)
+- [什么是自由软件？](https://www.fsf.org/about/what-is-free-software)
