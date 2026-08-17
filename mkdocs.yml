@@ -206,6 +206,8 @@ nav:
       - applications/shell/bash.md
       - applications/shell/zsh.md
       - applications/shell/fish.md
+    - 其他:
+      - applications/other/fastfetch.md
   - 进阶:
     - advanced/lvm.md
     - advanced/btrfs.md
