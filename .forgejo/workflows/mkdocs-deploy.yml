@@ -75,4 +75,4 @@ jobs:
           site: https://preview.hb.linuxcabin.top/
           server: codeberg.page
           token: ${{ forge.token }}
-            source: site/
+          source: site/
