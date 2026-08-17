@@ -6,8 +6,4 @@
 
 ## 安装
 
-由于中望CAD的商业模式限制，需要用户前往官网自行认证下载。
-
-## 更多
-
-- [中望CAD](https://www.zwsoft.cn/product/zwcad)
+由于中望CAD的商业模式限制，需要用户前往[官网](https://www.zwsoft.cn/product/zwcad)自行认证下载。
