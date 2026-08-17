@@ -56,7 +56,7 @@ jobs:
           git commit -m "Deploy site $(date -u '+%Y-%m-%d %H:%M:%S UTC')"
           git push --force "https://Fangcat_Dev:${DEPLOY_TOKEN}@codeberg.org/LinuxCabin/handbook-site.git" HEAD:pages
       - name: Deploy to preview
-        if: github.event_name == 'pull_request' 
+        if: github.event_name == 'pull_request_target' 
         env:
           DEPLOY_TOKEN: ${{ secrets.DEPLOY_TOKEN }}
         run: |
