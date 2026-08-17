@@ -21,10 +21,6 @@ on:
       - '.forgejo/workflows/mkdocs-deploy.yml'
   workflow_dispatch:
 
-concurrency:
-  group: "pages"
-  cancel-in-progress: false
-
 jobs:
   build-and-deploy:
     runs-on: build-env
