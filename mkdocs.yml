@@ -201,6 +201,10 @@ nav:
       - applications/programming/python.md
       - applications/programming/miniconda.md
       - applications/programming/cpp.md
+    - 工程制图:
+      - applications/cad/zwcad.md
+      - applications/cad/freecad.md
+      - applications/cad/openscad.md
     - AI:
       - applications/ai/openclaw.md
     - Shell:
