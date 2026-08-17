@@ -48,8 +48,8 @@ flatpak install org.gnu.emacs
 
      最后一项是基础键，前面的全都是修饰键。 `C`-`c` 是 Ctrl + C； `M`-`c` 是 Alt + C； `C`-`M`-`c` 是 Ctrl + Alt + C ...
 
-     ???+ question "Shift去哪里了？"
-         没有 Shift！在 Emacs 里我们用已经“被大写”的字符来代替 Shift。比如
+     **Shift去哪里了？
+         没有 Shift！**在 Emacs 里我们用已经“被大写”的字符来代替 Shift。比如
      
          - `M`-`<`： Alt + Shift + ,
          - `M`-`,`： Alt + ,
