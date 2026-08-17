@@ -70,6 +70,7 @@ jobs:
       
           echo "preview.hb.linuxcabin.top" > CNAME
       - name: Deploy to review
+        if: github.event_name == 'pull_request' 
         uses: https://codeberg.org/git-pages/action@v2
         with:
           site: https://preview.hb.linuxcabin.top/
