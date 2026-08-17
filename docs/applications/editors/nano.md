@@ -62,6 +62,8 @@ nano 采用 [GPL-3.0](https://www.gnu.org/licenses/gpl-3.0) 协议发布。
 
 我不确定要不要加入shift。如果这是wiki，我绝对会加，但是作为新手向，没几个快捷键用到shift。 -->
 
+nano 窗口的底部会出现一些可用快捷键的提示。
+
 ??? info "一些常用的快捷键"
 
     **文件**
