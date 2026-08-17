@@ -55,10 +55,8 @@ jobs:
           git add .
           git commit -m "Deploy site $(date -u '+%Y-%m-%d %H:%M:%S UTC')"
           git push --force "https://Fangcat_Dev:${DEPLOY_TOKEN}@codeberg.org/LinuxCabin/handbook-site.git" HEAD:pages
-      - name: Deploy to preview
-        if: github.event_name == 'pull_request_target' 
-        env:
-          DEPLOY_TOKEN: ${{ secrets.DEPLOY_TOKEN }}
+      - name: Pre-treatment for reviewing
+        if: github.event_name == 'pull_request' 
         run: |
           cd site
       
@@ -71,9 +69,10 @@ jobs:
           sed -i "s/<body\([^>]*\)>/<body\1><div style=\"background-color:#f8d7da; color:#721c24; padding:10px; text-align:center; border-bottom:1px solid #f5c6cb;\">Preview: PR #${PR_NUMBER} by ${PR_AUTHOR} | Built: ${BUILD_TIME}<\/div>/" index.html
       
           echo "preview.hb.linuxcabin.top" > CNAME
-          git init
-          git config user.name "Fangcat_Dev"
-          git config user.email "f20091219@outlook.com"
-          git add .
-          git commit -m "Deploy site $(date -u '+%Y-%m-%d %H:%M:%S UTC')"
-          git push --force "https://Fangcat_Dev:${DEPLOY_TOKEN}@codeberg.org/LinuxCabin/handbook-preview.git" HEAD:pages
+      - name: Deploy to review
+        uses: https://codeberg.org/git-pages/action@v2
+        with:
+          site: https://preview.hb.linuxcabin.top/
+          server: codeberg.page
+          token: ${{ forge.token }}
+            source: site/
