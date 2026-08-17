@@ -15,7 +15,7 @@ Debian系：
 sudo apt install emacs
 ```
 
-???- info "如果正在使用 Wayland..."
+???- note "如果您正在使用 Wayland"
      默认的 `emacs-gtk` 在 Wayland 下可能会导致各种问题。使用 `emacs-pgtk`：
      ```bash
      sudo apt install emacs emacs-gtk- emacs-pgtk+ --purge
@@ -31,7 +31,7 @@ Arch系：
 sudo pacman -S emacs
 ```
 
-虽然不建议，Emacs 可以使用 [Flatpak](../../concepts/package_managers/flatpak.md) 安装
+Emacs 可以使用 [Flatpak](../../concepts/package_managers/flatpak.md) 安装，但我们不建议使用该方法。
 ```bash
 flatpak install org.gnu.emacs
 ```
@@ -47,11 +47,12 @@ flatpak install org.gnu.emacs
      - `...`-`SPC`： `SPC` 是 space，空格
 
      最后一项是基础键，前面的全都是修饰键。 `C`-`c` 是 Ctrl + C； `M`-`c` 是 Alt + C； `C`-`M`-`c` 是 Ctrl + Alt + C ...
+
+     ???+ question "Shift去哪里了？"
+         没有 Shift！在 Emacs 里我们用已经“被大写”的字符来代替 Shift。比如
      
-     你可能想问 Shift 去哪里了？没有 Shift！在 Emacs 里我们用已经“被大写”的字符来代替 Shift。比如
-     
-     - `M`-`<`： Alt + Shift + ,
-     - `M`-`,`： Alt + ,
+         - `M`-`<`： Alt + Shift + ,
+         - `M`-`,`： Alt + ,
 
 **文件**
 `C-x C-c` 退出Emacs  
@@ -95,16 +96,16 @@ flatpak install org.gnu.emacs
      显然这些不是所有的官方配置快捷键，事实上用户可以自己更改快捷键，受限于篇幅和难度这里不多赘述。请参阅 [#关于更多](#_14)。
 
 
-### 一篇简短的 Emacs 入门教程
+### 简短教程
 
 ???+ note "注意"
-     这篇文章的标题不是 “emacs：从入门到精通”，本篇文章只介绍 Emacs 作为文本编辑器最基础的部分。如果读者想要一篇综合的，完整的教程，请参阅 [#关于更多](#_14)
+     这篇文章的标题不是《Emacs：从入门到精通》，本篇文章只介绍 Emacs 作为文本编辑器最基础的部分。如果读者想要一篇综合的，完整的教程，请参阅 [#关于更多](#_14)
 
-虽然非常强大，Emacs 出了名地难以学习。下面是一篇入门级教程，通过对本文源代码的编辑来阐述 Emacs 的基础部分。
+虽然非常强大，Emacs 出了名地难以学习。下面是一篇入门级教程，以对本文源代码的编辑为例来阐述 Emacs 的基础部分。
 
 #### 下载并打开这篇文章
 
-???- info "我不熟悉 Markdown ..."
+???+ question "我不熟悉 Markdown"
      没有关系！我们不要求读者理解 Markdown 的语法。
 
 用终端运行以下命令：
@@ -125,7 +126,7 @@ emacs emacs.md
 - 纵向移动一个段落：`M`-`{` , `M`-`}`
 - 横向移动一个单词：`M`-`b` , `M`-`f`
 
-???- tip "更多组合键"
+??? tip "更多组合键"
      - 移动到行首或行尾：`C`-`a` , `C`-`e`
      - 移动到整个文件的开头和末尾：`M`-`<` , `M`-`>`
 
@@ -139,8 +140,6 @@ emacs emacs.md
 
 
 
-
-
 delete this
 
 试试 `C`-`<backspace>`，这个组合键能删除一整个单词，用它删掉 `delete this`
@@ -151,7 +150,7 @@ d e l e t e t h i s
 
 按下 `C-/`，它能撤销刚刚做的更改（比如删除）。
 
-???- tip "更多组合键"
+??? tip "更多组合键"
      用 `C`-`d` 或 `<delete>` 就能向后删除，用 `C`-`<delete>` 向后删除一个单词。
 
 #### 选中，拷贝和粘贴
@@ -166,7 +165,7 @@ d e l e t e t h i s
 
 
 ???+ tips "提示"
-     [#移动光标](#_6) 的内容可以在这里用哦
+     [#移动光标](#_6) 的内容可以在这里用哦。
 
 
 连续按两下 `C`-`SPC` 以退出选区。
@@ -185,14 +184,14 @@ d e l e t e t h i s
 
 现在试试向前查找 ``backspace`` 吧。按 `C`-`r`，输入 ``backspace``，回车。
 
-???- tip "回到搜索前的位置..."
+??? tip "回到搜索前的位置..."
      按 `C`-`u` `C`-`SPC` 就可以回到上一个标记的位置。搜索会留下标记，所以可以回到上一个搜索前的位置。
 
 ##### 替换
 
 下面的 Emacs 有拼写错误，我们使用 `M`-`%` 查找并替换它。按下 `M`-`%` ，输入 ``Eamcs`` ，再输入 ``Emacs``  ，输入 ``y`` 确认替换。
 
-???- tip "如果不想逐个确认..."
+??? tip "如果不想逐个确认..."
      Eamcs 有一个命令，叫 ``replace-string``，但是默认不绑定至任何键位。如果要运行它，我们先按 `M`-`x` ，再手动输入 `replace-string`。
 
 #### 保存和退出
@@ -207,9 +206,6 @@ d e l e t e t h i s
 ##### 重置所有内容
 
 Emacs 的 ``revert-buffer`` 命令能删除所有没保存的内容，但是默认不绑定至任何键位。先按 `M`-`x` ，手动输入 ``revert-buffer`` 来执行它。
-
-
-
 
 ## 关于更多
 
