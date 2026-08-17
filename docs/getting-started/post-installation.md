@@ -7,7 +7,7 @@
 因此，在安装之后，请务必切换软件源到国内镜像，以保证软件下载与系统更新的速度。
 
 ???+ "提示"
-    在换源之前，我们强烈建议您首先了解发行版对应包管理器的基本命令。您可以参照“概念-软件包”一节。
+    在换源之前，我们强烈建议您首先了解发行版对应包管理器的基本命令。您可以参照“[应用与工具](../applications/apps.md)”一节。
 
 ???+ "快捷脚本"
     您可以使用[LinuxMirrors项目](https://linuxmirrors.cn/)的换源脚本，更方便，快捷。
@@ -25,9 +25,9 @@
 
 ## Flatpak
 
-[Flatpak](../concepts/package_managers/flatpak.md)是新一代Linux软件管理工具。其采用沙箱式设计，使得软件能够兼容多数发行版。并且，基于Flatpak的Flathub是Linux上极其重要的应用商店，深度集成于KDE Discover, GNOME。
+[Flatpak](../applications/apps.md#flatpak)是新一代Linux软件管理工具。其采用沙箱式设计，使得软件能够兼容多数发行版。并且，基于Flatpak的Flathub是Linux上极其重要的应用商店，深度集成于KDE Discover, GNOME。
 
-**对于用户软件，我们推荐您使用[Flatpak](../concepts/package_managers/flatpak.md)或[AppImage](../concepts/package_managers/appimage.md)进行安装。**
+**对于用户软件，我们推荐您使用[Flatpak](../applications/apps.md#flatpak)或[AppImage](../applications/apps.md#appimage)进行安装。**
 
 您可以通过包管理器或者桌面环境自带的应用商店安装Flatpak。同样的，Flathub也需要换源。
 

@@ -34,11 +34,7 @@ command [options] [arguments]
     另外，如果您希望深入了解部分命令的完整使用方法，可以尝试[man](#man)或[info](#info)等命令（但不是所有命令都提供这样的文档）
 
 ???+ info "包管理器相关"
-    包管理器相关指令，请查看概念-包管理一节。
-    - [Apt](../concepts/package_managers/apt.md)
-    - [Dnf](../concepts/package_managers/dnf.md)
-    - [Pacman](../concepts/package_managers/pacman.md)
-    - [Flatpak](../concepts/package_managers/flatpak.md)
+    包管理器相关指令，请查看[应用与工具](../applications/apps.md)一节。
 
 ### sudo
 

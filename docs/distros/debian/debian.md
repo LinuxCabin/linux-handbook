@@ -18,7 +18,7 @@ Debian是一个由全球志愿者社区维护的自由开源操作系统。它�
     - USTC: https://mirrors.ustc.edu.cn/debian-cd/
     - MirrorZ: https://mirrors.cernet.edu.cn/debian-cd/
     - 官方（较慢）: https://cdimage.debian.org/debian-cd/
- - 包管理器：[apt](../../concepts/package_managers/apt.md) ,  dpkg（底层）
+ - 包管理器：[apt](../../applications/apps.md#apt-debian) ,  dpkg（底层）
  - 更新方式：版本/滚动
  - 自动换源：302
  - 图形安装界面：是

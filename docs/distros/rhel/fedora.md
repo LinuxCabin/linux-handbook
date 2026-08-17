@@ -38,7 +38,7 @@ Fedora是一款前沿、开放的发行版，有着广泛的社区支持，并�
     - TUNA: https://mirrors.tuna.tsinghua.edu.cn/fedora/releases/
     - USTC: https://mirrors.ustc.edu.cn/fedora/releases/
     - MirrorZ: https://mirrors.cernet.edu.cn/fedora/releases/
- - 包管理器：[dnf](../../concepts/package_managers/dnf.md)
+ - 包管理器：[dnf](../../applications/apps.md#dnf-red-hat)
  - 更新方式：传统/OSTree
  - 自动换源：302
  - 图形安装界面：是
