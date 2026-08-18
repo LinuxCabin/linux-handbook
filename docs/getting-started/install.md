@@ -51,7 +51,7 @@
 !!! warning "警告"
     无论您选择什么，请确保您已经备份该磁盘上所有的重要文件！！！
 
-在选择EFI[引导](../concepts/operating_system/boot_loader.md) (/boot) 分区时，请选择设备上的ESP分区（通常位于分区图示的最左侧，是一个FAT32文件系统的不大的分区）。**如果您想要保留Windows，请一定不要勾选“格式化/boot”。**
+在选择EFI[引导](./before-installing.md#_4) (/boot) 分区时，请选择设备上的ESP分区（通常位于分区图示的最左侧，是一个FAT32文件系统的不大的分区）。**如果您想要保留Windows，请一定不要勾选“格式化/boot”。**
 
 ### 应用安装
 

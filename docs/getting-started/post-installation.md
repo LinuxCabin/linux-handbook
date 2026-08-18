@@ -68,7 +68,7 @@
 
 ### Win -> Linux
 
-若您的Linux使用ext[文件系统](../concepts/operating_system/file_system.md)，则Windows会由于不支持ext而无法访问Linux的文件。
+若您的Linux使用ext[文件系统](./before-installing.md#_7)，则Windows会由于不支持ext而无法访问Linux的文件。
 
 您只需在Windows下载安装[Ext4Fsd](https://www.accum.se/~bosse/ext2fsd/0.71/Ext2Fsd-0.71-setup.exe)即可解决。
 

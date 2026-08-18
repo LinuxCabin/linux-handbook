@@ -101,6 +101,7 @@ nav:
   - 主页: index.md
   - 开始:
     - getting-started/purpose.md
+    - getting-started/os-basis.md
     - getting-started/before-installing.md
     - getting-started/install.md
     - getting-started/post-installation.md
@@ -117,14 +118,6 @@ nav:
       - concepts/linux/mirrors.md
       - concepts/linux/shell.md
       - concepts/linux/rolling_update.md
-    - 操作系统:
-      - concepts/operating_system/bios.md
-      - concepts/operating_system/secure_boot.md
-      - concepts/operating_system/boot_loader.md
-      - concepts/operating_system/disk_partition_table.md
-      - concepts/operating_system/partition.md
-      - concepts/operating_system/file_system.md
-      - concepts/operating_system/mounting.md
   - 发行版:
     - distros/distro.md
     - Debian系:

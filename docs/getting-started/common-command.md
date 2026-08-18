@@ -29,7 +29,7 @@ command [options] [arguments]
 ???+ tip "提示"
     您可以不用背透这些指令，但至少应该熟悉符号与指令对应的含义，以免执行部分危险指令。
 
-    不过，后续教程的部分操作（如[引导美化](../concepts/operating_system/boot_loader.md)）可能会用到这些指令。
+    不过，后续教程的部分操作（如[引导美化](../advanced/boot_loader.md)）可能会用到这些指令。
 
     另外，如果您希望深入了解部分命令的完整使用方法，可以尝试[man](#man)或[info](#info)等命令（但不是所有命令都提供这样的文档）
 
