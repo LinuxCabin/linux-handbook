@@ -111,13 +111,6 @@ nav:
     - getting-started/input-method.md
     - getting-started/common-command.md
     - getting-started/network.md
-  - 概念:
-    - Linux基础:
-      - concepts/linux/free_software.md
-      - concepts/linux/distro.md
-      - concepts/linux/mirrors.md
-      - concepts/linux/shell.md
-      - concepts/linux/rolling_update.md
   - 发行版:
     - distros/distro.md
     - Debian系:
@@ -195,6 +188,7 @@ nav:
     - AI:
       - applications/ai/openclaw.md
     - Shell:
+      - applications/shell/shell.md
       - applications/shell/bash.md
       - applications/shell/zsh.md
       - applications/shell/fish.md

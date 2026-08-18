@@ -21,7 +21,41 @@
 
 简单来说，TUNA快，USTC广，MirrorZ兜底。您可以任意选择三者中的一个。
 
-各个发行版的换源教程，我们已经整理到了对应发行版的选项卡下，您可以自行查阅。同时，我们也提供了[镜像站使用指南](../concepts/linux/mirrors.md)。
+??? question "如何使用镜像站？"
+
+    这里举Fedora作为例子，我们使用 [TUNA源](https://mirrors.tuna.tsinghua.edu.cn/)
+
+    - **访问镜像站**
+        首先打开镜像站, 也就是访问 => https://mirrors.tuna.tsinghua.edu.cn/
+
+    - **搜索发行版**
+        这个时候我们在搜索框里面输入 Fedora
+
+        然后就会出现筛选结果， 这个时候我们不要直接点Fedora, 而是点旁边的那个 `?` (也就是tuna给的换源官方手册)
+
+        ![TUNA搜索界面](../img/mirrors/pic1.png)
+
+    - **命令替换**
+
+        之后我们直接复制命令替换的那个内容
+
+        ![命令替换](../img/mirrors/pic2.png)
+
+    ???+ note "权限问题" 
+        TUNA默认提供的是使用 root 进行操作的指令，如果直接输入，大概率会有 Permission denied 的报错。
+
+        这时我们只需要在前面先加上一个 `sudo` (记得是 sudo 然后空一个再粘贴命令)就可以了， 当然T您也可以直接打开上面的“是否使用sudo的”开关，之后复制并执行命令。
+
+        ![启动sudo](../img/mirrors/pic3.png)
+
+    替换完成之后， 我们可以直接进行系统的**软件更新，见证魔法** => 我刚开始用的时候，也感觉直接更新所有软件是一个很酷的事情。
+
+    ```bash
+    sudo dnf update # 检查并更新
+    ```
+
+
+各个发行版的换源教程，我们已经整理到了对应发行版的选项卡下，您可以自行查阅。
 
 ## Flatpak
 
