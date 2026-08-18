@@ -194,6 +194,7 @@ nav:
       - applications/multimedia/krita.md
       - applications/multimedia/kdenlive.md
       - applications/multimedia/davinci.md
+      - applications/multimedia/vlc.md
       - applications/multimedia/others.md
     - 编程与开发:
       - applications/programming/git.md
