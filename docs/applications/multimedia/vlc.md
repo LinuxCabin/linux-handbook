@@ -61,8 +61,6 @@ flatpak install org.videolan.VLC
 !!! warning "如果使用 Flatpak 安装..."
     [Flatpak](https://flathub.org/apps/org.videolan.VLC) 版的 VLC 已自带 FFmpeg 编码/解码库，不需要再安装以下软件。
 
-<!-- 需要 RedHat 系的帮助！感谢 -->
-
 #### Debian 系：
 
 安装 ``ffmpeg`` 包。打开终端，运行
