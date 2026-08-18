@@ -11,7 +11,7 @@
 
 大部分桌面环境支持双击安装包进行安装。您也可以按照使用以下的包管理器。
 
-## Apt (Debian)
+## Apt (Debian系)
 
 全称：Advanced Packaging Tool
 
@@ -37,7 +37,7 @@ apt有多种变体，如apt-get、aptitude（用于缓解依赖地狱）等。
 
 更详细可以参考[Runoob的教程](https://www.runoob.com/linux/linux-comm-apt.html)。
 
-## Dnf (Red Hat)
+## Dnf (红帽系)
 
 全称：Dandified Yum
 
@@ -66,7 +66,7 @@ dnf是大部分红帽系的软件包管理器，在rpm的基础上创建。
 
 更详细可以参考[Runoob的教程](https://www.runoob.com/linux/linux-comm-dnf.html)。
 
-## Pacman (Arch)
+## Pacman (Arch系)
 
 全称：Package Manager
 
@@ -142,7 +142,7 @@ AUR (Arch User Repository)是当今Linux软件包数目第二多的软件仓库�
 一般来说，AUR的常用语法与Pacman基本相同。
 
 ???+ note "执行者"
-    不建议使用`sudo`来执行AUR助手。
+    不建议使用`sudo`或在`root`用户下执行AUR助手。
 
 !!! warning "网络问题" 
     AUR本质上拖管的是PKGBUILD文件，可以被看作是应用程序的构建脚本，因而部分软件在安装时需要从Github拉取上游软件包，这使得部分软件的安装进度十分缓慢。

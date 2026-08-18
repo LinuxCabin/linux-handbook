@@ -48,29 +48,14 @@ UEFI（统一可扩展固件接口）是基于BIOS的衍生替代方案，其作
     **ESP目录结构可能因挂载点不同存在差异，请自行替换下方教程路径。**
 
     ```
-    /boot
-    ├── efi
-    │   ├── BOOT  # Windows的引导
-    │   │   ├── BOOTIA32.EFI
-    │   │   ├── BOOTX64.EFI
-    │   │   ├── fbia32.efi
-    │   │   └── fbx64.efi
-    │   └── fedora  # Linux的引导
-    │       ├── BOOTIA32.CSV
-    │       ├── bootuuid.cfg
-    │       ├── BOOTX64.CSV
-    │       ├── grub.cfg
-    │       ├── grubia32.efi
-    │       ├── grubx64.efi
-    │       ├── mmia32.efi
-    │       ├── mmx64.efi
-    │       ├── shim.efi
-    │       ├── shimia32.efi
-    │       └── shimx64.efi
-    └── grub # GRUB配置，部分发行版为grub2
-         ├── bootuuid.cfg
-         ├── grub.cfg
-         └── grubenv
+    /boot/efi/EFI
+    ├── BOOT
+    ├── fedora
+    │   └── ...
+    └── Microsoft
+         └── Boot
+               └─ ...
+
     ```
 
 ## 存储
