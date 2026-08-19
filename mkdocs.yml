@@ -101,6 +101,7 @@ nav:
   - 主页: index.md
   - 开始:
     - getting-started/purpose.md
+    - getting-started/os-basis.md
     - getting-started/before-installing.md
     - getting-started/install.md
     - getting-started/post-installation.md
@@ -110,27 +111,6 @@ nav:
     - getting-started/input-method.md
     - getting-started/common-command.md
     - getting-started/network.md
-  - 概念:
-    - Linux基础:
-      - concepts/linux/free_software.md
-      - concepts/linux/distro.md
-      - concepts/linux/mirrors.md
-      - concepts/linux/shell.md
-      - concepts/linux/rolling_update.md
-    - 操作系统:
-      - concepts/operating_system/bios.md
-      - concepts/operating_system/secure_boot.md
-      - concepts/operating_system/boot_loader.md
-      - concepts/operating_system/disk_partition_table.md
-      - concepts/operating_system/partition.md
-      - concepts/operating_system/file_system.md
-      - concepts/operating_system/mounting.md
-    - 包管理:
-      - concepts/package_managers/apt.md
-      - concepts/package_managers/dnf.md
-      - concepts/package_managers/pacman.md
-      - concepts/package_managers/flatpak.md
-      - concepts/package_managers/appimage.md
   - 发行版:
     - distros/distro.md
     - Debian系:
@@ -209,9 +189,12 @@ nav:
     - AI:
       - applications/ai/openclaw.md
     - Shell:
+      - applications/shell/shell.md
       - applications/shell/bash.md
       - applications/shell/zsh.md
       - applications/shell/fish.md
+    - 其他:
+      - applications/other/fastfetch.md
   - 进阶:
     - advanced/lvm.md
     - advanced/btrfs.md

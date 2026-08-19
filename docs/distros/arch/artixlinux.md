@@ -16,7 +16,7 @@ Artix Linux 是一个基于 Arch Linux 的独立硬核发行版。它最大的�
     - TUNA: https://mirrors.tuna.tsinghua.edu.cn/artixlinux-iso/
     - USTC: 无
     - MirrorZ: 无
- - 包管理器：[pacman](../../concepts/package_managers/pacman.md)
+ - 包管理器：[pacman](../../applications/apps.md#pacman-arch)
  - 更新方式：滚动
  - 自动换源：是
  - 图形安装界面：是

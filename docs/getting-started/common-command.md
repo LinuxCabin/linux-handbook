@@ -4,7 +4,7 @@
 
 ## 常见符号
 
-- `$`: 用以表示[Shell](../concepts/linux/shell.md)环境，不需要进行输入。
+- `$`: 用以表示[Shell](../applications/shell/shell.md)环境，不需要进行输入。
 - `#`: 用以表示注释，井号后的内容会被自动忽略。
 - `~`: 用以代表用户目录，如 `~/file` 。
 - `*`: 通配符，可代指“全部”，如 `dir1/*` 指 `dir1` 下全部文件、文件夹，`dir1/file*.file`指 `dir1` 文件夹下所有以 `file` 开头，`.file` 结尾的文件与文件夹。
@@ -29,16 +29,12 @@ command [options] [arguments]
 ???+ tip "提示"
     您可以不用背透这些指令，但至少应该熟悉符号与指令对应的含义，以免执行部分危险指令。
 
-    不过，后续教程的部分操作（如[引导美化](../concepts/operating_system/boot_loader.md)）可能会用到这些指令。
+    不过，后续教程的部分操作（如[引导美化](../advanced/boot_loader.md)）可能会用到这些指令。
 
     另外，如果您希望深入了解部分命令的完整使用方法，可以尝试[man](#man)或[info](#info)等命令（但不是所有命令都提供这样的文档）
 
 ???+ info "包管理器相关"
-    包管理器相关指令，请查看概念-包管理一节。
-    - [Apt](../concepts/package_managers/apt.md)
-    - [Dnf](../concepts/package_managers/dnf.md)
-    - [Pacman](../concepts/package_managers/pacman.md)
-    - [Flatpak](../concepts/package_managers/flatpak.md)
+    包管理器相关指令，请查看[应用与工具](../applications/apps.md)一节。
 
 ### sudo
 
@@ -61,7 +57,7 @@ command [options] [arguments]
 
 ### cd 
 
-将[Shell](../concepts/linux/shell.md)的工作目录切换到某目录。
+将[Shell](../applications/shell/shell.md)的工作目录切换到某目录。
 
 默认情况下，Shell的工作目录为 `/home` 下的对应用户文件夹，并会在左侧展示（部分Shell可能除外）。
 

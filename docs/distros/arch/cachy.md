@@ -18,7 +18,7 @@ CachyOS 是一个基于 Arch Linux 优化的高性能滚动更新发行版。它
     - TUNA: 无
     - USTC: https://mirrors.ustc.edu.cn/cachyos/ISO/
     - MirrorZ: https://mirrors.cernet.edu.cn/cachyos/ISO/
- - 包管理器：[pacman](../../concepts/package_managers/pacman.md)
+ - 包管理器：[pacman](../../applications/apps.md#pacman-arch)
  - 更新方式：滚动
  - 自动换源：是
  - 图形安装界面：是

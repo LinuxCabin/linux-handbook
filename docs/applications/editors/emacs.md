@@ -32,7 +32,7 @@ Arch系：
 sudo pacman -S emacs
 ```
 
-Emacs 可以使用 [Flatpak](../../concepts/package_managers/flatpak.md) 安装，但我们不建议使用该方法。
+Emacs 可以使用 [Flatpak](../../applications/apps.md#flatpak) 安装，但我们不建议使用该方法。
 ```bash
 flatpak install org.gnu.emacs
 ```

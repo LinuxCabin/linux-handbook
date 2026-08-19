@@ -10,7 +10,7 @@
 
 ## 概述
 
-Bash是一个古老的[Shell](../../concepts/linux/shell.md),大多数发行版预装了Bash并作为默认Bash,Bash符合POSIX标准,这代表Bash可以运行Zsh的脚本,反之亦然。
+Bash是一个古老的[Shell](./shell.md),大多数发行版预装了Bash并作为默认Bash,Bash符合POSIX标准,这代表Bash可以运行Zsh的脚本,反之亦然。
 
 ## 安装
 
