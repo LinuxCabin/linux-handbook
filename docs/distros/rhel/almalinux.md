@@ -17,7 +17,7 @@ ALmaLinux与Rocky Linux一样，是RHEL的开源衍生版本。作为企业级 L
     - TUNA: 无
     - USTC: 无
     - MirrorZ: https://mirrors.cernet.edu.cn/almalinux/
- - 包管理器：[dnf](../../concepts/package_managers/dnf.md)
+ - 包管理器：[dnf](../../applications/apps.md#dnf)
  - 更新方式：传统
  - 自动换源：302
  - 图形安装界面：是

@@ -20,7 +20,7 @@ Deepin（深度操作系统）是一款源自中国、享誉全球的Linux发行
     - TUNA: https://mirrors.tuna.tsinghua.edu.cn/deepin-cd/
     - USTC: https://mirrors.ustc.edu.cn/deepin-cd/
     - MirrorZ: https://mirrors.cernet.edu.cn/deepin-cd/
- - 包管理器：[apt](../../concepts/package_managers/apt.md)
+ - 包管理器：[apt](../../applications/apps.md#apt-debian)
  - 更新方式：OSTree
  - 自动换源：半自动
  - 图形安装界面：是

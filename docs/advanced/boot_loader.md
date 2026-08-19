@@ -31,7 +31,7 @@ rEFInd是作为已停止维护的rEFIt项目的分支而诞生，最初旨在解
 
 在安装软件包之后，您需要运行`sudo refind-install`来将其安装到ESP。
 
-安装之后，您需要关闭或手动配置[安全启动](../concepts/operating_system/secure_boot.md)来保证引导器正常运行。以下我们会示范如何使用shim配置。
+安装之后，您需要关闭或手动配置[安全启动](../getting-started/os-basis.md#_3)来保证引导器正常运行。以下我们会示范如何使用shim配置。
 
 首先，您需要通过您的包管理器安装`shim-signed`。
 

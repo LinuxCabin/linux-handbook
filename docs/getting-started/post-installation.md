@@ -7,7 +7,7 @@
 因此，在安装之后，请务必切换软件源到国内镜像，以保证软件下载与系统更新的速度。
 
 ???+ "提示"
-    在换源之前，我们强烈建议您首先了解发行版对应包管理器的基本命令。您可以参照“概念-软件包”一节。
+    在换源之前，我们强烈建议您首先了解发行版对应包管理器的基本命令。您可以参照“[应用与工具](../applications/apps.md)”一节。
 
 ???+ "快捷脚本"
     您可以使用[LinuxMirrors项目](https://linuxmirrors.cn/)的换源脚本，更方便，快捷。
@@ -21,13 +21,47 @@
 
 简单来说，TUNA快，USTC广，MirrorZ兜底。您可以任意选择三者中的一个。
 
-各个发行版的换源教程，我们已经整理到了对应发行版的选项卡下，您可以自行查阅。同时，我们也提供了[镜像站使用指南](../concepts/linux/mirrors.md)。
+??? question "如何使用镜像站？"
+
+    这里举Fedora作为例子，我们使用 [TUNA源](https://mirrors.tuna.tsinghua.edu.cn/)
+
+    - **访问镜像站**
+        首先打开镜像站, 也就是访问 => https://mirrors.tuna.tsinghua.edu.cn/
+
+    - **搜索发行版**
+        这个时候我们在搜索框里面输入 Fedora
+
+        然后就会出现筛选结果， 这个时候我们不要直接点Fedora, 而是点旁边的那个 `?` (也就是tuna给的换源官方手册)
+
+        ![TUNA搜索界面](../img/mirrors/pic1.png)
+
+    - **命令替换**
+
+        之后我们直接复制命令替换的那个内容
+
+        ![命令替换](../img/mirrors/pic2.png)
+
+    ???+ note "权限问题" 
+        TUNA默认提供的是使用 root 进行操作的指令，如果直接输入，大概率会有 Permission denied 的报错。
+
+        这时我们只需要在前面先加上一个 `sudo` (记得是 sudo 然后空一个再粘贴命令)就可以了， 当然T您也可以直接打开上面的“是否使用sudo的”开关，之后复制并执行命令。
+
+        ![启动sudo](../img/mirrors/pic3.png)
+
+    替换完成之后， 我们可以直接进行系统的**软件更新，见证魔法** => 我刚开始用的时候，也感觉直接更新所有软件是一个很酷的事情。
+
+    ```bash
+    sudo dnf update # 检查并更新
+    ```
+
+
+各个发行版的换源教程，我们已经整理到了对应发行版的选项卡下，您可以自行查阅。
 
 ## Flatpak
 
-[Flatpak](../concepts/package_managers/flatpak.md)是新一代Linux软件管理工具。其采用沙箱式设计，使得软件能够兼容多数发行版。并且，基于Flatpak的Flathub是Linux上极其重要的应用商店，深度集成于KDE Discover, GNOME。
+[Flatpak](../applications/apps.md#flatpak)是新一代Linux软件管理工具。其采用沙箱式设计，使得软件能够兼容多数发行版。并且，基于Flatpak的Flathub是Linux上极其重要的应用商店，深度集成于KDE Discover, GNOME。
 
-**对于用户软件，我们推荐您使用[Flatpak](../concepts/package_managers/flatpak.md)或[AppImage](../concepts/package_managers/appimage.md)进行安装。**
+**对于用户软件，我们推荐您使用[Flatpak](../applications/apps.md#flatpak)或[AppImage](../applications/apps.md#appimage)进行安装。**
 
 您可以通过包管理器或者桌面环境自带的应用商店安装Flatpak。同样的，Flathub也需要换源。
 
@@ -68,7 +102,7 @@
 
 ### Win -> Linux
 
-若您的Linux使用ext[文件系统](../concepts/operating_system/file_system.md)，则Windows会由于不支持ext而无法访问Linux的文件。
+若您的Linux使用ext[文件系统](./before-installing.md#_7)，则Windows会由于不支持ext而无法访问Linux的文件。
 
 您只需在Windows下载安装[Ext4Fsd](https://www.accum.se/~bosse/ext2fsd/0.71/Ext2Fsd-0.71-setup.exe)即可解决。
 

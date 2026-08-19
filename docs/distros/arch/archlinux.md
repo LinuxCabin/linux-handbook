@@ -32,7 +32,7 @@ Arch Linux 是 Linux 社区中最受欢迎的独立滚动更新（Rolling Releas
     - TUNA: https://mirrors.tuna.tsinghua.edu.cn/archlinux/iso/
     - USTC: https://mirrors.ustc.edu.cn/archlinux/iso/
     - MirrorZ: https://mirrors.cernet.edu.cn/archlinux/iso/
- - 包管理器：[pacman](../../concepts/package_managers/pacman.md)
+ - 包管理器：[pacman](../../applications/apps.md#pacman-arch)
 
 !!! warning "警告"
     Arch 严禁“部分升级”（Partial Upgrade）。请勿在未同步升级全系统的情况下单独安装或更新某个软件，否则极易导致系统依赖断裂造成所谓的 **“滚挂”** ！

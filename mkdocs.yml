@@ -101,6 +101,7 @@ nav:
   - 主页: index.md
   - 开始:
     - getting-started/purpose.md
+    - getting-started/os-basis.md
     - getting-started/before-installing.md
     - getting-started/install.md
     - getting-started/post-installation.md
@@ -108,30 +109,8 @@ nav:
       - getting-started/devices/drivers.md
       - getting-started/devices/others.md
     - getting-started/input-method.md
-    - getting-started/applications.md
     - getting-started/common-command.md
     - getting-started/network.md
-  - 概念:
-    - Linux基础:
-      - concepts/linux/free_software.md
-      - concepts/linux/distro.md
-      - concepts/linux/mirrors.md
-      - concepts/linux/shell.md
-      - concepts/linux/rolling_update.md
-    - 操作系统:
-      - concepts/operating_system/bios.md
-      - concepts/operating_system/secure_boot.md
-      - concepts/operating_system/boot_loader.md
-      - concepts/operating_system/disk_partition_table.md
-      - concepts/operating_system/partition.md
-      - concepts/operating_system/file_system.md
-      - concepts/operating_system/mounting.md
-    - 包管理:
-      - concepts/package_managers/apt.md
-      - concepts/package_managers/dnf.md
-      - concepts/package_managers/pacman.md
-      - concepts/package_managers/flatpak.md
-      - concepts/package_managers/appimage.md
   - 发行版:
     - distros/distro.md
     - Debian系:
@@ -170,20 +149,52 @@ nav:
     - 跨发行版:
       - compatibility/inter-distros/distrobox.md
   - 应用与工具:
-    - applications/emacs.md
-    - applications/vim.md
-    - applications/zsh.md
-    - applications/fish.md
-    - applications/ssh.md
-    - applications/git.md
-    - applications/openclaw.md
+    - applications/apps.md
+    - 即时通讯:
+      - applications/im/qq.md
+      - applications/im/wechat.md
+    - 办公与协作:
+      - applications/office/dingtalk.md
+      - applications/office/feishu.md
+      - applications/office/libreoffice.md
+      - applications/office/onlyoffice.md
+      - applications/office/wps.md
+    - 娱乐:
+      - applications/entertainment/qqmusic.md
+      - applications/entertainment/ncm.md
+      - applications/entertainment/tencent.md
+      - applications/entertainment/iqiyi.md
+    - 编辑器:
+      - applications/editors/nano.md
+      - applications/editors/emacs.md
+      - applications/editors/vim.md
+      - applications/editors/vscode.md
     - 多媒体处理:
+      - applications/multimedia/gimp.md
+      - applications/multimedia/krita.md
       - applications/multimedia/obs_studio.md
-    - 开发相关:
-      - applications/programming/cpp.md
+      - applications/multimedia/kdenlive.md
+      - applications/multimedia/davinci.md
+      - applications/multimedia/others.md
+    - 编程与开发:
+      - applications/programming/git.md
+      - applications/programming/ssh.md
       - applications/programming/python.md
       - applications/programming/miniconda.md
-      - applications/programming/vscode.md
+      - applications/programming/cpp.md
+    - 工程制图:
+      - applications/cad/zwcad.md
+      - applications/cad/freecad.md
+      - applications/cad/openscad.md
+    - AI:
+      - applications/ai/openclaw.md
+    - Shell:
+      - applications/shell/shell.md
+      - applications/shell/bash.md
+      - applications/shell/zsh.md
+      - applications/shell/fish.md
+    - 其他:
+      - applications/other/fastfetch.md
   - 进阶:
     - advanced/lvm.md
     - advanced/btrfs.md

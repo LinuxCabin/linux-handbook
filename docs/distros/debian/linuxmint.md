@@ -17,7 +17,7 @@ Linux Mint 是公认对 Windows 迁移用户最友好的 Linux 发行版。它�
     - TUNA: https://mirrors.tuna.tsinghua.edu.cn/linuxmint-cd/
     - USTC: https://mirrors.ustc.edu.cn/linuxmint-cd/
     - MirrorZ: https://mirrors.cernet.edu.cn/linuxmint-cd/
- - 包管理器：[apt](../../concepts/package_managers/apt.md)
+ - 包管理器：[apt](../../applications/apps.md#apt-debian)
  - 更新方式：版本
  - 自动换源：半自动
  - 图形安装界面：是

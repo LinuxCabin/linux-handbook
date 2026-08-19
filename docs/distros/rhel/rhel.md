@@ -17,7 +17,7 @@
     - TUNA: 无
     - USTC: 无
     - MirrorZ: 无
- - 包管理器：[dnf](../../concepts/package_managers/dnf.md)
+ - 包管理器：[dnf](../../applications/apps.md#dnf)
  - 更新方式：传统
  - 自动换源：否
  - 图形安装界面：是

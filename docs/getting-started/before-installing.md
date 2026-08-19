@@ -4,9 +4,12 @@
 
 在开始之前，您需要准备好一个空U盘（建议8GB以上），并且（最好）关闭电脑的安全启动 (Secure Boot) 功能。
 
-如果您使用Windows，可以参考这篇较为简单的[教程](https://zhuanlan.zhihu.com/p/719651215)进入[BIOS](../concepts/operating_system/bios.md)。
+!!! question "没有U盘？"
+    如果您确实没有可用的移动存储设备用于烧录映像，可以参考[ULLI](./install.md#ulli)相关内容。
 
-进入[BIOS](../concepts/operating_system/bios.md)后，请通过方向键进入Security->Secure Boot，并将其设置为Disabled状态。
+如果您使用Windows，可以参考这篇较为简单的[教程](https://zhuanlan.zhihu.com/p/719651215)进入[BIOS](./os-basis.md#bios)。
+
+进入[BIOS](./os-basis.md#bios)后，请通过方向键进入Security->Secure Boot，并将其设置为Disabled状态。
 
 各品牌、型号电脑关闭安全启动的方法不同，如果与提供的路径不同，我们建议您使用AI辅助或搜索具体解决方案。
 
@@ -15,7 +18,11 @@
 
 ## 选择发行版
 
-[发行版](../concepts/linux/distro.md)选择至关重要，这会从根本上决定您的日常使用体验。我们建议您参考网络资料与用户评价进行选择，或者被其他人“带师”。
+Linux 发行版（也被叫做GNU/Linux 发行版），为一般用户预先集成好了Linux内核及各种应用软件。一般用户不需要重新编译，在直接安装之后，只需要小幅度更改设定就可以使用，通常以软件包管理系统来进行应用软件的管理。Linux发行版通常包含了一些应用软件。这些操作系统通常由Linux内核、以及来自GNU计划的大量的函数库，和基于X11或者Wayland的图形界面。各大发行版的差别主要在包管理，更新速度等方面，部分发行版会具有一些特性，例如“不可变”，“CPU性能优化”等等。
+
+简单来说，发行版可以被看作基于Linux内核的不同操作系统风味版本。
+
+发行版的选择至关重要，这会从根本上决定您的日常使用体验。我们建议您参考网络资料与用户评价进行选择，或者被其他人“带师”。
 
 ???+ quote "名人名言"
     I mean, I think the fragmentation has been a huge disadvantage over the years.
@@ -83,18 +90,25 @@
 
     **桌面外观不由发行版本身决定，而是由您所安装的桌面环境决定。**
 
-    我用某个发行版并不代表我必须使用某个桌面环境。与Windows不同，Linux的组件之间具有极其高的耦合度！您完全可以选用更加简单的发行版来体验您心仪的桌面环境。
+    我用某个发行版并不代表我必须使用某个桌面环境。与Windows不同，Linux的组件之间具有极其低的耦合度！您完全可以选用更加简单的发行版来体验您心仪的桌面环境。
 
     在继续之前，我们建议您首先阅读[桌面](../desktop/desktop.md)章节。
 
+???+ info "滚动更新"
+    滚动更新是一种系统更新方式。在滚动更新中，系统不存在大版本的区别（如Debian 12与Debian 13），仅存在小版本的更改。滚动更新发行版中的软件包（包括Linux内核、桌面环境和各类应用程序）会持续不断地被替换为最新版本。这种模式类似于“忒修斯之船”，系统的所有组件都在随时间推移被不断替换，从而保证系统始终处于最新状态。
+
+    这样的特性使得滚动更新发行版具备“任何版本都能升级”的特点，使得用户能够第一时间获得软件的最新版本。不过当然，这样的形式可能会使得某些大改动被忽视，进而导致“滚挂”的发生，维护成本较高。
+
+    常见的滚动更新例子有Arch Linux、OpenSUSE Tumbleweed、Debian Sid等。
+
 ## 调配分区
 
-我们建议您通过专业的[分区](../concepts/operating_system/partition.md)工具——如[DiskGenius](https://www.diskgenius.cn/)（[教程](https://www.diskgenius.cn/help/partresizing.php)）和Windows的磁盘管理单元（[教程](https://freeswzhcn.codeberg.page/site/posts/%E4%B8%BA%20GNU-Linux%20%E5%87%86%E5%A4%87%E5%8F%8C%E5%90%AF%E5%8A%A8%E5%88%86%E5%8C%BA%E2%80%94%E2%80%94Microsoft%20Windows/)）——进行分区。您需要用分区工具在电脑硬盘上腾出60GB以上（建议值）的**空闲**空间。我们不建议直接在DiskGenius等WIndows下软件创建分区，而是在安装时由安装程序进行创建，这可以保证系统的稳定性和分区一致性。
+我们建议您通过专业的[分区](./before-installing.md#_6)工具——如[DiskGenius](https://www.diskgenius.cn/)（[教程](https://www.diskgenius.cn/help/partresizing.php)）和Windows的磁盘管理单元（[教程](https://freeswzhcn.codeberg.page/site/posts/%E4%B8%BA%20GNU-Linux%20%E5%87%86%E5%A4%87%E5%8F%8C%E5%90%AF%E5%8A%A8%E5%88%86%E5%8C%BA%E2%80%94%E2%80%94Microsoft%20Windows/)）——进行分区。您需要用分区工具在电脑硬盘上腾出60GB以上（建议值）的**空闲**空间。我们不建议直接在DiskGenius等WIndows下软件创建分区，而是在安装时由安装程序进行创建，这可以保证系统的稳定性和分区一致性。
 
 我们建议您在操作完分区后用其他设备记录您磁盘的分区图示/顺序，这在安装系统时非常有用。
 
 !!! warning "警告"
-    请不要将Linux安装到任何NTFS[文件系统](../concepts/operating_system/file_system.md)的分区，这将导致你的系统完全无法启动！Linux对NTFS的支持尚不完善！我们不建议使用Linux来调整NTFS分区！！！
+    请不要将Linux安装到任何NTFS[文件系统](./before-installing.md#_7)的分区，这将导致你的系统完全无法启动！Linux对NTFS的支持尚不完善！我们不建议使用Linux来调整NTFS分区！！！
     
     任何分区操作都存在风险，请您在操作之前确保已经备份所用磁盘中的重要数据到可靠的外部存储！！！
 
@@ -254,6 +268,7 @@
         （内容来自[使用 balenaEtcher 制作 GNU/Linux 启动盘](https://freeswzhcn.codeberg.page/site/posts/%E4%BD%BF%E7%94%A8%20balenaEtcher%20%E5%88%B6%E4%BD%9C%20GNU-Linux%20%E5%90%AF%E5%8A%A8%E7%9B%98/)，本部分内容使用CC BY-SA 4.0协议分发）
 
     - [Raspberry Pi Imager](https://www.raspberrypi.com/software/)
+
 
 !!! warning "警告"
     在烧录前，请确保您的U盘中没有重要资料！U盘的所有文件将被清空且几乎不可逆！！！

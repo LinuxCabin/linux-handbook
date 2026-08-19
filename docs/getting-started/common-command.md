@@ -4,7 +4,7 @@
 
 ## 常见符号
 
-- `$`: 用以表示[Shell](../concepts/linux/shell.md)环境，不需要进行输入。
+- `$`: 用以表示[Shell](../applications/shell/shell.md)环境，不需要进行输入。
 - `#`: 用以表示注释，井号后的内容会被自动忽略。
 - `~`: 用以代表用户目录，如 `~/file` 。
 - `*`: 通配符，可代指“全部”，如 `dir1/*` 指 `dir1` 下全部文件、文件夹，`dir1/file*.file`指 `dir1` 文件夹下所有以 `file` 开头，`.file` 结尾的文件与文件夹。
@@ -29,16 +29,12 @@ command [options] [arguments]
 ???+ tip "提示"
     您可以不用背透这些指令，但至少应该熟悉符号与指令对应的含义，以免执行部分危险指令。
 
-    不过，后续教程的部分操作（如[引导美化](../concepts/operating_system/boot_loader.md)）可能会用到这些指令。
+    不过，后续教程的部分操作（如[引导美化](../advanced/boot_loader.md)）可能会用到这些指令。
 
     另外，如果您希望深入了解部分命令的完整使用方法，可以尝试[man](#man)或[info](#info)等命令（但不是所有命令都提供这样的文档）
 
 ???+ info "包管理器相关"
-    包管理器相关指令，请查看概念-包管理一节。
-    - [Apt](../concepts/package_managers/apt.md)
-    - [Dnf](../concepts/package_managers/dnf.md)
-    - [Pacman](../concepts/package_managers/pacman.md)
-    - [Flatpak](../concepts/package_managers/flatpak.md)
+    包管理器相关指令，请查看[应用与工具](../applications/apps.md)一节。
 
 ### sudo
 
@@ -61,7 +57,7 @@ command [options] [arguments]
 
 ### cd 
 
-将[Shell](../concepts/linux/shell.md)的工作目录切换到某目录。
+将[Shell](../applications/shell/shell.md)的工作目录切换到某目录。
 
 默认情况下，Shell的工作目录为 `/home` 下的对应用户文件夹，并会在左侧展示（部分Shell可能除外）。
 
@@ -216,9 +212,14 @@ man [options] [section] page
 
 ### nano
 
+???+ info "想要了解 nano？"
+     nano 在**应用与工具**栏目中有独立的页面，内容涵盖了快捷键和使用方法。前往 [nano](../applications/editors/nano.md)。
+
 nano（包名`nano`）是广受赞誉的终端文本编辑器，拥有简单易操作的界面，适合新手用来通过终端编辑系统配置文件。
 
 例如：`sudo nano /etc/sudoers`指以超级管理员权限，用nano修改`/etc/sudoers`。
+
+<!-- 这个例子不好。在arch系（和也许redhat系？）中你应该用visudo来编辑sudoers。-->
 
 ???+ note "权限"
     编辑部分配置文件时需要`sudo`提权。
