@@ -10,26 +10,31 @@ VLC 是[自由软件](https://www.gnu.org/philosophy/free-sw.html)，基于 [GPL
 
 ## 安装
 
-VLC 可以由传统包管理器或 [Flatpak](../../concepts/package_managers/flatpak.md), Snap 安装。我们推荐使用 Flatpak 。
+VLC 可以由传统包管理器或 [Flatpak](../apps.md#flatpak), Snap 安装。我们推荐使用 Flatpak 。
 
-[Flatpak](https://flathub.org/apps/org.videolan.VLC) （推荐）
+### [Flatpak](https://flathub.org/apps/org.videolan.VLC) （推荐）
 ```bash
 flatpak install org.videolan.VLC
 ```
 
-??? info "传统包管理器（apt, yum, pacman...）的安装方法"
+### Snap
+```bash
+sudo snap install vlc
+```
 
-    Debian 系：
+### 传统包管理器
+
+- Debian 系：
     ```bash
     sudo apt install vlc
     ```
 
-    RedHat 系：
+- RedHat 系：
     ```bash
     sudo yum install vlc
     ```
 
-    Arch 系：
+- Arch 系：
     ```bash
     sudo pacman -S vlc
     ```
