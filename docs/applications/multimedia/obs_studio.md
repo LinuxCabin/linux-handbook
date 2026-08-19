@@ -12,7 +12,7 @@ OBS Studio 同时是一款视频录制器和一款推流器。它还有“合成
 OBS Studio 完全免费，灵活可定制，还有庞大的插件库和社区支持。
 
 ## 安装
-可以通过 [Flatpak](../../concepts/package_managers/flatpak.md) 和 Snap 安装 OBS Stuio，也可以通过传统包管理器直接安装 OBS Studio。
+可以通过 [Flatpak](../apps.md#flatpak) 和 Snap 安装 OBS Stuio，也可以通过传统包管理器直接安装 OBS Studio。
 
 ### Flatpak（推荐：AMD / Intel）
 ```bash
