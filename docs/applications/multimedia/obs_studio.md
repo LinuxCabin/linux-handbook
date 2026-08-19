@@ -24,7 +24,7 @@ flatpak install com.obsproject.Studio
 sudo snap install obs-studio
 ```
 
-### 包管理器（推荐：Nvidia）
+### 传统包管理器（推荐：Nvidia）
 - Debian系：
     ```bash
     sudo apt install obs-studio
