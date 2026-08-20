@@ -197,9 +197,8 @@ cd
 rm -rf /tmp/obs-wayland-hotkeys-git
 ```
 
-##### Fedora
+##### RedHat 系（ RHEL 除外 ）
 
-<!-- 我不知道 copr 只能用于fedora，还是可以用于“redhat 系”。请审稿者修改这里 -->
 启用第三方的 COPR 源，安装 `obs-studio-plugin-wayland-hotkeys`。
 
 在终端运行：
