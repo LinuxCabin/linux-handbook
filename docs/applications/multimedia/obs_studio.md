@@ -197,7 +197,7 @@ cd
 rm -rf /tmp/obs-wayland-hotkeys-git
 ```
 
-##### RedHat 系（ RHEL 除外 ）
+##### RedHat 系
 
 启用第三方的 COPR 源，安装 `obs-studio-plugin-wayland-hotkeys`。
 
@@ -243,7 +243,7 @@ sudo dnf install obs-studio-plugin-wayland-hotkeys
 
 #### 使用
 
-安装完成后启动 OBS Studio，您应该会看到一个设置快捷键的弹窗。
+安装完成后启动 OBS Studio，您应该会看到一个设置快捷键的弹窗。如果没有，可能需要注销后重新登录。
 
 !!! info "注意"
     OBS 内置的快捷键设置没有效果，应该去系统设置里更改快捷键。
