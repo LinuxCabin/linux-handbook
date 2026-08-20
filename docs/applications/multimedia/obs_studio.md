@@ -84,7 +84,7 @@ OBS Studio 默认输出 1080p ，（视您的硬件）最高 6000 kbps 的视频
 
 您可能需要重启电脑。
 
-??? question "可是我看不到硬件加速的选项耶？"
+??? question "可是我看不到硬件加速的选项？"
      把输出模式改成 **高级** ，在 **直播** 和 **录像** 的视频编码器里选择 **"FFmpeg VAAPI"** 开头的选项。
 
 ### 硬件加速 ( Nvidia )
@@ -111,7 +111,7 @@ OBS Studio 默认输出 1080p ，（视您的硬件）最高 6000 kbps 的视频
 
 VA-API, VDPAU 和 高性能的 NVDEC, NVENC 都可用。
 
-??? warning "如果您的 Nvidia 显卡较老..."
+??? warning "如果您的 Nvidia 显卡较旧..."
     我们了解到一些发行版中最新的 FFmpeg 基于新版本的 NVENC API 头文件构建，如果你使用 **帕斯卡架构**（ Geforce **10系** ）及更老的 Nvidia 显卡，发现无法使用 NVENC，您可能需要降级 FFmpeg。  
     如果电脑上有使用 FFmpeg 的其他软件，它们可能也需要跟着一起降级。通常您的包管理器会提醒您所有要降级的软件。
 
@@ -126,7 +126,7 @@ flatpak install org.freedesktop.Platform.VAAPI.nvidia
 
 现在只有 VA-API 和 VDPAU 可用。要使用 NVDEC 和 NVENC，[安装 CUDA 工具包](https://docs.nvidia.com/cuda/cuda-installation-guide-linux/)。
 
-<!-- 不写了。我成功跑起来了但是太复杂了，写下来绝对撞j4w: ffmpeg又不是不能用。 -->
+<!-- 不写了。我成功跑起来了但是太复杂了，写下来绝对撞j4w: vaapi又不是不能用。 -->
 
 #### nouveau
 
