@@ -55,25 +55,25 @@ jobs:
           git add .
           git commit -m "Deploy site $(date -u '+%Y-%m-%d %H:%M:%S UTC')"
           git push --force "https://Fangcat_Dev:${DEPLOY_TOKEN}@codeberg.org/LinuxCabin/handbook-site.git" HEAD:pages
-      - name: Pre-treatment for reviewing
-        if: github.event_name == 'pull_request' 
-        run: |
-          cd site
+      # - name: Pre-treatment for reviewing
+      #   if: github.event_name == 'pull_request' 
+      #   run: |
+      #     cd site
       
-          # 获取 PR 信息与构建时间
-          PR_NUMBER="${{ github.event.pull_request.number }}"
-          PR_AUTHOR="${{ github.event.pull_request.user.login }}"
-          BUILD_TIME="$(date -u '+%Y-%m-%d %H:%M:%S UTC')"
+      #     # 获取 PR 信息与构建时间
+      #     PR_NUMBER="${{ github.event.pull_request.number }}"
+      #     PR_AUTHOR="${{ github.event.pull_request.user.login }}"
+      #     BUILD_TIME="$(date -u '+%Y-%m-%d %H:%M:%S UTC')"
       
-          # 在 <body> 标签后插入横幅（保留原有属性）
-          sed -i "s/<body\([^>]*\)>/<body\1><div style=\"background-color:#f8d7da; color:#721c24; padding:10px; text-align:center; border-bottom:1px solid #f5c6cb;\">Preview: PR #${PR_NUMBER} by ${PR_AUTHOR} | Built: ${BUILD_TIME}<\/div>/" index.html
+      #     # 在 <body> 标签后插入横幅（保留原有属性）
+      #     sed -i "s/<body\([^>]*\)>/<body\1><div style=\"background-color:#f8d7da; color:#721c24; padding:10px; text-align:center; border-bottom:1px solid #f5c6cb;\">Preview: PR #${PR_NUMBER} by ${PR_AUTHOR} | Built: ${BUILD_TIME}<\/div>/" index.html
       
-          echo "preview.hb.linuxcabin.top" > CNAME
-      - name: Deploy to review
-        if: github.event_name == 'pull_request' 
-        uses: https://codeberg.org/git-pages/action@v2
-        with:
-          site: https://preview.hb.linuxcabin.top/
-          server: codeberg.page
-          token: ${{ forge.token }}
-          source: site/
+      #     echo "preview.hb.linuxcabin.top" > CNAME
+      # - name: Deploy to review
+      #   if: github.event_name == 'pull_request' 
+      #   uses: https://codeberg.org/git-pages/action@v2
+      #   with:
+      #     site: https://preview.hb.linuxcabin.top/
+      #     server: codeberg.page
+      #     token: ${{ forge.token }}
+      #     source: site/
