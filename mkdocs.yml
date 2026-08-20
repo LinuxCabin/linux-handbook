@@ -111,6 +111,7 @@ nav:
     - getting-started/input-method.md
     - getting-started/common-command.md
     - getting-started/network.md
+    - getting-started/mac.md
   - 发行版:
     - distros/distro.md
     - Debian系:
