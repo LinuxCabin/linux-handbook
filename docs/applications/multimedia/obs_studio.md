@@ -91,7 +91,7 @@ OBS Studio 默认输出 1080p ，（视您的硬件）最高 6000 kbps 的视频
 
 #### Nvidia 专有驱动
 
-!!! warning "专有软件（非自由软件）"
+??? warning "专有软件（非自由软件）"
     Nvidia 专有驱动（`nvidia`）是[专有软件](https://www.gnu.org/proprietary/proprietary.html)。
 
 ##### 传统包管理器
@@ -105,6 +105,12 @@ OBS Studio 默认输出 1080p ，（视您的硬件）最高 6000 kbps 的视频
 您可能需要重启电脑。
 
 VA-API, VDPAU 和 高性能的 NVDEC, NVENC 都可用。
+
+??? warning "不给 Nvidia 交钱（买新显卡）？活该失去支持。"
+    我们了解到一些发行版中最新的 FFmpeg 基于新版本的 NVENC API 头文件构建，如果你使用 **帕斯卡架构**（ Geforce **10系** ）及更老的 Nvidia 显卡，发现无法使用 NVENC，您可能需要降级 FFmpeg。  
+    如果电脑上有使用 FFmpeg 的其他软件，它们可能也需要跟着一起降级。通常您的包管理器会提醒您所有要降级的软件。
+
+    [*专有软件常常是恶意软件*](https://www.gnu.org/proprietary/proprietary.html)*。*
 
 ##### Flatpak 或 Snap
 
@@ -123,7 +129,7 @@ flatpak install org.freedesktop.Platform.VAAPI.nvidia
 
 还需要安装 [从Nvidia驱动中提取的固件](https://nouveau.freedesktop.org/VideoAcceleration.html#firmware)。
 
-!!! warning "专有软件（非自由软件）"
+??? warning "专有软件（非自由软件）"
     上述“从Nvidia驱动中提取的固件”是[专有软件](https://www.gnu.org/proprietary/proprietary.html)。如果您的目标是完全自由的软件，nouveau目前还做不到。您可以考虑使用集成显卡进行硬件加速。
 
 ???- info "安装过程..."
@@ -160,8 +166,7 @@ flatpak install org.freedesktop.Platform.VAAPI.nvidia
 
 ### Wayland 下的快捷键
 
-<!-- 裸金属运行的obs需要手动编译该插件，受限于coc无法提供教程 -->
-<!-- edit Aug 18 6:36 PM EDT 2026：安装nvidia比手动编译难... 要么不加入n卡要么一起橄榄coc... -->
+#### Flatpak
 
 如果 OBS Studio 使用 Flatpak 安装，安装 ``com.obsproject.Studio.Plugin.WaylandHotkeys`` 。
 
@@ -183,7 +188,36 @@ flatpak install com.obsproject.Studio.Plugin.WaylandHotkeys
 
      打开系统设置，导航至 **键盘** - **快捷键**，在列表里选择 **OBS Studio** 。
 
-<!-- TODO: 我需要使用中文操作系统的人帮我验证翻译名。-->
+#### 传统包管理器
+
+##### Arch 系
+
+安装 AUR 上的 `obs-wayland-hoykeys-git`。
+
+在终端以*非 root，有 sudo 权限*的用户运行：
+```bash
+cd /tmp
+git clone --depth 1 https://aur.archlinux.org/obs-wayland-hotkeys-git.git
+cd obs-wayland-hotkeys-git
+makepkg -si
+cd
+rm -rf /tmp/obs-wayland-hotkeys-git
+```
+
+##### Fedora
+
+启用第三方的 COPR 源，安装 `obs-studio-plugin-wayland-hotkeys`。
+
+在终端运行：
+```bash
+sudo dnf copr enable tarulia/obs-studio-plugins
+dnf list --available --repo=copr:copr.fedorainfracloud.org:tarulia:obs-studio-plugins
+sudo dnf install obs-studio-plugin-wayland-hotkeys
+```
+
+##### 其他发行版
+
+您可能需要[手动编译这个插件](https://github.com/leia-uwu/obs-wayland-hotkeys#compiling-it-yourself)。
 
 ## 关于更多
 
