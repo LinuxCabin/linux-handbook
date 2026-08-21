@@ -1,8 +1,11 @@
 # Mac设备（2018至今）
 
+!!! info "更老的 Macintosh ？"
+    对于 2018 年以前的 Macintosh（没有 T2 芯片的机型），请参照一般的安装方法。
+
 由于[T2芯片](https://support.apple.com/zh-cn/103265)和[Silicon](https://support.apple.com/zh-cn/116943)芯片，上述安装方法在Mac设备上很可能不适用。这里给出两种面向不同设备安装Linux的方法。
 
-## Intel设备
+## Intel 设备
 
 参考[t2linux](https://wiki.t2linux.org/roadmap/)
 
@@ -13,15 +16,23 @@
 !!! notice "提示"
     Mac设备的启动顺序选项需要通过开机时长按`option键`唤出。
 
-## Silicon设备
+## Apple Silicon 设备
 
-参考[Asahi Linux](https://asahilinux.org/docs/)
+参考[Asahi Linux](https://asahilinux.org/docs/)。
 
 !!! warning "警告"
     Asahi Linux项目对于Silicon设备的[支持](https://asahilinux.org/fedora/#device-support)有限，仅推荐M1/M2用户在**了解风险**的情况下尝试。
 
 使用此方法之前，请先检查是否有45GB以上的空余空间以供Linux使用。
 
-在`终端.app`中输入以下命令：`curl https://alx.sh | sh`
+### Fedora Asahi Remix ( 基于 Fedora Linux )
+
+在`终端`中输入以下命令：`curl https://alx.sh | sh`
 
 即可自动开始安装进程。
+
+### Asahi Alarm ( Asahi Arch Linux ARM )
+
+在`终端`中输入以下命令：`curl https://asahi-alarm.org/installer-bootstrap.sh | sh`
+
+即可开始自动安装进程。
