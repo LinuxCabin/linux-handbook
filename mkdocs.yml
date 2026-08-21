@@ -140,6 +140,7 @@ nav:
       - Btrfs:
         - concepts/file_system/btrfs/btrfs.md
         - concepts/file_system/btrfs/linux_on_btrfs.md
+        - concepts/file_system/btrfs/migrating_to_btrfs.md
     - 桌面:
       - concepts/desktop/de.md
       - concepts/desktop/tiling_desktop.md

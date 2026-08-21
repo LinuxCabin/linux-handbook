@@ -1,5 +1,7 @@
 # Btrfs
 
+![Markdown Logo](../../../img/Btrfs_logo.svg){width=300}
+
 英文：B-tree filesystem（btrfs）
 
 ## 概述
@@ -20,6 +22,7 @@ Btrfs有以下常见功能：
 - 子卷（一个或多个单独可挂载基于每个物流分区）
 - 快照（只读和可写，写复制，子卷复制）
 - 就地转换（带回滚）ext3/4与ReiserFS
+- 压缩（全自动透明压缩）
 
 ## 实践
 
@@ -40,3 +43,22 @@ Btrfs已经成为了大多数发行版安装程序的默认选项，而其存在
 - 删除子卷：`sudo btrfs subvolume delete 挂载点`
 - 列出子卷：`sudo btrfs subvolume list 挂载点`
 - 查看子卷信息：`sudo btrfs subvolume show 挂载点`
+
+### 压缩
+
+压缩对于应用程序来说是透明的，可以节省硬盘空间。
+Btrfs 支持 ``zlib``，``lzo``，和 ``zstd`` 压缩算法。
+
+使用 ``compress=算法[:等级]`` 参数挂载以启用压缩，等级越高压缩越强。
+
+
+### 禁用写时复制
+
+!!! warning "警告"
+    禁用写时复制会禁用数据校验，Btrfs 将无法验证其完整性。不应该在生产环境下开启。
+
+在新的文件或文件夹上禁用写时复制：
+```bash
+chattr +C /path/to/something
+```
+这个命令对文件夹中已有的文件无效。
