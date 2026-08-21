@@ -275,7 +275,7 @@ Resize device id 1 (/dev/sda2) from 32.00GiB to max
 
 执行 ``blkid`` 以获取分区的 ``UUID``，找到新的 Btrfs 分区并记下 ``UUID``。
 ```bash
-root@archiso ~ # blkid
+root@livecd ~ # blkid
 # Example 这是一个例子，我们的分区不一定是 /dev/sda2 也不太可能会有相同的UUID。
 ...
 /dev/sda2: UUID="ce58a65d-7b6f-486c-837f-962fed1604c1" UUID_SUB="bdfb85ad-1495-48b1-84d6-8acc9625f27f" BLOCK_SIZE="4096" TYPE="btrfs" PARTUUID="964fb3a3-4f56-4be8-969b-67e309df0786"
@@ -298,7 +298,7 @@ UUID=ce58a65d-7b6f-486c-837f-962fed1604c1	/home		btrfs		defaults,subvol=/@home		
 
 如果有 EFI 分区，应该现在挂载。
 ```bash
-root@archiso ~ # mount /dev/sda1 /mnt/newroot/boot/efi
+root@livecd ~ # mount /dev/sda1 /mnt/newroot/boot/efi
 ```
 
 
