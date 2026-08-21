@@ -173,6 +173,7 @@ nav:
     - 多媒体处理:
       - applications/multimedia/gimp.md
       - applications/multimedia/krita.md
+      - applications/multimedia/obs_studio.md
       - applications/multimedia/kdenlive.md
       - applications/multimedia/davinci.md
       - applications/multimedia/vlc.md
