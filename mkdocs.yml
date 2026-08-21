@@ -199,6 +199,9 @@ nav:
       - applications/other/fastfetch.md
   - 进阶:
     - advanced/lvm.md
-    - advanced/btrfs.md
+    - Btrfs:
+      - advanced/btrfs/btrfs.md
+      - advanced/btrfs/linux_on_btrfs.md
+      - advanced/btrfs/migrating_to_btrfs.md
     - advanced/boot_loader.md
   - 关于: about.md
