@@ -1,5 +1,5 @@
 # 指南： 迁移已有的 Linux 安装至 Btrfs
-并设置 Btrfs 子卷
+—— 并设置 Btrfs 子卷。
 
 !!! warning "警告"
     这篇指南面向对 Linux 已有所经验的用户，对分区表，Linux 文件系统，引导的了解是硬性要求。不建议任何第一次使用 Linux 的用户参照此指南。误操作可能导致数据损失。
@@ -7,9 +7,19 @@
 !!! note "注意"
     本文描述了一种笔者*猜想*适用于最多人的从 **Ext4** 迁移到 Btrfs 的方法。不保证在所有设备上工作。如果因为一些原因在您的设备上不能完成，笔者深表歉意。
 
+    *对于不熟悉 Linux 文件系统的用户，备份然后[重新安装 Linux](./linux_on_btrfs.md) 也许是更好的选择。*
+
 
 ## 准备
 
+### 所以，为什么使用 Btrfs ，哪些情况下可以使用 Btrfs ...
+
+!!! info "我想使用 Btrfs，因为..."
+    可以将 Linux 根目录下的不同文件夹（例如 ``/home`` ``/var`` ``/srv`` ...）挂载到不同的 Btrfs 子卷。相比传统使用 ext4 的布局，Btrfs 子卷有共享文件系统的储存空间的特性，可以不浪费子卷内未使用的空间从而使单一挂载点不易“爆满”。Btrfs 的快照功能还允许在不复制物理数据的前提下备份。
+
+!!! warning "我不该使用 Btrfs，因为..."
+    Btrfs 的 RAID 功能非常不稳定，请不要使用 Btrfs 自带的 RAID 功能。同时，因为 Btrfs 才用写时复制（CoW），在处理修改大文件（如 数据库，BitTorrent）时会产生严重的碎片，特别是机械硬盘。
+    因此，不应该在下载机，存储优先的服务器上使用 Btrfs。XFS, ZFS 是更成熟的选择。
 
 ### 了解要转换的文件系统结构
 
@@ -122,7 +132,7 @@ root@livecd ~ # ls -A /mnt/newpart
 @
 ```
 
-???- note "如果这是唯一的分区..."
+??? note "如果这是唯一的分区..."
      您也许想把一些目录子卷存放，例如 ``/home``。这种情况下，创建新子卷并直接从 ``@`` 子卷移动。
      ```bash
      btrfs subvolume create /mnt/newpart/@home
@@ -203,7 +213,7 @@ root@livecd ~ # btrfs filesystem resize max /mnt/newpart
 Resize device id 1 (/dev/sda2) from 32.00GiB to max
 ```
 
-???- note "如果你的 Btrfs 分区不在空闲空间的头部..."
+??? note "如果你的 Btrfs 分区不在空闲空间的头部..."
     没有特定的工具下，Btrfs 只能向后扩展和向前压缩。为了向前扩展，我们需要使用一些分区编辑工具将 Btrfs 分区连带数据块整体向前挪，然后再向后扩展。
 
     这里演示使用 ``sfdisk`` 。
@@ -245,7 +255,7 @@ Resize device id 1 (/dev/sda2) from 32.00GiB to max
 
 我们需要从记录中删除已不存在的 ext4 分区，加入新的 Btrfs 分区。
 
-???- tip "Arch 系发行版...？"
+??? tip "Arch 系发行版...？"
      使用 Arch 系发行版的 livecd 可以逃课。
      
      挂载包括EFI，swap的所有分区并让脚本识别它们。
@@ -294,13 +304,13 @@ root@archiso ~ # mount /dev/sda1 /mnt/newroot/boot/efi
 
 大部分引导更新软件需要在 chroot 下运行。
 
-???- tip "Arch 系发行版...？"
+??? tip "Arch 系发行版...？"
      使用 Arch 系发行版的 livecd 可以逃课。
      ```bash
      arch-chroot /mnt/newroot /bin/bash
      ```
 
-     使用 ``arch-chroot`` 时 ``PATH``（环境变量）里没有 ``/sbin`` 和 ``/usr/sbin``，因为 Arch Linux 不使用这两条路径存放程序。在使用这两条路径存放管理程序的发行版（比如 Debian）上运行 ``arch-chroot`` 会造成一部分程序无法执行，解决方法很简单。
+     使用 ``arch-chroot`` 时 ``PATH``（环境变量）里没有 ``/sbin`` 和 ``/usr/sbin``，因为 Arch Linux 不使用这两条路径存放程序。在使用这两条路径存放管理程序的发行版（比如 Debian）上运行 ``arch-chroot`` 会造成一部分程序无法执行，解决方法很简单：
      ```bash
      (ch) root@archiso:/# source /etc/profile
      ```
