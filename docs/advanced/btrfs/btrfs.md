@@ -1,6 +1,6 @@
 # Btrfs
 
-![Markdown Logo](../../../img/Btrfs_logo.svg){width=300}
+![Markdown Logo](../../img/Btrfs_logo.svg){width=300}
 
 英文：B-tree filesystem（btrfs）
 
@@ -11,11 +11,7 @@ Btrfs即B-tree文件系统，通常念成Butter FS，Better FS或B-tree FS，一
 ???+ note "写时复制 (CoW)"
     写时复制指将修改的数据块单独存储到CoW分区，以实现备份的作用。具体原理可参考下图。
 
-<<<<<<<< HEAD:docs/advanced/btrfs.md
-    ![CoW 示意图](../img/CoW.png)
-========
-    ![CoW 示意图](../../../img/CoW.png)
->>>>>>>> 2899bb7 (added guide on installing linux with btrfs subvol linux_on_btrfs.md):docs/concepts/file_system/btrfs/btrfs.md
+    ![CoW 示意图](../../img/CoW.png)
 
 Btrfs有以下常见功能：
 
