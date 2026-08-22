@@ -204,5 +204,6 @@ nav:
       - advanced/btrfs/btrfs.md
       - advanced/btrfs/linux_on_btrfs.md
       - advanced/btrfs/migrating_to_btrfs.md
+    - advanced/swap.md
     - advanced/boot_loader.md
   - 关于: about.md

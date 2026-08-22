@@ -1,18 +1,6 @@
-# 指南： 在 Btrfs 子卷上安装 Linux
-
-!!! warning "警告"
-    这篇指南面向对 Linux 已有所经验的用户，对分区表，Linux 文件系统，引导的了解是硬性要求。不建议任何第一次安装和使用 Linux 的用户参照此指南。误操作可能导致数据损失。
+# 在 Btrfs 子卷上安装 Linux
 
 ## 准备
-
-### 所以，为什么使用 Btrfs ，哪些情况下可以使用 Btrfs ...
-
-!!! info "我想使用 Btrfs，因为..."
-    可以将 Linux 根目录下的不同文件夹（例如 ``/home`` ``/var`` ``/srv`` ...）挂载到不同的 Btrfs 子卷。相比传统使用 ext4 的布局，Btrfs 子卷有共享文件系统的储存空间的特性，可以不浪费子卷内未使用的空间从而使单一挂载点不易“爆满”。Btrfs 的快照功能还允许在不复制物理数据的前提下备份。
-
-!!! warning "我不该使用 Btrfs，因为..."
-    Btrfs 的 RAID 功能非常不稳定，请不要使用 Btrfs 自带的 RAID 功能。同时，因为 Btrfs 才用写时复制（CoW），在处理修改大文件（如 数据库，BitTorrent）时会产生严重的碎片，特别是机械硬盘。
-    因此，不应该在下载机，存储优先的服务器上使用 Btrfs。XFS, ZFS 是更成熟的选择。
 
 ### 决定分区的布局
 
@@ -77,6 +65,7 @@ Linux 是自由的，任何布局只要有 ``/`` 的挂载点都行得通。但�
 ```
 
 <!-- 这部分应该在别的地方介绍。
+
 - （可选）如果想要使用整个硬盘，选中硬盘名后回车，选择 ``msdos`` 。
 
 - （可选）选中未分配空间，选择创建新分区 ``Create a new partition`` ，分区大小 512MB 到 1GB ，类型 主分区 ``Primary`` ，位置 头部 ``Beginning`` ，文件系统 Ext4，挂载点 ``Mount point``  /boot。
@@ -86,7 +75,8 @@ Linux 是自由的，任何布局只要有 ``/`` 的挂载点都行得通。但�
 - 继续选中未分配空间，选择创建新分区，大小按自动提示或 max，类型 逻辑分区，文件系统 btrfs，挂载点 / 。
 
 - 看起来不错就结束分区并写入磁盘吧 ``Finish partitioning and write changes to disk`` 
--->
+- 
+  ->
 
 
 ##### 如果使用 UEFI：
@@ -160,7 +150,7 @@ Create subvolume './@home'
 
 子卷创建好后，我们将母卷卸载并把文件系统挂载回 ``/target`` 下 。如果有 EFI 分区，别忘了挂载它（ ``/boot/efi`` ）。
 
-???- info "有关压缩"
+??? info "有关压缩"
     如果想设置压缩，应该现在设置。
     
     在挂载的参数里加上 ``compress=zstd``，像这样
@@ -188,13 +178,13 @@ Create subvolume './@home'
 ~ # nano /target/etc/fstab
 ```
 
-???- info "有关压缩"
+??? info "有关压缩"
     同理地，在参数里加上 ``compress=zstd``，像这样
     ```text
     UUID=...    /...   btrfs    ...,compress=zstd,subvol=...   0   0
     ```
 
-???- tip "如果不会使用nano..."
+??? tip "如果不会使用nano..."
      Ctrl + \ 调出替换菜单，输入 ``@rootfs`` ，回车，替换为 ``@`` ，回车。
      把光标留在那一行，Ctrl + K 剪切一整行，再按 Ctrl + U 原封不动粘贴回去，每按一次 Ctrl + U 都能得到一整行复制的条例。
      Ctrl + O 保存，Ctrl + X 退出。
@@ -283,7 +273,7 @@ umount /mnt/btrfs
 
 挂载 Linux 文件系统。
 
-???- info "有关压缩"
+??? info "有关压缩"
     如果想设置压缩，应该现在设置。
     
     在挂载的参数里加上 ``compress=zstd``，像这样
