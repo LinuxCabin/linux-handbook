@@ -5,13 +5,14 @@
 ???+ question "什么是物理内存？"
     物理内存简单来说就是内存条/内存颗粒所提供的内存，也可以说是厂商在售卖机器时所宣称的内存。
 
-交换空间的大小主要参照物理内存的大小来决定。但这并不是唯一决定因素，您可以按照自己的需求进行调整（比如自己的游戏吃内存就酌情调大），以下表格**仅供参考**。
+交换空间的大小主要参照物理内存的大小来决定。但这并不是唯一决定因素，您可以按照自己的需求进行调整（比如自己的游戏吃内存就酌情调大），以下表格[来源于Red Hat](https://docs.redhat.com/zh-cn/documentation/red_hat_enterprise_linux/9/html/managing_storage_devices/recommended-system-swap-space_getting-started-with-swap)，**仅供参考**。
 
-| RAM | Swap >= |
-| --- | --- |
-| <= 4GB | 2倍 |
-| 4~16GB | 1倍 |
-| 16GB~64GB | 8GB |
+| 系统中的 RAM 量          | 推荐的 swap 空间          | 允许休眠时推荐的 swap 空间 |
+|--------------------------|---------------------------|----------------------------|
+| 小于 2 GiB               | RAM 量的 2 倍             | RAM 量的 3 倍              |
+| 2 GiB – 8 GiB            | 与 RAM 量相等             | RAM 量的 2 倍              |
+| 8 GiB – 64 GiB           | 至少 4 GiB                | RAM 量的 1.5 倍            |
+| 大于 64 GiB              | 至少 4 GiB（视工作负载）  | 不推荐休眠                 |
 
 Swap主要分为交换文件与交换分区两类来源。
 
@@ -104,6 +105,35 @@ sudo nano /etc/fstab
 ```
 
 之后，在`/etc/fstab`追加`UUID=XXX  none  swap  sw  0  0`即可。
+
+## zram
+
+zram是一种虚拟内存压缩功能，能够使得Linux更好利用RAM。zram的最主要用途即为作交换空间。
+
+我们建议使用`zram-generator`来简化配置流程。
+
+- Debian: `sudo apt install systemd-zram-generator`
+- Fedora: `sudo dnf install zram-generator zram-generator-defaults`
+- Arch: `sudo pacman -S zram-generator`
+
+???+ tip "Fedora用户福利"
+    如果您是Fedora用户，根据[Fedora Wiki](https://fedoraproject.org/wiki/Changes/SwapOnZRAM#Overview_of_the_Feature)，`zram-generator-defaults`已经包含了默认配置。如果您不需要自定义配置，您可以跳过以下步骤。
+
+之后，编辑配置文件：
+
+```bash
+sudo nano /etc/systemd/zram-generator.conf
+```
+
+并写入：（如下为zram大小为内存的二分之一，最大4096MiB，使用zstd压缩）
+
+```conf
+[zram0]
+zram-size = min(ram / 2, 4096)
+compression-algorithm = zstd
+```
+
+之后，重启系统即可。
 
 ## Swappiness
 
