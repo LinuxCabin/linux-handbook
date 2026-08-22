@@ -154,6 +154,7 @@ nav:
     - 即时通讯:
       - applications/im/qq.md
       - applications/im/wechat.md
+      - applications/im/matrix.md
     - 办公与协作:
       - applications/office/dingtalk.md
       - applications/office/feishu.md
