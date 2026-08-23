@@ -12,6 +12,8 @@ opencode提供了cli和桌面版，在linux，上我们推荐cli版，从而解�
 ```bash
 curl -fsSL https://opencode.ai/install | bash 
 ```
+桌面版直接在[opencode下载页面](https://opencode.ai/download)选择桌面版下载
+
 其余安装方式参照[opencode官方文档](https://opencode.ai/docs/zh-cn)
 
 ## 使用
