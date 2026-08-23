@@ -191,6 +191,7 @@ nav:
       - applications/cad/openscad.md
     - AI:
       - applications/ai/openclaw.md
+      - applications/ai/opencode.md
     - Shell:
       - applications/shell/shell.md
       - applications/shell/bash.md
