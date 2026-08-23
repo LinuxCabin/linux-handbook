@@ -11,18 +11,18 @@
 
 ## 准备
 
-在开始前，您需要下载 Debian 13 的安装 ISO。上一节中的**“[下载镜像](../../before-installing/#_5)”**中有所叙述。
+在开始前，您需要下载 Debian 13 的安装 ISO。上一节中的**“[下载镜像](../before-installing.md#_5)”**中有所叙述。
 
 ???+ tips "Debian 的安装镜像下载地址..."
-    [Debian 的详细信息](../../../distros/debian/debian/#_2)中有记录。前往***“镜像下载地址”*项**下面的网页，点击 `current/`，再点击电脑的架构（一般是`amd64/`），再点击 `iso-cd/`，选择 `debian-`...`-netinst.
+    [Debian 的详细信息](../../distros/debian/debian.md#_2)中有记录。前往***“镜像下载地址”*项**下面的网页，点击 `current/`，再点击电脑的架构（一般是`amd64/`），再点击 `iso-cd/`，选择 `debian-`...`-netinst.
 
-下载镜像后，您需要将镜像烧录到U盘（或移动硬盘）中。可以参考上一节中的**“[烧录镜像](../../before-installing/#_6)”**。
+下载镜像后，您需要将镜像烧录到U盘（或移动硬盘）中。可以参考上一节中的**“[烧录镜像](../before-installing.md#_6)”**。
 
 烧录完成后，您需要从烧录完的有安装镜像的U盘（或移动硬盘）中启动。
 
 这篇教程使用 `debian-13.6.0-amd64-netinst.iso` 。
 
-## 安装过程
+## 安装
 
 从U盘（或移动硬盘）启动后，“Debian安装程序菜单”会出现。这个菜单通常有好几个选项，但为了方便，我们选择第一个选项 `Graphical install`，即 `图形化安装程序` 。
 
@@ -245,3 +245,69 @@
 点击确认后，安装器会下载并安装所有需要的软件包。此过程可能需要几分钟到一天，具体时间取决于您的网络速度。
 
 ![package_install_1](../../img/debian_installation_full/package_download_1.png)
+
+### 完成安装
+
+现在 Debian 已经完成安装了，拔出安装媒介（U盘或移动硬盘）。
+
+![installation_finished](../../img/debian_installation_full/installation_finished.png)
+
+点击 `继续`，以重新启动。重启后，我们会进入新安装的 Debian GNU/Linux 操作系统。
+
+## 启动
+
+开机后，我们会进入 GNU GRUB。
+
+![grub](../../img/debian_installation_full/grub.png)
+
+要启动 Debian，用键盘 `↑` 和 `↓` 键选择 `Debian GNU/Linux`，并按回车键 `Enter`。
+
+## 安装后要做的事
+
+### 添加用户至 `sudo` 组
+
+Debian 默认不将用户添加至 `sudo` 组。这种情况下使用 `sudo` 执行命令会出现以下报错：
+
+```
+linux@desktop-pc:~$ sudo apt update
+[sudo] linux 的密码:
+linux 未出现在 sudoers 文件中。
+```
+
+![sudo_denied](../../img/debian_installation_full/sudo_denied.png)
+
+我们需要将用户添加到 `sudo` 组。
+
+先打开“终端”。取决于您安装的桌面环境，“终端”的名字可能不同。一个好方法是在搜索栏里搜 `terminal` 。
+
+![terminal](../../img/debian_installation_full/terminal.png)
+
+为了下面的操作，我们要暂时切换至 *root 用户*。我们使用 `su` 命令来切换用户。
+
+在终端里输入 `su`，再输入 ***root 用户*的密码**，按回车键 `Enter`。
+
+???+ tip "我的窗口是不是卡住了？"
+    没有卡住。为了安全考量，您看不到您正在输入的密码。
+
+```
+linux@desktop-pc:~$ su
+密码:
+root@desktop-pc:/home/linux#
+```
+
+![su](../../img/debian_installation_full/su.png)
+
+现在我们已经切换到了 *root 用户*。要把用户加进一个组，我们使用 `gpasswd -a` 命令。
+
+在终端里输入 `gpasswd -a`，**一个空格**，您的用户名，**一个空格**，`sudo`，再按回车键 `Enter`。
+
+这里笔者的用户名是 `linux`，所以输入 `gpasswd -a linux sudo`。
+
+```
+root@desktop-pc:/home/linux# gpasswd -a linux sudo
+正在将用户“linux”加入到“sudo”组中
+```
+
+![add_to_sudo_group](../../img/debian_installation_full/add_to_sudo_group.png)
+
+加入完成后，按 `Ctrl` + `D` 来退出 root 用户。注销并重新登录（也可以重启），`sudo` 就可以正常使用了。
