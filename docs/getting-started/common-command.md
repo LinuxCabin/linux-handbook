@@ -4,10 +4,10 @@
 
 ## 常见符号
 
-- `$`: 用以表示[Shell](../applications/shell/shell.md)环境，不需要进行输入。
-- `#`: 用以表示注释，井号后的内容会被自动忽略。
-- `~`: 用以代表用户目录，如 `~/file` 。
-- `*`: 通配符，可代指“全部”，如 `dir1/*` 指 `dir1` 下全部文件、文件夹，`dir1/file*.file`指 `dir1` 文件夹下所有以 `file` 开头，`.file` 结尾的文件与文件夹。
+- `$`: 在命令行中表示非root用户的提示符，其后闪动的光标代表等待用户输入。在[Shell](../applications/shell/shell.md)脚本中代表变量名的开始。
+- `#`: 在命令行中表示root用户的提示符。在脚本中表示注释，井号后的内容会被自动忽略。
+- `~`: 用以代表当前用户目录，如 `~/file` 。
+- `*`: 通配符，可代指“全部”，如 `dir1/*` 指 `dir1` 下全部文件、文件夹，`dir1/file*.file`指 `dir1` 文件夹下所有以 `file` 开头，`.file` 结尾的文件与文件夹。在zsh下，使用通配符可能需要输入`\*`。
 
 ## 常见指令
 
@@ -35,25 +35,6 @@ command [options] [arguments]
 
 ???+ info "包管理器相关"
     包管理器相关指令，请查看[应用与工具](../applications/apps.md)一节。
-
-### sudo
-
-以超级管理员（root）身份运行某指令，后面可以接其他指令。
-
-例如：
-
-- `sudo apt upgrade` 以管理员身份更新（Debian）系统软件包。
-- `sudo -i` 进入root用户Shell。（特殊用法）
-
-???+ note "输入密码"
-    在Linux终端中，输入的密码不会显示，也不会以类似`*`或`·`的形式表现出来，这是正常现象，直接输入密码即可。
-
-???+ note "预装"
-    在大多数发行版中，sudo为预装软件包。若没有找到，您可能需要通过包管理器自行安装。
-
-???+ note "sudoers"
-    若在使用`sudo`时，遇到权限不足提示，您需要将当前用户添加至`wheel`组中，或者编辑`/etc/sudoers`，找到`root    ALL=(ALL)       ALL`，在下方添加`用户名    ALL=(ALL)       ALL`。
-
 
 ### cd 
 
@@ -116,17 +97,6 @@ command [options] [arguments]
 
 例如：`mkdir dir` 在工作目录下创建名为 `dir` 的文件夹。
 
-### systemctl
-
-用于（在基于systemd的发行版中）管理系统服务。
-
-例如：
-
-- `sudo systemctl start xxx` 启动某服务
-- `sudo systemctl stop xxx` 终止某服务
-- `sudo systemctl enable xxx` 启用某服务（自启动，不会立即启动）
-- `sudo systemctl disable xxx` 禁用某服务（不再自启动，不会立即终止）
-
 ### chmod
 
 用于更改用户对文件的权限。
@@ -146,6 +116,14 @@ command [options] [arguments]
 chmod中间的数字表示权限。
 
 chmod的用法较为复杂，您也可以参考[Runoob的教程](https://www.runoob.com/linux/linux-comm-chmod.html)。
+
+### find
+
+在指定目录下寻找符合条件的文件
+
+例如：`find ./ -name "*.txt"` 在当前目录下寻找所有txt文件。
+
+find指令较为强大，您可以在`man find`中获取更多使用方法。
 
 ### man
 
@@ -210,6 +188,34 @@ man [options] [section] page
 
 ## 系统维护工具
 
+### sudo
+
+以超级管理员（root）身份运行某指令，后面可以接其他指令。
+
+在大多数发行版中，sudo为预装软件包。若没有找到，您可能需要通过包管理器自行安装。
+
+例如：
+
+- `sudo apt upgrade` 以管理员身份更新（Debian）系统软件包。
+- `sudo -i` 进入root用户Shell。（特殊用法）
+
+???+ note "输入密码"
+    在Linux终端中，输入的密码不会显示，也一般不会以类似`*`或`·`的形式表现出来，这是正常现象，直接输入密码即可。
+
+???+ note "sudoers"
+    若在使用`sudo`时，遇到权限不足提示，您需要将当前用户添加至`wheel`组中，或者使用`visudo`指令编辑`/etc/sudoers`，找到`root    ALL=(ALL)       ALL`，在下方添加`用户名    ALL=(ALL)       ALL`。
+
+### systemctl
+
+用于（在基于systemd的发行版中）管理系统服务。
+
+例如：
+
+- `sudo systemctl start xxx` 启动某服务
+- `sudo systemctl stop xxx` 终止某服务
+- `sudo systemctl enable xxx` 启用某服务（自启动，不会立即启动）
+- `sudo systemctl disable xxx` 禁用某服务（不再自启动，不会立即终止）
+
 ### nano
 
 ???+ info "想要了解 nano？"
@@ -217,9 +223,7 @@ man [options] [section] page
 
 nano（包名`nano`）是广受赞誉的终端文本编辑器，拥有简单易操作的界面，适合新手用来通过终端编辑系统配置文件。
 
-例如：`sudo nano /etc/sudoers`指以超级管理员权限，用nano修改`/etc/sudoers`。
-
-<!-- 这个例子不好。在arch系（和也许redhat系？）中你应该用visudo来编辑sudoers。-->
+例如：`sudo nano /etc/environment`指以超级管理员权限，用nano修改`/etc/environment`来配置系统环境变量。
 
 ???+ note "权限"
     编辑部分配置文件时需要`sudo`提权。
