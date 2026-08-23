@@ -271,8 +271,7 @@ Linux 发行版（也被叫做GNU/Linux 发行版），为一般用户预先集�
 
         （内容来自[使用 balenaEtcher 制作 GNU/Linux 启动盘](https://freeswzhcn.codeberg.page/site/posts/%E4%BD%BF%E7%94%A8%20balenaEtcher%20%E5%88%B6%E4%BD%9C%20GNU-Linux%20%E5%90%AF%E5%8A%A8%E7%9B%98/)，本部分内容使用CC BY-SA 4.0协议分发）
 
-    - [Raspberry Pi Imager](https://www.raspberrypi.com/software/)  **只能用于树莓派 (Raspberry Pi)*
-
+    - [Raspberry Pi Imager](https://www.raspberrypi.com/software/)
 
 !!! warning "警告"
     在烧录前，请确保您的U盘中没有重要资料！U盘的所有文件将被清空且几乎不可逆！！！
