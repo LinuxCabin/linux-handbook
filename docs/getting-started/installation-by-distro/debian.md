@@ -13,7 +13,7 @@
 
 在开始前，您需要下载 Debian 13 的安装 ISO。上一节中的**“[下载镜像](../before-installing.md#_5)”**中有所叙述。
 
-???+ tips "Debian 的安装镜像下载地址..."
+???+ tip "Debian 的安装镜像下载地址..."
     [Debian 的详细信息](../../distros/debian/debian.md#_2)中有记录。前往***“镜像下载地址”*项**下面的网页，点击 `current/`，再点击电脑的架构（一般是`amd64/`），再点击 `iso-cd/`，选择 `debian-`...`-netinst.
 
 下载镜像后，您需要将镜像烧录到U盘（或移动硬盘）中。可以参考上一节中的**“[烧录镜像](../before-installing.md#_6)”**。
