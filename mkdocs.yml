@@ -197,6 +197,8 @@ nav:
       - applications/shell/bash.md
       - applications/shell/zsh.md
       - applications/shell/fish.md
+    - 系统维护:
+      - applications/maintenance/gparted.md
     - 其他:
       - applications/other/fastfetch.md
   - 进阶:
