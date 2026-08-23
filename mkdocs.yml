@@ -104,6 +104,8 @@ nav:
     - getting-started/os-basis.md
     - getting-started/before-installing.md
     - getting-started/install.md
+    - 详细安装过程:
+      - getting-started/installation-by-distro/debian.md
     - getting-started/post-installation.md
     - 设备支持:
       - getting-started/devices/drivers.md
