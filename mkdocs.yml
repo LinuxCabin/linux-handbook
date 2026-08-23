@@ -212,4 +212,6 @@ nav:
       - advanced/btrfs/migrating_to_btrfs.md
     - advanced/swap.md
     - advanced/boot_loader.md
+    - 命令:
+      - advanced/command/dd.md
   - 关于: about.md
