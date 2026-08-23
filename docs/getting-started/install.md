@@ -34,7 +34,7 @@
 ???+ note "提示"
     在安装前，我们建议您查看“发行版”章节对应发行版下的“注意事项”一节。
 
-一些是一些较为热门的安装教程：
+以下是一些较为热门的安装教程：
 
  - Ubuntu: [https://www.bilibili.com/video/BV1CG4y1h7bx](https://www.bilibili.com/video/BV1CG4y1h7bx)
  - Fedora: [https://www.bilibili.com/video/BV1ZRpdzaEQj](https://www.bilibili.com/video/BV1ZRpdzaEQj)
