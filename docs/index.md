@@ -4,12 +4,13 @@
 
 **本项目目前处于未完成状态，欢迎贡献！**
 
-访问慢？换条线路试试！😉
-
- - [Vercel](https://vercel.hb.linuxcabin.top)
- - [Github Pages](https://hb.linuxcabin.top)
- - [Codeberg Pages](https://cb.hb.linuxcabin.top)
- - [Cloudflare Pages](https://cf.hb.linuxcabin.top)
+???+ info "镜像列表"
+    访问慢？换条线路试试！
+  
+    - [Vercel](https://vercel.hb.linuxcabin.top)
+    - [Github Pages](https://hb.linuxcabin.top)
+    - [Codeberg Pages](https://cb.hb.linuxcabin.top)
+    - [Cloudflare Pages](https://cf.hb.linuxcabin.top)
 
 ## 想要入门？看这里！
 
@@ -17,7 +18,16 @@
 
 ## 如何使用本教程？
 
-按照“开始”节的流程进行阅读并操作即可。在遇到一些名词时，您可以在内链上悬停查看释义，或者自行到“概念”一节进行查阅。并且，您也应该阅读对应发行版与桌面环境的章节来了解一些基本知识与问题解决方案。
+本教程主要分为如下几个章节：
+
+- 开始：安装并快速搭建起一个能够使用的Linux系统
+- 发行版：介绍不同发行版的基本信息并提供一些特殊处理
+- 桌面：介绍不同桌面，并提供相关信息与美化教程
+- 兼容性：Windows与跨发行版应用兼容相关内容
+- 应用与工具：应用管理相关知识，常用应用以及一些应用的开源替代品的介绍、下载链接
+- 进阶：一些难度较高的配置项与前沿概念
+
+您可以按照顺序阅读并操作实践。
 
 ## 我们想要做什么？
 

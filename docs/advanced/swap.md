@@ -18,7 +18,7 @@ Swap主要分为交换文件与交换分区两类来源。
 
 ## 交换文件
 
-顾名思义，交换文件就是指以文件的形式作为交换空间。通常来说，交换文件名为Swapfile，并置于根目录下。交换文件与分区方式相比自由度更高，容易调整大小。以下我们会介绍如何配置Swapfile。
+顾名思义，交换文件就是指以文件的形式作为交换空间。通常来说，交换文件名为Swapfile，并置于根目录下。交换文件与分区方式相比自由度更高，容易调整大小。以下我们会介绍如何配置交换文件。
 
 ```bash
 # 创建Swapfile，请自行修改count大小（bs*count即为其MB大小，1GB=1024MB）
@@ -95,10 +95,10 @@ sudo swapon /swapfile
 
 ```bash
 # 临时启用Swap
-sudo swapon 分区路径
+sudo swapon 块设备路径
 
 # 查看分区的UUID，请记录下此处的UUID
-sudo blkid 分区路径
+sudo blkid 块设备路径
 
 # 修改/etc/fstab，设置开机自动挂载
 sudo nano /etc/fstab
