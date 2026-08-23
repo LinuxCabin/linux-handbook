@@ -42,3 +42,9 @@ LinuxCabin是一个志愿者组织，本教程由对Linux抱有热情的用户�
 <a href="https://github.com/LinuxCabin/linux-handbook/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=LinuxCabin/linux-handbook" />
 </a>
+
+## 加入我们
+
+想加入？欢迎加入我们的QQ群或Matrix！
+QQ: 631799393
+Matrix: #linuxcabin:gitter.im
