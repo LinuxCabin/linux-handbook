@@ -2,7 +2,7 @@
 
 ## 概述
 
-[opencode](https://opencode.ai)是一个开源的Claude Code替代品，内置丰富的免费AI模型，可以帮你写代码、处理文档、整理文件，从而提高你的工作效率。
+[OpenCode](https://opencode.ai)是一个开源的Claude Code替代品，内置丰富的免费AI模型，可以帮你写代码、处理文档、整理文件，从而提高你的工作效率。
 
 ## 安装
 
