@@ -8,20 +8,20 @@
 
 ## 安装
 
-Debian系：
-```bash
-sudo apt install freecad
-```
+- Debian系：
+    ```bash
+    sudo apt install freecad
+    ```
 
-红帽系：
-```bash
-sudo dnf install freecad
-```
+- 红帽系：
+    ```bash
+    sudo dnf install freecad
+    ```
 
-Arch系：
-```bash
-sudo pacman -S freecad
-```
+- Arch系：
+    ```bash
+    sudo pacman -S freecad
+    ```
 
 ## 使用
 

@@ -8,20 +8,20 @@ OpenSCAD是一款以代码风格进行建模的设计工具，具有预览和渲
 
 ## 安装
 
-Debian系：
-```bash
-sudo apt install openscad
-```
+- Debian系：
+    ```bash
+    sudo apt install openscad
+    ```
 
-红帽系：
-```bash
-sudo dnf install openscad
-```
+- 红帽系：
+    ```bash
+    sudo dnf install openscad
+    ```
 
-Arch系：
-```bash
-sudo pacman -S openscad
-```
+- Arch系：
+    ```bash
+    sudo pacman -S openscad
+    ```
 
 ## 使用
 
