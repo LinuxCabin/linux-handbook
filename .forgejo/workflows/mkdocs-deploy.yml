@@ -33,11 +33,13 @@ jobs:
 
       - name: Install MkDocs dependencies
         run: |
-          python -m pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
-          
+          # python -m pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
+
           python -m pip install --upgrade pip
           
-          pip install -r requirements.txt
+          pip install --index-url https://pypi.tuna.tsinghua.edu.cn/simple \
+                      --extra-index-url https://pypi.org/simple \
+                      -r requirements.txt
 
       - name: Build MkDocs site
         run: mkdocs build --strict
