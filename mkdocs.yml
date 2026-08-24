@@ -147,6 +147,7 @@ nav:
     - Win & Linux:
       - compatibility/windows/wine.md
       - compatibility/windows/steam.md
+      - compatibility/windows/vm.md
     - 跨发行版:
       - compatibility/inter-distros/distrobox.md
   - 应用与工具:
