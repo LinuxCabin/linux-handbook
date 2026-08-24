@@ -8,7 +8,7 @@
 
 在Linux中，你可能要使用一些wine无法兼容的Windows独占软件，但当你无法放弃或者没有平替时，又该如何使用？此时，虚拟机便是最好的解决方案。
 
-???+info "在Linux上主流的Windows虚拟机方案"
+???+ info "在Linux上主流的Windows虚拟机方案"
     - VirtualBox：图形化最完善，最开箱即用，性能提升需要搭配KVM使用，但KVM支持不够完善
     - VMware：与VirtualBox类似
     - QEMU：最强大，完美支持KVM，支持直通，但需要使用大量CLI，virt-manager逻辑复杂，上手难度大
@@ -83,20 +83,26 @@ qemu-system-x86_64 \  # 指定为x86_64的模拟
 
 ### 安装
 
-#### Debian 系
+Debian 系：
 ```bash
+sudo apt install linux-headers-generic
 sudo apt install virtualbox
 ```
 
-#### 红帽系
+#### 红帽系：
 ```bash
- sudo dnf install virtualbox
+sudo dnf install kernel-devel kernel-headers
+sudo dnf install virtualbox
 ```
 
-#### Arch 系
+#### Arch 系：
 ```bash
+sudo pacman -S linux-headers
 sudo pacman -S virtualbox
 ```
+
+!!! info "安装过程"
+    有关更详细的安装过程和安装中可能出现的问题，请参见 [VirtualBox](../../applications/virtualization/virtualbox.md) 页面。
 
 ### 使用
 
