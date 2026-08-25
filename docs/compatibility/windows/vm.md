@@ -57,17 +57,30 @@ qemu-img create -f qcow2 [磁盘文件路径]/windows_disk.qcow2 64G
 然后使用以下参数从iso启动
 
 ```bash
-qemu-system-x86_64 \  # 指定为x86_64的模拟
-  -enable-kvm \  # 使用KVM以加速
-  -cpu host \  # 将主机的 CPU 型号和特性直接传递给虚拟机，以获得最佳性能
-  -smp 4 \  # 分配 4 个 CPU 核心给虚拟机
-  -m 4096 \  # 分配4096MB（4GB）内存给虚拟机，可使用参数4G
-  -device usb-tablet \  # 解决鼠标坐标错位的关键。它模拟一个USB绘图板（或触控屏），使用绝对坐标定位，这样鼠标指针在宿主机和虚拟机内就能完全同步
-  -drive file=[磁盘文件路径]/windows_disk.qcow2,if=virtio,format=qcow2 \  # 需指向创建的QEMU磁盘文件路径
-  -cdrom [Window镜像路径]/windows.iso \  # 需指向Windows ISO安装文件
-  -boot order=d \  # 设置从光驱启动
-  -nic user,model=virtio-net-pci \  # 网络，此处使用virt-IO
+qemu-system-x86_64 \
+  -enable-kvm \
+  -cpu host \
+  -smp 4 \
+  -m 4096 \
+  -machine usb=on \
+  -device usb-tablet \
+  -drive file=[磁盘文件路径]/windows_disk.qcow2,if=virtio,format=qcow2 \
+  -cdrom [Window镜像路径]/windows.iso \
+  -boot order=d \
+  -nic user,model=virtio-net-pci \
 ```
+- `qemu-system-x86_64`指定为x86_64的模拟
+-  `-enable-kvm`使用KVM以加速
+-  `-cpu host`将主机的 CPU 型号和特性直接传递给虚拟机，以获得最佳性能
+-  `-smp 4`分配 4 个 CPU 核心给虚拟机
+-  `-m 4096`分配4096MB（4GB）内存给虚拟机，可使用参数4G
+-  `-machine usb=on`启用USB透传
+-  `-device usb-tablet`解决鼠标坐标错位的关键。它模拟一个USB绘图板（或触控屏），使用绝对坐标定位，这样鼠标指针在宿主机和虚拟机内就能完全同步
+-  `-drive file=[磁盘文件路径]/windows_disk.qcow2,if=virtio,format=qcow2`需指向创建的QEMU磁盘文件路径
+-  `-cdrom [Window镜像路径]/windows.iso`需指向Windows ISO安装文件
+-  `-boot order=d`设置从光驱启动
+-  `-nic user,model=virtio-net-pci`网络，此处使用virt-IO
+  
 
 安装完成后，可以删去 `-cdrom` 和 `-boot` 行。
 
