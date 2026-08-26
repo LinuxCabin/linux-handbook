@@ -69,6 +69,7 @@ qemu-system-x86_64 \
   -boot order=d \
   -nic user,model=virtio-net-pci \
 ```
+
 - `qemu-system-x86_64`指定为x86_64的模拟
 -  `-enable-kvm`使用KVM以加速
 -  `-cpu host`将主机的 CPU 型号和特性直接传递给虚拟机，以获得最佳性能
