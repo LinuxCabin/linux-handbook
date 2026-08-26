@@ -76,7 +76,7 @@ Linux 是自由的，任何布局只要有 ``/`` 的挂载点都行得通。但�
 
 - 看起来不错就结束分区并写入磁盘吧 ``Finish partitioning and write changes to disk`` 
 - 
-  ->
+-->
 
 
 ##### 如果使用 UEFI：

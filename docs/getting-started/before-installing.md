@@ -54,7 +54,7 @@ Linux 发行版（也被叫做GNU/Linux 发行版），为一般用户预先集�
     <td>困难</td>
     <td><a href=/distros/arch/archlinux>Arch Linux</a> / <a href=/distros/arch/artixlinux>Artix Linux</a> / <a href=/distros/nixos>NixOS Unstable</a></td>
     <td>Guix Linux</td>
-    <td>Gentoo Linux / <a href=/distros/nixos>NixOS Stable</a></td>
+    <td><a href=/distros/gentoo>Gentoo Linux</a> / <a href=/distros/nixos>NixOS Stable</a></td>
     <td>LFS (Linux From Scratch)</td>
   </tr>
   <tr>
@@ -99,11 +99,13 @@ Linux 发行版（也被叫做GNU/Linux 发行版），为一般用户预先集�
 
     这样的特性使得滚动更新发行版具备“任何版本都能升级”的特点，使得用户能够第一时间获得软件的最新版本。不过当然，这样的形式可能会使得某些大改动被忽视，进而导致“滚挂”的发生，维护成本较高。
 
-    常见的滚动更新例子有Arch Linux、OpenSUSE Tumbleweed、Debian Sid等。
+    常见的滚动更新例子有Arch Linux、OpenSUSE Tumbleweed、Debian Testing/Sid、Gentoo Linux等。
 
 ## 调配分区
 
-我们建议您通过专业的[分区](./before-installing.md#_6)工具——如[DiskGenius](https://www.diskgenius.cn/)（[教程](https://www.diskgenius.cn/help/partresizing.php)）和Windows的磁盘管理单元（[教程](https://freeswzhcn.codeberg.page/site/posts/%E4%B8%BA%20GNU-Linux%20%E5%87%86%E5%A4%87%E5%8F%8C%E5%90%AF%E5%8A%A8%E5%88%86%E5%8C%BA%E2%80%94%E2%80%94Microsoft%20Windows/)）——进行分区。您需要用分区工具在电脑硬盘上腾出60GB以上（建议值）的**空闲**空间。我们不建议直接在DiskGenius等WIndows下软件创建分区，而是在安装时由安装程序进行创建，这可以保证系统的稳定性和分区一致性。
+我们建议您先通过专业的[分区](./before-installing.md#_6)工具——如[DiskGenius](https://www.diskgenius.cn/)（[教程](https://www.diskgenius.cn/help/partresizing.php)）和Windows的磁盘管理单元（[教程](https://freeswzhcn.codeberg.page/site/posts/%E4%B8%BA%20GNU-Linux%20%E5%87%86%E5%A4%87%E5%8F%8C%E5%90%AF%E5%8A%A8%E5%88%86%E5%8C%BA%E2%80%94%E2%80%94Microsoft%20Windows/)）——挤压出空闲空间。您需要用分区工具在电脑硬盘上腾出60GB以上（建议值）的**未分配**空间。
+
+我们不建议直接在DiskGenius等Windows下软件创建分区，而是在安装时由安装程序进行创建，这可以保证系统的稳定性和分区一致性。
 
 我们建议您在操作完分区后用其他设备记录您磁盘的分区图示/顺序，这在安装系统时非常有用。
 
@@ -114,17 +116,19 @@ Linux 发行版（也被叫做GNU/Linux 发行版），为一般用户预先集�
 
 ## 下载镜像
 
-您需要先到各发行版的官网找到下载按钮，并下载对应系统镜像，但由于中国大陆网络环境，我们并不推荐直接到官网下载。
+您需要下载想安装的 Linux 发行版的系统镜像。可以到官方网站下载，也可以到镜像站下载。由于中国大陆网络环境，我们不推荐直接到官网下载。
 
-或者，您可以通过开源镜像站进行下载。您可以在“发行版”章节对应选项卡中找到“镜像下载链接”下载系统镜像。
+如果要通过开源镜像站进行下载，可以在“[发行版](../distros/distro.md)”章节对应选项卡中找到“镜像下载链接”下载系统镜像。
 
-我们建议您选择最新，并且预装您所需要的桌面环境的版本。
+我们建议您选择最新，且预装您所需要的[桌面环境](../desktop/desktop.md)的版本。
 
 ???+ example "一些常见的发行版标签"
-    - x86-64/amd64: 大多数PC（一般选这个）
-    - arm64/aarch64/armv8l/armv8a: 树莓派、IoT等设备
-    - desktop: 带桌面环境的系统（推荐）
-    - server: 服务器用系统，无桌面环境
+    - `x86_64`/`amd64`: 大多数PC（一般选这个）
+    - `i386`/`i486`/`i686`: 较*旧（指奔腾3这种20几年前的...）*的PC *或* 内存小于等于 2GB 的PC
+    - `arm64`/`aarch64`/`armv8l`/`armv8a`: 树莓派、IoT等设备
+    - `livecd`: 镜像自带可操作的 Linux 系统，一般带有桌面环境（类似于 Windows PE）
+    - `desktop`: 安装带桌面环境的系统（推荐）
+    - `server`: 服务器用系统，无桌面环境
 
 ???+ example "一些桌面环境/窗口管理器"
     - [KDE](../desktop/de/kde.md) (K Desktop Environment): 贴近Windows操作逻辑，有高度的自定义性与丰富主题
@@ -268,7 +272,6 @@ Linux 发行版（也被叫做GNU/Linux 发行版），为一般用户预先集�
         （内容来自[使用 balenaEtcher 制作 GNU/Linux 启动盘](https://freeswzhcn.codeberg.page/site/posts/%E4%BD%BF%E7%94%A8%20balenaEtcher%20%E5%88%B6%E4%BD%9C%20GNU-Linux%20%E5%90%AF%E5%8A%A8%E7%9B%98/)，本部分内容使用CC BY-SA 4.0协议分发）
 
     - [Raspberry Pi Imager](https://www.raspberrypi.com/software/)
-
 
 !!! warning "警告"
     在烧录前，请确保您的U盘中没有重要资料！U盘的所有文件将被清空且几乎不可逆！！！

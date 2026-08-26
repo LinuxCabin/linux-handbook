@@ -16,18 +16,29 @@ theme:
   custom_dir: overrides
   language: zh
   palette:
-    - scheme: default
-      primary: teal
-      accent: green
-      toggle:
-        icon: material/brightness-7
-        name: 夜间模式
-    - scheme: slate
-      primary: black
-      accent: teal
-      toggle:
-        icon: material/brightness-4
-        name: 日间模式
+      - media: "(prefers-color-scheme)"
+        scheme: default
+        primary: blue
+        accent: light blue
+        toggle:
+          icon: material/brightness-auto
+          name: 切换亮色模式
+
+      - media: "(prefers-color-scheme: light)"
+        scheme: default
+        primary: blue
+        accent: light blue
+        toggle:
+          icon: material/brightness-7
+          name: 切换暗色模式
+
+      - media: "(prefers-color-scheme: dark)"
+        scheme: slate
+        primary: blue
+        accent: light blue
+        toggle:
+          icon: material/brightness-4
+          name: 切换跟随系统
   icon:
     logo: material/book-open-page-variant
     repo: fontawesome/brands/github
@@ -104,6 +115,9 @@ nav:
     - getting-started/os-basis.md
     - getting-started/before-installing.md
     - getting-started/install.md
+    - 详细安装过程:
+      - getting-started/installation-by-distro/debian.md
+      - getting-started/installation-by-distro/fedora.md
     - getting-started/post-installation.md
     - 设备支持:
       - getting-started/devices/drivers.md
