@@ -198,8 +198,6 @@ nav:
       - applications/shell/bash.md
       - applications/shell/zsh.md
       - applications/shell/fish.md
-    - 虚拟化:
-      - applications/virtualization/virtualbox.md
     - 系统维护:
       - applications/maintenance/gparted.md
     - 其他:
