@@ -1,6 +1,6 @@
 # Wine
 
-Wine （“Wine Is Not an Emulator” 的首字母缩写）是一个能够在多种操作系统上运行 Windows 应用的兼容层。Wine 不是像虚拟机或者模拟器一样模仿内部的 Windows 逻辑，而是將 Windows API 调用翻译成为动态的 POSIX 调用，免除了性能和其他一些行为的内存占用，让你能够干净地集合 Windows 应用到你的桌面。
+Wine （“Wine Is Not an Emulator” 的首字母缩写）是一个能够在多种操作系统上运行 Windows 应用的兼容层。Wine 不是像虚拟机或者模拟器一样模仿内部的 Windows 逻辑，而是将 Windows API 调用翻译成为动态的 POSIX 调用，免除了性能和其他一些行为的内存占用，让你能够干净地集合 Windows 应用到你的桌面。
 
 !!! warning "警告"
     Wine无法保证Windows应用能够完美运行。在使用Wine之前，我们建议您首先查阅以下数据库：
@@ -14,6 +14,10 @@ Wine （“Wine Is Not an Emulator” 的首字母缩写）是一个能够在多
     若兼容性问题较大，我们建议您使用虚拟机方式运行应用。
 
 ## 安装
+
+### Bottles（新手推荐）
+
+对于新手用户，我们更推荐您使用 [Bottles](https://flathub.org/zh-Hans/apps/com.usebottles.bottles)，这是一款用图形界面运行 Windows 软件的工具。它以 Flatpak 分发、开箱即用，无需手动配置 Wine 与依赖。安装与使用详见 [Bottles](./bottles.md) 页面。
 
 ### 原生安装
 
@@ -40,13 +44,6 @@ Wine （“Wine Is Not an Emulator” 的首字母缩写）是一个能够在多
 
 ???+ note "反作弊"
     安装 Lutris 或者 Steam 后可以用 [ProtonPlus](https://flathub.org/zh-Hans/apps/com.vysp3r.ProtonPlus) 管理[Proton](./steam.md#proton)。安装[晨曦酒庄 Proton](https://dawn.wine/dawn-winery/dwproton)（dw-proton）来获得对国内二游反作弊的更佳兼容，在兼容层设置内选用下载好的 dw-proton 即可。
-
-### Bottles
-
-或者，您还可以通过[Bottles](https://flathub.org/zh-Hans/apps/com.usebottles.bottles)管理Windows软件。
-
-!!! warning "警告"
-    同样的，Bottles需要从Github下载依赖，在中国大陆网络环境可能遇到阻碍。
 
 ### CrossOver
 

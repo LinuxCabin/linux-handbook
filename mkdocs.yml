@@ -160,6 +160,7 @@ nav:
   - 兼容性:
     - Win & Linux:
       - compatibility/windows/wine.md
+      - compatibility/windows/bottles.md
       - compatibility/windows/steam.md
       - compatibility/windows/vm.md
     - 跨发行版:
