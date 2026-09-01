@@ -4,25 +4,38 @@
 
 Linux下的输入法框架主要有以下两种选择：
 
- - Fcitx (包名`fcitx5`): 轻量，启动快，建议KDE、Sway、Hyprland等用户使用  
+ - Fcitx (包名`fcitx5`): 轻量，启动快，建议KDE、Sway、Hyprland等用户使用
  - IBus (包名`ibus`): 自定义功能有限，但与GNOME深度集成，建议GNOME用户使用
 
 您可以通过您的包管理器安装这两种输入法框架之一。
 
+!!! warning "Fcitx 不是 `fcitx`"
+	在*相当一部分*发行版中，包`fcitx`是Fcitx **4**，而包`fcitx5`才是最新的Fcitx **5**。您当然不想使用旧版的软件。
+
 !!! warning "已知问题"
     由于Wayland显示协议的原因，部分输入法在Electron应用中可能会出现无法输入的状况。我们建议您目前先继续该教程。但是若出现该问题，您可以尝试以下解决方案：
     
-    - 方案一：在终端中编辑`/etc/environment`（可输入`sudo nano /etc/environment`），添加如下行：
+	- 方案一：在终端中编辑`~/.profile`（可输入`nano ~/.profile`），在文件末尾添加如下行：
+	
+	```
+	# 如果是IBus输入法请将 fcitx 和 fcitx5 替换为 ibus
+	export GTK_IM_MODULE="fcitx5"
+	export QT_IM_MODULE="fcitx5"
+	export XMODIFIERS="@im=fcitx"
+	export SDL_IM_MODULE="fcitx5"	
+	```
+	
+    - 方案二：在终端中编辑`/etc/environment`（可输入`sudo nano /etc/environment`），在文件末尾添加如下行：
 
     ```
-    # 如果是IBus输入法请将fcitx替换为ibus
-    GTK_IM_MODULE=fcitx
-    QT_IM_MODULE=fcitx
-    XMODIFIERS=@im=fcitx
-    SDL_IM_MODULE=fcitx
+    # 如果是IBus输入法请将 fcitx 和 fcitx5 替换为 ibus
+	GTK_IM_MODULE="fcitx5"
+	QT_IM_MODULE="fcitx5"
+	XMODIFIERS="@im=fcitx"
+	SDL_IM_MODULE="fcitx5"
     ```
 
-    - 方案二：编辑`~/.config/electron-flags.conf`（可在终端中输入`nano ~/.config/electron-flags.conf`），添加如下行：
+    - 方案三：编辑`~/.config/electron-flags.conf`（可在终端中输入`nano ~/.config/electron-flags.conf`），添加如下行：
 
     ```
     --enable-features=WaylandWindowDecorations
@@ -31,6 +44,10 @@ Linux下的输入法框架主要有以下两种选择：
     ```
 
     或者，您可以参考这篇[知乎教程](https://zhuanlan.zhihu.com/p/690062589)。
+	
+	另外，如果您在*X11*的轻量化的桌面环境中遇到了类似的麻烦，也可以试试上面的方案一或方案二。
+
+<!-- 我在考虑从这里移出，因为如果读者在整一些最小安装，这个对于x11也很有用 -->
 
 ### Fcitx
 
@@ -40,11 +57,11 @@ Linux下的输入法框架主要有以下两种选择：
 
 若您是GNOME用户，您需要额外安装`gnome-tweaks`，在“优化-开机启动程序”中添加“Fcitx5”，或者安装`fcitx5-autostart`来使Fcitx5自启动。我们同时建议您安装这个[GNOME扩展](https://extensions.gnome.org/extension/261/kimpanel/)。
 
-若您是其他桌面环境用户，您也可以通过设置XDG自动启动或编辑配置文件的方式来使得Fcitx5开机自启。
+若您是其他桌面环境用户，您也可以通过设置XDG自动启动或编辑配置文件的方式来使得Fcitx5开机自启：
 
 - Hyprland: `exec-once = fcitx5 --replace -d`
 - Niri: 在配置文件中添加`spawn-at-startup "fcitx5" "-d"`
-
+- `.xinitrc`: 在桌面环境的前一行添加`fcitx5 -d`
 
 ### IBus
 
@@ -52,13 +69,21 @@ IBus会自动与GNOME集成，所以GNOME用户无须进行额外操作。
 
 若您是KDE用户，请打开KDE设置，搜索虚拟键盘，并选中“IBus”。
 
+若您是其他桌面环境用户，您也可以通过设置XDG自动启动或编辑配置文件的方式来使得IBus开机自启：
+
+- Hyprland: `exec-once = ibus-daemon --daemonize --replace --xim`
+- Niri: 在配置文件中添加`spawn-at-startup "ibus-daemon" "--daemonize" "--xim"`
+- `.xinitrc`: 在桌面环境的前一行添加`ibus-daemon --daemonize`
+
 ## 设置默认框架
 
 在Debian系发行版中，安装输入法后可能需要安装并用终端运行`im-config`来选择默认输入法框架。在Fedora中，您可能需要使用`imsettings`来设置。
 
 ## 中文输入法框架
 
-对于中文输入法框架，由于IBus默认的拼音输入差强人意，并且其他输入框架也大多字库不全或过时。因此，我们推荐您使用中州韵 (Rime)，其能够安装多种词库，并且有强大的输入引擎。
+对于中文输入法框架，由于IBus默认的拼音输入不尽人意，并且其他输入框架也大多字库不全或过时。因此，我们推荐您使用中州韵 (Rime)，其能够安装多种词库，并且有强大的输入引擎。
+
+<!-- 差强人意：大体使人满意 -->
 
 ### 安装Rime
 
