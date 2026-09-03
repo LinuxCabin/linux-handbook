@@ -18,21 +18,21 @@ Linux下的输入法框架主要有以下两种选择：
 	- 方案一：在终端中编辑`~/.profile`（可输入`nano ~/.profile`），在文件末尾添加如下行：
 	
 	```
-	# 如果是IBus输入法请将 fcitx 和 fcitx5 替换为 ibus
-	export GTK_IM_MODULE="fcitx5"
-	export QT_IM_MODULE="fcitx5"
+	# 如果是IBus输入法请将 fcitx 替换为 ibus
+	export GTK_IM_MODULE="fcitx"
+	export QT_IM_MODULE="fcitx"
 	export XMODIFIERS="@im=fcitx"
-	export SDL_IM_MODULE="fcitx5"	
+	export SDL_IM_MODULE="fcitx"	
 	```
 	
     - 方案二：在终端中编辑`/etc/environment`（可输入`sudo nano /etc/environment`），在文件末尾添加如下行：
 
     ```
-    # 如果是IBus输入法请将 fcitx 和 fcitx5 替换为 ibus
-	GTK_IM_MODULE="fcitx5"
-	QT_IM_MODULE="fcitx5"
+	# 如果是IBus输入法请将 fcitx 替换为 ibus
+	GTK_IM_MODULE="fcitx"
+	QT_IM_MODULE="fcitx"
 	XMODIFIERS="@im=fcitx"
-	SDL_IM_MODULE="fcitx5"
+	SDL_IM_MODULE="fcitx"	
     ```
 
     - 方案三：编辑`~/.config/electron-flags.conf`（可在终端中输入`nano ~/.config/electron-flags.conf`），添加如下行：
@@ -61,7 +61,21 @@ Linux下的输入法框架主要有以下两种选择：
 
 - Hyprland: `exec-once = fcitx5 --replace -d`
 - Niri: 在配置文件中添加`spawn-at-startup "fcitx5" "-d"`
-- `.xinitrc`: 在桌面环境的前一行添加`fcitx5 -d`
+
+??? note ".xinitrc"
+	以 dwm 举例。
+	将启动桌面环境的一行：
+	```bash
+	exec dwm
+	```
+	或，
+	```bash
+	exec dbus-run-session -- dwm
+	```
+	替换为：
+	```bash
+	exec dbus-run-session -- sh -c 'fcitx5 -d && exec dwm'
+	```
 
 ### IBus
 
@@ -73,7 +87,22 @@ IBus会自动与GNOME集成，所以GNOME用户无须进行额外操作。
 
 - Hyprland: `exec-once = ibus-daemon --daemonize --replace --xim`
 - Niri: 在配置文件中添加`spawn-at-startup "ibus-daemon" "--daemonize" "--xim"`
-- `.xinitrc`: 在桌面环境的前一行添加`ibus-daemon --daemonize`
+
+
+??? note ".xinitrc"
+	以 dwm 举例。
+	将启动桌面环境的一行：
+	```bash
+	exec dwm
+	```
+	或，
+	```bash
+	exec dbus-run-session -- dwm
+	```
+	替换为：
+	```bash
+	exec dbus-run-session -- sh -c 'ibus-daemon --daemonize && exec dwm'
+	```
 
 ## 设置默认框架
 
