@@ -1,6 +1,7 @@
 # Artix Linux
 
-![Logo](https://artixlinux.org/img/artix-logo.png)
+![artixlogo](../../img/distros/artix-logo.png){width=200px}
+<!-- somehow artixlinux.org/img/artix-logo.png 在我的游览器上就是不会显示，拉到本地 -->
 
 ## 简介
 
