@@ -2,7 +2,7 @@
 
 感谢 [Phiality](https://github.com/PhialsBasement) 的[补丁](https://github.com/ValveSoftware/wine/pull/310)，在 [Wine 兼容层](../compatibility/windows/wine.md) 上运行 Adobe 软件变得可能。
 
-在这篇教程里，我们使用 Adobe Photoshop 2021 作为演示。
+在这篇教程里，我们使用 Adobe Photoshop 2021 作为演示，但大多数 Adobe 的软件应该都能正常运行。
 
 ## 需要的文件
 
