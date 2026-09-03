@@ -227,4 +227,5 @@ nav:
     - advanced/boot_loader.md
     - 命令:
       - advanced/command/dd.md
+    - advanced/adobe_on_wine.md
   - 关于: about.md
