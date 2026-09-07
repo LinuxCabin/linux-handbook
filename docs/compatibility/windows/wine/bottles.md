@@ -15,7 +15,7 @@ flatpak install flathub com.usebottles.bottles
 ```
 
 !!! warning "网络问题"
-    如果您尚未添加 Flathub 软件源，或在下载时速度缓慢，请参考[应用与工具-Flatpak](../../applications/apps.md#flatpak)配置 Flathub 镜像。
+    如果您尚未添加 Flathub 软件源，或在下载时速度缓慢，请参考[应用与工具-Flatpak](../../../applications/apps.md#flatpak)配置 Flathub 镜像。
 
 ## 使用
 
@@ -34,7 +34,7 @@ flatpak install flathub com.usebottles.bottles
 - **应用（Application）**：默认启用 DXVK 与 VKD3D，预装基础字体与 Wine Mono（用于替代 .NET Framework），适合办公、绘图、建模等普通 Windows 软件。
 - **自定义（Custom）**：完全空白的环境，供您自由实验，创建时可自行选择运行器。
 
-![创建新容器](../../img/bottles/create_bottle.png)
+![创建新容器](../../../img/bottles/create_bottle.png)
 
 创建后，您可以随时在 Bottle 的设置中修改这些配置。每个 Bottle 相互独立，一个 Bottle 出问题时可以将其删除重建，不影响其他 Bottle；Bottles 也支持导出、导入与克隆 Bottle，方便备份与分享。
 
@@ -48,11 +48,11 @@ flatpak install flathub com.usebottles.bottles
 !!! note "关于 Proton 运行器"
     Bottles 官方建议仅在个别游戏确有对应的 Proton 补丁时才使用 Proton 运行器——Valve 也参与了 Wine 的开发，Proton 的许多特性已经合入新版 Wine。
 
-![Bottles 主界面](../../img/bottles/main_menu.png)
+![Bottles 主界面](../../../img/bottles/main_menu.png)
 
 新运行器可以在“首选项-运行器”中点击下载按钮安装；如果愿意尝鲜，也可以开启“预发布（Pre-release）”选项来测试候选版本，代价是可能出现 Bug 或兼容回退。
 
-![首选项入口](../../img/bottles/preferences_entry.png)
+![首选项入口](../../../img/bottles/preferences_entry.png)
 
 !!! tip "提示"
     如果您不了解各兼容层之间的差异，保持默认即可。
@@ -65,9 +65,9 @@ Bottles 内置了依赖管理器，可在 Bottle 详情页的“依赖项（Depe
 !!! note "提示"
     您可以通过网络搜索或询问 AI，来了解软件需要安装哪些依赖项。
 
-![Bottle 详情页-选项](../../img/bottles/bottle_options.png)
+![Bottle 详情页-选项](../../../img/bottles/bottle_options.png)
 
-![依赖项列表](../../img/bottles/dependencies.png)
+![依赖项列表](../../../img/bottles/dependencies.png)
 
 ### 安装并运行软件
 
@@ -78,7 +78,7 @@ Bottles 内置了依赖管理器，可在 Bottle 详情页的“依赖项（Depe
 !!! note "提示"
     也可以手动移动。例如，一个名为 `APP` 的 Bottle，其 C 盘所在目录为 `~/.var/app/com.usebottles.bottles/data/bottles/bottles/APP/drive_c`。
 
-![Bottle 详情页](../../img/bottles/bottle_details.png)
+![Bottle 详情页](../../../img/bottles/bottle_details.png)
 
 安装完成后，Bottles 会自动扫描 Bottle 中的开始菜单快捷方式，将软件列入“程序（Programs）”列表。若列表中没有出现新装的软件（例如软件不写入开始菜单时），可点击“添加快捷方式”按钮手动指定可执行文件路径。之后点击程序右侧的运行按钮即可运行该软件。
 

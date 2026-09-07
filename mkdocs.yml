@@ -159,9 +159,12 @@ nav:
       - desktop/wm/sway.md
   - 兼容性:
     - Win & Linux:
-      - compatibility/windows/wine.md
-      - compatibility/windows/bottles.md
-      - compatibility/windows/steam.md
+      - Wine及其衍生物:
+        - compatibility/windows/wine/wine.md
+        - compatibility/windows/wine/bottles.md
+        - compatibility/windows/wine/steam.md
+        - 软件列表:
+          - compatibility/windows/wine/adobe_on_wine.md
       - compatibility/windows/vm.md
     - 跨发行版:
       - compatibility/inter-distros/distrobox.md
@@ -227,5 +230,4 @@ nav:
     - advanced/boot_loader.md
     - 命令:
       - advanced/command/dd.md
-    - advanced/adobe_on_wine.md
   - 关于: about.md

@@ -33,7 +33,7 @@
 2. 我能否忍受可能会带来的不便与学习成本？  
    这包括可能会和终端打一部分交道，以及可能存在的不稳定性风险。
 3. 我能否完全脱离Windows？  
-   如果不能，您需要参考“虚拟机”、[Wine](../compatibility/windows/wine.md)等章节。
+   如果不能，您需要参考“虚拟机”、[Wine](../compatibility/windows/wine/wine.md)等章节。
 
 检查完毕！打开下一章，开始我们的旅途吧！
 
