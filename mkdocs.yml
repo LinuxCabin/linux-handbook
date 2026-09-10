@@ -87,6 +87,7 @@ extra_javascript:
   - assets/js/wiki_hover.js
 extra_css:
   - assets/css/tippy.css
+  - assets/css/stylesheets/extra.css
 
 plugins:
   - search:

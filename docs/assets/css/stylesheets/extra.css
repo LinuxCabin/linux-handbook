@@ -1,0 +1,22 @@
+/* docs/assets/css/stylesheets/extra.css */
+
+[data-md-color-scheme="slate"] {
+  --waline-white: #0f172a;
+  --waline-light-grey: #1e293b;
+  --waline-dark-grey: #cbd5e1;
+
+  --waline-color: #e2e8f0;
+  --waline-bg-color: #111827;
+  --waline-bg-color-light: #1e293b;
+  --waline-bg-color-hover: #334155;
+
+  --waline-border-color: #475569;
+  --waline-disable-bg-color: #1e293b;
+  --waline-disable-color: #64748b;
+
+  --waline-code-bg-color: #0f172a;
+  --waline-bq-color: #94a3b8;
+
+  --waline-theme-color: #60a5fa;
+  --waline-active-color: #93c5fd;
+}
