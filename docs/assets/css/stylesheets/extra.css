@@ -1,22 +1,42 @@
 /* docs/assets/css/stylesheets/extra.css */
 
 [data-md-color-scheme="slate"] {
-  --waline-white: #0f172a;
-  --waline-light-grey: #1e293b;
-  --waline-dark-grey: #cbd5e1;
+    /* text on Submit button */
+    --waline-white: #0f172a;
+    --waline-light-grey: #1e293b;
+    --waline-dark-grey: #cbd5e1;
 
-  --waline-color: #e2e8f0;
-  --waline-bg-color: #111827;
-  --waline-bg-color-light: #1e293b;
-  --waline-bg-color-hover: #334155;
+    /* NickName, E-Mail, Website text */
+    --waline-color: #e2e8f0;
 
-  --waline-border-color: #475569;
-  --waline-disable-bg-color: #1e293b;
-  --waline-disable-color: #64748b;
+    /* no flashbang */
+    --waline-bg-color: #111827;
+    --waline-bg-color-light: #1e293b;
+    --waline-bg-color-hover: #334155;
 
-  --waline-code-bg-color: #0f172a;
-  --waline-bq-color: #94a3b8;
+    /* comment box and its separator */
+    --waline-border-color: #445369;
+    --waline-border: 1px solid var(--waline-border-color);
+    /* --waline-disable-bg-color: #FF0000;
+     * --waline-disable-color: #0000FF; */
 
-  --waline-theme-color: #60a5fa;
-  --waline-active-color: #93c5fd;
+    --waline-code-bg-color: #0f172a;
+    --waline-bq-color: #94a3b8;
+
+    /* submit button */
+    --waline-theme-color: #60a5fa;
+    --waline-active-color: #93c5fd;
+}
+
+/* header and tabs */
+[data-md-color-scheme="slate"] .md-header, .md-tabs {
+    background-color: #111827;
+}
+
+/* body */
+[data-md-color-scheme="slate"] {
+    /* fg ( e.g. hyprlinks ) */
+    --md-primary-fg-color: #60a5fa;
+    /* highlight ( e.g. hyperlinks when mouse hover them ) */
+    --md-accent-fg-color: #93c5fd;
 }
