@@ -29,7 +29,7 @@
 }
 
 /* header and tabs */
-[data-md-color-scheme="slate"] .md-header, .md-tabs {
+[data-md-color-scheme="slate"] .md-header, [data-md-color-scheme="slate"] .md-tabs {
     background-color: #111827;
 }
 
