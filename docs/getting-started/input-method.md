@@ -4,7 +4,7 @@
 
 Linux下的输入法框架主要有以下两种选择：
 
- - Fcitx (包名`fcitx5`): 轻量，启动快，建议KDE、Sway、Hyprland等用户使用
+ - Fcitx (包名`fcitx5`, [Flathub (推荐)](https://flathub.org/zh-Hans/apps/org.fcitx.Fcitx5) ): 轻量，启动快，建议KDE、Sway、Hyprland等用户使用
  - IBus (包名`ibus`): 自定义功能有限，但与GNOME深度集成，建议GNOME用户使用
 
 您可以通过您的包管理器安装这两种输入法框架之一。
@@ -85,7 +85,7 @@ IBus会自动与GNOME集成，所以GNOME用户无须进行额外操作。
 
 若您是其他桌面环境用户，您也可以通过设置XDG自动启动或编辑配置文件的方式来使得IBus开机自启：
 
-- Hyprland: `exec-once = ibus-daemon --daemonize --replace --xim`
+- Hyprland: 在配置文件中添加`exec-once = ibus-daemon --daemonize --replace --xim`
 - Niri: 在配置文件中添加`spawn-at-startup "ibus-daemon" "--daemonize" "--xim"`
 
 
@@ -104,36 +104,29 @@ IBus会自动与GNOME集成，所以GNOME用户无须进行额外操作。
 	exec dbus-run-session -- sh -c 'ibus-daemon --daemonize && exec dwm'
 	```
 
-## 设置默认框架
+## 中文输入引擎
 
-在Debian系发行版中，安装输入法后可能需要安装并用终端运行`im-config`来选择默认输入法框架。在Fedora中，您可能需要使用`imsettings`来设置。
+### 中文插件 (Fcitx 5)
 
-## 中文输入法框架
+如果您使用Fcitx 5，您**可以只安装中文插件**。其提供开箱即用的拼音输入法，对新手来说更加友好。
 
-对于中文输入法框架，由于IBus默认的拼音输入不尽人意，并且其他输入框架也大多字库不全或过时。因此，我们推荐您使用中州韵 (Rime)，其能够安装多种词库，并且有强大的输入引擎。
+要安装中文插件，请通过您的包管理安装 `fcitx5-chinese-addons` (Flatpak版本请使用 `flatpak` 安装 `org.fcitx.Fcitx5.Addon.ChineseAddons`)。
 
-<!-- 差强人意：大体使人满意 -->
+安装之后，请打开Fcitx配置（右键托盘图标即可），并选中您需要的输入方案，点击“<”按钮将其添加到输入法列表中。
 
-### 安装Rime
+### Rime
 
-若您使用Fcitx，您需要安装：
+IBus默认的拼音输入不尽人意，并且其他输入框架也大多字库不全或过时。因此，如果您追求更加准确的输入方式，我们推荐您使用中州韵 (Rime)，其能够安装多种词库，并且有强大的输入引擎。
 
-```bash
-fcitx5-chinese-addons fcitx5-rime
-```
+- 若您使用Fcitx，您需要安装 `fcitx5-rime` (Flatpak版本请使用 `flatpak` 安装 `org.fcitx.Fcitx5.Addon.Rime`)
+- 若您使用IBus，您需要安装 `ibus-rime`
 
-若您使用IBus，您需要安装：
-
-```bash
-ibus-rime
-```
-
-安装ibus-rime后，若您是GNOME桌面用户，请打开GNOME设置-键盘-输入源，添加`中文（Rime）`。若没有看到，请重启系统。
+安装ibus-rime后，若您是GNOME桌面用户，请打开GNOME设置-键盘-输入源，添加`中文（Rime）`。若没有看到，请重启系统。如果您是Fcitx 5用户，请打开Fcitx配置（右键托盘图标即可），并选中“中州韵”，点击“<”按钮将其添加到输入法列表中。我们推荐您将其置于顶层，以使用Shift来方便切换中英文模式。
 
 !!! warning "已知问题"
-    `ibus-rime`在GNOME上经常出现输入法卡住无法调出或无法退出英文模式的状况。若出现，请打开状态栏中输入法的下拉菜单，并重新点击`中文（Rime）`。
+    Rime 经常出现输入法卡住无法调出或无法退出英文模式的状况。若出现，请打开状态栏中输入法的下拉菜单，并重新选择输入法。
 
-### 安装Rime配方
+#### 安装配方
 
 在Rime中，不同的输入方案被称为配方。Rime的配方十分丰富，并且还支持粤语等方言输入配方。
 
@@ -143,9 +136,49 @@ ibus-rime
 
 对于Arch用户来说，您只需要安装`rime-ice-git`包（AUR/ArchLinuxCN）即可。
 
-#### 使用Plum
+##### 手动安装
 
-以下我们会示范使用Plum安装雾凇拼音。
+手动安装适合无法访问Github的用户，且相对简单。
+
+首先，您需要通过[加速链接](https://mirror.nju.edu.cn/github-release/iDvel/rime-ice/LatestRelease/full.zip)或[官方链接](https://github.com/iDvel/rime-ice/releases/latest/download/full.zip)下载雾凇拼音的最新构建。
+
+之后，请您进入您的用户目录（IBus位于`~/.config/ibus/rime`，Fcitx5位于`~/.local/share/fcitx5/rime`，Fcitx5 Flatpak版本位于`~/.var/app/org.fcitx.Fcitx5/data/fcitx5/rime/`），删除目录中所有内容，并将压缩包中的文件复制进去。
+
+之后，您需要重新部署Rime（位于状态栏中），或者更简单，注销系统再重新登录。
+
+???+ note "如何进行关闭注音、更改候选词数等设置？"
+    Rime不提供GUI界面修改配置，因而所有配置均需要在配置文件中进行更改。
+
+    对于候选词数，请找到用户目录下`default.yaml`中如下配置进行更改：
+
+    ```yaml
+    # 菜单
+    menu:
+    page_size: 5  # 候选词个数
+    ```
+    雾凇拼音的默认设置下，所有候选词都会被全拼注音。如果你的用户目录里有`rime_ice.schema.yaml`这个文件，打开，将`spelling_hints`和`always_show_comments`两行注释，像下面这样。
+
+    ```yaml
+    # 主翻译器，拼音
+    translator:
+    dictionary: rime_ice           # 挂载词库 rime_ice.dict.yaml
+    #  spelling_hints: 8              # corrector.lua ：为了让错音错字提示的 Lua 同时适配全拼双拼，将拼音显示在 comment 中
+    #  always_show_comments: true     # corrector.lua ：Rime 默认在 preedit 等于 comment 时取消显示 comment，这里强制一直显示，供 corrector.lua 做判断用。
+    initial_quality: 1.2           # 拼音的权重应该比英文大
+    ```
+
+    （来自[每一个选项都被全拼注音，如何关闭？](https://github.com/orgs/rime/discussions/1366)）
+
+
+    每次修改完配置文件，请重新部署Rime（位于状态栏中），或者更简单，注销系统再重新登录。
+
+    更多配置项，您可以参考[Dvel的这篇博客](https://dvel.me/posts/rime-ice/)。
+
+
+
+##### 使用Plum
+
+如果您追求更能够加便捷地更新词库，我们建议使用Plum管理配方。
 
 !!! warning "网络问题"
     Plum会从Github拉取对应配方仓库，所以该方法对网络环境有要求。
@@ -184,41 +217,3 @@ bash rime-install iDvel/rime-ice:others/recipes/grammar:schema=rime_ice
 # double_pinyin_jiajia（拼音加加双拼）
 # double_pinyin_ziguang（紫光双拼）
 ```
-
-#### 手动安装
-
-手动安装适合无法访问Github的用户。
-
-首先，您需要通过[加速链接](https://mirror.nju.edu.cn/github-release/iDvel/rime-ice/LatestRelease/full.zip)或[官方链接](https://github.com/iDvel/rime-ice/releases/latest/download/full.zip)下载雾凇拼音的最新构建。
-
-之后，请您进入您的用户目录（IBus位于`~/.config/ibus/rime`，Fcitx5位于`~/.local/share/fcitx5/rime`），删除目录中所有内容，并将压缩包中的文件复制进去。
-
-之后，您需要重新部署Rime（位于状态栏中），或者更简单，注销系统再重新登录。
-
-???+ note "如何进行关闭注音、更改候选词数等设置？"
-    Rime不提供GUI界面修改配置，因而所有配置均需要在配置文件中进行更改。
-
-    对于候选词数，请找到用户目录下`default.yaml`中如下配置进行更改：
-
-    ```yaml
-    # 菜单
-    menu:
-    page_size: 5  # 候选词个数
-    ```
-    雾凇拼音的默认设置下，所有候选词都会被全拼注音。如果你的用户目录里有`rime_ice.schema.yaml`这个文件，打开，将`spelling_hints`和`always_show_comments`两行注释，像下面这样。
-
-    ```yaml
-    # 主翻译器，拼音
-    translator:
-    dictionary: rime_ice           # 挂载词库 rime_ice.dict.yaml
-    #  spelling_hints: 8              # corrector.lua ：为了让错音错字提示的 Lua 同时适配全拼双拼，将拼音显示在 comment 中
-    #  always_show_comments: true     # corrector.lua ：Rime 默认在 preedit 等于 comment 时取消显示 comment，这里强制一直显示，供 corrector.lua 做判断用。
-    initial_quality: 1.2           # 拼音的权重应该比英文大
-    ```
-
-    （来自[每一个选项都被全拼注音，如何关闭？](https://github.com/orgs/rime/discussions/1366)）
-
-
-    每次修改完配置文件，请重新部署Rime（位于状态栏中），或者更简单，注销系统再重新登录。
-
-    更多配置项，您可以参考[Dvel的这篇博客](https://dvel.me/posts/rime-ice/)。
