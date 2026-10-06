@@ -35,6 +35,7 @@
 以下是本站有的安装教程：
 
 - [Debian](./installation-by-distro/debian.md)
+- [Fedora](./installation-by-distro/fedora.md)
 
 以下是一些较为热门的安装教程：
 

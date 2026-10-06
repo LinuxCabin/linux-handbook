@@ -132,7 +132,7 @@ Linux 发行版（也被叫做GNU/Linux 发行版），为一般用户预先集�
 
 ???+ example "一些桌面环境/窗口管理器"
     - [KDE](../desktop/de/kde.md) (K Desktop Environment): 贴近Windows操作逻辑，有高度的自定义性与丰富主题
-      ![KDE](https://fedoraproject.org/assets/images/kde-edition/background_plasma.png)
+      ![KDE](https://fedoraproject.org/assets/images/kde-plasma-background_plasma.png)
     - [GNOME](../desktop/de/gnome.md): 贴近macOS界面，优雅、简洁，有多样的扩展（可能需要安装某些扩展、软件包来获得较好的桌面体验）
       ![GNOME](https://fedoraproject.org/assets/images/workstation_framework.webp)
     - COSMIC: 拥有优秀的窗口管理机制，自定义性强，是下一代的前卫Wayland桌面环境
