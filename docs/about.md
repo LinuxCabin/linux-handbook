@@ -12,9 +12,9 @@ LinuxCabin QQ群: 631799393
   
 QQ: 2950966704
   
-Matrix: [@fangcat_dev:mozilla.org](https://matrix.to/#/@fangcat_dev:mozilla.org)
+Matrix: [@fangcat_dev:pub.solar](https://matrix.to/#/@fangcat_dev:pub.solar)
 
-E-Mail: [f20091219@outlook.com](mailto:f20091219@outlook.com)
+E-Mail: [fangcat_dev@outlook.com](mailto:fangcat_dev@outlook.com)
 
 BiliBili: [Fangcat_Dev](https://space.bilibili.com/588672425)
 
