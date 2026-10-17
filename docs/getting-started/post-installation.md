@@ -6,10 +6,10 @@
 
 因此，在安装之后，请务必切换软件源到国内镜像，以保证软件下载与系统更新的速度。
 
-???+ "提示"
+???+ note "提示"
     在换源之前，我们强烈建议您首先了解发行版对应包管理器的基本命令。您可以参照“[应用与工具](../applications/apps.md)”一节。
 
-???+ "快捷脚本"
+???+ note "快捷脚本"
     您可以使用[LinuxMirrors项目](https://linuxmirrors.cn/)的换源脚本，更方便，快捷。
 
 
@@ -89,7 +89,7 @@
 
 这是由于Windows采用的时间制是本地时间，也就是BIOS设置中的时间，而Linux默认使用UTC时间（格林尼治标准时间），由于中国属于GMT+8时区，每次切换系统都会导致8个小时的差异。
 
-要解决这个问题也很简单，请在Windows下以管理员权限启动PowerShell，并执行：`reg add "HKLM\SYSTEM\CurrentControlSet\Control\TimeZoneInformation" /v 。
+要解决这个问题也很简单，请在Windows下以管理员权限启动PowerShell，并执行：`reg add "HKLM\SYSTEM\CurrentControlSet\Control\TimeZoneInformation" /v` 。
 
 !!! warning "已知问题"
     您也可以在Linux终端中输入：`timedatectl set-local-rtc 1`来解决。

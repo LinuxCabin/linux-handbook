@@ -1,4 +1,19 @@
-# LinuxCabin Handbook
+---
+# https://vitepress.dev/reference/default-theme-home-page
+layout: home
+
+hero:
+  name: "LinuxCabin Handbook"
+  tagline: "给新手的Linux手册"
+  image:
+    src: /img/LC.png
+    alt: LinuxCabin
+  actions:
+    - theme: brand
+      text: 开始吧！
+      link: /getting-started/purpose
+
+---
 
 嘿！你好👋这是LinuxCabin Handbook，一个专为中国用户设计的Linux入门指南！
 
@@ -52,4 +67,5 @@ LinuxCabin是一个志愿者组织，本教程由对Linux抱有热情的用户�
 <a href="https://github.com/LinuxCabin/linux-handbook/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=LinuxCabin/linux-handbook" />
 </a>
+
 
