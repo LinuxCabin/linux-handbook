@@ -1,6 +1,6 @@
 # Note: This workflow is specially optimized for building the site in Mainland China.
 
-name: Deploy MkDocs to Another Repository
+name: Deploy
 
 on:
   push:
@@ -24,7 +24,7 @@ jobs:
       - name: Install Node.js dependencies
         run: npm install
 
-      - name: Build MkDocs site
+      - name: Build site
         run: npm run build
 
       - name: Deploy to target repository
