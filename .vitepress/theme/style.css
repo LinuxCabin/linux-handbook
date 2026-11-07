@@ -1,0 +1,32 @@
+:root {
+  --lc-brand-h: 205;
+  --lc-brand-s: 82%;
+
+  --lc-brand-1: hsl(var(--lc-brand-h) var(--lc-brand-s) 42%);
+  --lc-brand-2: hsl(var(--lc-brand-h) var(--lc-brand-s) 50%);
+  --lc-brand-3: hsl(var(--lc-brand-h) var(--lc-brand-s) 50%);
+  --lc-brand-soft: hsl(var(--lc-brand-h) var(--lc-brand-s) 50% / 0.14);
+  --lc-brand-hard: hsl(var(--lc-brand-h) var(--lc-brand-s) 32%);
+  --lc-brand-soft-hex: hsl(var(--lc-brand-h) var(--lc-brand-s) 96%);
+}
+
+:root {
+  --vp-c-brand-1: var(--lc-brand-1) !important;
+  --vp-c-brand-2: var(--lc-brand-2) !important;
+  --vp-c-brand-3: var(--lc-brand-3) !important;
+  --vp-c-brand-soft: var(--lc-brand-soft) !important;
+  --vp-c-brand-hard: var(--lc-brand-hard) !important;
+  --vp-c-brand-soft-hex: var(--lc-brand-soft-hex) !important;
+
+  --vp-c-brand: var(--vp-c-brand-1) !important;
+  --vp-c-sponsor: var(--lc-brand-3) !important;
+}
+
+.dark {
+  --lc-brand-1: hsl(var(--lc-brand-h) var(--lc-brand-s) 62%);
+  --lc-brand-2: hsl(var(--lc-brand-h) var(--lc-brand-s) 68%);
+  --lc-brand-3: hsl(var(--lc-brand-h) var(--lc-brand-s) 56%);
+  --lc-brand-soft: hsl(var(--lc-brand-h) var(--lc-brand-s) 60% / 0.18);
+  --lc-brand-hard: hsl(var(--lc-brand-h) var(--lc-brand-s) 72%);
+  --lc-brand-soft-hex: hsl(var(--lc-brand-h) var(--lc-brand-s) 18%);
+}
