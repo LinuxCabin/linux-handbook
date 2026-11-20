@@ -112,7 +112,7 @@ OBS Studio 默认输出 1080p、最高 6000 kbps 的视频（具体取决于您�
 VA-API、VDPAU 可用，性能更好的 NVDEC、NVENC 也可用。
 
 ??? warning "如果您的 Nvidia 显卡较旧..."
-    我们了解到，一些发行版中最新的 FFmpeg 是基于新版本 NVENC API 的头文件构建的。如果您使用 **帕斯卡架构**（GeForce **10 系**）及更老的 Nvidia 显卡，无法使用 NVENC，可能需要降级 FFmpeg。
+    我们了解到，一些发行版中最新的 FFmpeg 是基于新版本 NVENC API 的头文件构建的。如果您使用 **帕斯卡架构**（GeForce **10 系**）及更老的 Nvidia 显卡，无法使用 NVENC，可能需要降级 FFmpeg。  
     如果电脑上有使用 FFmpeg 的其他软件，它们可能也需要跟着一起降级。通常您的包管理器会提醒您所有要降级的软件。
 
     [*专有软件常常是恶意软件*](https://www.gnu.org/proprietary/proprietary.html)*。*

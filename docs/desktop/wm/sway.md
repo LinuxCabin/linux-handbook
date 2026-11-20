@@ -10,7 +10,7 @@
 
 [官方文档](https://github.com/swaywm/sway/wiki)
 
-**注意：如果您使用NVIDIA的闭源驱动，您无法使用Sway，Sway也不会添加关于NVIDIA的支持**
+**注意：Sway 官方不为 NVIDIA 闭源驱动提供支持，使用时需要以 `--unsupported-gpu` 启动**
 
 ## 概述
 

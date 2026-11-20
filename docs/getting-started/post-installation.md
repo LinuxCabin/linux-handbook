@@ -16,7 +16,7 @@
 国内主要的开源软件镜像站有以下这些：
 
  - [TUNA（清华源）](https://mirrors.tuna.tsinghua.edu.cn/)：由清华大学TUNA协会维护，是国内最主流的软件镜像源，以极高的下载速度著称。
- - [USTC（中科大源）](https://mirrors.ustc.edu.cn/) : 由中国科学技术大学（USTC）及其 LUG 服务器维护小组维护，镜像收录十分广泛，收录了 Rocky 等在 TUNA 上没有的镜像。
+ - [USTC（中科大源）](https://mirrors.ustc.edu.cn/)：由中国科学技术大学（USTC）及其 LUG 服务器维护小组维护，镜像收录十分广泛，收录了 Rocky 等在 TUNA 上没有的镜像。
  - [MirrorZ（校园网联合镜像站）](https://mirrors.cernet.edu.cn/)：由中国教育和科研计算机网网络中心（CERNET）提供服务，收录了各大高校所创立的开源镜像站，能够自动重定向至地理位置最近的镜像站。
 
 简单来说，TUNA快，USTC广，MirrorZ兜底。您可以任意选择三者中的一个。
@@ -89,7 +89,7 @@
 
 这是由于Windows采用的时间制是本地时间，也就是BIOS设置中的时间，而Linux默认使用UTC时间（格林尼治标准时间），由于中国属于GMT+8时区，每次切换系统都会导致8个小时的差异。
 
-要解决这个问题也很简单，请在Windows下以管理员权限启动PowerShell，并执行：`reg add "HKLM\SYSTEM\CurrentControlSet\Control\TimeZoneInformation" /v`。
+要解决这个问题也很简单，请在Windows下以管理员权限启动PowerShell，并执行：`reg add "HKLM\SYSTEM\CurrentControlSet\Control\TimeZoneInformation" /v RealTimeIsUniversal /t REG_DWORD /d 1 /f`。
 
 !!! warning "已知问题"
     您也可以在Linux终端中输入：`timedatectl set-local-rtc 1`来解决。

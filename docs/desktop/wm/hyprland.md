@@ -20,7 +20,7 @@ Hyprland拥有相对惊艳的视觉效果，并支持动态平铺窗口，能够
 在美观之外，Hyprland 还拥有极其强大的定制性，修改后的配置文件在保存时会自动热加载。且支持插件扩展，并提供了基于socket的IPC机制，方便其他程序与 Hyprland 交互，实现深度定制。
 
 !!! warning "NVIDIA 注意事项"
-    由于NVIDIA对Wayland的实现问题，Hyprland官方对 NVIDIA 显卡是不受支持的（unsupported）。虽然有大量用户成功使用，但其配置过程中可能会遇到各种问题。如果你使用 NVIDIA 显卡，建议先阅读官方的 [NVIDIA 专页（英文）](https://wiki.hypr.land/Nvidia/)。
+    由于NVIDIA对Wayland的实现问题，Hyprland 官方不支持 NVIDIA 显卡（unsupported）。虽然有大量用户成功使用，但其配置过程中可能会遇到各种问题。如果你使用 NVIDIA 显卡，建议先阅读官方的 [NVIDIA 专页（英文）](https://wiki.hypr.land/Nvidia/)。
 
 ## 安装
 

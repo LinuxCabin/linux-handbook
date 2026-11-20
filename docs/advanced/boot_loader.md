@@ -16,7 +16,7 @@ GRUB_THEME=/boot/grub/themes/主题文件夹/theme.txt
 # 一般为theme.txt，部分主题可能不同
 ```
 
-最后，运行`sudo upgrade-grub`来更新GRUB配置即可。
+最后，运行`sudo update-grub`来更新GRUB配置即可。
 
 ## rEFInd
 
@@ -38,7 +38,7 @@ rEFInd是已停止维护的 rEFIt 项目的分支，最初旨在解决非Mac电�
 大部分发行版已经预置了签名过的shimx64.efi，您只需要替换以下指令`--shim`后的路径即可。
 
 ```bash
-sudo refind install --shim /boot/efi/一般为发行版名称/shimx64.efi
+sudo refind-install --shim /boot/efi/一般为发行版名称/shimx64.efi
 # EFI目录可能存在差异
 # 或者，您也可以使用/usr/share/shim-signed/shimx64.efi
 ```

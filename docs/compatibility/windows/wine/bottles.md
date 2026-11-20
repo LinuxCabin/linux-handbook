@@ -82,8 +82,8 @@ Bottles 内置了依赖管理器，可在 Bottle 详情页的“依赖项（Depe
 
 安装完成后，Bottles 会自动扫描 Bottle 中的开始菜单快捷方式，将软件列入“程序（Programs）”列表。若列表中没有出现新装的软件（例如软件在安装时不写入开始菜单），可点击“添加快捷方式”按钮手动指定可执行文件路径。之后点击程序右侧的运行按钮即可运行该软件。
 
-???+ note "创建桌面快捷方式"
-    在程序的菜单中选择“添加到桌面（Add Desktop Entry）”，即可在桌面和应用菜单中直接启动该软件。Flatpak 版本的 Bottles 需要额外权限才能生成桌面项，请先关闭 Bottles，然后执行：
+???+ note "创建应用菜单项"
+    在程序的菜单中选择“添加到桌面（Add Desktop Entry）”，即可在应用菜单中直接启动该软件。Flatpak 版本的 Bottles 需要额外权限才能生成桌面项，请先关闭 Bottles，然后执行：
 
     ```bash
     flatpak override com.usebottles.bottles --user --filesystem=xdg-data/applications

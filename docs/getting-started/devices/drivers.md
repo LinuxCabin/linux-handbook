@@ -36,9 +36,9 @@ AMD不同架构的显卡需要不同驱动，绝大多数情况下使用开源�
 | RDNA3/RDNA3+ | RX7000系列、Radeon8000系列 | amdgpu | 直接使用系统内置驱动，配合mesa提供最佳游戏/图形性能 |
 | RDNA2|RX6000系列 | amdgpu | 原生完美支持 |
 | RDNA/RDNA1 | RX5000系列 | amdgpu | 原生完美支持 |
-| GCN5/5.1(Vega) | RXVega56/64，RadeonVII | amdgpu | 需确保内核版本较新以获得最佳支持 |
-| GCN1~4 | RX400/500系列，R9Fury|amdgpu | 属于较老架构，默认可能使用老旧的radeon驱动，建议在内核参数中强制启用amdgpu |
- |早于GCN1架构 | HD7000系列及更早（如HD5000/6000）| radeon | 已停止维护，仅能使用开源的 radeon 驱动 |
+| GCN5/5.1(Vega) | RXVega56/64、RadeonVII | amdgpu | 需确保内核版本较新以获得最佳支持 |
+| GCN1~4 | RX400/500系列、R9Fury|amdgpu | 属于较老架构，默认可能使用老旧的radeon驱动，建议在内核参数中强制启用amdgpu |
+| 早于GCN1架构 | HD6000 及更早（如 HD5000/6000）| radeon | 已停止维护，仅能使用开源的 radeon 驱动 |
 
 
 ### NVIDIA
@@ -50,7 +50,7 @@ AMD不同架构的显卡需要不同驱动，绝大多数情况下使用开源�
 
     <p align="right">——Linus Torvalds</p>
 
-自 2023 年以来，NVIDIA 对 Linux 的驱动支持日渐完善，如今除极个别方面仍有不足外，几乎已经追平 Windows。目前NVIDIA在最新驱动开源部分非关键的内核空间部分，即nvidia-open。但其用户空间工具（如CUDA、DLSS等）依然闭源，即nvidia-utils。
+自 2023 年以来，NVIDIA 对 Linux 的驱动支持日渐完善，如今除极个别方面仍有不足外，几乎已经追平 Windows。目前 NVIDIA 已将内核空间模块开源（Turing 及更新架构），即 nvidia-open。但其用户空间工具（如CUDA、DLSS等）依然闭源，即nvidia-utils。
 
 同样，NVIDIA不同架构的显卡也需要不同的驱动，但是NVIDIA相对AMD更为复杂
 
@@ -64,14 +64,14 @@ AMD不同架构的显卡需要不同驱动，绝大多数情况下使用开源�
 NVIDIA显卡在专业用途下可能需要`akmod-nvidia`与`xorg-x11-drv-nvidia-cuda`库。
 
 !!! warning "警告"
-    由于NVIDIA坚持使用 EGLStreams，而 KDE KWin、GNOME Mutter 及各类基于 wlroots 的混成器均围绕公版方案 GBM 构建，这导致大量基于 wlroots 的小型项目无法兼容 NVIDIA 显卡——NVIDIA 的 Wayland 实现并非社区推荐的公版方案，许多本应正常的 Wayland 功能在 NVIDIA 显卡下会出现严重问题。
+    NVIDIA 长期沿用自家的 EGLStreams，而非社区通用的 GBM，早期驱动下 KDE KWin、GNOME Mutter 及各类基于 wlroots 的混成器对 NVIDIA 支持并不完整。自 495 版驱动起已支持 GBM，555 版起支持显式同步，目前的问题主要集中在旧卡与旧驱动、Xwayland 以及个别合成器的兼容性上。  
 
     ***已知存在的问题***
 
     - Hyprland Wayland合成器的显示器缩放问题
-    - wlroots未支持NVIDIA
+    - 旧版驱动下 wlroots 系合成器的兼容性
     - Waydroid无法使用NVIDIA
-    - ...以及各种因为EGLStreams而受影响的软件
+    - ...以及各类依赖显式同步（explicit sync）的功能
 
 ## 网卡驱动
 
@@ -89,7 +89,7 @@ Broadcom（博通）无线网卡在Linux系统下的支持情况因芯片型号�
 
 ???+ info "目前的支持情况"
     - 原生支持芯片（brcmsmac/brcmfmac）：大多数较新的Broadcom无线网卡由内核中的开源驱动直接支持，这类网卡通常即插即用。
-    - 需要专有驱动的芯片（broadcom-sta/wl）：例如BCM4311, BCM4312, BCM4313, BCM43142, BCM4360等。这类设备在主流发行版（如 Ubuntu, Debian, Arch Linux 等）中需要安装broadcom-wl或 bcmwl-kernel-source驱动包。
+    - 需要专有驱动的芯片（broadcom-sta/wl）：例如 BCM4311、BCM4312、BCM4313、BCM43142、BCM4360 等。这类设备在主流发行版（如 Ubuntu、Debian、Arch Linux 等）中需要安装broadcom-wl或 bcmwl-kernel-source驱动包。
     - 极其老旧或部分极新芯片：可能只有 Windows 驱动，Linux 下无法使用无线功能
 
 ### Qualcomm Atheros 

@@ -15,7 +15,7 @@
 
 - https://1ms.run/
 - https://xuanyuan.cloud/free
-- [南京大学镜像站 (GHCR、GCR等)](https://doc.nju.edu.cn/books/e1654/page/ghcr)
+- [南京大学镜像站（GHCR、GCR 等）](https://doc.nju.edu.cn/books/e1654/page/ghcr)
 
 ## Steam加速
 

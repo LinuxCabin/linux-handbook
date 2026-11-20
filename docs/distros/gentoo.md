@@ -22,7 +22,7 @@ Gentoo Linux 是一个高度可定制的、基于源码的操作系统。Gentoo 
 - 官网：https://www.gentoo.org/
 - 支持的系统架构：x86_64(amd64)/ia64/x86(i486,i686)/arm64/arm32(arm)/ppc64/ppc32(ppc)/risc-v/mips/alpha/hppa/sparc/s390/m68k ...
 - 自由软件：是（可选择许可证类型）
-- 初始化进程  （init）：
+- 初始化进程（init）：
     - ``OpenRC``        ( ``sysvinit`` / ``openrc-init`` )
     - ``systemd``
 ???+ note "有关初始化进程（init）的选择"

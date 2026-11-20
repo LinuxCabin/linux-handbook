@@ -53,9 +53,9 @@ Kvantum（包名为`kvantum`）是一个适用于KDE桌面环境的Qt主题引�
  - 小部件（Plasma Widget）：`~/.local/share/plasma/plasmoids/`
  - 壁纸插件（Wallpaper Plugin）：`~/.local/share/plasma/wallpapers/`
  - 窗口装饰（Window Decoration）：`~/.local/share/aurorae/themes/`
- - 桌面特效（KWin 效果）（KWin Effect）：`~/.local/share/kwin/effects/`
+ - 桌面特效（KWin Effect）：`~/.local/share/kwin/effects/`
  - KWin 脚本（KWin Script）：`~/.local/share/kwin/scripts/`
- - 登录屏幕（SDDM）（Login Screen）：无用户安装路径
+ - 登录屏幕（SDDM / Login Screen）：无用户安装路径
  - 欢迎屏幕（Splash Screen）：`~/.local/share/plasma/look-and-feel/<主题名称>/contents/splash/`
 
 ##### 系统安装
@@ -69,9 +69,9 @@ Kvantum（包名为`kvantum`）是一个适用于KDE桌面环境的Qt主题引�
  - 小部件（Plasma Widget）：`/usr/share/plasma/plasmoids/`
  - 壁纸插件（Wallpaper Plugin）：`/usr/share/plasma/wallpapers/`
  - 窗口装饰（Window Decoration）：`/usr/share/aurorae/themes/`
- - 桌面特效（KWin 效果）（KWin Effect）：`/usr/share/kwin/effects/`
+ - 桌面特效（KWin Effect）：`/usr/share/kwin/effects/`
  - KWin 脚本（KWin Script）：`/usr/share/kwin/scripts/`
- - 登录屏幕（SDDM）（Login Screen）：`/usr/share/plasma/lookandfeel/<全局主题名称>/contents/splash/`
+ - 登录屏幕（SDDM / Login Screen）：`/usr/share/plasma/look-and-feel/<全局主题名称>/contents/login/`
  - 欢迎屏幕（Splash Screen）：`/usr/share/plasma/look-and-feel/<全局主题名称>/contents/splash/`
 
 （以上内容来自于[Plasma themes and plugins](https://develop.kde.org/docs/plasma/)）

@@ -214,7 +214,7 @@ Resize device id 1 (/dev/sda2) from 32.00GiB to max
     
     ``--move-data`` 代表在更改分区表时一并移动数据，请不要省略。
     
-    sfdisk 的输入格式是 ``<起始位置>``、``<分区大小>``、``<分区类型>``、``<是否可启动 *仅MBR >``，各项目之间用逗号隔开。
+    sfdisk 的输入格式是 ``<起始位置>``、``<分区大小>``、``<分区类型>``、``<是否可启动 *仅MBR >``，实际输入时各项目之间用英文逗号隔开。
 
     进入时，屏幕上方会打印现在的分区表 ``Old situation:``
     ```text
@@ -245,7 +245,7 @@ Resize device id 1 (/dev/sda2) from 32.00GiB to max
 ??? tip "Arch 系发行版...？"
      使用 Arch 系发行版的 livecd 可以逃课。
      
-     把包括 EFI 和 swap 在内的所有分区都挂载或启用到 ``/mnt/newroot`` 下，让 ``genfstab`` 能识别它们。
+     把包括 EFI 在内的分区挂载到 ``/mnt/newroot`` 下，并启用 swap 分区，让 ``genfstab`` 能识别它们。
      ```bash
      root@archiso ~ # mount /dev/sda1 /mnt/newroot/boot/efi 
      root@archiso ~ # swapon /dev/sda6

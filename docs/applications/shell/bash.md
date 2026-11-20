@@ -10,7 +10,7 @@
 
 ## 概述
 
-Bash是一个古老的[Shell](./shell.md)，大多数发行版预装了Bash并作为默认 Shell，Bash符合POSIX标准，因此大多数遵循 POSIX 标准的脚本在两者之间可以通用。
+Bash是一个古老的[Shell](./shell.md)，大多数发行版预装了Bash并作为默认 Shell，Bash 大体符合 POSIX 标准，因此多数遵循 POSIX 标准的脚本可不加修改地在各类 POSIX Shell 中运行。
 
 ## 安装
 
