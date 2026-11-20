@@ -24,13 +24,13 @@ Sway是一个平铺窗口管理器，采用Wayland显示协议，采用[MIT许�
 
 ## 使用（快捷键）
 
-**Sway的Mod键为Super键（及Win键，Alt左边的键），如果您不喜欢，您可以将配置文件开头的Mod4改为Mod1，可使Mod键变为Alt键**
+**Sway的Mod键为Super键（即Win键，Alt左边的键），如果您不喜欢，您可以将配置文件开头的Mod4改为Mod1，可使Mod键变为Alt键**
 
 - Mod+Return 打开终端（默认终端为Foot）
 - Mod+Shift+q 关闭窗口
 - Mod+d 打开一个启动器（默认为wmenu）
 - Mod+Shift+c 重新加载配置文件
-- Mod+h/j/k/l 控制聚焦窗口
+- Mod+h/j/k/l 切换窗口焦点（左/下/上/右）
 - Mod+f 全屏窗口
 - Mod+1~10 切换到工作区
 - Mod+Shift+1~10 将窗口切换到另一个工作区
@@ -42,7 +42,7 @@ Sway是一个平铺窗口管理器，采用Wayland显示协议，采用[MIT许�
 
 `bindsym $mod+一个键 exec 软件名称`
 
-您可以使用以下语法配置壁纸（前提您安装了Swaybg、feh等在X11下常用的壁纸软件在Wayland无法使用）
+您可以使用以下语法配置壁纸（前提是您安装了 swaybg；feh 等在 X11 下常用的壁纸软件在 Wayland 下无法使用）
 
 `output 显示器名称 bg 壁纸存放地址 stretch`
 

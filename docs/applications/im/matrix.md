@@ -6,7 +6,7 @@ Matrix家服务器通过其联邦设计进行互通，类似电子邮件，您�
 
 ## 安装
 
-Matrix具有[多个客户端](https://matrix.org/ecosystem/clients/)（国内无法访问），此处仅介绍Linux端。以下软件均可以在Flathub获取。
+Matrix具有[多个客户端](https://matrix.org/ecosystem/clients/)（该列表页在国内可能无法访问），此处仅介绍 Linux 端。以下软件均可以在Flathub获取。
 
 - [Element](https://element.io/): 与Matrix联系紧密，使用广泛，但速度较慢。
 
@@ -40,7 +40,7 @@ Matrix具有[多个客户端](https://matrix.org/ecosystem/clients/)（国内无
 
 ???+ info "常用家服务器"
     - mozilla.org: 由Mozilla提供，需要Mozilla账号注册，国内访问良好
-    - gitter.im: 由Gitter提供，需要Github注册，国内访问良好
+    - gitter.im: 由Gitter提供，需要 GitHub 账号注册，国内访问良好
     - matrix.org: 由Matrix官方提供，国内无法连接
 
     [此网站](https://servers.joinmatrix.org/)收录了大量其他Matrix家服务器，您可以自由选择。或者，您可以自行搭建。

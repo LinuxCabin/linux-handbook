@@ -2,7 +2,7 @@
 —— 并设置 Btrfs 子卷。
 
 !!! note "注意"
-    本文描述了一种笔者*猜想*适用于最多人的从 **Ext4** 迁移到 Btrfs 的方法。不保证在所有设备上工作。如果因为一些原因在您的设备上不能完成，笔者深表歉意。
+    本文描述一种从 **Ext4** 迁移到 Btrfs 的方法，笔者认为它适用于大多数人（仅为个人经验）。不保证在所有设备上工作。如果因为一些原因在您的设备上不能完成，笔者深表歉意。
     
     *对于不熟悉 Linux 文件系统的用户，备份然后[重新安装 Linux](./linux_on_btrfs.md) 也许是更好的选择。*
 
@@ -22,13 +22,13 @@ Filesystem      Size  Used Avail Use% Mounted on
 /dev/sda1       975M  9.1M  966M   1% /boot/efi  *类似的是efi分区，不用考虑它
 ...
 ```
-只要其中有一个分区的可用空间 ``Avail`` 大于其他所有分区占用 ``Used`` 的总合，就可以使用这个方法：只保留此分区，将此分区转化为 Btrfs，再把其他分区的数据拷贝到此分区。
+只要其中有一个分区的可用空间 ``Avail`` 大于其他所有分区占用 ``Used`` 的总和，就可以使用这个方法：只保留此分区，将此分区转化为 Btrfs，再把其他分区的数据拷贝到此分区。
 
 ## 理论成立，实践开始！
 
 ### 启动 livecd
 
-显然我们不能修改一个已挂载的文件系统，更不能卸载运行中 ``/`` 上的文件系统，所以需要用到 livecd。
+我们不能修改正在使用的文件系统，也无法卸载挂载在 ``/`` 上的文件系统，所以需要用到 livecd。
 
 大多数发行版的 livecd 都应该可用，这里使用 Arch Linux image 演示。如果选用的 livecd 带图形化界面，打开终端（Terminal）。
 
@@ -87,10 +87,10 @@ root@livecd ~ # mount
 ```
 
 可以看到 ``btrfs-convert`` 将原分区的文件系统直接放到母卷（``subvol=/``）下。这更像原来 ext4 的做法，但因为我们要设置子卷，不能采用这样的方案。
-我们要把文件系统镜像到它应该在的子卷里，用 Btrfs 的快照功能。
+我们要用 Btrfs 的快照功能，把文件系统复制到它该在的子卷里。
 
 ???+ note "子卷名"
-     在这个例子里，文件系统源自 ``/``，所以快照到 ``@`` 子卷。如果我们选择了保留 ``/home`` 分区，应该快照到 ``@home`` 分区，以此类推...
+     在这个例子里，文件系统源自 ``/``，所以快照到 ``@`` 子卷。如果我们选择了保留 ``/home`` 分区，应该快照到 ``@home`` 子卷，以此类推...
 
 ```bash
 root@livecd ~ # btrfs subvolume snapshot /mnt/newpart /mnt/newpart/@
@@ -120,7 +120,7 @@ root@livecd ~ # ls -A /mnt/newpart
 ```
 
 ??? note "如果这是唯一的分区..."
-     您也许想把一些目录子卷存放，例如 ``/home``。这种情况下，创建新子卷并直接从 ``@`` 子卷移动。
+     您也许想把一些目录单独放进子卷，例如 ``/home``。这种情况下，创建新子卷并直接从 ``@`` 子卷移动。
      ```bash
      btrfs subvolume create /mnt/newpart/@home
      mv /mnt/newpart/@/home/* /mnt/newpart/@home
@@ -152,7 +152,7 @@ root@livecd ~ # mount /dev/sda2 /mnt/newroot/home -o subvol=@home
 ...
 ```
 
-按照原来的文件系统结构挂载原有要删除的分区到一个地方并拷贝数据到 Btrfs 子卷。
+按原来的目录结构，把要删除的分区挂载到 ``/mnt/oldparts`` 下，再把数据拷贝进对应的 Btrfs 子卷。
 ```bash
 root@livecd ~ # mount --mkdir /dev/sda5 /mnt/oldparts/home
 ...
@@ -165,7 +165,7 @@ root@livecd ~ # umount /dev/sda5
 ...
 ```
 
-我们的 Btrfs 分区现在包含所有的数据，等价于原来的几个 ext4 分区。我们不再需要那些旧分区，现在可以安全地删除他们，并将空间用于扩展新的 Btrfs 分区。
+我们的 Btrfs 分区现在包含所有的数据，等价于原来的几个 ext4 分区。我们不再需要那些旧分区，现在可以安全地删除它们，并将空间用于扩展新的 Btrfs 分区。
 
 用喜欢的分区表编辑器打开硬盘并删除旧的 ext4 分区，这里使用 ``fdisk``。
 
@@ -201,7 +201,7 @@ Resize device id 1 (/dev/sda2) from 32.00GiB to max
 ```
 
 ??? note "如果你的 Btrfs 分区不在空闲空间的头部..."
-    没有特定的工具下，Btrfs 只能向后扩展和向前压缩。为了向前扩展，我们需要使用一些分区编辑工具将 Btrfs 分区连带数据块整体向前挪，然后再向后扩展。
+    在没有专用工具的情况下，Btrfs 只能向后扩展和向前压缩。为了向前扩展，我们需要使用一些分区编辑工具将 Btrfs 分区连带数据块整体向前挪，然后再向后扩展。
 
     这里演示使用 ``sfdisk``。
 
@@ -214,7 +214,7 @@ Resize device id 1 (/dev/sda2) from 32.00GiB to max
     
     ``--move-data`` 代表在更改分区表时一并移动数据，请不要省略。
     
-    sfdisk 的输入格式是 ``<起始位置>``、``<分区大小>``、``<分区类型>``、``<是否可启动 *仅MBR >``，用逗号隔开每个项目。
+    sfdisk 的输入格式是 ``<起始位置>``、``<分区大小>``、``<分区类型>``、``<是否可启动 *仅MBR >``，各项目之间用逗号隔开。
 
     进入时，屏幕上方会打印现在的分区表 ``Old situation:``
     ```text
@@ -226,7 +226,7 @@ Resize device id 1 (/dev/sda2) from 32.00GiB to max
     /dev/sda6  159424512 167770111   8345600    4G Linux swap
     ```
     
-    我们需要找到 ``/dev/sda4`` 的前一个分区。通常来说分区按序号（就是那个``4``）排列，但是也有例外。我们将 ``/dev/sda4`` 的起始扇区号 ``Start`` 与所有分区的结束扇区号 ``End`` 比较，找出小于 ``/dev/sda4`` 起始扇区号的最大的结束扇区号，那就是要找的分区。在这个例子里是 ``127830015``，``/dev/sda2``。
+    我们需要找到 ``/dev/sda4`` 的前一个分区。通常来说，``fdisk`` 里各分区按起始扇区从小到大排列，但编号本身不一定连续，不能直接拿编号减一。我们将 ``/dev/sda4`` 的起始扇区号 ``Start`` 与所有分区的结束扇区号 ``End`` 比较，找出小于 ``/dev/sda4`` 起始扇区号的最大的结束扇区号，那就是要找的分区。在这个例子里是 ``127830015``，``/dev/sda2``。
 
     我们想让 ``/dev/sda4`` 尽可能地往前移，输入起始位置前一个分区的结束扇区号**加一**，这个例子里是 ``127830016``。
     ```text
@@ -236,16 +236,16 @@ Resize device id 1 (/dev/sda2) from 32.00GiB to max
 
 <!-- TODO: 使用Diskgenius的方法 -->
 
-做完上述内容后，分区的布局已经完成。要让新分区可启动，编辑原有的 fstab 和引导工具。
+做完上述内容后，分区的布局已经完成。要能从新分区启动，还需要更新 fstab 和引导程序（GRUB 等）。
 
 ### 更新 fstab
 
-我们需要从记录中删除已不存在的 ext4 分区，加入新的 Btrfs 分区。
+我们需要从 fstab 里删掉已不存在的 ext4 分区条目，换成新的 Btrfs 分区条目。
 
 ??? tip "Arch 系发行版...？"
      使用 Arch 系发行版的 livecd 可以逃课。
      
-     挂载包括EFI、swap的所有分区并让脚本识别它们。
+     把包括 EFI 和 swap 在内的所有分区都挂载或启用到 ``/mnt/newroot`` 下，让 ``genfstab`` 能识别它们。
      ```bash
      root@archiso ~ # mount /dev/sda1 /mnt/newroot/boot/efi 
      root@archiso ~ # swapon /dev/sda6
@@ -312,7 +312,7 @@ mount -t proc proc $NR/proc
 mount -t sysfs sysfs $NR/sys
 ```
 
-chroot 内没有更新 DNS 的服务，为了访问互联网，手动复制一份 livecd 的过去。
+chroot 内没有更新 DNS 的服务，为了访问互联网，手动把 livecd 的 ``/etc/resolv.conf`` 复制进去。
 
 ```bash
 cp /etc/resolv.conf "$NR"/etc/resolv.conf
@@ -339,7 +339,7 @@ grub-mkconfig -o /boot/grub/grub.cfg
 
 ### 重启
 
-按 ``Ctrl + D`` 组合键或者执行 ``exit`` 退出 chroot 环境，卸载所有硬盘的分区，重启。
+按 ``Ctrl + D`` 组合键或者执行 ``exit`` 退出 chroot 环境，卸载硬盘上所有已挂载的分区，重启。
 ```bash
 (ch) root@livecd:/# exit
 logout

@@ -18,7 +18,7 @@
 
 ## 选择发行版
 
-Linux 发行版（也被叫做GNU/Linux 发行版），为一般用户预先集成好了Linux内核及各种应用软件。一般用户不需要重新编译，在直接安装之后，只需要小幅度更改设定就可以使用，通常以软件包管理系统来进行应用软件的管理。Linux发行版通常包含了一些应用软件。这些操作系统通常由Linux内核、以及来自GNU计划的大量的函数库，和基于X11或者Wayland的图形界面。各大发行版的差别主要在包管理、更新速度等方面，部分发行版会具有一些特性，例如“不可变”、“CPU性能优化”等等。
+Linux 发行版（也被叫做GNU/Linux 发行版），为一般用户预先集成好了Linux内核及各种应用软件。一般用户不需要重新编译，在直接安装之后，只需要小幅度更改设定就可以使用，通常以软件包管理系统来进行应用软件的管理。Linux发行版通常包含了一些应用软件。这些操作系统通常由Linux内核、来自GNU计划的大量函数库，以及基于X11或者Wayland的图形界面组成。各大发行版的差别主要在包管理、更新速度等方面，部分发行版会具有一些特性，例如“不可变”、“CPU性能优化”等等。
 
 简单来说，发行版可以被看作基于Linux内核的不同操作系统风味版本。
 
@@ -99,32 +99,32 @@ Linux 发行版（也被叫做GNU/Linux 发行版），为一般用户预先集�
 
     这样的特性使得滚动更新发行版具备“任何版本都能升级”的特点，使得用户能够第一时间获得软件的最新版本。不过当然，这样的形式可能会使得某些大改动被忽视，进而导致“滚挂”的发生，维护成本较高。
 
-    常见的滚动更新例子有Arch Linux、OpenSUSE Tumbleweed、Debian Testing/Sid、Gentoo Linux等。
+    常见的滚动更新例子有Arch Linux、openSUSE Tumbleweed、Debian Testing/Sid、Gentoo Linux等。
 
 ## 调配分区
 
-我们建议您先通过专业的[分区](./before-installing.md#_6)工具——如[DiskGenius](https://www.diskgenius.cn/)（[教程](https://www.diskgenius.cn/help/partresizing.php)）和Windows的磁盘管理单元（[教程](https://freeswzhcn.codeberg.page/site/posts/%E4%B8%BA%20GNU-Linux%20%E5%87%86%E5%A4%87%E5%8F%8C%E5%90%AF%E5%8A%A8%E5%88%86%E5%8C%BA%E2%80%94%E2%80%94Microsoft%20Windows/)）——挤压出空闲空间。您需要用分区工具在电脑硬盘上腾出60GB以上（建议值）的**未分配**空间。
+我们建议您先通过专业的[分区](./before-installing.md#_6)工具——如[DiskGenius](https://www.diskgenius.cn/)（[教程](https://www.diskgenius.cn/help/partresizing.php)）和Windows的磁盘管理单元（[教程](https://freeswzhcn.codeberg.page/site/posts/%E4%B8%BA%20GNU-Linux%20%E5%87%86%E5%A4%87%E5%8F%8C%E5%90%AF%E5%8A%A8%E5%88%86%E5%8C%BA%E2%80%94%E2%80%94Microsoft%20Windows/)）——压缩出空闲空间。您需要用分区工具在电脑硬盘上腾出60GB以上（建议值）的**未分配**空间。
 
-我们不建议直接在DiskGenius等Windows下软件创建分区，而是在安装时由安装程序进行创建，这可以保证系统的稳定性和分区一致性。
+我们不建议直接在 DiskGenius 等 Windows 下的软件中创建分区，而是在安装时由安装程序进行创建，这可以保证系统的稳定性和分区一致性。
 
 我们建议您在操作完分区后用其他设备记录您磁盘的分区图示/顺序，这在安装系统时非常有用。
 
 !!! warning "警告"
     请不要将Linux安装到任何NTFS[文件系统](./before-installing.md#_7)的分区，这将导致你的系统完全无法启动！Linux对NTFS的支持尚不完善！我们不建议使用Linux来调整NTFS分区！
     
-    任何分区操作都存在风险，请您在操作之前确保已经备份所用磁盘中的重要数据到可靠的外部存储！
+    任何分区操作都存在风险，请您在操作之前确保已经备份所有磁盘中的重要数据到可靠的外部存储！
 
 ## 下载镜像
 
 您需要下载想安装的 Linux 发行版的系统镜像。可以到官方网站下载，也可以到镜像站下载。由于中国大陆网络环境，我们不推荐直接到官网下载。
 
-如果要通过开源镜像站进行下载，可以在“[发行版](../distros/distro.md)”章节对应选项卡中找到“镜像下载链接”下载系统镜像。
+如果要通过开源镜像站进行下载，可以在“[发行版](../distros/distro.md)”章节对应选项卡中找到“镜像下载链接”来下载系统镜像。
 
 我们建议您选择最新，且预装您所需要的[桌面环境](../desktop/desktop.md)的版本。
 
 ???+ example "一些常见的发行版标签"
     - `x86_64`/`amd64`: 大多数PC（一般选这个）
-    - `i386`/`i486`/`i686`: 较*旧（指奔腾3这种20几年前的...）*的PC *或* 内存小于等于 2GB 的PC
+    - `i386`/`i486`/`i686`: 较*旧（指奔腾3这种20多年前的...）*的PC *或* 内存小于等于 2GB 的PC
     - `arm64`/`aarch64`/`armv8l`/`armv8a`: 树莓派、IoT等设备
     - `livecd`: 镜像自带可操作的 Linux 系统，一般带有桌面环境（类似于 Windows PE）
     - `desktop`: 安装带桌面环境的系统（推荐）
@@ -148,7 +148,7 @@ Linux 发行版（也被叫做GNU/Linux 发行版），为一般用户预先集�
 ???+ example "一些比较热门的烧录软件"
     - [Ventoy](https://www.ventoy.net/cn/download.html)（推荐）
     ??? note "Ventoy使用指南"
-        在开始本教程之前，请准备一个**足够大**的 U 盘。足够大意味着**可以保存您要使用的的全部系统镜像。**请注意，**这将清除 U 盘上的所有数据**。
+        在开始本教程之前，请准备一个**足够大**的 U 盘。足够大意味着**可以保存您要使用的全部系统镜像。**请注意，**这将清除 U 盘上的所有数据**。
 
         ## 第一步：下载 Ventoy
 
@@ -225,7 +225,7 @@ Linux 发行版（也被叫做GNU/Linux 发行版），为一般用户预先集�
         
         ## 第一步：下载 balenaEtcher
 
-        打开 balenaEtcher 的 [GitHub 页面](https://github.com/balena-io/etcher)，打开 Releases 中的 Release。
+        打开 balenaEtcher 的 [GitHub 页面](https://github.com/balena-io/etcher)，进入 Releases 页面。
 
         ![图 1](https://freeswzhcn.codeberg.page/site/posts/%E4%BD%BF%E7%94%A8%20balenaEtcher%20%E5%88%B6%E4%BD%9C%20GNU-Linux%20%E5%90%AF%E5%8A%A8%E7%9B%98/pic01.png)
 

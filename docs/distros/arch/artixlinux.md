@@ -1,7 +1,7 @@
 # Artix Linux
 
 ![artixlogo](../../img/distros/artix-logo.png){width=200px}
-<!-- somehow artixlinux.org/img/artix-logo.png 在我的游览器上就是不会显示，拉到本地 -->
+<!-- somehow artixlinux.org/img/artix-logo.png 在我的浏览器上就是不会显示，拉到本地 -->
 
 ## 简介
 
@@ -32,4 +32,4 @@ Artix Linux 是一个基于 Arch Linux 的独立硬核发行版。它最大的�
 
  - OpenRC: 使用 Gentoo Linux 开发的 OpenRC 作为初始化系统，在 Artix 中最为稳健和流行。
  - runit: 使用 Void Linux 核心的 runit，启动速度极快，服务配置极其简单明了。
- - s6 / dinit / suite66: 适合有特定需求的极客探索的现代轻量化、并发控制初始化系统。
+ - s6 / dinit / suite66: 面向有特定需求的极客，属于现代、轻量、支持并发控制的初始化系统。

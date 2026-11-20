@@ -1,6 +1,6 @@
 # Wine
 
-Wine （“Wine Is Not an Emulator” 的首字母缩写）是一个能够在多种操作系统上运行 Windows 应用的兼容层。Wine 不是像虚拟机或者模拟器一样模仿内部的 Windows 逻辑，而是将 Windows API 调用翻译成为动态的 POSIX 调用，免除了性能和其他一些行为的内存占用，让你能够干净地集合 Windows 应用到你的桌面。
+Wine （“Wine Is Not an Emulator” 的首字母缩写）是一个能够在多种操作系统上运行 Windows 应用的兼容层。Wine 不是像虚拟机或者模拟器一样模仿内部的 Windows 逻辑，而是将 Windows API 调用翻译成为动态的 POSIX 调用，免除了虚拟机或模拟器带来的性能损失与内存占用，让你能够干净地将 Windows 应用集成到你的桌面。
 
 !!! warning "警告"
     Wine无法保证Windows应用能够完美运行。在使用Wine之前，我们建议您首先查阅以下数据库：
@@ -25,7 +25,7 @@ Wine （“Wine Is Not an Emulator” 的首字母缩写）是一个能够在多
 
 在安装Wine后，我们推荐您一并安装以下软件包（套件）：
 
-- `winetricks`：用于补充Windows软件运行的所需依赖。
+- `winetricks`：用于补充 Windows 软件运行所需的依赖。
 - `dxvk`(Debian) / `wine-dxvk`(Fedora)/ `dxvk-bin`(AUR)：DXVK补丁，提供Direct3D 8, 9, 10与11的支持。
 - `vkd3d`(Debian/Fedora) / `vkd3d`与`lib32-vkd3d`(Arch)：VKD3D补丁，提供Direct3D 12支持
 - `wine-mono`(Fedora/Arch)：Microsoft .NET支持
@@ -53,6 +53,6 @@ Wine （“Wine Is Not an Emulator” 的首字母缩写）是一个能够在多
 
 ### 字体
 
-在旧版本Wine中，中文字体可能出现“口口口”的显示问题。关于这个问题的解决方案也较为杂乱，您可以参考[这篇博客](https://www.cnblogs.com/jee-cai/p/14095217.html)，通过修改注册表或者WineTricks的方式补全中文字体。
+在旧版本Wine中，中文字体可能出现“口口口”的显示问题。关于这个问题的解决方案也较为杂乱，您可以参考[这篇博客](https://www.cnblogs.com/jee-cai/p/14095217.html)，通过修改注册表或者winetricks的方式补全中文字体。
 
 在新版本Wine中，该问题已被基本修复。

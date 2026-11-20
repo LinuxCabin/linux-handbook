@@ -14,7 +14,7 @@
 
 由于原安装脚本需要从Github拉取文件，您需要在`https://raw.githubusercontent.com`前面加上Github加速链接（像这样`https://gh-proxy.com/https://raw.githubusercontent.com`）。
 
-同时，您需要为nvm换源。我们建议参考[NVM 镜像设置](https://www.nvmnode.com/zh/guide/mirrors.html)。
+若您通过 nvm 安装 Node.js，还需要为 nvm 换源。我们建议参考[NVM 镜像设置](https://www.nvmnode.com/zh/guide/mirrors.html)。
 
 !!! warning "包管理器"
     尽管多数发行版的官方源提供了`nodejs`包，但其版本严重过时，因此不推荐使用包管理器安装Node.js。

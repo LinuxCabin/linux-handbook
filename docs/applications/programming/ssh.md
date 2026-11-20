@@ -26,4 +26,4 @@ sudo systemctl start ssh # 个别发行版为sshd
 
 ## 关于更多
 
-请根据`man ssh`中的信息进行专门性学习。
+请根据`man ssh`中的信息进一步学习。

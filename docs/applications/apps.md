@@ -7,9 +7,9 @@
 ## 软件包选择
   - Debian 系：Debian, Mint, Ubuntu, Kubuntu等：`deb`
   - 红帽系：Fedora, RHEL, Rocky等：`rpm`
-  - Arch 系：通常不需要用包（`pacman`）安装
+  - Arch 系：Arch, Manjaro, EndeavourOS等：`pkg.tar.zst`（`pacman`）
 
-大部分桌面环境支持双击安装包进行安装。您也可以按照使用以下的包管理器。
+大部分桌面环境支持双击安装包进行安装。您也可以使用以下的包管理器。
 
 ## Apt（Debian系）
 
@@ -45,7 +45,7 @@ apt有多种变体，如apt-get、aptitude（用于缓解依赖地狱）等。
 
 dnf是大部分红帽系的软件包管理器，在rpm的基础上创建。
 
-与先前的yum相比，dnf具有性能高、速度快的特点。
+与先前的yum相比，dnf 具有性能更好、速度更快的优点。
 
 以下是一些较为常见的dnf指令。
 
@@ -70,7 +70,7 @@ dnf是大部分红帽系的软件包管理器，在rpm的基础上创建。
 
 全称：Package Manager
 
-包格式：pacman
+包格式：pkg.tar.zst
 
 pacman是大部分Arch系的软件包管理器。
 
@@ -88,14 +88,14 @@ pacman是大部分Arch系的软件包管理器。
 
     - `pipewire`: 音频服务
     - `ffmpeg`: 多媒体后端
-    - `NetworkManager`: 网络链接管理
+    - `NetworkManager`: 网络连接管理
     - `cups`: 打印
     - `systemd-resolved`: DNS解析
     
     以上列表无法覆盖所有选项，若遇到未列出的情况，您可以寻求AI的帮助。
 
 ???+ note "软件组"
-    在安装软件组时，遇到这样的情况，我们建议您直接回车：
+    在安装软件组时，若遇到类似下面的提示，我们建议您直接回车（默认全选）：
     ```
     :: There are 58 members in group gnome:
     :: Repository extra
@@ -135,7 +135,7 @@ pacman是大部分Arch系的软件包管理器。
 
 AUR（Arch User Repository）是当今Linux软件包数目第二多的软件仓库，具有丰富多样的应用可供安装，包括但不限于QQ、微信、达芬奇等。
 
-要使用AUR，您需要安装AUR助手，目前有`yay`与`paru`可供选择。不过请注意，两者并不直接存在与Arch Linux官方软件仓库中，我们建议您首先添加Arch Linux CN软件仓库，之后用`pacman`安装任意一个。或者，您也可以参照Arch Wiki的教程：[Yay](https://wiki.archlinuxcn.org/zh-cn/Yay)
+要使用AUR，您需要安装AUR助手，目前有`yay`与`paru`可供选择。不过请注意，两者并不直接存在于Arch Linux官方软件仓库中，我们建议您首先添加Arch Linux CN软件仓库，之后用`pacman`安装任意一个。或者，您也可以参照Arch Wiki的教程：[Yay](https://wiki.archlinuxcn.org/zh-cn/Yay)
 
 同时，您可能需要安装`base-devel`来编译软件。
 
@@ -145,7 +145,7 @@ AUR（Arch User Repository）是当今Linux软件包数目第二多的软件仓�
     不建议使用`sudo`或在`root`用户下执行AUR助手。
 
 !!! warning "网络问题" 
-    AUR本质上拖管的是PKGBUILD文件，可以被看作是应用程序的构建脚本，因而部分软件在安装时需要从Github拉取上游软件包，这使得部分软件的安装进度十分缓慢。
+    AUR本质上托管的是PKGBUILD文件，可以被看作是应用程序的构建脚本，因而部分软件在安装时需要从Github拉取上游软件包，这使得部分软件的安装进度十分缓慢。
 
     要解决这一问题，您可以手动编辑PKGBUILD来更换加速链接，也可以参考[本篇教程](https://zhuanlan.zhihu.com/p/688340777)。
 
@@ -158,12 +158,12 @@ Flatpak是Linux新一代跨平台软件安装解决方案。它通过沙箱设�
 
     要解决这一问题，请使用Flatpak安装Flatseal后，找到对应软件，关闭“回退到X11”。
     
-    不过尽管如此，大多数软件的表现均与包管理器版本无较大差别。
+    不过尽管如此，大多数软件的表现均与包管理器版本并没有太大差别。
 
 在您使用Flatpak之前，请确保您已经使用您的系统包管理器安装了`flatpak`包，并添加了Flathub软件源。
 
 ???+ info "Flathub缓存"
-    国内目前仅USTC与SJTUG有Flathub缓存。
+    国内目前有 USTC 与 MirrorZ 提供 Flathub 缓存，其中 MirrorZ 支持自动重定向。
 
      - USTC: https://mirrors.ustc.edu.cn/help/flathub.html
     
@@ -184,7 +184,7 @@ Flatpak是Linux新一代跨平台软件安装解决方案。它通过沙箱设�
 
 包格式：appimage
 
-AppImage是一种通用的软件包格式，可以理解为Windows上的绿色版软件。它通过打包依赖来规避额外安装，具有通用性，可以在几乎所有发行版上运行。AppImage包没有统一的管理器。
+AppImage是一种通用的软件包格式，可以理解为Windows上的绿色版软件。它通过打包依赖来免去额外安装依赖的麻烦，具有通用性，可以在几乎所有发行版上运行。AppImage包没有统一的管理器。
 
 ???+ note "权限问题"
     在下载AppImage后，您需要运行`chmod +x 软件包`来给予其执行权限。

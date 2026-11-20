@@ -2,14 +2,14 @@
 
 ## 概述
 
-虚拟机（Virtual Machine）指一种特殊的软件，可以在计算机系统中建立一种环境，用户可以基于虚拟机这个软件所建立的特殊环境来运行其它软件。虚拟机通过系统的软件模拟功能具有完整硬件系统功能。
+虚拟机（Virtual Machine）指一种特殊的软件，可以在计算机系统中建立一种环境，用户可以基于虚拟机这个软件所建立的特殊环境来运行其它软件。虚拟机通过软件模拟的方式，具备完整的硬件系统功能。
 
 简单来说，就是运行在一个完全隔离环境中的完整计算机系统，能提供物理计算机的功能。
 
-在Linux中，你可能要使用一些wine无法兼容的Windows独占软件，但当你无法放弃或者没有平替时，又该如何使用？此时，虚拟机便是最好的解决方案。
+在Linux中，你可能要使用一些wine无法兼容的Windows独占软件，但当你无法放弃这些软件、又找不到替代品时，该怎么办呢？此时，虚拟机便是最好的解决方案。
 
 ???+ info "在Linux上主流的Windows虚拟机方案"
-    - VirtualBox：图形化最完善，最开箱即用，性能提升需要搭配KVM使用，但KVM支持不够完善
+    - VirtualBox：图形界面最完善、最开箱即用；虚拟化由自带的 vboxdrv 内核模块实现，不需要搭配 KVM
     - VMware：与VirtualBox类似
     - QEMU：最强大，完美支持KVM，支持直通，但需要使用大量CLI，virt-manager逻辑复杂，上手难度大
     - KVM：内核模块，一般不直接使用
@@ -65,28 +65,28 @@ qemu-system-x86_64 \
   -machine usb=on \
   -device usb-tablet \
   -drive file=[磁盘文件路径]/windows_disk.qcow2,if=virtio,format=qcow2 \
-  -cdrom [Window镜像路径]/windows.iso \
+  -cdrom [Windows镜像路径]/windows.iso \
   -boot order=d \
   -nic user,model=virtio-net-pci \
 ```
 
 - `qemu-system-x86_64`指定为x86_64的模拟
--  `-enable-kvm`使用KVM以加速
+-  `-enable-kvm` 使用 KVM 加速；前提是固件中已开启 Intel VT-x 或 AMD-V，且当前用户属于 `kvm` 组
 -  `-cpu host`将主机的 CPU 型号和特性直接传递给虚拟机，以获得最佳性能
 -  `-smp 4`分配 4 个 CPU 核心给虚拟机
 -  `-m 4096`分配4096MB（4GB）内存给虚拟机，可使用参数4G
--  `-machine usb=on`启用USB透传
+-  `-machine usb=on` 启用虚拟机的 USB 控制器（不是把宿主机 USB 设备透传给虚拟机）
 -  `-device usb-tablet`解决鼠标坐标错位的关键。它模拟一个USB绘图板（或触控屏），使用绝对坐标定位，这样鼠标指针在宿主机和虚拟机内就能完全同步
 -  `-drive file=[磁盘文件路径]/windows_disk.qcow2,if=virtio,format=qcow2`需指向创建的QEMU磁盘文件路径
--  `-cdrom [Window镜像路径]/windows.iso`需指向Windows ISO安装文件
+-  `-cdrom [Windows镜像路径]/windows.iso`需指向Windows ISO安装文件
 -  `-boot order=d`设置从光驱启动
--  `-nic user,model=virtio-net-pci`网络，此处使用virt-IO
+-  `-nic user,model=virtio-net-pci`网络，此处使用 virtio
 
 安装完成后，可以删去 `-cdrom` 和 `-boot` 行。
 
 ### 关于更多
 
-因本手册专业性限制，建议另寻专门性教程进行学习
+受限于篇幅，建议另寻专门的教程学习
 
 - [QEMU官方文档（英文）](https://qemu.readthedocs.io/en/master/)
 
@@ -230,7 +230,7 @@ VirtualBox 使用*树外*内核模组来完成虚拟化。为了编译 VirtualBo
 
 #### 将用户加入至 `vboxusers` 组
 
-只有在 `vboxusers` 组内的用户才能使用 VirtualBox 虚拟机。
+只有 `vboxusers` 组内的用户才能使用 USB 设备、共享文件夹等功能；不加组也能启动虚拟机，但会受此限制。
 
 要将用户加入 `vboxusers` 组，执行以下命令：
 ```bash
@@ -242,7 +242,7 @@ sudo usermod -aG vboxusers $USER
 sudo gpasswd -a $USER vboxusers
 ```
 
-加入完成后，您需要重新登入（注销再登入）以使新的组别产生效果。
+加入完成后，您需要重新登录（注销再登录）以使新的组别产生效果。
 
 #### 加载内核模块
 

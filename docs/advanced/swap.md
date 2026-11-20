@@ -14,11 +14,11 @@
 | 8 GiB – 64 GiB           | 至少 4 GiB                | RAM 量的 1.5 倍            |
 | 大于 64 GiB              | 至少 4 GiB（视工作负载）  | 不推荐休眠                 |
 
-Swap主要分为交换文件与交换分区两类来源。
+Swap 主要有两类来源：交换文件与交换分区。
 
 ## 交换文件
 
-顾名思义，交换文件就是指以文件的形式作为交换空间。通常来说，交换文件名为Swapfile，并置于根目录下。交换文件与分区方式相比自由度更高，容易调整大小。以下我们会介绍如何配置交换文件。
+顾名思义，交换文件就是指以文件的形式作为交换空间。通常来说，交换文件名为 swapfile，并置于根目录下。交换文件与分区方式相比自由度更高，容易调整大小。以下我们会介绍如何配置交换文件。
 
 ```bash
 # 创建Swapfile，请自行修改count大小（bs*count即为其MB大小，1GB=1024MB）
@@ -108,7 +108,7 @@ sudo nano /etc/fstab
 
 ## zram
 
-zram是一种虚拟内存压缩功能，能够使得Linux更好利用RAM。zram的最主要用途即为作交换空间。
+zram是一种虚拟内存压缩功能，能让 Linux 更好地利用 RAM。zram的最主要用途即为作交换空间。
 
 我们建议使用`zram-generator`来简化配置流程。
 
@@ -125,7 +125,7 @@ zram是一种虚拟内存压缩功能，能够使得Linux更好利用RAM。zram�
 sudo nano /etc/systemd/zram-generator.conf
 ```
 
-并写入：（如下为zram大小为内存的二分之一，最大4096MiB，使用zstd压缩）
+并写入：（下面把 zram 大小设为内存的二分之一，最大4096MiB，使用zstd压缩）
 
 ```conf
 [zram0]
@@ -159,6 +159,6 @@ sudo nano /etc/sysctl.d/99-swappiness.conf
 ```
 
 ??? question "为什么不建议直接编辑/etc/sysctl.conf？"
-    互联网上的部分教程会推荐您直接修改`/etc/sysctl.conf`，但这事实上是在较老版本的发行版中的做法。在现代Linux中，`man sysctl.d`的SYNOPSIS部分已经删除了`/etc/sysctl.conf`，并且明确将`/etc/sysctl.d/*.conf`放置在第一位上。
+    互联网上的部分教程会推荐您直接修改`/etc/sysctl.conf`，但这事实上是在较老版本的发行版中的做法。在现代Linux中，`man sysctl.d`的SYNOPSIS部分已经删除了`/etc/sysctl.conf`，并且明确把 `/etc/sysctl.d/*.conf` 排在第一位。
 
-并修改或追加`vm.swappiness=值`，之后运行`sudo sysctl --system`来使其生效。
+在该文件中写入或修改 `vm.swappiness=值`，之后运行`sudo sysctl --system`来使其生效。

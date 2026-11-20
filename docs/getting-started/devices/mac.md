@@ -3,7 +3,7 @@
 !!! info "更老的 Macintosh？"
     对于 2018 年以前的 Macintosh（没有 T2 芯片的机型），请参照一般的安装方法。
 
-由于[T2芯片](https://support.apple.com/zh-cn/103265)和[Silicon](https://support.apple.com/zh-cn/116943)芯片，上述安装方法在Mac设备上很可能不适用。这里给出两种面向不同设备安装Linux的方法。
+由于搭载 [T2 芯片](https://support.apple.com/zh-cn/103265)与 [Apple Silicon](https://support.apple.com/zh-cn/116943)芯片，上述安装方法在Mac设备上很可能不适用。这里给出两种面向不同设备安装Linux的方法。
 
 ## Intel 设备
 
@@ -11,10 +11,10 @@
 
 [t2linux项目](https://github.com/t2linux)在Github给出了部分适配热门发行版的镜像。为简便安装流程，建议使用[CachyOS发行版](https://cachyos.org)，其内置了对T2芯片的支持，并在国内网络环境中表现较好。
 
-选择好**对T2芯片适配**的镜像并[烧录](../before-installing.md#_6)后，移步至[安装系统](../install.md)继续安装流程。
+选择好**适配 T2 芯片**的镜像并[烧录](../before-installing.md#_6)后，移步至[安装系统](../install.md)继续安装流程。
 
 !!! notice "提示"
-    Mac设备的启动顺序选项需要通过开机时长按`option键`唤出。
+    Mac设备的启动磁盘选择菜单需要在开机时长按 `option` 键唤出。
 
 ## Apple Silicon 设备
 

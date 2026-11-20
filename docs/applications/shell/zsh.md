@@ -25,7 +25,7 @@ Arch系
 sudo pacman -S zsh zsh-autosuggestions zsh-syntax-highlighting
 ```
 
-安装好后，您可以运行`chsh -s /bin/zsh`来设置Zsh为默认终端。
+安装好后，您可以运行`chsh -s /bin/zsh`来把 Zsh 设为默认 Shell。
 
 ???+info "注意"
     部分发行版源的`zsh`包，在初次运行`zsh`时，会询问您想要如何配置`.zshrc`（Zsh的配置文件）。我们建议您输入2来选择`(2)  Populate your ~/.zshrc with the configuration recommended by the system administrator and exit (you will need to edit the file by hand, if so desired).`（默认推荐配置）。
@@ -46,7 +46,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 sh -c "$(wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
 ```
 !!! warning "网络问题"
-    该脚本与 https://install.ohmyz.sh 的脚本本质相同，均需要从Github克隆Zsh仓库，因此可能需要较好的网络环境。
+    该脚本与 https://install.ohmyz.sh 的脚本本质相同，均需要从 GitHub 克隆 Oh My Zsh 仓库，因此可能需要较好的网络环境。
 
 #### 手动安装
 

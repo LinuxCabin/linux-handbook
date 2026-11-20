@@ -29,7 +29,7 @@ Kvantum（包名为`kvantum`）是一个适用于KDE桌面环境的Qt主题引�
 
 大多数KDE的扩展、主题等的来源为 https://store.kde.org/ 与 https://www.pling.me/，而在中国大陆网络环境下，在KDE自带设置中安装的体验十分痛苦。
 
-所以对于大多数扩展、主题等，需要通过手动方式进行安装。手动安装有两种方式：
+因此，大多数扩展、主题等都需要通过手动方式安装。手动安装有两种方式：
 
 #### 法一：源码自带安装脚本
 
@@ -72,7 +72,7 @@ Kvantum（包名为`kvantum`）是一个适用于KDE桌面环境的Qt主题引�
  - 桌面特效（KWin 效果）（KWin Effect）：`/usr/share/kwin/effects/`
  - KWin 脚本（KWin Script）：`/usr/share/kwin/scripts/`
  - 登录屏幕（SDDM）（Login Screen）：`/usr/share/plasma/lookandfeel/<全局主题名称>/contents/splash/`
- - 欢迎屏幕（Splash Screen）：`~/.local/share/plasma/look-and-feel/<全局主题名称>/contents/splash/`
+ - 欢迎屏幕（Splash Screen）：`/usr/share/plasma/look-and-feel/<全局主题名称>/contents/splash/`
 
 （以上内容来自于[Plasma themes and plugins](https://develop.kde.org/docs/plasma/)）
 

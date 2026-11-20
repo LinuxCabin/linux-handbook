@@ -10,7 +10,7 @@
 
 ## 概述
 
-Bash是一个古老的[Shell](./shell.md)，大多数发行版预装了Bash并作为默认Bash，Bash符合POSIX标准，这代表Bash可以运行Zsh的脚本，反之亦然。
+Bash是一个古老的[Shell](./shell.md)，大多数发行版预装了Bash并作为默认 Shell，Bash符合POSIX标准，因此大多数遵循 POSIX 标准的脚本在两者之间可以通用。
 
 ## 安装
 
@@ -25,7 +25,7 @@ Bash是一个古老的[Shell](./shell.md)，大多数发行版预装了Bash并�
 您可以使用[starship](https://starship.rs/zh-CN/)配置Bash。
 
 ???+ note "字体"
-    我们您可以安装[Nerd Fonts字体](https://www.nerdfonts.com/)以解决字体乱码问题。
+    您可以安装[Nerd Fonts字体](https://www.nerdfonts.com/)以解决字体乱码问题。
 
 ```bash
 curl -sS https://starship.rs/install.sh | sh

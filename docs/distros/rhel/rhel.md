@@ -4,7 +4,7 @@
 
 ## 简介
 
-作为企业级 Linux 的绝对行业标杆，由红帽公司主导的 RHEL（Red Hat Enterprise Linux）主打极端的稳定性、可预测的长期支持（通常长达 10 年）和企业级安全。由于软件包版本相对保守，且默认缺少商业多媒体解码器、日常桌面软件，导致桌面开箱即用体验对新手而言折腾成本较高，但是服务器、科学计算和高稳定性工作站方面的首选。
+作为企业级 Linux 的绝对行业标杆，由红帽公司主导的 RHEL（Red Hat Enterprise Linux）主打极端的稳定性、可预测的长期支持（通常长达 10 年）和企业级安全。由于软件包版本相对保守，且默认缺少商业多媒体解码器、日常桌面软件，导致桌面开箱即用体验对新手而言折腾成本较高，但在服务器、科学计算和高稳定性工作站方面仍是首选。
 
 ## 详细信息
 
@@ -51,7 +51,7 @@
 
 ### EPEL (Extra Packages for Enterprise Linux)
 
-EPEL为企业Linux提供服务，内置了部分官方软件源没有内置的软件包。如果您发现某些软件包没有找到，您可以通过添加EPEL来尝试。
+EPEL（Extra Packages for Enterprise Linux）为企业级 Linux 提供额外软件包，其中包括官方软件源未收录的部分。如果您发现某些软件包没有找到，您可以通过添加EPEL来尝试。
 
 ???+ info "镜像源帮助"
      - TUNA: https://mirrors.tuna.tsinghua.edu.cn/help/epel/

@@ -4,7 +4,7 @@
 
 ## 简介
 
-NixOS是在Nix基础上，将系统层面进一步原子化所产生的极客系统。它通过编辑配置文件来修改系统设置（声明式），具有不可变性，并且能够规避依赖冲突等问题。
+NixOS是在Nix基础上，把系统配置进一步原子化、可复现的极客发行版。它通过编辑配置文件来修改系统设置（声明式），具有不可变性，并且能够规避依赖冲突等问题。
 
 ## 详细信息
 
@@ -30,7 +30,7 @@ NixOS是在Nix基础上，将系统层面进一步原子化所产生的极客系
 
 ### LiveCD Mirrors
 
-NixOS LiveCD的安装程序不提供镜像源选择，并且由于LiveCD的只读特性也无法修改镜像源。所以在安装NixOS时，若您不具备相应网络条件，您需要通过手动方式来安装系统。
+NixOS LiveCD的安装程序不提供镜像源选择，并且由于LiveCD的只读特性也无法修改镜像源。所以在安装NixOS时，若您不具备相应网络条件，您需要手动指定镜像源来完成安装。
 
 我们建议您参考[该安装教程](https://www.bilibili.com/video/BV1KfiuBhE6i/)以及[NixOS CN](https://nixos-cn.org/tutorials/installation/DualBoot.html)，并在执行`sudo nixos-install`时，将原指令替换为`sudo nixos-install --option substituters 镜像地址`。
 

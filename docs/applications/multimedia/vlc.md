@@ -10,7 +10,7 @@ VLC 是[自由软件](https://www.gnu.org/philosophy/free-sw.html)，基于 [GPL
 
 ## 安装
 
-VLC 可以由传统包管理器或 [Flatpak](../apps.md#flatpak)，Snap 安装。我们推荐使用 Flatpak。
+VLC 可以通过传统包管理器、[Flatpak](../apps.md#flatpak) 或 Snap 安装。我们推荐使用 Flatpak。
 
 ### [Flatpak](https://flathub.org/apps/org.videolan.VLC) （推荐）
 ```bash

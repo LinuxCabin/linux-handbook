@@ -51,6 +51,6 @@ Python拥有规模庞大的PyPi库。通常，我们使用`pip`进行安装。�
     note: If you believe this is a mistake, please contact your Python installation or OS distribution provider. You can override this, at the risk of breaking your Python installation or OS, by passing --break-system-packages.
     hint: See PEP 668 for the detailed specification.
     ```
-    由于系统的部分组件依赖Python的依赖，因而外来库可能破坏系统本身的依赖关系。
+    由于系统的部分组件依赖 Python 环境中的库，外来库可能破坏系统自身的依赖关系。
 
     这个时候，我们建议您使用`venv`创建虚拟环境，或者寻找发行版的软件源是否有对应的库可供安装（一般包名为`python3-库`或`python-库`）。

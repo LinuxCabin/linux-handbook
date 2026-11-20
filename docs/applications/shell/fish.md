@@ -40,7 +40,7 @@ chsh -s "$(command -v fish)"
 
 当您在Fish输入命令时，您可以按Tab键列出所有选项，您可以使用方向键选择选项，使用回车键补全
 
-使用`ctrl-a`或`ctrl-e`移动到命令的头部或尾部
+使用`ctrl-a`或`ctrl-e`将光标移动到行首或行尾
 
 使用`ctrl-k`删除光标后的所有内容
 
@@ -50,16 +50,16 @@ chsh -s "$(command -v fish)"
 
 使用`alt-u`将光标后面的所有字母大写
 
-**Fish默认使用Emacs快捷键，您可以使用`fish_vi_key_bindings`切换到vi模式，使用`fish_default_key_bindings`，切换回去**。
+**Fish默认使用Emacs快捷键，您可以使用`fish_vi_key_bindings`切换到vi模式，再用 `fish_default_key_bindings` 切换回默认模式**。
 
 ## 配置
 
-您可以在config-fish添加以下文本关闭Fish的欢迎信息：
+您可以在 `~/.config/fish/config.fish` 中添加以下内容关闭Fish的欢迎信息：
 ```bash
 set -U fish_greeting
 ```
 
-您可以使用以下语法设置别名
+您可以用 `alias` 定义别名（执行时展开），或用 `abbr` 定义缩写（输入时提示展开）：
 ```bash
 alias 别名="原本的命令"
 abbr -a 别名="原本的命令"
@@ -67,7 +67,7 @@ abbr -a 别名="原本的命令"
 
 ## 关于更多
 
-受限于我们的专门性，建议选择这些更专门的教程或文档学习
+受限于篇幅，建议通过以下更专业的教程或文档继续学习
 
 - [官方文档](https://fishshell.com/docs/current/index.html)
 - [Fish语言教程](https://fishshell.com/docs/current/tutorial.html)

@@ -38,7 +38,7 @@ Gentoo Linux 是一个高度可定制的、基于源码的操作系统。Gentoo 
 - 包管理器：Portage
 - 更新方式：滚动
 ???+ note "有关“部分升级”"
-     不像其他滚动发行版，Gentoo Linux 允许“部分升级”（Partial Upgrade）。Portage 使用单软件包的依赖关系图，SLOT 系统 和 preserved-rebuild 功能来避免软件包冲突。这当然不是说一直处在“部分升级”的状态是个好主意，还是建议有空完全升级。
+     与其他滚动发行版不同，Gentoo Linux 允许“部分升级”（Partial Upgrade）。Portage 使用单软件包的依赖关系图，SLOT 系统 和 preserved-rebuild 功能来避免软件包冲突。这当然不是说一直处在“部分升级”的状态是个好主意，还是建议有空完全升级。
 
 - 图形安装界面：否
 - 换源教程：

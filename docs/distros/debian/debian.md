@@ -19,8 +19,8 @@ Debian是一个由全球志愿者社区维护的自由开源操作系统。它�
     - MirrorZ: https://mirrors.cernet.edu.cn/debian-cd/
     - 官方（较慢）：https://cdimage.debian.org/debian-cd/
  - 包管理器：[apt](../../applications/apps.md#apt-debian)、dpkg（底层）
- - 更新方式：版本/滚动
- - 自动换源：302
+ - 更新方式：固定版本（Stable）/ 滚动（Testing、Sid）
+ - 自动换源：是（镜像列表以 302 跳转自动选源）
  - 图形安装界面：是
  - 换源教程：
     - TUNA: 
@@ -38,14 +38,14 @@ Debian是一个由全球志愿者社区维护的自由开源操作系统。它�
 Debian官方维护三个并行的发行版本。
 
 - Debian Stable（稳定版）：最稳定，经过测试，推荐普通用户使用。
-- Debian Testing（测试版）：下一个 Stable 版本的开发中状态，与 Debian Sid（不稳定版）保持通常 2 - 10 天的间隔，软件在验证无大碍后从 Sid 进入到 Testing。
+- Debian Testing（测试版）：下一个 Stable 版本的开发中状态，与 Debian Sid（不稳定版）通常保持 2-10 天的间隔，软件在验证无大碍后从 Sid 进入到 Testing。
 - Debian Sid（不稳定版）：滚动更新，作为Debian的日常开发阵地。
 
 ## 注意事项
 
 ### Debian CN
 
-[Debian 中文社区](https://debiancn.org/)提供了一系列软件，可作为对Debian官方仓库的一个补充，其目的之一是改进Debian中文用户在Debian系统上的使用体验。
+[Debian 中文社区](https://debiancn.org/)提供了一系列软件，可作为 Debian 官方仓库的补充，其目的之一是改进Debian中文用户在Debian系统上的使用体验。
 
 ???+ note "安装与换源教程"
     Debian CN所提供的安装教程位于Github。为照顾国内用户，我们将其README.md拷贝并以Markdown格式化后展示于下方。

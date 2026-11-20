@@ -14,7 +14,7 @@ g++是GNU项目开发的C++编译器，属于GNU编译器套件（GCC）的核�
 sudo apt install g++ -y
 ```
 
-- 红帽系（Fedora, rhel, rocky）
+- 红帽系（Fedora、RHEL、Rocky）
 
 ```bash
 sudo dnf install g++ -y

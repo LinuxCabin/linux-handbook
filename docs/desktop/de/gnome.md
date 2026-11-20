@@ -19,11 +19,11 @@ GNOME桌面设计以简洁专注为核心理念，采用活动概览替代传统
 ## 使用
 
 ???+ note "找不到应用栏？"
-    GNOME默认隐藏应用栏，将鼠标置于屏幕左上角即可换出。以下“扩展”部分会提供优化任务栏逻辑用的扩展。
+    GNOME默认隐藏应用栏，将鼠标置于屏幕左上角即可唤出。以下“扩展”部分会提供优化任务栏逻辑用的扩展。
 
 ### gnome-tweaks
 
-GNOME桌面下的窗口默认不带最小化、最大化按钮，并且不提供字体、鼠标等本应能够自定义选项，因此需要您使用包管理器安装`gnome-tweaks`来实现该效果。
+GNOME桌面下的窗口默认不带最小化、最大化按钮，并且不提供字体、鼠标指针等本应可以自定义的选项，因此需要您使用包管理器安装`gnome-tweaks`来实现该效果。
 
 安装好后的`gnome-tweaks`在应用列表中呈现为“优化”应用，您可以在其中自定义您的桌面。
 
@@ -39,7 +39,7 @@ GNOME有十分丰富的[扩展商店](https://extensions.gnome.org/)，并且部
 - [Firefox扩展](https://addons.mozilla.org/zh-CN/firefox/addon/gnome-shell-integration/)
 
 ???+ note "Chrome/Edge免科学上网方法"
-    我们为您下载了其crx源文件，并将其放在了[网盘](https://fangapp.lanzout.com/i6KzF3xfzptg)。在下载文件后，我们建议您参照[此教程](https://zhuanlan.zhihu.com/p/361955238)以及下面的讨论区来进行安装。
+    我们已把该浏览器扩展的 crx 源文件放在[网盘](https://fangapp.lanzout.com/i6KzF3xfzptg)。下载后，请参照[此教程](https://zhuanlan.zhihu.com/p/361955238)进行安装。
 
 以下是我们认为使用GNOME的**必备**扩展：
 

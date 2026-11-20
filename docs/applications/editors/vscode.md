@@ -7,7 +7,7 @@
 Visual Studio Code是由微软开发的开源IDE，因其庞大的扩展市场与广泛的语言支持而闻名，多数的在线IDE基于VSCode二次开发。VSCodium为VSCode的自由版本，削减了微软提供的遥测等服务，不收集用户数据。
 
 ???+ question "VSCodium为什么被称作“自由版本”？"
-    尽管微软将VSCode的核心代码开源，但诸如扩展市场、同步等功能仍然闭源且由微软掌控，仅仅在微软进行编译时被加入源代码。
+    尽管微软将VSCode的核心代码开源，但诸如扩展市场、同步等功能仍然闭源且由微软掌控，仅在微软官方编译的版本中被加入。
 
 ![vscode.dev](https://code.visualstudio.com/assets/home/swimlane-anywhere-light.png)
 
@@ -32,7 +32,7 @@ Arch用户可以通过AUR安装`vscodium-bin`。
 
 ## 使用
 
-您可以按下`Ctrl+Shift+P`打开功能面板，进行打开终端、切换语言、预览Markdown等操作。
+您可以按下`Ctrl+Shift+P`打开功能面板，以打开终端、切换语言、预览 Markdown 等。
 
 ### 扩展
 

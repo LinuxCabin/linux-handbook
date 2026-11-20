@@ -20,7 +20,7 @@ GRUB_THEME=/boot/grub/themes/主题文件夹/theme.txt
 
 ## rEFInd
 
-rEFInd是作为已停止维护的rEFIt项目的分支而诞生，最初旨在解决非Mac电脑上的UEFI启动问题。它的最大亮点是自动检测能力，能自动识别出系统里的Windows、Linux、macOS等各种操作系统。由于其出色的外观和易用性，它在需要管理复杂多系统启动的用户中非常受欢迎。
+rEFInd是已停止维护的 rEFIt 项目的分支，最初旨在解决非Mac电脑上的UEFI启动问题。它的最大亮点是自动检测能力，能自动识别出系统里的Windows、Linux、macOS等各种操作系统。由于其出色的外观和易用性，它在需要管理复杂多系统启动的用户中非常受欢迎。
 
 !!! warning "适用性"
     rEFInd仅支持UEFI。
@@ -73,7 +73,7 @@ sudo refind install --shim /boot/efi/一般为发行版名称/shimx64.efi
 
 ### 美化
 
-rEFInd的主题大多于[Github](https://github.com/topics/refind-theme)上发布。
+rEFInd的主题大多发布在 [Github](https://github.com/topics/refind-theme) 上。
 
 大多数主题拥有一键安装脚本，并提供了手动安装教程。此处只讲解通用的手动安装方法。
 

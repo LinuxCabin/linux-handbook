@@ -6,7 +6,7 @@
 
 ## 概述
 
-Git是一个Git是一个免费、开源、自由的分布式版本控制软件，Git采用[GPL-V2协议](https://opensource.org/license/GPL-2.0)发布，是软件开发中的常用软件，当然Git不单单可以用来软件开发，只要涉及版本控制，使用Git就是个不错的选择。
+Git是一个免费、开源、自由的分布式版本控制软件，Git采用[GPL-V2协议](https://opensource.org/license/GPL-2.0)发布，是软件开发中的常用软件，当然Git不单单可以用来软件开发，只要涉及版本控制，使用Git就是个不错的选择。
 
 ## 使用方法
 
@@ -16,7 +16,7 @@ Git是一个Git是一个免费、开源、自由的分布式版本控制软件�
 git clone http://example.com/example.git
 ```
 
-### 创建初始化一个Git仓库
+### 初始化一个 Git 仓库
 
 #### 从空的目录创建
 
@@ -38,7 +38,7 @@ git init
 git init
 ```
 
-### 将修改的文件推送到仓库创建一个版本
+### 提交修改，生成一个版本
 
 #### 加入暂存区
 
@@ -59,7 +59,7 @@ git commit -m "这一次提交的介绍"
 
     您可以使用`echo $EDITOR`得知当前编辑器是什么
 
-    `git commit` 将缓存区的文件放入本地仓库
+    `git commit` 将暂存区的文件提交到本地仓库
 
 > `commit`意为`提交`
 
@@ -76,7 +76,7 @@ git log
 
 - `git log` 查看commit历史，每一个提交都具有一个独一无二的哈希值
 - `git reflog` 可以查看您所有的操作，包括您删除的版本的哈希值
-- `git reset --mixed` 这是默认使用参数，会删除本地仓库和缓存区的文件
+- `git reset --mixed` 这是默认使用参数，会撤销暂存区的内容并移动分支指针，但保留工作区文件
 - `git reset --hard` 会删除本地仓库和缓存区和工作区的文件
 - `git reset --soft` 只删除本地仓库的文件
 
@@ -87,7 +87,7 @@ git log
 
 ## 关于更多
 
-由于我们的专门性限制，我们建议您去其他专门教程深入的的学习git。
+受限于篇幅，建议您参考其他专门教程深入学习 Git。
 
 1. [Pro Git Book](https://git-scm.com/book/zh/v2)
 2. [菜鸟教程](https://www.runoob.com/git/git-tutorial.html)

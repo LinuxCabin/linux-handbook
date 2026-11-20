@@ -12,7 +12,7 @@ OBS Studio 同时是一款视频录制器和一款推流器。它还有“合成
 OBS Studio 完全免费，灵活可定制，还有庞大的插件库和社区支持。
 
 ## 安装
-可以通过 [Flatpak](../apps.md#flatpak) 和 Snap 安装 OBS Stuio，也可以通过传统包管理器直接安装 OBS Studio。
+可以通过 [Flatpak](../apps.md#flatpak) 和 Snap 安装 OBS Studio，也可以通过传统包管理器直接安装 OBS Studio。
 
 ### Flatpak（推荐：AMD / Intel）
 ```bash
@@ -50,7 +50,7 @@ sudo snap install obs-studio
 现在您应该可以在新弹出的窗口上看到目前屏幕的内容，再点击一次 **OK** 来保存设定。
 
 ### 视频质量
-OBS Studio 默认输出 1080p，（视您的硬件）最高 6000 kbps 的视频。
+OBS Studio 默认输出 1080p、最高 6000 kbps 的视频（具体取决于您的硬件）。
 
 #### 更改输出分辨率
 若要更改输出分辨率，点击右下角的 **设置**，在设置的左侧栏目中点击 **视频**，将右侧的 **输出分辨率** 改为想要的值，点击右下角的 **完成**。
@@ -60,7 +60,7 @@ OBS Studio 默认输出 1080p，（视您的硬件）最高 6000 kbps 的视频�
 
 ### 快捷键
 
-前往 **设置**，左侧栏目的 **快捷键**，点击项目后的输入框，在键盘和/或鼠标（是的，可以绑定鼠标侧键）按下你想要设置的键。
+前往 **设置**，点击左侧栏目的 **快捷键**，再点击项目后的输入框，在键盘和/或鼠标（是的，可以绑定鼠标侧键）按下你想要设置的键。
 ???+ note "不工作？"
      如果快捷键在 OBS 窗口外不工作，很有可能您使用 Wayland 显示服务器。OBS 无法在后台访问键盘，这是 Wayland 为了安全而作出的限制。有利用 Wayland 原生接口的插件，参阅 [**Wayland 下的快捷键**](#wayland) 章节。
 
@@ -85,7 +85,7 @@ OBS Studio 默认输出 1080p，（视您的硬件）最高 6000 kbps 的视频�
 您可能需要重启电脑。
 
 ??? question "可是我看不到硬件加速的选项？"
-     把输出模式改成 **高级**，在 **直播** 和 **录像** 的视频编码器里选择 **"FFmpeg VAAPI"** 开头的选项。
+     把输出模式改成 **高级**，在 **直播** 和 **录像** 的视频编码器里选择以 **"FFmpeg VAAPI"** 开头的选项。
 
 ### 硬件加速（Nvidia）
 
@@ -109,17 +109,17 @@ OBS Studio 默认输出 1080p，（视您的硬件）最高 6000 kbps 的视频�
 
 您可能需要重启电脑。
 
-VA-API, VDPAU 和 高性能的 NVDEC, NVENC 都可用。
+VA-API、VDPAU 可用，性能更好的 NVDEC、NVENC 也可用。
 
 ??? warning "如果您的 Nvidia 显卡较旧..."
-    我们了解到一些发行版中最新的 FFmpeg 基于新版本的 NVENC API 头文件构建，如果你使用 **帕斯卡架构**（Geforce **10系**）及更老的 Nvidia 显卡，发现无法使用 NVENC，您可能需要降级 FFmpeg。
+    我们了解到，一些发行版中最新的 FFmpeg 是基于新版本 NVENC API 的头文件构建的。如果您使用 **帕斯卡架构**（GeForce **10 系**）及更老的 Nvidia 显卡，无法使用 NVENC，可能需要降级 FFmpeg。
     如果电脑上有使用 FFmpeg 的其他软件，它们可能也需要跟着一起降级。通常您的包管理器会提醒您所有要降级的软件。
 
     [*专有软件常常是恶意软件*](https://www.gnu.org/proprietary/proprietary.html)*。*
 
 ##### Flatpak 或 Snap
 
-如果 OBS Studio 使用 Flatpak 或 Snap 安装，不用任何操作，依赖（VA-API）已经被管理好了...除非先安装的 OBS，后安装的 Nvidia 专有驱动。这样的话，安装以下包裹：
+如果 OBS Studio 使用 Flatpak 或 Snap 安装，不用任何操作，依赖（VA-API）已经被管理好了...除非您先安装 OBS，之后才安装 Nvidia 专有驱动。这样的话，安装以下软件包：
 ```bash
 flatpak install org.freedesktop.Platform.VAAPI.nvidia
 ```
@@ -130,7 +130,7 @@ flatpak install org.freedesktop.Platform.VAAPI.nvidia
 
 #### nouveau
 
-从 GeForce 8系（8600 GT, 8800 GTX 等）到 **开普勒架构**的 GeForce 7系（GTX 760, GTX 780 等，**GTX 750 和 GTX 750 Ti 不包括在内**），nouveau 支持 VA-API 和 VDPAU 加速。
+从 GeForce 8系（8600 GT, 8800 GTX 等）到 **开普勒架构**的 GeForce 700 系（GTX 760, GTX 780 等，**GTX 750 和 GTX 750 Ti 不包括在内**），nouveau 支持 VA-API 和 VDPAU 加速。
 
 还需要安装 [从Nvidia驱动中提取的固件](https://nouveau.freedesktop.org/VideoAcceleration.html#firmware)。
 
@@ -185,7 +185,7 @@ flatpak install com.obsproject.Studio.Plugin.WaylandHotkeys
 
 ##### Arch 系
 
-安装 AUR 上的 `obs-wayland-hoykeys-git`。
+安装 AUR 上的 `obs-wayland-hotkeys-git`。
 
 在终端以*非 root，有 sudo 权限*的用户运行：
 ```bash

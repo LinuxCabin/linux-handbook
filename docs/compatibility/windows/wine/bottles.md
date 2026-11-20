@@ -42,8 +42,8 @@ flatpak install flathub com.usebottles.bottles
 
 运行器（Runner）即 Bottles 使用的兼容层，分为两类：
 
-- **Wine 类**：适用于所有环境。Bottles 提供默认运行器 **Soda**（基于 Valve 的 Wine 分支与 Proton 补丁构建）、补丁更全面的 **Caffe**、来自 Lutris 开发者的构建，以及仅应用 wine-staging 补丁的纯净运行器 **Vaniglia**。
-- **Proton**：由 Valve 开发、GloriousEggroll 改进的 GE 版本，是功能更复杂的 Wine 分支，适合较新的游戏。您可以在创建 Bottle 时选择“自定义”环境来选用 Proton，也可以之后随时在 Bottle 设置中切换。
+- **Wine 类**：适用于所有环境。Bottles 提供默认运行器 **Soda**（基于 Valve 的 Wine 分支与 Proton 补丁构建）、补丁更全面的 **Caffe**、来自 Lutris 项目的构建，以及仅应用 wine-staging 补丁的纯净运行器 **Vaniglia**。
+- **Proton**：Proton 是 Valve 基于 Wine 开发的兼容层，这里提供的是由 GloriousEggroll 维护的社区改进版 Proton GE，功能和配置比普通 Wine 更复杂，适合较新的游戏。您可以在创建 Bottle 时选择“自定义”环境来选用 Proton，也可以之后随时在 Bottle 设置中切换。
 
 !!! note "关于 Proton 运行器"
     Bottles 官方建议仅在个别游戏确有对应的 Proton 补丁时才使用 Proton 运行器——Valve 也参与了 Wine 的开发，Proton 的许多特性已经合入新版 Wine。
@@ -80,10 +80,10 @@ Bottles 内置了依赖管理器，可在 Bottle 详情页的“依赖项（Depe
 
 ![Bottle 详情页](../../../img/bottles/bottle_details.png)
 
-安装完成后，Bottles 会自动扫描 Bottle 中的开始菜单快捷方式，将软件列入“程序（Programs）”列表。若列表中没有出现新装的软件（例如软件不写入开始菜单时），可点击“添加快捷方式”按钮手动指定可执行文件路径。之后点击程序右侧的运行按钮即可运行该软件。
+安装完成后，Bottles 会自动扫描 Bottle 中的开始菜单快捷方式，将软件列入“程序（Programs）”列表。若列表中没有出现新装的软件（例如软件在安装时不写入开始菜单），可点击“添加快捷方式”按钮手动指定可执行文件路径。之后点击程序右侧的运行按钮即可运行该软件。
 
 ???+ note "创建桌面快捷方式"
-    在程序的菜单中选择“添加到桌面（Add Desktop Entry）”，即可在系统应用菜单中直接启动该软件。Flatpak 版本的 Bottles 需要额外权限才能生成桌面项，请先关闭 Bottles，然后执行：
+    在程序的菜单中选择“添加到桌面（Add Desktop Entry）”，即可在桌面和应用菜单中直接启动该软件。Flatpak 版本的 Bottles 需要额外权限才能生成桌面项，请先关闭 Bottles，然后执行：
 
     ```bash
     flatpak override com.usebottles.bottles --user --filesystem=xdg-data/applications

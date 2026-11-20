@@ -16,7 +16,7 @@
 国内主要的开源软件镜像站有以下这些：
 
  - [TUNA（清华源）](https://mirrors.tuna.tsinghua.edu.cn/)：由清华大学TUNA协会维护，是国内最主流的软件镜像源，以极高的下载速度著称。
- - [USTC（中科大源）](https://mirrors.ustc.edu.cn/) : 由中国科学技术大学与中科大LUG服务器维护小组维护，镜像收录十分广泛，容纳了包括Rocky等（TUNA不愿加）的镜像。
+ - [USTC（中科大源）](https://mirrors.ustc.edu.cn/) : 由中国科学技术大学（USTC）及其 LUG 服务器维护小组维护，镜像收录十分广泛，收录了 Rocky 等在 TUNA 上没有的镜像。
  - [MirrorZ（校园网联合镜像站）](https://mirrors.cernet.edu.cn/)：由中国教育和科研计算机网网络中心（CERNET）提供服务，收录了各大高校所创立的开源镜像站，能够自动重定向至地理位置最近的镜像站。
 
 简单来说，TUNA快，USTC广，MirrorZ兜底。您可以任意选择三者中的一个。
@@ -44,11 +44,11 @@
     ???+ note "权限问题" 
         TUNA默认提供的是使用 root 进行操作的指令，如果直接输入，大概率会有 Permission denied 的报错。
 
-        这时我们只需要在前面先加上一个 `sudo`（记得是 sudo 然后空一个再粘贴命令）就可以了，当然T您也可以直接打开上面的“是否使用sudo的”开关，之后复制并执行命令。
+        这时我们只需要在前面先加上一个 `sudo`（记得是 sudo 然后空一个再粘贴命令）就可以了，当然您也可以直接打开上面的“是否使用sudo的”开关，之后复制并执行命令。
 
         ![启动sudo](../img/mirrors/pic3.png)
 
-    替换完成之后，我们可以直接进行系统的**软件更新，见证魔法** => 我刚开始用的时候，也感觉直接更新所有软件是一个很酷的事情。
+    替换完成之后，我们可以直接进行系统的**软件更新，见证魔法**。
 
     ```bash
     sudo dnf update # 检查并更新
@@ -59,7 +59,7 @@
 
 ## Flatpak
 
-[Flatpak](../applications/apps.md#flatpak)是新一代Linux软件管理工具。其采用沙箱式设计，使得软件能够兼容多数发行版。并且，基于Flatpak的Flathub是Linux上极其重要的应用商店，深度集成于KDE Discover, GNOME。
+[Flatpak](../applications/apps.md#flatpak)是新一代Linux软件管理工具。其采用沙箱式设计，使得软件能够兼容多数发行版。并且，基于Flatpak的Flathub是Linux上极其重要的应用商店，深度集成于 KDE Discover、GNOME 软件等应用商店。
 
 **对于用户软件，我们推荐您使用[Flatpak](../applications/apps.md#flatpak)或[AppImage](../applications/apps.md#appimage)进行安装。**
 
@@ -73,7 +73,7 @@
      - MirrorZ: https://help.mirrors.cernet.edu.cn/flathub
 
 !!! warning "已知问题"
-    Flatpak与宿主机互通目前不够完善，例如QQ的剪贴板问题、拖拽文件识别等。
+    Flatpak 与宿主机之间的互通目前还不够完善，存在 QQ 剪贴板、拖拽文件识别等问题。
 
     要解决这一问题，请使用Flatpak安装Flatseal后，找到对应软件，关闭“回退到X11”，并且打开允许访问全部文件。
     
@@ -85,7 +85,7 @@
 
 ## 时间制（双系统）
 
-如果您使用的是Windows与Linux双系统，您会发现在从Linux切换至Windows时，时间会发生错位。
+如果您使用的是Windows与Linux双系统，您会发现，从 Linux 切换至 Windows 时，时间会错位。
 
 这是由于Windows采用的时间制是本地时间，也就是BIOS设置中的时间，而Linux默认使用UTC时间（格林尼治标准时间），由于中国属于GMT+8时区，每次切换系统都会导致8个小时的差异。
 
@@ -115,7 +115,7 @@
 
     要解决该问题，请在Windows的命令提示符中运行`chkdsk X: /f`并**重启至少两次**进行修复。若依然失败，请运行`chkdsk X: /r`进行更为彻底的修复。
 
-    **请将上图命令中的X:替换为自己的盘符。**
+    **请将上面命令中的 `X:` 替换为自己的盘符。**
 
 ## 杂项
 

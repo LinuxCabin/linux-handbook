@@ -40,7 +40,7 @@ Fedora是一款前沿、开放的发行版，有着广泛的社区支持，并�
     - MirrorZ: https://mirrors.cernet.edu.cn/fedora/releases/
  - 包管理器：[dnf](../../applications/apps.md#dnf)
  - 更新方式：传统/OSTree
- - 自动换源：302
+ - 自动换源：是（镜像列表以 302 跳转自动选源）
  - 图形安装界面：是
  - 换源教程：
     - TUNA: https://mirrors.tuna.tsinghua.edu.cn/help/fedora/
@@ -106,18 +106,18 @@ Fedora由于版权限制，无法内置H264/H265编解码器，因此需要手�
 
 ### Fedora Flatpak仓库
 
-若您发现自己的KDE Discover、GNOME 应用 一直在转圈加载，又或是安装Flatpak时一直在查找匹配项，那么可能是Fedora的官方Flatpak源在拖后腿。
+若您发现自己的KDE Discover、GNOME 软件一直在转圈加载，又或是安装Flatpak时一直在查找匹配项，那么可能是Fedora的官方Flatpak源在拖后腿。
 
 要解决这个问题，您可以在终端中运行如下指令：`sudo flatpak remote-delete fedora`。
 
 !!! warning "针对不可变发行版"
-     Fedora的不可变版本中，有部分系统应用的来源为Fedora官方Flatpak仓库。所以，我们建议您在提示移除源会删除软件时，记录好将要删除软件的包名。在删除后，您可以通过官方Flathub仓库重新安装。
+     Fedora的不可变版本中，有部分系统应用的来源为Fedora官方Flatpak仓库。所以，我们建议您当提示移除该源会删除软件时，记录好将要删除软件的包名。在删除后，您可以通过官方Flathub仓库重新安装。
 
-     部分包名带有`fedora`字样的软件包提示未找到是正常现象。
+     部分包名带有 `fedora` 字样的软件包，移除源后提示“未找到”属于正常现象。
 
 ### 多余内核
 
-Fedora的dnf不会自动删除多余的内核，因而需要通过修改`/etc/dnf/dnf.conf`来实现。
+Fedora的dnf不会自动删除多余的内核，因而需要通过修改`/etc/dnf/dnf.conf`来启用自动清理。
 
 ```bash
 sudo nano /etc/dnf/dnf.conf

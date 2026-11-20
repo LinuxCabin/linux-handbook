@@ -4,7 +4,7 @@
 
 ## 简介
 
-Ubuntu是当今最受认可的Linux发行版，也是中国国家操作系统基准架构。它用户支持广泛，兼容性强，并且有优秀的开箱即用体验。不过近年来的商业化操作令Linux社区对它嗤之以鼻。
+Ubuntu是当今最受认可的Linux发行版，也是中国国家操作系统基准架构。它拥有广泛的用户支持，兼容性强，并且有优秀的开箱即用体验。不过近年来的商业化操作令Linux社区对它嗤之以鼻。
 
 ???+ quote "名人名言"
     Ubuntu very much wanted to be like a consumer oriented thing. And in the process, when I tried it many, many years ago, they literally made it hard for me to upgrade the kernel because that was not their target audience.
@@ -27,7 +27,7 @@ Ubuntu是当今最受认可的Linux发行版，也是中国国家操作系统基
  - 包管理器：[apt](../../applications/apps.md#apt-debian)
 !!! warning "警告"
     注意！使用apt安装部分软件时可能[被Snap劫持](https://www.zhihu.com/question/47659130)！
- - 更新方式：版本
+ - 更新方式：按版本升级
  - 自动换源：半自动
  - 图形安装界面：是
  - 换源教程：
@@ -59,10 +59,10 @@ Ubuntu是当今最受认可的Linux发行版，也是中国国家操作系统基
 
 ### Debian CN
 
-[Debian 中文社区](https://debiancn.org/)提供了一系列软件，可作为对Debian官方仓库的一个补充，其目的之一是改进Debian中文用户在Debian系统上的使用体验。
+[Debian 中文社区](https://debiancn.org/)提供了一系列软件，可作为对Debian官方仓库的一个补充，其目的之一是改善 Debian 中文用户的使用体验。
 
 ???+ note "安装与换源教程"
-    Debian CN所提供的安装教程位于Github。为照顾国内用户，我们将其README.md拷贝并以Markdown格式化后展示于下方。
+    Debian CN所提供的安装教程位于Github。为照顾国内用户，我们把它复制过来，转成 Markdown 格式后展示于下方。
 
     ??? info "安装教程"
 
@@ -111,9 +111,9 @@ Ubuntu是当今最受认可的Linux发行版，也是中国国家操作系统基
 
 ### 移除Snap
 
-Snap是Canonical推出的Linux通用包管理工具。与Flatpak相同，采用沙箱化设计来保证软件极其依赖的正常运行。
+Snap是Canonical推出的Linux通用包管理工具。与Flatpak相同，采用沙箱化设计来保证软件及其依赖的正常运行。
 
-不过，由于Canonical的商业操作，使用`apt`安装部分软件会被Snap劫持，同时由于Snap本身的性能优化不足，因而其被部分社区用户唾弃，Linux Mint也剔除了Snap。
+不过，由于Canonical的商业操作，使用`apt`安装部分软件会被Snap劫持，同时由于 Snap 本身的性能优化不足，它被部分社区用户唾弃，Linux Mint也剔除了Snap。
 
 Snap的移除步骤十分繁琐。首先，你必须按照顺序（先应用，后依赖）卸载所有Snap应用：
 ```bash

@@ -13,7 +13,7 @@ Steam是由Valve于2003年推出的全球最大的数字游戏发行与社交平
 
 ## 安装
 
-Steam在Linux上的安装有十分多样的方法。
+Steam 在 Linux 上有多种安装方式。
 
 ### Flathub
 
@@ -60,7 +60,7 @@ sudo dpkg -i 软件包名
 
 ## Proton
 
-Linux上的Steam通过Proton来运行Windows游戏。Proton基于Wine，并集合了DXVK、VKD3D等补丁，使得图形兼容性大幅提升的同时保证了性能损耗的最小。
+Linux上的Steam通过Proton来运行Windows游戏。Proton 基于 Wine，并集成了 DXVK、VKD3D 等组件（分别把 Direct3D 9/10/11 与 Direct3D 12 调用转换为 Vulkan），在提升图形兼容性的同时把性能损耗降到最低。
 
 不同的Proton大版本具有不同的特性，例如部分早期版本对中文支持不完善，会出现“方块字”问题，又或是窗口边框样式简陋等等。要自行选择Proton版本，请在库中选择对应游戏，打开属性-兼容性，勾选“强制使用特定 Steam Play 兼容性工具”，并选择合适的Proton版本。
 
@@ -70,7 +70,7 @@ Linux上的Steam通过Proton来运行Windows游戏。Proton基于Wine，并集�
 
 #### Flatpak
 
-如果您的Steam是通过Flatpak安装的，您只需要安装Flatpak补丁即可。
+如果您的Steam是通过Flatpak安装的，您只需要安装 Proton GE 的 Flatpak 扩展（CompatibilityTool）即可。
 
 ```bash
 flatpak install com.valvesoftware.Steam.CompatibilityTool.Proton-GE
@@ -97,15 +97,15 @@ flatpak install com.valvesoftware.Steam.CompatibilityTool.Proton-GE
 
 ---
 
-安装Proton GE后，请按照上述操作应用Proton GE。
+安装Proton GE后，请回到游戏属性的“兼容性”页，按前文方式勾选并选中刚安装的 Proton GE。
 
 ## 运行Windows软件
 
-Steam也可以用于运行Windows软件。但我们并**不建议**通过这种方式来运行，而是使用Lutris。
+Steam也可以用于运行Windows软件。但我们并**不建议**通过这种方式来运行，更推荐改用 Lutris。
 
 要添加Windows软件，您可以选择上方状态栏的游戏-添加非Steam游戏-浏览，选择对应的安装程序。
 
-安装好程序后，要打开应用，请更改设置-目标：
+安装好程序后，要打开应用，请在游戏属性的“快捷方式”页把“目标”改为下面目录中的可执行文件：
 
 - Flatpak版本：`~/.var/app/com.valvesoftware.Steam/data/Steam/steamapps/compatdata/游戏Id/pfx/drive_c/` 在该目录下找到安装路径的可执行文件
 - 包版本：`~/.local/share/Steam/steamapps/compatdata/游戏Id/pfx/drive_c/` 在该目录下找到安装路径的可执行文件

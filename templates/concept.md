@@ -14,5 +14,5 @@
 
 1. `sudo dnf install xxx` 安装某个软件包
 2. `sudo dnf remove xxx` 卸载某个软件包
-3. `sudo dnf update` 更新所以软件包
+3. `sudo dnf update` 更新所有软件包
 4. ...

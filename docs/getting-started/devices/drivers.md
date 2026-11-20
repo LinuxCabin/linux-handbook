@@ -13,7 +13,7 @@ Linux下的驱动主要分为以下两类：
 
 ### Intel
 
-Intel显卡（包括传统的核显、锐炫Arc独显以及最新的酷睿Ultra核显）在Linux下遵循“开源优先、即插即用”的策略。Intel直接把驱动写进Linux内核和Mesa图形库的，日常使用或打游戏不需要去官网手动下载任何安装包。而且Intel在更新和优化驱动，具体对比如下
+Intel显卡（包括传统的核显、锐炫Arc独显以及最新的酷睿Ultra核显）在Linux下遵循“开源优先、即插即用”的策略。Intel 直接把驱动写进了 Linux 内核和 Mesa 图形库，日常使用或打游戏都不需要去官网手动下载安装包。而且 Intel 一直在持续更新和优化驱动，具体对比如下：
 
 | 内核驱动模块 | 对应显卡型号&架构示例 | 其他说明 |
 |---|---|---|
@@ -29,7 +29,7 @@ Intel显卡在专业用途下可能需要的库有：
 
 AMD显卡在Linux下主要依赖开源驱动（`amdgpu`）。由于AMD将大部分驱动源码直接合入Linux内核，免去了第三方安装的麻烦。主流发行版（如Ubuntu、Fedora、Arch）均可即插即用，日常体验（尤其是多屏、Wayland协议、开源游戏Vulkan性能）表现极佳。
 
-AMD不同架构的显卡需要不同驱动，但大多数使用`amdgpu`（专有驱动）即可。或者，对于自由驱动，您可以使用`mesa-va-drivers`。
+AMD不同架构的显卡需要不同驱动，绝大多数情况下使用开源的 `amdgpu` 即可；`mesa-va-drivers` 提供的是 VA-API 硬件视频加速，与驱动选择无关。
 
 | 显卡架构 | 对应显卡型号示例 | 内核驱动模块 | 其他说明 |
 |---|---|---|---|
@@ -38,7 +38,7 @@ AMD不同架构的显卡需要不同驱动，但大多数使用`amdgpu`（专有
 | RDNA/RDNA1 | RX5000系列 | amdgpu | 原生完美支持 |
 | GCN5/5.1(Vega) | RXVega56/64，RadeonVII | amdgpu | 需确保内核版本较新以获得最佳支持 |
 | GCN1~4 | RX400/500系列，R9Fury|amdgpu | 属于较老架构，默认可能使用老旧的radeon驱动，建议在内核参数中强制启用amdgpu |
- |早于GCN1架构 | HD7000系列及更早（如HD5000/6000）| radeon | 支持停止维护，仅能使用开源radeon驱动 |
+ |早于GCN1架构 | HD7000系列及更早（如HD5000/6000）| radeon | 已停止维护，仅能使用开源的 radeon 驱动 |
 
 
 ### NVIDIA
@@ -50,7 +50,7 @@ AMD不同架构的显卡需要不同驱动，但大多数使用`amdgpu`（专有
 
     <p align="right">——Linus Torvalds</p>
 
-NVIDIA对Linux用户的驱动在23年以来，支持日渐完善，NVIDIA显卡目前在极个别方面不足外，几乎已经追平Windows。目前NVIDIA在最新驱动开源部分非关键的内核空间部分，即nvidia-open。但其用户空间工具（如CUDA、DLSS等）依然闭源，即nvidia-utils。
+自 2023 年以来，NVIDIA 对 Linux 的驱动支持日渐完善，如今除极个别方面仍有不足外，几乎已经追平 Windows。目前NVIDIA在最新驱动开源部分非关键的内核空间部分，即nvidia-open。但其用户空间工具（如CUDA、DLSS等）依然闭源，即nvidia-utils。
 
 同样，NVIDIA不同架构的显卡也需要不同的驱动，但是NVIDIA相对AMD更为复杂
 
@@ -64,7 +64,7 @@ NVIDIA对Linux用户的驱动在23年以来，支持日渐完善，NVIDIA显卡�
 NVIDIA显卡在专业用途下可能需要`akmod-nvidia`与`xorg-x11-drv-nvidia-cuda`库。
 
 !!! warning "警告"
-    由于NVIDIA坚持使用 EGLStreams，而 KDE KWin、GNOME Mutter 及各类基于 wlroots 的混成器均围绕公版方案 GBM 构建，导致大量小型项目根本无法支持 NVIDIA 显卡，即 NVIDIA 对 Wayland 的实现并非 Wayland 的推荐公版，造成众多本应运行良好的 Wayland 机制在 NVIDIA 显卡下出现严重问题！
+    由于NVIDIA坚持使用 EGLStreams，而 KDE KWin、GNOME Mutter 及各类基于 wlroots 的混成器均围绕公版方案 GBM 构建，这导致大量基于 wlroots 的小型项目无法兼容 NVIDIA 显卡——NVIDIA 的 Wayland 实现并非社区推荐的公版方案，许多本应正常的 Wayland 功能在 NVIDIA 显卡下会出现严重问题。
 
     ***已知存在的问题***
 
@@ -77,7 +77,7 @@ NVIDIA显卡在专业用途下可能需要`akmod-nvidia`与`xorg-x11-drv-nvidia-
 
 ### Realtek
 
-内核自带r8169（eth）和rtw88（wireless）驱动，但对于高端无线网卡和部分RTL无线网卡支持不佳，出现问题时，推荐安装rtw89、rtl8821ce以解决。
+内核自带r8169（eth）和rtw88（wireless）驱动，但对部分较新的 RTL 无线网卡支持不佳，出现问题时，推荐安装rtw89、rtl8821ce以解决。
 
 ### Intel 
 
@@ -90,7 +90,7 @@ Broadcom（博通）无线网卡在Linux系统下的支持情况因芯片型号�
 ???+ info "目前的支持情况"
     - 原生支持芯片（brcmsmac/brcmfmac）：大多数较新的Broadcom无线网卡由内核中的开源驱动直接支持，这类网卡通常即插即用。
     - 需要专有驱动的芯片（broadcom-sta/wl）：例如BCM4311, BCM4312, BCM4313, BCM43142, BCM4360等。这类设备在主流发行版（如 Ubuntu, Debian, Arch Linux 等）中需要安装broadcom-wl或 bcmwl-kernel-source驱动包。
-    - 极其老旧或部分极新芯片：可能仅有Windows驱动
+    - 极其老旧或部分极新芯片：可能只有 Windows 驱动，Linux 下无法使用无线功能
 
 ### Qualcomm Atheros 
 

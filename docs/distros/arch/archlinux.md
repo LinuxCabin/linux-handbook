@@ -68,7 +68,7 @@ Server = https://mirrors.cernet.edu.cn/archlinuxcn/$arch
 
 AUR（Arch User Repository）是当今Linux软件包数目第二多的软件仓库，具有丰富多样的应用可供安装，包括但不限于QQ、微信、达芬奇等。
 
-要使用AUR，您需要安装AUR助手，目前有`yay`与`paru`可供选择。不过请注意，两者并不直接存在与Arch Linux官方软件仓库中，我们建议您首先添加Arch Linux CN软件仓库，之后用`pacman`安装任意一个。或者，您也可以参照Arch Wiki的教程：[Yay](https://wiki.archlinuxcn.org/zh-cn/Yay)
+要使用AUR，您需要安装AUR助手，目前有`yay`与`paru`可供选择。不过请注意，两者并不直接存在于Arch Linux官方软件仓库中，我们建议您首先添加Arch Linux CN软件仓库，之后用`pacman`安装任意一个。或者，您也可以参照Arch Wiki的教程：[Yay](https://wiki.archlinuxcn.org/zh-cn/Yay)
 
 同时，您可能需要安装`base-devel`来编译软件。
 
@@ -76,6 +76,6 @@ AUR（Arch User Repository）是当今Linux软件包数目第二多的软件仓�
    不建议使用`sudo`来执行AUR助手。
 
 !!! warning "网络问题" 
-   AUR本质上拖管的是PKGBUILD文件，可以被看作是应用程序的构建脚本，因而部分软件在安装时需要从Github拉取上游软件包，这使得部分软件的安装进度十分缓慢。
+   AUR本质上托管的是PKGBUILD文件，可以被看作是应用程序的构建脚本，因而部分软件在安装时需要从Github拉取上游软件包，这使得部分软件的安装进度十分缓慢。
 
    要解决这一问题，您可以手动编辑PKGBUILD来更换加速链接，也可以参考[本篇教程](https://zhuanlan.zhihu.com/p/688340777)。
