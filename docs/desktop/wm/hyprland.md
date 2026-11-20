@@ -5,7 +5,7 @@
 
 [官方Wiki（英文）](https://wiki.hypr.land/)
 
-配置文件：`~/.config/hypr/hyprland.conf`
+配置文件：`~/.config/hypr/hyprland.lua`
 
 ## 概述
 

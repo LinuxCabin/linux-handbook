@@ -163,7 +163,7 @@ Flatpak是Linux新一代跨平台软件安装解决方案。它通过沙箱设�
 在您使用Flatpak之前，请确保您已经使用您的系统包管理器安装了`flatpak`包，并添加了Flathub软件源。
 
 ???+ info "Flathub缓存"
-    国内目前有 USTC 与 MirrorZ 提供 Flathub 缓存，其中 MirrorZ 支持自动重定向。
+    国内目前仅 USTC 与 SJTUG 有 Flathub 缓存。
 
      - USTC: https://mirrors.ustc.edu.cn/help/flathub.html
     
