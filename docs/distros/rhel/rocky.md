@@ -17,7 +17,7 @@ Rocky Linux是RHEL的下游版本。在RedHat宣布停止公开RHEL源代码后�
     - TUNA: 无
     - USTC: https://mirrors.ustc.edu.cn/rocky/
     - MirrorZ: https://mirrors.cernet.edu.cn/rocky/
- - 包管理器：[dnf](../../applications/apps.md#dnf)
+ - 包管理器：[dnf](../../applications/apps.md#dnf-红帽系)
  - 更新方式：传统
  - 自动换源：是（镜像列表以 302 跳转自动选源）
  - 图形安装界面：是
