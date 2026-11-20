@@ -27,7 +27,7 @@ Kvantum（包名为`kvantum`）是一个适用于KDE桌面环境的Qt主题引�
 
 ### 扩展、主题等的安装
 
-大多数KDE的扩展、主题等的来源为 https://store.kde.org/ 与 https://www.pling.me/ ，而在中国大陆网络环境下，在KDE自带设置中安装的体验十分痛苦。
+大多数KDE的扩展、主题等的来源为 https://store.kde.org/ 与 https://www.pling.me/，而在中国大陆网络环境下，在KDE自带设置中安装的体验十分痛苦。
 
 所以对于大多数扩展、主题等，需要通过手动方式进行安装。手动安装有两种方式：
 
@@ -44,35 +44,35 @@ Kvantum（包名为`kvantum`）是一个适用于KDE桌面环境的Qt主题引�
 
 ##### 用户安装
 
- - 全局主题 (Global Theme)：`~/.local/share/plasma/look-and-feel/`
- - Plasma 外观样式 (Plasma Style)：`~/.local/share/plasma/desktoptheme/`
- - 颜色 (Color Scheme)：`~/.local/share/color-schemes/`
- - 图标 (Icon Theme)：`~/.local/share/icons/`
- - 面板预设模板 (Panel Layout Template)：`~/.local/share/plasma/layout-templates/`
- - 任务切换器 (Task Switcher)：`~/.local/share/kwin/tabbox/`
- - 小部件 (Plasma Widget)：`~/.local/share/plasma/plasmoids/`
- - 壁纸插件 (Wallpaper Plugin)：`~/.local/share/plasma/wallpapers/`
- - 窗口装饰 (Window Decoration)：`~/.local/share/aurorae/themes/`
- - 桌面特效（KWin 效果）(KWin Effect)：`~/.local/share/kwin/effects/`
- - KWin 脚本 (KWin Script)：`~/.local/share/kwin/scripts/`
- - 登录屏幕 (SDDM) (Login Screen)：无用户安装路径
- - 欢迎屏幕 (Splash Screen)：`~/.local/share/plasma/look-and-feel/<主题名称>/contents/splash/`
+ - 全局主题（Global Theme）：`~/.local/share/plasma/look-and-feel/`
+ - Plasma 外观样式（Plasma Style）：`~/.local/share/plasma/desktoptheme/`
+ - 颜色（Color Scheme）：`~/.local/share/color-schemes/`
+ - 图标（Icon Theme）：`~/.local/share/icons/`
+ - 面板预设模板（Panel Layout Template）：`~/.local/share/plasma/layout-templates/`
+ - 任务切换器（Task Switcher）：`~/.local/share/kwin/tabbox/`
+ - 小部件（Plasma Widget）：`~/.local/share/plasma/plasmoids/`
+ - 壁纸插件（Wallpaper Plugin）：`~/.local/share/plasma/wallpapers/`
+ - 窗口装饰（Window Decoration）：`~/.local/share/aurorae/themes/`
+ - 桌面特效（KWin 效果）（KWin Effect）：`~/.local/share/kwin/effects/`
+ - KWin 脚本（KWin Script）：`~/.local/share/kwin/scripts/`
+ - 登录屏幕（SDDM）（Login Screen）：无用户安装路径
+ - 欢迎屏幕（Splash Screen）：`~/.local/share/plasma/look-and-feel/<主题名称>/contents/splash/`
 
 ##### 系统安装
 
- - 全局主题 (Global Theme)：`/usr/share/plasma/look-and-feel/`
- - Plasma 外观样式 (Plasma Style)：`/usr/share/plasma/desktoptheme/`
- - 颜色 (Color Scheme)：`/usr/share/color-schemes/`
- - 图标 (Icon Theme)：`/usr/share/icons/`
- - 面板预设模板 (Panel Layout Template)：`/usr/share/plasma/layout-templates/`
- - 任务切换器 (Task Switcher)：`/usr/share/kwin/tabbox/`
- - 小部件 (Plasma Widget)：`/usr/share/plasma/plasmoids/`
- - 壁纸插件 (Wallpaper Plugin)：`/usr/share/plasma/wallpapers/`
- - 窗口装饰 (Window Decoration)：`/usr/share/aurorae/themes/`
- - 桌面特效（KWin 效果）(KWin Effect)：`/usr/share/kwin/effects/`
- - KWin 脚本 (KWin Script)：`/usr/share/kwin/scripts/ (`
- - 登录屏幕 (SDDM) (Login Screen)：`/usr/share/plasma/lookandfeel/<全局主题名称>/contents/splash/`
- - 欢迎屏幕 (Splash Screen)：`~/.local/share/plasma/look-and-feel/<全局主题名称>/contents/splash/`
+ - 全局主题（Global Theme）：`/usr/share/plasma/look-and-feel/`
+ - Plasma 外观样式（Plasma Style）：`/usr/share/plasma/desktoptheme/`
+ - 颜色（Color Scheme）：`/usr/share/color-schemes/`
+ - 图标（Icon Theme）：`/usr/share/icons/`
+ - 面板预设模板（Panel Layout Template）：`/usr/share/plasma/layout-templates/`
+ - 任务切换器（Task Switcher）：`/usr/share/kwin/tabbox/`
+ - 小部件（Plasma Widget）：`/usr/share/plasma/plasmoids/`
+ - 壁纸插件（Wallpaper Plugin）：`/usr/share/plasma/wallpapers/`
+ - 窗口装饰（Window Decoration）：`/usr/share/aurorae/themes/`
+ - 桌面特效（KWin 效果）（KWin Effect）：`/usr/share/kwin/effects/`
+ - KWin 脚本（KWin Script）：`/usr/share/kwin/scripts/`
+ - 登录屏幕（SDDM）（Login Screen）：`/usr/share/plasma/lookandfeel/<全局主题名称>/contents/splash/`
+ - 欢迎屏幕（Splash Screen）：`~/.local/share/plasma/look-and-feel/<全局主题名称>/contents/splash/`
 
 （以上内容来自于[Plasma themes and plugins](https://develop.kde.org/docs/plasma/)）
 

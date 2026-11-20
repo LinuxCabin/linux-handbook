@@ -8,13 +8,13 @@ g++是GNU项目开发的C++编译器，属于GNU编译器套件（GCC）的核�
 
 ### 安装
 
-- Debian 系(Ubuntu, Mint, Debian)
+- Debian 系（Ubuntu, Mint, Debian）
 
 ```bash
 sudo apt install g++ -y
 ```
 
-- 红帽系(Fedora, rhel, rocky)
+- 红帽系（Fedora, rhel, rocky）
 
 ```bash
 sudo dnf install g++ -y

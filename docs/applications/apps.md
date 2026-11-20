@@ -5,13 +5,13 @@
 或者，您也可以通过发行版自带应用商店或第三方应用商店（如[星火应用商店](https://www.spark-app.store/)）进行下载。
 
 ## 软件包选择
-  - Debian 系: Debian, Mint, Ubuntu, Kubuntu等: `deb`
-  - 红帽系: Fedora, RHEL, Rocky等: `rpm`
-  - Arch 系: 通常不需要用包(`pacman`)安装
+  - Debian 系：Debian, Mint, Ubuntu, Kubuntu等：`deb`
+  - 红帽系：Fedora, RHEL, Rocky等：`rpm`
+  - Arch 系：通常不需要用包（`pacman`）安装
 
 大部分桌面环境支持双击安装包进行安装。您也可以按照使用以下的包管理器。
 
-## Apt (Debian系)
+## Apt（Debian系）
 
 全称：Advanced Packaging Tool
 
@@ -37,7 +37,7 @@ apt有多种变体，如apt-get、aptitude（用于缓解依赖地狱）等。
 
 更详细可以参考[Runoob的教程](https://www.runoob.com/linux/linux-comm-apt.html)。
 
-## Dnf (红帽系)
+## Dnf（红帽系）
 
 全称：Dandified Yum
 
@@ -45,7 +45,7 @@ apt有多种变体，如apt-get、aptitude（用于缓解依赖地狱）等。
 
 dnf是大部分红帽系的软件包管理器，在rpm的基础上创建。
 
-与先前的yum相比，dnf具有性能高，速度快的特点。
+与先前的yum相比，dnf具有性能高、速度快的特点。
 
 以下是一些较为常见的dnf指令。
 
@@ -66,7 +66,7 @@ dnf是大部分红帽系的软件包管理器，在rpm的基础上创建。
 
 更详细可以参考[Runoob的教程](https://www.runoob.com/linux/linux-comm-dnf.html)。
 
-## Pacman (Arch系)
+## Pacman（Arch系）
 
 全称：Package Manager
 
@@ -75,10 +75,10 @@ dnf是大部分红帽系的软件包管理器，在rpm的基础上创建。
 pacman是大部分Arch系的软件包管理器。
 
 !!! warning "警告"
-    Arch 严禁“部分升级”（Partial Upgrade）。请勿在未同步升级全系统的情况下单独安装或更新某个软件，否则极易导致系统依赖断裂造成所谓的 **“滚挂”** ！此外，推荐配置 **AUR (Arch User Repository)** 并配合 yay 或 paru 等助手使用，可以提升使用体验。
+    Arch 严禁“部分升级”（Partial Upgrade）。请勿在未同步升级全系统的情况下单独安装或更新某个软件，否则极易导致系统依赖断裂造成所谓的 **“滚挂”**！此外，推荐配置 **AUR (Arch User Repository)** 并配合 yay 或 paru 等助手使用，可以提升使用体验。
 
 ???+ note "多选题"
-    在安装软件时，您可能见到类似如下的选项:
+    在安装软件时，您可能见到类似如下的选项：
     ```
     :: There are 2 providers available for jack:
     :: Repository extra
@@ -95,7 +95,7 @@ pacman是大部分Arch系的软件包管理器。
     以上列表无法覆盖所有选项，若遇到未列出的情况，您可以寻求AI的帮助。
 
 ???+ note "软件组"
-    在安装软件组时，遇到这样的情况，我们建议您直接回车:
+    在安装软件组时，遇到这样的情况，我们建议您直接回车：
     ```
     :: There are 58 members in group gnome:
     :: Repository extra
@@ -117,7 +117,7 @@ pacman是大部分Arch系的软件包管理器。
 4. `sudo pacman -Scc` 清空包缓存
 
 ???+ question "-S, -Syu，这些都是什么意思？"
-    在Pacman中，`-S`（Sync，同步）、`-R`（Remove，移除）这些代表的是选项(Options)，可以看作“主操作模式”，而不同的选项后可能会存在不同的“辅助开关”。例如，`-S`的变体`-Syu`或`-S -y -u`中，`-y`代表Refresh（刷新），`-u`代表Sysupgrade（更新所有包），意为：刷新软件源并更新所有包。而在`-R`的变体`-Rus`中 ，`-u`代表的就是Unneeded（跳过仍然被其他包所依赖的软件包），`-s`代表Recursive（递归删除目标包与依赖），意为：递归删除目标包与依赖，并忽略那些被其他软件依赖的包。
+    在Pacman中，`-S`（Sync，同步）、`-R`（Remove，移除）这些代表的是选项（Options），可以看作“主操作模式”，而不同的选项后可能会存在不同的“辅助开关”。例如，`-S`的变体`-Syu`或`-S -y -u`中，`-y`代表Refresh（刷新），`-u`代表Sysupgrade（更新所有包），意为：刷新软件源并更新所有包。而在`-R`的变体`-Rus`中，`-u`代表的就是Unneeded（跳过仍然被其他包所依赖的软件包），`-s`代表Recursive（递归删除目标包与依赖），意为：递归删除目标包与依赖，并忽略那些被其他软件依赖的包。
     
     并且，部分“辅助开关”被重复时会有不同作用，例如`-Syyuu`，此处的`-yy`表示强制刷新软件源，`-uu`表示在更新的同时允许降级。
 
@@ -131,9 +131,9 @@ pacman是大部分Arch系的软件包管理器。
 
 更详细可以参考[Linux命令手册](https://www.linux-man.cn/linux/command/pacman/)。
 
-### AUR 助手 (Arch)
+### AUR 助手（Arch）
 
-AUR (Arch User Repository)是当今Linux软件包数目第二多的软件仓库，具有丰富多样的应用可供安装，包括但不限于QQ、微信、达芬奇等。
+AUR（Arch User Repository）是当今Linux软件包数目第二多的软件仓库，具有丰富多样的应用可供安装，包括但不限于QQ、微信、达芬奇等。
 
 要使用AUR，您需要安装AUR助手，目前有`yay`与`paru`可供选择。不过请注意，两者并不直接存在与Arch Linux官方软件仓库中，我们建议您首先添加Arch Linux CN软件仓库，之后用`pacman`安装任意一个。或者，您也可以参照Arch Wiki的教程：[Yay](https://wiki.archlinuxcn.org/zh-cn/Yay)
 

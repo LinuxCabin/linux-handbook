@@ -20,7 +20,7 @@
 
 - ... ...
 
-Linux 是自由的，任何布局只要有 ``/`` 的挂载点都行得通。但是一些软件期望标准化的布局，比如 Timeshift。如果打算使用 Timeshift 进行备份，只能选择第一种（``@home``,``@``）。
+Linux 是自由的，任何布局只要有 ``/`` 的挂载点都行得通。但是一些软件期望标准化的布局，比如 Timeshift。如果打算使用 Timeshift 进行备份，只能选择第一种（``@home``、``@``）。
 除此之外，可能还需要单独的 swap 分区和 EFI 分区（如果使用 UEFI）。
 
 ???+ tip "如果打算安装双系统"
@@ -31,7 +31,7 @@ Linux 是自由的，任何布局只要有 ``/`` 的挂载点都行得通。但�
 ## Debian
 
 由于 Debian 安装器不支持 Btrfs 子卷，需要在安装途中做点小手脚。
-在 高级设置 ``Advanced options`` 里选择 专家安装 ``Expert install`` 。
+在 高级设置 ``Advanced options`` 里选择 专家安装 ``Expert install``。
 
 ### 分区
 #### 使用安装器的自动分区
@@ -39,7 +39,7 @@ Linux 是自由的，任何布局只要有 ``/`` 的挂载点都行得通。但�
 !!! warning "警告"
     备份所有重要资料再继续。此部分的误操作可能导致数据损失。
 
-像往常一样安装 Debian, 直到 磁盘分区 ``Partition disks`` , 选择 向导 - 使用最大的未分配空间 ``Guided - use the largest continuous free space`` 或 向导 - 使用整个磁盘 ``Guided - use entire disk`` ，再选择 所有文件在同一分区 ``All files in one partition`` 。
+像往常一样安装 Debian，直到 磁盘分区 ``Partition disks``，选择 向导 - 使用最大的未分配空间 ``Guided - use the largest continuous free space`` 或 向导 - 使用整个磁盘 ``Guided - use entire disk``，再选择 所有文件在同一分区 ``All files in one partition``。
 
 选中格式为 ext4，挂载点为 / 的分区，将文件系统改为 btrfs。
 
@@ -49,10 +49,10 @@ Linux 是自由的，任何布局只要有 ``/`` 的挂载点都行得通。但�
 !!! warning "警告"
     备份所有重要资料再继续。此部分的误操作可能导致数据损失。
 
-像往常一样安装 Debian，直到 磁盘分区 ``Partition disks`` ，选择 手动 ``Manual`` 。
+像往常一样安装 Debian，直到 磁盘分区 ``Partition disks``，选择 手动 ``Manual``。
 
 
-##### 如果使用 BIOS：
+##### 如果使用 BIOS
 
 我们需要一个 Btrfs 分区挂载至 ``/`` 和可选的 swap 分区。
 
@@ -66,20 +66,20 @@ Linux 是自由的，任何布局只要有 ``/`` 的挂载点都行得通。但�
 
 <!-- 这部分应该在别的地方介绍。
 
-- （可选）如果想要使用整个硬盘，选中硬盘名后回车，选择 ``msdos`` 。
+- （可选）如果想要使用整个硬盘，选中硬盘名后回车，选择 ``msdos``。
 
-- （可选）选中未分配空间，选择创建新分区 ``Create a new partition`` ，分区大小 512MB 到 1GB ，类型 主分区 ``Primary`` ，位置 头部 ``Beginning`` ，文件系统 Ext4，挂载点 ``Mount point``  /boot。
+- （可选）选中未分配空间，选择创建新分区 ``Create a new partition``，分区大小 512MB 到 1GB，类型 主分区 ``Primary``，位置 头部 ``Beginning``，文件系统 Ext4，挂载点 ``Mount point``  /boot。
 
-- （可选）继续选中未分配空间，选择创建新分区，分区大小为稍大于内存容量，类型 逻辑分区 ``Logical`` ，位置 尾部 ``End`` ，文件系统 swap area。
+- （可选）继续选中未分配空间，选择创建新分区，分区大小为稍大于内存容量，类型 逻辑分区 ``Logical``，位置 尾部 ``End``，文件系统 swap area。
 
-- 继续选中未分配空间，选择创建新分区，大小按自动提示或 max，类型 逻辑分区，文件系统 btrfs，挂载点 / 。
+- 继续选中未分配空间，选择创建新分区，大小按自动提示或 max，类型 逻辑分区，文件系统 btrfs，挂载点 /。
 
 - 看起来不错就结束分区并写入磁盘吧 ``Finish partitioning and write changes to disk`` 
 - 
 -->
 
 
-##### 如果使用 UEFI：
+##### 如果使用 UEFI
 
 我们需要一个 FAT 格式的 ``/boot/efi`` 分区充当 EFI 分区，一个 Btrfs 分区挂载至 ``/`` 和可选的 swap 分区。
 
@@ -127,7 +127,7 @@ Linux 是自由的，任何布局只要有 ``/`` 的挂载点都行得通。但�
 /dev/sda6 on /mnt/btrfs type btrfs ( ... subvol=/)
 ```
 
-现在开始创建子卷，以仅单独 ``@home`` 布局为例。为了保持兼容性以使用 Timeshift 等工具，我们将默认的 ``@rootfs`` 子卷移动到 ``@`` 。
+现在开始创建子卷，以仅单独 ``@home`` 布局为例。为了保持兼容性以使用 Timeshift 等工具，我们将默认的 ``@rootfs`` 子卷移动到 ``@``。
 
 ???+ note "有关在根目录上挂载的子卷的名字"
      Debian 默认使用 ``subvol=/@rootfs`` 作为根目录使用的子卷，而大多数主流发行版倾向使用 ``subvol=/@``。如果使用 Ubuntu 等发行版并正按照本指南操作，不需要移动子卷。
@@ -148,7 +148,7 @@ Create subvolume './@home'
 @        @home
 ```
 
-子卷创建好后，我们将母卷卸载并把文件系统挂载回 ``/target`` 下 。如果有 EFI 分区，别忘了挂载它（ ``/boot/efi`` ）。
+子卷创建好后，我们将母卷卸载并把文件系统挂载回 ``/target`` 下。如果有 EFI 分区，别忘了挂载它（``/boot/efi``）。
 
 ??? info "有关压缩"
     如果想设置压缩，应该现在设置。
@@ -185,11 +185,11 @@ Create subvolume './@home'
     ```
 
 ??? tip "如果不会使用nano..."
-     Ctrl + \ 调出替换菜单，输入 ``@rootfs`` ，回车，替换为 ``@`` ，回车。
+     Ctrl + \ 调出替换菜单，输入 ``@rootfs``，回车，替换为 ``@``，回车。
      把光标留在那一行，Ctrl + K 剪切一整行，再按 Ctrl + U 原封不动粘贴回去，每按一次 Ctrl + U 都能得到一整行复制的条例。
      Ctrl + O 保存，Ctrl + X 退出。
 
-编辑 ``<mount point>`` 挂载点， ``<options>`` 挂载参数。
+编辑 ``<mount point>`` 挂载点、``<options>`` 挂载参数。
 
 ```text
 ...
@@ -221,7 +221,7 @@ cfdisk /dev/sda
 !!! warning "警告"
     备份所有重要资料。误操作可能导致数据损失。
 
-#### 如果使用BIOS：
+#### 如果使用BIOS
 
 ```text
   sda （硬盘，可能是hdX，sdX，nvmeXnY...）
@@ -231,7 +231,7 @@ cfdisk /dev/sda
    └─ ...
 ```
 
-#### 如果使用UEFI：
+#### 如果使用UEFI
 
 ```text
   sda （硬盘，可能是hdX，sdX，nvmeXnY...）
@@ -327,4 +327,4 @@ ArchWiki - Installation guide
 
 
 
-<!-- TODO: ## 列表里没有我的发行版，怎么办？ -->
+<!-- TODO: ## 列表里没有我的发行版，怎么办？-->

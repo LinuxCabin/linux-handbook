@@ -27,7 +27,7 @@ rEFInd是作为已停止维护的rEFIt项目的分支而诞生，最初旨在解
 
 ### 安装
 
-您需要通过您的包管理器安装`refind` (Debian/Arch) / `rEFInd` (Fedora，注意大小写)。
+您需要通过您的包管理器安装`refind`（Debian/Arch）/ `rEFInd`（Fedora，注意大小写）。
 
 在安装软件包之后，您需要运行`sudo refind-install`来将其安装到ESP。
 

@@ -11,7 +11,7 @@ Matrix具有[多个客户端](https://matrix.org/ecosystem/clients/)（国内无
 - [Element](https://element.io/): 与Matrix联系紧密，使用广泛，但速度较慢。
 
 ???+ note "Element已知问题"
-    在GNOME桌面上，Element的Flatpak版本在启动时可能会出现Keyring问题，您可以参照[该Issue](https://github.com/flathub/im.riot.Riot/issues/528)，在Flatseal中找到Element，并在Session Bus-调用中添加:
+    在GNOME桌面上，Element的Flatpak版本在启动时可能会出现Keyring问题，您可以参照[该Issue](https://github.com/flathub/im.riot.Riot/issues/528)，在Flatseal中找到Element，并在Session Bus-调用中添加：
     - GNOME: `org.freedesktop.secrets`
     - KDE: `org.kde.kwalletd6`
 

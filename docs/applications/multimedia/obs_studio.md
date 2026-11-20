@@ -42,7 +42,7 @@ sudo snap install obs-studio
 ## 配置
 
 ### 录制屏幕
-在 **来源** 中，点击 **+** 号，选择 **屏幕采集(Pipewire)** ，点击 **OK** 。
+在 **来源** 中，点击 **+** 号，选择 **屏幕采集（Pipewire）**，点击 **OK**。
 
 ???+ info "如果收到了弹窗..."
      桌面管理器可能会问您诸如 “是否允许该应用录制屏幕” 的问题，选择允许。这是安全的，只有 OBS Studio 能看见屏幕上的内容。
@@ -50,7 +50,7 @@ sudo snap install obs-studio
 现在您应该可以在新弹出的窗口上看到目前屏幕的内容，再点击一次 **OK** 来保存设定。
 
 ### 视频质量
-OBS Studio 默认输出 1080p ，（视您的硬件）最高 6000 kbps 的视频。
+OBS Studio 默认输出 1080p，（视您的硬件）最高 6000 kbps 的视频。
 
 #### 更改输出分辨率
 若要更改输出分辨率，点击右下角的 **设置**，在设置的左侧栏目中点击 **视频**，将右侧的 **输出分辨率** 改为想要的值，点击右下角的 **完成**。
@@ -66,28 +66,28 @@ OBS Studio 默认输出 1080p ，（视您的硬件）最高 6000 kbps 的视频
 
 ## 使用
 
-点击 **开始录制** 或 **开始直播** ，在完成后点击** 停止录制** 或 **停止直播** 。
+点击 **开始录制** 或 **开始直播**，在完成后点击** 停止录制** 或 **停止直播**。
 
 如想暂停录制，点击 **停止录制** *旁边* 的暂停键以暂停。再点一下以继续录制，或点击** 停止录制** 来结束。
 
 ## 高级
 
-### 硬件加速 ( AMD / Intel )
+### 硬件加速（AMD / Intel）
 
 如果 OBS Studio 使用 Flatpak 或 Snap 安装，不用任何操作，依赖已经被管理好了。
 
-如果 OBS Studio 使用传统包管理器安装，安装 ``ffmpeg`` 。
+如果 OBS Studio 使用传统包管理器安装，安装 ``ffmpeg``。
 
-- Debian 系： `sudo apt install ffmpeg`
-- RedHat 系： `sudo yum install ffmpeg`
-- Arch 系：   `sudo pacman -S ffmpeg`
+- Debian 系：`sudo apt install ffmpeg`
+- RedHat 系：`sudo yum install ffmpeg`
+- Arch 系：`sudo pacman -S ffmpeg`
 
 您可能需要重启电脑。
 
 ??? question "可是我看不到硬件加速的选项？"
-     把输出模式改成 **高级** ，在 **直播** 和 **录像** 的视频编码器里选择 **"FFmpeg VAAPI"** 开头的选项。
+     把输出模式改成 **高级**，在 **直播** 和 **录像** 的视频编码器里选择 **"FFmpeg VAAPI"** 开头的选项。
 
-### 硬件加速 ( Nvidia )
+### 硬件加速（Nvidia）
 
 !!! quote "所以 Nvidia ..."
     **So Nvidia, fuck you.**  
@@ -101,18 +101,18 @@ OBS Studio 默认输出 1080p ，（视您的硬件）最高 6000 kbps 的视频
 
 ##### 传统包管理器
 
-如果 OBS Studio 使用传统包管理器安装，安装 ``ffmpeg`` 。
+如果 OBS Studio 使用传统包管理器安装，安装 ``ffmpeg``。
 
-- Debian 系： `sudo apt install ffmpeg`
-- RedHat 系： `sudo yum install ffmpeg`
-- Arch 系：   `sudo pacman -S ffmpeg`
+- Debian 系：`sudo apt install ffmpeg`
+- RedHat 系：`sudo yum install ffmpeg`
+- Arch 系：`sudo pacman -S ffmpeg`
 
 您可能需要重启电脑。
 
 VA-API, VDPAU 和 高性能的 NVDEC, NVENC 都可用。
 
 ??? warning "如果您的 Nvidia 显卡较旧..."
-    我们了解到一些发行版中最新的 FFmpeg 基于新版本的 NVENC API 头文件构建，如果你使用 **帕斯卡架构**（ Geforce **10系** ）及更老的 Nvidia 显卡，发现无法使用 NVENC，您可能需要降级 FFmpeg。  
+    我们了解到一些发行版中最新的 FFmpeg 基于新版本的 NVENC API 头文件构建，如果你使用 **帕斯卡架构**（Geforce **10系**）及更老的 Nvidia 显卡，发现无法使用 NVENC，您可能需要降级 FFmpeg。
     如果电脑上有使用 FFmpeg 的其他软件，它们可能也需要跟着一起降级。通常您的包管理器会提醒您所有要降级的软件。
 
     [*专有软件常常是恶意软件*](https://www.gnu.org/proprietary/proprietary.html)*。*
@@ -126,11 +126,11 @@ flatpak install org.freedesktop.Platform.VAAPI.nvidia
 
 现在只有 VA-API 和 VDPAU 可用。要使用 NVDEC 和 NVENC，[安装 CUDA 工具包](https://docs.nvidia.com/cuda/cuda-installation-guide-linux/)。
 
-<!-- 不写了。我成功跑起来了但是太复杂了，写下来绝对撞j4w: vaapi又不是不能用。 -->
+<!-- 不写了。我成功跑起来了但是太复杂了，写下来绝对撞j4w: vaapi又不是不能用。-->
 
 #### nouveau
 
-从 GeForce 8系（ 8600 GT, 8800 GTX 等）到 **开普勒架构**的 GeForce 7系（ GTX 760, GTX 780 等，**GTX 750 和 GTX 750 Ti 不包括在内**），nouveau 支持 VA-API 和 VDPAU 加速。
+从 GeForce 8系（8600 GT, 8800 GTX 等）到 **开普勒架构**的 GeForce 7系（GTX 760, GTX 780 等，**GTX 750 和 GTX 750 Ti 不包括在内**），nouveau 支持 VA-API 和 VDPAU 加速。
 
 还需要安装 [从Nvidia驱动中提取的固件](https://nouveau.freedesktop.org/VideoAcceleration.html#firmware)。
 
@@ -139,14 +139,14 @@ flatpak install org.freedesktop.Platform.VAAPI.nvidia
 
 ???- info "安装过程..."
     ##### 安装 mesa 驱动
-    - Debian 系： `sudo apt install mesa-va-drivers`  
-    - RedHat 系： `sudo yum install mesa-va-drivers`  
-    - Arch 系： `sudo pacman -S mesa`  
-    - Gentoo Linux： `USE=vaapi sudo -E emerge media-libs/mesa`
+    - Debian 系：`sudo apt install mesa-va-drivers`  
+    - RedHat 系：`sudo yum install mesa-va-drivers`  
+    - Arch 系：`sudo pacman -S mesa`  
+    - Gentoo Linux：`USE=vaapi sudo -E emerge media-libs/mesa`
 
     ##### 安装固件
-    - Arch 系： `git clone --depth 1 https://aur.archlinux.org/nouveau-fw.git && cd nouveau-fw && makepkg -si`  
-    - Gentoo Linux： `sudo emerge sys-firmware/nvidia-firmware`  
+    - Arch 系：`git clone --depth 1 https://aur.archlinux.org/nouveau-fw.git && cd nouveau-fw && makepkg -si`  
+    - Gentoo Linux：`sudo emerge sys-firmware/nvidia-firmware`  
     - 其他发行版：
         ```bash
         mkdir /tmp/nouveau
@@ -160,10 +160,10 @@ flatpak install org.freedesktop.Platform.VAAPI.nvidia
         ```
 
     ##### 安装 FFmpeg
-    - Debian 系： `sudo apt install ffmpeg`  
-    - RedHat 系： `sudo yum install ffmpeg`  
-    - Arch 系： `sudo pacman -S ffmpeg`  
-    - Gentoo Linux： `USE=vaapi sudo -E emerge media-video/ffmpeg`
+    - Debian 系：`sudo apt install ffmpeg`  
+    - RedHat 系：`sudo yum install ffmpeg`  
+    - Arch 系：`sudo pacman -S ffmpeg`  
+    - Gentoo Linux：`USE=vaapi sudo -E emerge media-video/ffmpeg`
 
     *如果您使用 Flatpak 安装 OBS Studio，第三步 **安装 FFmpeg** 可以跳过。*
 
@@ -175,7 +175,7 @@ flatpak install org.freedesktop.Platform.VAAPI.nvidia
 
 #### Flatpak
 
-如果 OBS Studio 使用 Flatpak 安装，安装 ``com.obsproject.Studio.Plugin.WaylandHotkeys`` 。
+如果 OBS Studio 使用 Flatpak 安装，安装 ``com.obsproject.Studio.Plugin.WaylandHotkeys``。
 
 ```bash
 flatpak install com.obsproject.Studio.Plugin.WaylandHotkeys
@@ -218,7 +218,7 @@ sudo dnf install obs-studio-plugin-wayland-hotkeys
     ###### 安装编译时依赖
     - Debian
     
-        - 安装 `cmake`, `libobs-dev`, `qt6-base-dev`, `qt6-base-private-dev`, `qt6-svg-dev`, `qt6-wayland-dev`。
+        - 安装 `cmake`、`libobs-dev`、`qt6-base-dev`、`qt6-base-private-dev`、`qt6-svg-dev`、`qt6-wayland-dev`。
         ```bash
         sudo apt install cmake libobs-dev qt6-base-dev qt6-base-private-dev qt6-svg-dev qt6-wayland-dev
         ```
@@ -248,21 +248,21 @@ sudo dnf install obs-studio-plugin-wayland-hotkeys
 !!! info "注意"
     OBS 内置的快捷键设置没有效果，应该去系统设置里更改快捷键。
 
-???+ note "添加，更改，移除快捷键"
+???+ note "添加、更改、移除快捷键"
      **GNOME**
 
-     打开系统设置，导航至 **应用程序** - **OBS Studio** ，点击 **全局快捷键** 。
+     打开系统设置，导航至 **应用程序** - **OBS Studio**，点击 **全局快捷键**。
 
      **KDE Plasma**
 
-     打开系统设置，导航至 **键盘** - **快捷键**，在列表里选择 **OBS Studio** 。
+     打开系统设置，导航至 **键盘** - **快捷键**，在列表里选择 **OBS Studio**。
 
 
 ## 关于更多
 
-- [官方网站](https://obsproject.com/)： `https://obsproject.com/`
-- [官方文档](https://docs.obsproject.com/)： `https://docs.obsproject.com/`
+- [官方网站](https://obsproject.com/)：`https://obsproject.com/`
+- [官方文档](https://docs.obsproject.com/)：`https://docs.obsproject.com/`
 - 社区文档：
-    - [OBS Studio 完全新手指南](https://www.obs.com.cn/post/140.html)： `https://www.obs.com.cn/post/140.html`    ***这不是官网！OBS Studio 没有“中文官网”！**
+    - [OBS Studio 完全新手指南](https://www.obs.com.cn/post/140.html)：`https://www.obs.com.cn/post/140.html`    ***这不是官网！OBS Studio 没有“中文官网”！**
 - Nvidia：
-    - [Linux CUDA 安装教程](https://docs.nvidia.com/cuda/cuda-installation-guide-linux/)： `https://docs.nvidia.com/cuda/cuda-installation-guide-linux/`
+    - [Linux CUDA 安装教程](https://docs.nvidia.com/cuda/cuda-installation-guide-linux/)：`https://docs.nvidia.com/cuda/cuda-installation-guide-linux/`

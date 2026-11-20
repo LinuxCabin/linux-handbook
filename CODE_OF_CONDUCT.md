@@ -7,8 +7,8 @@
 
 ## 内容
 
-1. 项目尽量遵循J4W原则，即Just for Work，指文档应在必须的，无法避免的，影响日常的且新手需要的，可以理解的方面撰写。对于能够显著改善使用体验的内容，我们欢迎贡献。
-2. 对于常见问题，不得纳入冷门、小众的内容（如某机型特定驱动修复、CLOVER引导配置等），一切问题必须是常见的，广泛的，可复现的。
+1. 项目尽量遵循J4W原则，即Just for Work，指文档应在必须的、无法避免的、影响日常的且新手需要的、可以理解的方面撰写。对于能够显著改善使用体验的内容，我们欢迎贡献。
+2. 对于常见问题，不得纳入冷门、小众的内容（如某机型特定驱动修复、CLOVER引导配置等），一切问题必须是常见的、广泛的、可复现的。
 3. 对于教程，不得出现不常见的或不相关的内容（如C++编译、Synapse搭建方法）。
 4. 对于概念，不得过度涉及系统底层（如PAM、管道）。非必要尽量少地添加新概念。
 5. 尽可能采用简单的语言阐释，如类比等。
@@ -22,6 +22,6 @@
 1. 已经有Template的栏目请严格遵照模板，无模板栏目请参考先前已有文章文体格式。
 2. 对于包名、指令名、单行代码请使用行内代码；对于多行代码，请使用块级代码。已采用块级代码的多行代码无须修改。
 3. 所有内链禁止使用硬编码，请链接到相应.md文件。
-4. 合理使用Admonitions ([MkDocs](https://squidfunk.github.io/mkdocs-material/reference/admonitions/)或[VitePress](https://vitepress-theme-default-plus.lando.dev/markdown/admonitions.html))。
+4. 合理使用Admonitions（[MkDocs](https://squidfunk.github.io/mkdocs-material/reference/admonitions/)或[VitePress](https://vitepress-theme-default-plus.lando.dev/markdown/admonitions.html)）。
 5. 提交前请务必检查内容能否正常渲染与展示。
 

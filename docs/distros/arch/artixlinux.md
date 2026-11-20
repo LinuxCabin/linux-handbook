@@ -22,13 +22,13 @@ Artix Linux 是一个基于 Arch Linux 的独立硬核发行版。它最大的�
  - 自动换源：是
  - 图形安装界面：是
  - 换源教程：
-    - TUNA: 无，镜像地址: https://mirrors.tuna.tsinghua.edu.cn/artixlinux/
+    - TUNA: 无，镜像地址：https://mirrors.tuna.tsinghua.edu.cn/artixlinux/
     - USTC: 无
-    - MirrorZ: 无，镜像地址: https://mirrors.cernet.edu.cn/artixlinux/
+    - MirrorZ: 无，镜像地址：https://mirrors.cernet.edu.cn/artixlinux/
 
 ## 风味
 
-### 初始化系统分类 (Init Editions)
+### 初始化系统分类（Init Editions）
 
  - OpenRC: 使用 Gentoo Linux 开发的 OpenRC 作为初始化系统，在 Artix 中最为稳健和流行。
  - runit: 使用 Void Linux 核心的 runit，启动速度极快，服务配置极其简单明了。

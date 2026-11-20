@@ -12,7 +12,7 @@
 
 ## 安装
 
-- Debian系: `sudo apt install gimp`
-- 红帽系: `sudo dnf install gimp`
-- Arch系: `sudo pacman -S gimp`
-- [Flatpak版本](https://flathub.org/zh-Hans/apps/org.gimp.GIMP): `sudo flatpak install org.gimp.GIMP`
+- Debian系：`sudo apt install gimp`
+- 红帽系：`sudo dnf install gimp`
+- Arch系：`sudo pacman -S gimp`
+- [Flatpak版本](https://flathub.org/zh-Hans/apps/org.gimp.GIMP)：`sudo flatpak install org.gimp.GIMP`

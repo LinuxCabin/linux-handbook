@@ -16,7 +16,7 @@ Deepin（深度操作系统）是一款源自中国、享誉全球的Linux发行
  - 支持的系统架构：x86_64/arm64/Loong64/RISC-V等
  - 自由软件：是（部分自由）（Deepin）/ 否（统信UOS）
  - 镜像下载地址：
-    - 官网: https://www.deepin.org/zh/download/ / https://www.chinauos.com/resource/download-professional
+    - 官网：https://www.deepin.org/zh/download/ / https://www.chinauos.com/resource/download-professional
     - TUNA: https://mirrors.tuna.tsinghua.edu.cn/deepin-cd/
     - USTC: https://mirrors.ustc.edu.cn/deepin-cd/
     - MirrorZ: https://mirrors.cernet.edu.cn/deepin-cd/
@@ -25,7 +25,7 @@ Deepin（深度操作系统）是一款源自中国、享誉全球的Linux发行
  - 自动换源：半自动
  - 图形安装界面：是
  - 换源教程：
-    - 官网: https://www.deepin.org.cn/index/docs/wiki/05_操作指南/08_镜像加速/软件源替换教程.md
+    - 官网：https://www.deepin.org.cn/index/docs/wiki/05_操作指南/08_镜像加速/软件源替换教程.md
     - TUNA: 无
     - USTC: 无
     - MirrorZ: 无

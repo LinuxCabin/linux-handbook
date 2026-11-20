@@ -4,7 +4,7 @@
 
 虚拟机（Virtual Machine）指一种特殊的软件，可以在计算机系统中建立一种环境，用户可以基于虚拟机这个软件所建立的特殊环境来运行其它软件。虚拟机通过系统的软件模拟功能具有完整硬件系统功能。
 
-简单来说，就是运行在一个完全隔离环境中的完整计算机系统，能提供物理计算机的功能。 
+简单来说，就是运行在一个完全隔离环境中的完整计算机系统，能提供物理计算机的功能。
 
 在Linux中，你可能要使用一些wine无法兼容的Windows独占软件，但当你无法放弃或者没有平替时，又该如何使用？此时，虚拟机便是最好的解决方案。
 
@@ -39,11 +39,11 @@ sudo pacman -S qemu-full  #或 qemu-base，qemu-desktop
 ```
 
 !!! warning "注意事项"
-    Debian系： `qemu-system` 包含系统级模拟， `qemu-utils` 包含 `qemu-img` 等磁盘管理工具。若需完整模拟器支持，可安装 `qemu-system-*` 。
+    Debian系：`qemu-system` 包含系统级模拟，`qemu-utils` 包含 `qemu-img` 等磁盘管理工具。若需完整模拟器支持，可安装 `qemu-system-*`。
 
     红帽系：也可通过安装 `@virtualization` 来一次性安装QEMU、KVM及管理工具。
 
-    Arch系： `qemu-full` 是功能最全的包， `qemu-base` 是不含GUI的精简版； `qemu-desktop` 默认只包含x86_64模拟。
+    Arch系：`qemu-full` 是功能最全的包，`qemu-base` 是不含GUI的精简版；`qemu-desktop` 默认只包含x86_64模拟。
 
 ### 使用（CLI）
 
@@ -138,7 +138,7 @@ VirtualBox 使用*树外*内核模组来完成虚拟化。为了编译 VirtualBo
 
     要安装 VirtualBox，先启用 Debian Backports 源和 Debian Fast Track 源。
 
-    用喜欢的文本编辑器创建并编辑 `/etc/apt/sources.list.d/debian-backports.sources` 文件，这里示例 GNU nano 。
+    用喜欢的文本编辑器创建并编辑 `/etc/apt/sources.list.d/debian-backports.sources` 文件，这里示例 GNU nano。
 
     ```bash
     sudo nano /etc/apt/sources.list.d/debian-backports.sources
@@ -166,7 +166,7 @@ VirtualBox 使用*树外*内核模组来完成虚拟化。为了编译 VirtualBo
       Signed-By: /usr/share/keyrings/debian-archive-keyring.gpg
       ```
 
-    再创建并编辑 `/etc/apt/sources.list.d/fasttrack.sources` 文件，这里示例 GNU nano 。
+    再创建并编辑 `/etc/apt/sources.list.d/fasttrack.sources` 文件，这里示例 GNU nano。
 
     ```bash
     sudo nano /etc/apt/sources.list.d/fasttrack.sources
@@ -197,7 +197,7 @@ VirtualBox 使用*树外*内核模组来完成虚拟化。为了编译 VirtualBo
     sudo apt install fasttrack-archive-keyring
     ```
 
-    最后，安装 VirtualBox 。
+    最后，安装 VirtualBox。
     ```bash
     sudo apt update
     sudo apt install virtualbox

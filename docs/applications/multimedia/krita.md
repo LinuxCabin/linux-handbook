@@ -4,7 +4,7 @@
 
 ## 安装
 
-- Debian系: `sudo apt install krita`
-- 红帽系: `sudo dnf install krita`
-- Arch系: `sudo pacman -S krita`
-- [Flatpak版本](https://flathub.org/zh-Hans/apps/org.kde.krita): `sudo flatpak install org.kde.krita`
+- Debian系：`sudo apt install krita`
+- 红帽系：`sudo dnf install krita`
+- Arch系：`sudo pacman -S krita`
+- [Flatpak版本](https://flathub.org/zh-Hans/apps/org.kde.krita)：`sudo flatpak install org.kde.krita`

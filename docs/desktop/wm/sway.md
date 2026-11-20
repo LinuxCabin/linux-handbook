@@ -1,6 +1,6 @@
 # Sway
 
-**Sway的配置文件在`/etc/sway`下,其名称为`config`,应复制到`~/.config/sway`下**。
+**Sway的配置文件在`/etc/sway`下，其名称为`config`，应复制到`~/.config/sway`下**。
 
 ![sway](https://swaywm.org/logo.png)
 
@@ -10,25 +10,25 @@
 
 [官方文档](https://github.com/swaywm/sway/wiki)
 
-**注意:如果您使用NVIDIA的闭源驱动,您无法使用Sway,Sway也不会添加关于NVIDIA的支持**
+**注意：如果您使用NVIDIA的闭源驱动，您无法使用Sway，Sway也不会添加关于NVIDIA的支持**
 
 ## 概述
 
-Sway是一个平铺窗口管理器,采用Wayland显示协议,采用[MIT许可证](https://github.com/swaywm/sway?tab=MIT-1-ov-file)发布,常被认为是i3的Wayland版本,[i3](https://hb.linuxcabin.top/desktop/wm/i3/)的配置文件几乎可以直接替代,具体可看官方文档,
+Sway是一个平铺窗口管理器，采用Wayland显示协议，采用[MIT许可证](https://github.com/swaywm/sway?tab=MIT-1-ov-file)发布，常被认为是i3的Wayland版本，[i3](https://hb.linuxcabin.top/desktop/wm/i3/)的配置文件几乎可以直接替代，具体可看官方文档。
 
 ## 安装
 
-- Debian系: `sudo apt install sway`
-- 红帽系: `sudo dnf install sway`
-- Arch系: `sudo pacman -S sway`
+- Debian系：`sudo apt install sway`
+- 红帽系：`sudo dnf install sway`
+- Arch系：`sudo pacman -S sway`
 
-## 使用(快捷键)
+## 使用（快捷键）
 
-**Sway的Mod键为Super键(及Win键,Alt左边的键),如果您不喜欢,您可以将配置文件开头的Mod4改为Mod1,可使Mod键变为Alt键**
+**Sway的Mod键为Super键（及Win键，Alt左边的键），如果您不喜欢，您可以将配置文件开头的Mod4改为Mod1，可使Mod键变为Alt键**
 
-- Mod+Return 打开终端(默认终端为Foot)
+- Mod+Return 打开终端（默认终端为Foot）
 - Mod+Shift+q 关闭窗口
-- Mod+d 打开一个启动器(默认为wmenu)
+- Mod+d 打开一个启动器（默认为wmenu）
 - Mod+Shift+c 重新加载配置文件
 - Mod+h/j/k/l 控制聚焦窗口
 - Mod+f 全屏窗口
@@ -42,7 +42,7 @@ Sway是一个平铺窗口管理器,采用Wayland显示协议,采用[MIT许可证
 
 `bindsym $mod+一个键 exec 软件名称`
 
-您可以使用以下语法配置壁纸(前提您安装了Swaybg,feh等在X11下常用的壁纸软件在Wayland无法使用)
+您可以使用以下语法配置壁纸（前提您安装了Swaybg、feh等在X11下常用的壁纸软件在Wayland无法使用）
 
 `output 显示器名称 bg 壁纸存放地址 stretch`
 

@@ -4,8 +4,8 @@
 
 Linux下的输入法框架主要有以下两种选择：
 
- - Fcitx (包名`fcitx5`, [Flathub (推荐)](https://flathub.org/zh-Hans/apps/org.fcitx.Fcitx5) ): 轻量，启动快，建议KDE、Sway、Hyprland等用户使用
- - IBus (包名`ibus`): 自定义功能有限，但与GNOME深度集成，建议GNOME用户使用
+ - Fcitx（包名`fcitx5`，[Flathub (推荐)](https://flathub.org/zh-Hans/apps/org.fcitx.Fcitx5)）：轻量，启动快，建议KDE、Sway、Hyprland等用户使用
+ - IBus（包名`ibus`）：自定义功能有限，但与GNOME深度集成，建议GNOME用户使用
 
 您可以通过您的包管理器安装这两种输入法框架之一。
 
@@ -106,19 +106,19 @@ IBus会自动与GNOME集成，所以GNOME用户无须进行额外操作。
 
 ## 中文输入引擎
 
-### 中文插件 (Fcitx 5)
+### 中文插件（Fcitx 5）
 
 如果您使用Fcitx 5，您**可以只安装中文插件**。其提供开箱即用的拼音输入法，对新手来说更加友好。
 
-要安装中文插件，请通过您的包管理安装 `fcitx5-chinese-addons` (Flatpak版本请使用 `flatpak` 安装 `org.fcitx.Fcitx5.Addon.ChineseAddons`)。
+要安装中文插件，请通过您的包管理安装 `fcitx5-chinese-addons`（Flatpak版本请使用 `flatpak` 安装 `org.fcitx.Fcitx5.Addon.ChineseAddons`）。
 
 安装之后，请打开Fcitx配置（右键托盘图标即可），并选中您需要的输入方案，点击“<”按钮将其添加到输入法列表中。
 
 ### Rime
 
-IBus默认的拼音输入不尽人意，并且其他输入框架也大多字库不全或过时。因此，如果您追求更加准确的输入方式，我们推荐您使用中州韵 (Rime)，其能够安装多种词库，并且有强大的输入引擎。
+IBus默认的拼音输入不尽人意，并且其他输入框架也大多字库不全或过时。因此，如果您追求更加准确的输入方式，我们推荐您使用中州韵（Rime），其能够安装多种词库，并且有强大的输入引擎。
 
-- 若您使用Fcitx，您需要安装 `fcitx5-rime` (Flatpak版本请使用 `flatpak` 安装 `org.fcitx.Fcitx5.Addon.Rime`)
+- 若您使用Fcitx，您需要安装 `fcitx5-rime`（Flatpak版本请使用 `flatpak` 安装 `org.fcitx.Fcitx5.Addon.Rime`）
 - 若您使用IBus，您需要安装 `ibus-rime`
 
 安装ibus-rime后，若您是GNOME桌面用户，请打开GNOME设置-键盘-输入源，添加`中文（Rime）`。若没有看到，请重启系统。如果您是Fcitx 5用户，请打开Fcitx配置（右键托盘图标即可），并选中“中州韵”，点击“<”按钮将其添加到输入法列表中。我们推荐您将其置于顶层，以使用Shift来方便切换中英文模式。

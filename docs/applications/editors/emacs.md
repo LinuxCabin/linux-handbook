@@ -4,7 +4,7 @@
 
 ## 概述
 
-GNU Emacs ，简称 Emacs ，是一个文本编辑器，采用 Emacs Lisp 作为配置语言。作为 Lisp 解释器，Emacs 功能强大 (包括但不限于发邮件，使用irc聊天，阅读新闻和RSS订阅，玩俄罗斯方块) 。
+GNU Emacs，简称 Emacs，是一个文本编辑器，采用 Emacs Lisp 作为配置语言。作为 Lisp 解释器，Emacs 功能强大（包括但不限于发邮件、使用irc聊天、阅读新闻和RSS订阅、玩俄罗斯方块）。
 
 Emacs 是[自由软件](https://www.gnu.org/philosophy/free-sw.html)，是 [GNU 操作系统](https://www.gnu.org/) 的一部分。
 Emacs 采用 [GPL-3.0](https://www.gnu.org/licenses/gpl-3.0) 协议发布。
@@ -42,18 +42,18 @@ flatpak install org.gnu.emacs
 ### 快捷键
 
 ???+ note "Emacs 风味的组合键描述"
-     - `C`-`...`： `C` 是 Ctrl
-     - `M`-`...`： `M` 是 Alt
-     - `s`-`...`： `s` 是 Super，或者在大多数键盘上，Windows
-     - `...`-`SPC`： `SPC` 是 space，空格
+     - `C`-`...`：`C` 是 Ctrl
+     - `M`-`...`：`M` 是 Alt
+     - `s`-`...`：`s` 是 Super，或者在大多数键盘上，Windows
+     - `...`-`SPC`：`SPC` 是 space，空格
 
-     最后一项是基础键，前面的全都是修饰键。 `C`-`c` 是 Ctrl + C； `M`-`c` 是 Alt + C； `C`-`M`-`c` 是 Ctrl + Alt + C ...
+     最后一项是基础键，前面的全都是修饰键。`C`-`c` 是 Ctrl + C；`M`-`c` 是 Alt + C；`C`-`M`-`c` 是 Ctrl + Alt + C ...
 
      **Shift去哪里了？
          没有 Shift！**在 Emacs 里我们用已经“被大写”的字符来代替 Shift。比如
      
-         - `M`-`<`： Alt + Shift + ,
-         - `M`-`,`： Alt + ,
+         - `M`-`<`：Alt + Shift + ,
+         - `M`-`,`：Alt + ,
 
 **文件**
 `C-x C-c` 退出Emacs  
@@ -68,7 +68,7 @@ flatpak install org.gnu.emacs
 `M-<`/`>` 移动到文件头或文件尾  
 `M-g g` 前往某行
 
-**删除，撤销**
+**删除、撤销**
 `C-k` 删除光标后面的所有文本
 `C-d` 向后删除
 `C-/` 或 `C-x u` 撤销操作
@@ -102,7 +102,7 @@ flatpak install org.gnu.emacs
 ### 简短教程
 
 ???+ note "注意"
-     这篇文章的标题不是《Emacs：从入门到精通》，本篇文章只介绍 Emacs 作为文本编辑器最基础的部分。如果读者想要一篇综合的，完整的教程，请参阅 [#关于更多](#_14)
+     这篇文章的标题不是《Emacs：从入门到精通》，本篇文章只介绍 Emacs 作为文本编辑器最基础的部分。如果读者想要一篇综合的、完整的教程，请参阅 [#关于更多](#_14)
 
 虽然非常强大，Emacs 出了名地难以学习。下面是一篇入门级教程，以对本文源代码的编辑为例来阐述 Emacs 的基础部分。
 
@@ -192,14 +192,14 @@ d e l e t e t h i s
 
 ##### 替换
 
-下面的 Emacs 有拼写错误，我们使用 `M`-`%` 查找并替换它。按下 `M`-`%` ，输入 ``Eamcs`` ，再输入 ``Emacs``  ，输入 ``y`` 确认替换。
+下面的 Emacs 有拼写错误，我们使用 `M`-`%` 查找并替换它。按下 `M`-`%`，输入 ``Eamcs``，再输入 ``Emacs``，输入 ``y`` 确认替换。
 
 ??? tip "如果不想逐个确认..."
-     Eamcs 有一个命令，叫 ``replace-string``，但是默认不绑定至任何键位。如果要运行它，我们先按 `M`-`x` ，再手动输入 `replace-string`。
+     Eamcs 有一个命令，叫 ``replace-string``，但是默认不绑定至任何键位。如果要运行它，我们先按 `M`-`x`，再手动输入 `replace-string`。
 
 #### 保存和退出
 
-我们已经做好了所有更改，是时候保存了。按下 `C`-`x` `C`-`s` ，Emacs 就会保存未更改的内容。
+我们已经做好了所有更改，是时候保存了。按下 `C`-`x` `C`-`s`，Emacs 就会保存未更改的内容。
 
 如果要退出 Emacs，按下 `C`-`x` `C`-`c`。
 
@@ -208,7 +208,7 @@ d e l e t e t h i s
 
 ##### 重置所有内容
 
-Emacs 的 ``revert-buffer`` 命令能删除所有没保存的内容，但是默认不绑定至任何键位。先按 `M`-`x` ，手动输入 ``revert-buffer`` 来执行它。
+Emacs 的 ``revert-buffer`` 命令能删除所有没保存的内容，但是默认不绑定至任何键位。先按 `M`-`x`，手动输入 ``revert-buffer`` 来执行它。
 
 ## 关于更多
 

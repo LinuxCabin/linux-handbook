@@ -4,9 +4,9 @@
 
 ## 安装
 
-- Debian系: `sudo apt install libreoffice`
-- 红帽系: `sudo dnf install libreoffice`
-- Arch系: 
+- Debian系：`sudo apt install libreoffice`
+- 红帽系：`sudo dnf install libreoffice`
+- Arch系：
     ```bash
     # 稳定版本
     sudo pacman -S libreoffice-still
@@ -14,4 +14,4 @@
     # 前沿版本
     sudo pacman -S libreoffice-fresh 
     ```
-- [Flatpak版本](https://flathub.org/zh-Hans/apps/org.libreoffice.LibreOffice): `sudo flatpak install org.libreoffice.LibreOffice`
+- [Flatpak版本](https://flathub.org/zh-Hans/apps/org.libreoffice.LibreOffice)：`sudo flatpak install org.libreoffice.LibreOffice`

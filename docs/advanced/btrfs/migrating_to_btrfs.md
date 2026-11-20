@@ -48,7 +48,7 @@ sda      8:0    0     80G  0 disk
 ...
 ```
 
-我们确认了 ``/dev/sda2`` 是要保留的分区， ``/dev/sda5`` 是要拷贝数据后删除的分区。
+我们确认了 ``/dev/sda2`` 是要保留的分区，``/dev/sda5`` 是要拷贝数据后删除的分区。
 
 ### 将保留的 ext4 分区转换为 Btrfs 分区
 
@@ -90,7 +90,7 @@ root@livecd ~ # mount
 我们要把文件系统镜像到它应该在的子卷里，用 Btrfs 的快照功能。
 
 ???+ note "子卷名"
-     在这个例子里，文件系统源自 ``/`` ，所以快照到 ``@`` 子卷。如果我们选择了保留 ``/home`` 分区，应该快照到 ``@home`` 分区，以此类推...
+     在这个例子里，文件系统源自 ``/``，所以快照到 ``@`` 子卷。如果我们选择了保留 ``/home`` 分区，应该快照到 ``@home`` 分区，以此类推...
 
 ```bash
 root@livecd ~ # btrfs subvolume snapshot /mnt/newpart /mnt/newpart/@
@@ -125,7 +125,7 @@ root@livecd ~ # ls -A /mnt/newpart
      btrfs subvolume create /mnt/newpart/@home
      mv /mnt/newpart/@/home/* /mnt/newpart/@home
      ```
-     完成以后，直接跳到 #更新fstab 。
+     完成以后，直接跳到 #更新fstab。
 
 这一分区的工作已经完成了，接下来拷贝其余分区的数据。
 
@@ -203,7 +203,7 @@ Resize device id 1 (/dev/sda2) from 32.00GiB to max
 ??? note "如果你的 Btrfs 分区不在空闲空间的头部..."
     没有特定的工具下，Btrfs 只能向后扩展和向前压缩。为了向前扩展，我们需要使用一些分区编辑工具将 Btrfs 分区连带数据块整体向前挪，然后再向后扩展。
 
-    这里演示使用 ``sfdisk`` 。
+    这里演示使用 ``sfdisk``。
 
     假设 ``/dev/sda4`` 是我们要移动的分区...
     ```bash
@@ -214,7 +214,7 @@ Resize device id 1 (/dev/sda2) from 32.00GiB to max
     
     ``--move-data`` 代表在更改分区表时一并移动数据，请不要省略。
     
-    sfdisk 的输入格式是 ``<起始位置>``，``<分区大小>``，``<分区类型>``，``<是否可启动 *仅MBR >``，用逗号隔开每个项目。
+    sfdisk 的输入格式是 ``<起始位置>``、``<分区大小>``、``<分区类型>``、``<是否可启动 *仅MBR >``，用逗号隔开每个项目。
 
     进入时，屏幕上方会打印现在的分区表 ``Old situation:``
     ```text
@@ -226,7 +226,7 @@ Resize device id 1 (/dev/sda2) from 32.00GiB to max
     /dev/sda6  159424512 167770111   8345600    4G Linux swap
     ```
     
-    我们需要找到 ``/dev/sda4`` 的前一个分区。通常来说分区按序号（就是那个``4``）排列，但是也有例外。我们将 ``/dev/sda4`` 的起始扇区号 ``Start`` 与所有分区的结束扇区号 ``End`` 比较，找出小于 ``/dev/sda4`` 起始扇区号的最大的结束扇区号，那就是要找的分区。在这个例子里是 ``127830015``， ``/dev/sda2``。
+    我们需要找到 ``/dev/sda4`` 的前一个分区。通常来说分区按序号（就是那个``4``）排列，但是也有例外。我们将 ``/dev/sda4`` 的起始扇区号 ``Start`` 与所有分区的结束扇区号 ``End`` 比较，找出小于 ``/dev/sda4`` 起始扇区号的最大的结束扇区号，那就是要找的分区。在这个例子里是 ``127830015``，``/dev/sda2``。
 
     我们想让 ``/dev/sda4`` 尽可能地往前移，输入起始位置前一个分区的结束扇区号**加一**，这个例子里是 ``127830016``。
     ```text
@@ -245,7 +245,7 @@ Resize device id 1 (/dev/sda2) from 32.00GiB to max
 ??? tip "Arch 系发行版...？"
      使用 Arch 系发行版的 livecd 可以逃课。
      
-     挂载包括EFI，swap的所有分区并让脚本识别它们。
+     挂载包括EFI、swap的所有分区并让脚本识别它们。
      ```bash
      root@archiso ~ # mount /dev/sda1 /mnt/newroot/boot/efi 
      root@archiso ~ # swapon /dev/sda6
@@ -270,7 +270,7 @@ root@livecd ~ # blkid
 ```
 在这个例子中，``UUID`` 是 ``ce58a65d-7b6f-486c-837f-962fed1604c1``。
 
-用喜欢的文本编辑器打开硬盘上 Linux 安装根目录的 ``etc/fstab`` （在这个例子里是 ``/mnt/newroot/etc/fstab`` ），把带有 ``ext4`` 的整行注释或删除，并加上以下
+用喜欢的文本编辑器打开硬盘上 Linux 安装根目录的 ``etc/fstab`` （在这个例子里是 ``/mnt/newroot/etc/fstab``），把带有 ``ext4`` 的整行注释或删除，并加上以下
 ```
 UUID=ce58a65d-7b6f-486c-837f-962fed1604c1	/			btrfs		defaults,subvol=/@			0 0
 

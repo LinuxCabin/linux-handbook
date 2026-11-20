@@ -10,7 +10,7 @@ VLC 是[自由软件](https://www.gnu.org/philosophy/free-sw.html)，基于 [GPL
 
 ## 安装
 
-VLC 可以由传统包管理器或 [Flatpak](../apps.md#flatpak), Snap 安装。我们推荐使用 Flatpak 。
+VLC 可以由传统包管理器或 [Flatpak](../apps.md#flatpak)，Snap 安装。我们推荐使用 Flatpak。
 
 ### [Flatpak](https://flathub.org/apps/org.videolan.VLC) （推荐）
 ```bash
@@ -45,7 +45,7 @@ sudo snap install vlc
 
 ### 播放媒体
 
-点击 **媒体** - **打开文件** ，打开要播放的文件。
+点击 **媒体** - **打开文件**，打开要播放的文件。
 
 ### 退出
 
@@ -55,9 +55,9 @@ sudo snap install vlc
 
 ![vlck](../../img/applications/multimedia/vlc/VLC_basic_key_mapping.svg)
 
-*原作者： [Todd Weed](https://commons.wikimedia.org/w/index.php?curid=46539645), CC BY-SA 4.0*
+*原作者：[Todd Weed](https://commons.wikimedia.org/w/index.php?curid=46539645), CC BY-SA 4.0*
 
-*翻译： nopartyfor-sayo, CC BY-SA 4.0*
+*翻译：nopartyfor-sayo, CC BY-SA 4.0*
 
 ## 高级
 
@@ -66,21 +66,21 @@ sudo snap install vlc
 !!! warning "如果使用 Flatpak 安装..."
     [Flatpak](https://flathub.org/apps/org.videolan.VLC) 版的 VLC 已自带 FFmpeg 编码/解码库，不需要再安装以下软件。
 
-#### Debian 系：
+#### Debian 系
 
 安装 ``ffmpeg`` 包。打开终端，运行
 ```bash
 sudo apt install ffmpeg
 ```
 
-#### RedHat 系：
+#### RedHat 系
 
 安装 ``vlc-plugin-ffmpeg`` 包。打开终端，运行
 ```bash
 sudo yum install vlc-plugin-ffmpeg
 ```
 
-#### Arch 系：
+#### Arch 系
 
 安装 ``vlc-plugin-ffmpeg`` 包。打开终端，运行
 ```bash
@@ -89,8 +89,8 @@ sudo pacman -S vlc-plugin-ffmpeg
 
 ## 关于更多...
 
-- [官方网站](https://www.videolan.org/vlc/)： `https://www.videolan.org/vlc/`
+- [官方网站](https://www.videolan.org/vlc/)：`https://www.videolan.org/vlc/`
 
-- [官方文档](https://wiki.videolan.org/Documentation)： `https://wiki.videolan.org/Documentation`
+- [官方文档](https://wiki.videolan.org/Documentation)：`https://wiki.videolan.org/Documentation`
 
-- [什么是自由软件？](https://www.gnu.org/philosophy/free-sw.html)： `https://www.gnu.org/philosophy/free-sw.html`
+- [什么是自由软件？](https://www.gnu.org/philosophy/free-sw.html)：`https://www.gnu.org/philosophy/free-sw.html`

@@ -9,7 +9,7 @@
 OpenCode提供了CLI和桌面版。
 
 ### CLI版
-打开系统自带的终端模拟器，输入以下指令:
+打开系统自带的终端模拟器，输入以下指令：
 
 ```bash
 curl -fsSL https://opencode.ai/install | bash 

@@ -10,7 +10,7 @@ Zsh是一款拥有高度自定义性的[Shell](./shell.md)，它具有强大的�
 
 以下命令用于安装Zsh与部分推荐扩展。
 
-Debian系:
+Debian系：
 ```bash
 sudo apt install zsh zsh-autosuggestions zsh-syntax-highlighting
 ```
@@ -70,7 +70,7 @@ zsh
 大部分Zsh主题可以在[Github](https://github.com/topics/zsh-theme)上找到，同时，Oh My Zsh也拥有大量的[预置主题](https://github.com/ohmyzsh/ohmyzsh/wiki/Themes)。大部分主题均提供了安装脚本，此处我们以[Powerlevel10k](https://github.com/romkatv/powerlevel10k)为例。
 
 ??? note "字体"
-    Powerlevel10k需要安装以下字体（链接已加速）来确保呈现效果:
+    Powerlevel10k需要安装以下字体（链接已加速）来确保呈现效果：
 
     - [MesloLGS NF Regular.ttf](https://gh-proxy.com/https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Regular.ttf)
     - [MesloLGS NF Bold.ttf](https://gh-proxy.com/https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold.ttf)

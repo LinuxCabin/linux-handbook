@@ -6,17 +6,17 @@
 
 [官方文档](https://www.gnu.org/software/bash/manual/bash.html)
 
-**Bash的配置文件: `~/.bashrc`**
+**Bash的配置文件：`~/.bashrc`**
 
 ## 概述
 
-Bash是一个古老的[Shell](./shell.md),大多数发行版预装了Bash并作为默认Bash,Bash符合POSIX标准,这代表Bash可以运行Zsh的脚本,反之亦然。
+Bash是一个古老的[Shell](./shell.md)，大多数发行版预装了Bash并作为默认Bash，Bash符合POSIX标准，这代表Bash可以运行Zsh的脚本，反之亦然。
 
 ## 安装
 
-- Debian系列: `sudo apt install bash`
-- 红帽系: `sudo dnf install bash`
-- Arch系: `sudo pacman -S bash`
+- Debian系列：`sudo apt install bash`
+- 红帽系：`sudo dnf install bash`
+- Arch系：`sudo pacman -S bash`
 
 ## 配置
 

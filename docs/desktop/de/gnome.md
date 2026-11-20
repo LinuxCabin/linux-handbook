@@ -65,12 +65,12 @@ GNOME的主题通常需要在 [GNOME-LOOK.ORG](https://www.gnome-look.org/) 中�
 
 ![Theme Categories](https://itsfoss.com/content/images/wordpress/2017/10/ubuntu-17-10-changing-theme-800x450.jpeg)
 
-(来自[How to Install and Change GNOME Theme in Linux](https://itsfoss.com/install-switch-themes-gnome-shell/))
+（来自[How to Install and Change GNOME Theme in Linux](https://itsfoss.com/install-switch-themes-gnome-shell/)）
 
-在下载好主题后，您需要将压缩包解压到文件夹并置于以下任意一个文件夹中（按需求选择，用户安装指仅为本用户安装，系统安装则为所有用户安装）:
+在下载好主题后，您需要将压缩包解压到文件夹并置于以下任意一个文件夹中（按需求选择，用户安装指仅为本用户安装，系统安装则为所有用户安装）：
 
-- 用户安装: `~/.themes/`
-- 系统安装: `/usr/share/themes/`（可能需要自行创建）
+- 用户安装：`~/.themes/`
+- 系统安装：`/usr/share/themes/`（可能需要自行创建）
 
 您可以通过前文安装的`gnome-tweaks`启用主题，也可以按照对应主题下的启用指南来启用。
 

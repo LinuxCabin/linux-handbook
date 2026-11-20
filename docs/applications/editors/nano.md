@@ -1,6 +1,6 @@
 # nano
 
-<!-- 这篇文档使用 GNU nano 编写！ -->
+<!-- 这篇文档使用 GNU nano 编写！-->
 
 ```text
   GNU nano 8.4             Welcome-to-GNU-nano
@@ -60,7 +60,7 @@ nano 采用 [GPL-3.0](https://www.gnu.org/licenses/gpl-3.0) 协议发布。
 
      `Sh-^Del` = Shift + Ctrl + Del
 
-我不确定要不要加入shift。如果这是wiki，我绝对会加，但是作为新手向，没几个快捷键用到shift。 -->
+我不确定要不要加入shift。如果这是wiki，我绝对会加，但是作为新手向，没几个快捷键用到shift。-->
 
 nano 窗口的底部会出现一些可用快捷键的提示。
 
@@ -138,14 +138,14 @@ nano
 
 按 `M-A` 进入选区模式，移动光标使选区覆盖想操作的文本。
 
-按 `^K` 剪切选区内的文本；  
-按 `M-6` 复制选取内的文本；  
+按 `^K` 剪切选区内的文本；
+按 `M-6` 复制选取内的文本；
 按 `^U` 粘贴到光标的位置。
 
 如果没有设置选区，会剪切或复制光标所在的一整行。
 
 ???+ info "从外部粘贴"
-     如果要从其他软件粘贴（比如游览器），按**终端**设置的快捷键。这通常是 `Sh-^V`（ Shift + Ctrl + V ）。
+     如果要从其他软件粘贴（比如游览器），按**终端**设置的快捷键。这通常是 `Sh-^V`（Shift + Ctrl + V）。
 
 #### 查找替换
 
@@ -153,12 +153,12 @@ nano
 
 按 `^F`，输入要查找的字符，按`回车键`。
 
-如果找到了，字符会以黄色高亮。  
+如果找到了，字符会以黄色高亮。
 如果没找到，窗口底部会出现红色的 `not found` 字样。
 
 ##### 查找并替换
 
-按 `^\`，输入要替换的字符，按`回车键`；再输入要替换成的字符，按`回车键`。  
+按 `^\`，输入要替换的字符，按`回车键`；再输入要替换成的字符，按`回车键`。
 nano 会依个询问您每处是否要替换，按 `Y` 替换此处，`N` 保留此处，`A` 替换每处且不再询问，`^C` 取消替换。
 
 如果没找到，窗口底部会出现红色的 `not found` 字样。
@@ -176,8 +176,8 @@ nano 会依个询问您每处是否要替换，按 `Y` 替换此处，`N` 保留
 
 ## 关于
 
-[GNU nano 官方网站](https://nano-editor.org/)： `https://nano-editor.org/`
+[GNU nano 官方网站](https://nano-editor.org/)：`https://nano-editor.org/`
 
-[GNU nano 在线文档](https://nano-editor.org/dist/latest/nano.html)： `https://nano-editor.org/dist/latest/nano.html`
+[GNU nano 在线文档](https://nano-editor.org/dist/latest/nano.html)：`https://nano-editor.org/dist/latest/nano.html`
 
-[什么是自由软件？](https://www.gnu.org/philosophy/free-sw.html)： `https://www.gnu.org/philosophy/free-sw.html`
+[什么是自由软件？](https://www.gnu.org/philosophy/free-sw.html)：`https://www.gnu.org/philosophy/free-sw.html`

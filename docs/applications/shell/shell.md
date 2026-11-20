@@ -10,4 +10,4 @@ Shell是用户与Linux内核直接对话的“窗口”，你可以将它理解�
 ???+ example "常见的Linux Shell"
     - Bash: 大多数Linux发行版预装的Shell，兼容性强，支持广
     - Zsh: 自定义性强，有强大的自动补全功能，并兼容Bash语法
-    - Fish: 用户友好，人性化设计，易配置
+    - Fish: 用户友好、人性化设计、易配置

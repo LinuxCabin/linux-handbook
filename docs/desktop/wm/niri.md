@@ -4,7 +4,7 @@
 
 [官方Wiki（英文，Github）](https://github.com/niri-wm/niri/wiki/) [翻译版Wiki](https://docs.akass.cn/niri/)
 
-配置文件: `~/.config/niri/config.kdl`
+配置文件：`~/.config/niri/config.kdl`
 
 ## 概述
 
@@ -17,7 +17,7 @@ Niri是一个以滚动平铺为核心理念的Wayland合成器。它用Rust编�
 
 在安装之前，我们建议您首先选择好适合的桌面外壳。
 
-具体安装步骤，请参考[Niri的快速入门]（该指南中默认使用DMS作为桌面外壳，若您想要更换，请将其指令中的`dms`替换为其他选择）。
+具体安装步骤，请参考 Niri 的快速入门（该指南中默认使用DMS作为桌面外壳，若您想要更换，请将其指令中的`dms`替换为其他选择）。
 
 ???+ tip "DMS福利"
     如果您选择DMS作为桌面外壳，您也可以直接通过其一键脚本连带安装Niri。详情见[桌面外壳](../desktop.md#_5)。

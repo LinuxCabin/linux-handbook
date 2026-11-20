@@ -4,7 +4,7 @@ Steam是由Valve于2003年推出的全球最大的数字游戏发行与社交平
 
 !!! warning "兼容性"
 
-    在开始之前，我们建议您查阅如下数据库来了解游戏兼容性:
+    在开始之前，我们建议您查阅如下数据库来了解游戏兼容性：
 
     - [Can We Tux?](https://tux.red/)
     - [Are We Anti-Cheat Yet?（英文）](https://areweanticheatyet.com/)
@@ -90,7 +90,7 @@ flatpak install com.valvesoftware.Steam.CompatibilityTool.Proton-GE
 
 1. 从[Github Releases](https://github.com/GloriousEggroll/proton-ge-custom/releases)获取其发行版本的压缩包
 2. 创建并进入`~/.steam/steam/compatibilitytools.d`目录
-3. 解压tar包到此目录: `tar -xf GE-Proton*.tar.gz -C ~/.steam/steam/compatibilitytools.d/`
+3. 解压tar包到此目录：`tar -xf GE-Proton*.tar.gz -C ~/.steam/steam/compatibilitytools.d/`
 
 !!! warning "网络条件"
     本方法需要通过Github获取Proton GE，因而对网络条件有一定要求。

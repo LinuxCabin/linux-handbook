@@ -16,7 +16,7 @@ sudo pacman -S python
 Linux里面一般以`python3`命令使用Python。
 
 ???+ tip "通过`python`使用"
-    如果你想要用 `python` 这个命令， 可以装一个 `python-is-python3`, 来用软链接骗过操作系统(开个玩笑)。
+    如果你想要用 `python` 这个命令，可以装一个 `python-is-python3`，来用软链接骗过操作系统（开个玩笑）。
 
     - Debian: `sudo apt install python-is-python3 -y`
     - Fedora: `sudo dnf install python-is-python3 -y`
@@ -30,7 +30,7 @@ Python拥有规模庞大的PyPi库。通常，我们使用`pip`进行安装。�
 - Arch: `sudo pacman -S python-pip`
 
 !!! warning "系统依赖"
-    使用Pip安装部分库时，可能会出现如下警告:
+    使用Pip安装部分库时，可能会出现如下警告：
     ```
     error: externally-managed-environment
 

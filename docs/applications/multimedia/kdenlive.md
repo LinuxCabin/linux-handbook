@@ -7,7 +7,7 @@
 
 ## 安装
 
-- Debian系: `sudo apt install kdenlive`
-- 红帽系: `sudo dnf install kdenlive`
-- Arch系: `sudo pacman -S kdenlive`
-- [Flatpak版本](https://flathub.org/zh-Hans/apps/org.kde.kdenlive): `sudo flatpak install org.kde.kdenlive`
+- Debian系：`sudo apt install kdenlive`
+- 红帽系：`sudo dnf install kdenlive`
+- Arch系：`sudo pacman -S kdenlive`
+- [Flatpak版本](https://flathub.org/zh-Hans/apps/org.kde.kdenlive)：`sudo flatpak install org.kde.kdenlive`

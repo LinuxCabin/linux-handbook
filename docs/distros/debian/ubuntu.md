@@ -43,7 +43,7 @@ Ubuntu是当今最受认可的Linux发行版，也是中国国家操作系统基
  - Lubuntu: 预装LXQt桌面
  - Ubuntu Budgie: 预装Budgie桌面
  - Ubuntu Cinnamon: 预装Cinnamon桌面
- - Ubuntu Kylin（优麒麟）: 中国特供版，预装UKUI桌面
+ - Ubuntu Kylin（优麒麟）：中国特供版，预装UKUI桌面
  - Ubuntu MATE: 预装MATE桌面
  - Ubuntu Studio: 内容创作
  - Ubuntu Unity: 预装Unity桌面
@@ -115,7 +115,7 @@ Snap是Canonical推出的Linux通用包管理工具。与Flatpak相同，采用�
 
 不过，由于Canonical的商业操作，使用`apt`安装部分软件会被Snap劫持，同时由于Snap本身的性能优化不足，因而其被部分社区用户唾弃，Linux Mint也剔除了Snap。
 
-Snap的移除步骤十分繁琐。首先，你必须按照顺序（先应用，后依赖）卸载所有Snap应用:
+Snap的移除步骤十分繁琐。首先，你必须按照顺序（先应用，后依赖）卸载所有Snap应用：
 ```bash
 snap list # 列出Snap应用
 sudo snap remove --purge firefox #逐个卸载
@@ -123,7 +123,7 @@ sudo snap remove --purge firefox #逐个卸载
 sudo snap remove --purge core20 core24
 ```
 
-之后，卸载Snapd并清除残余目录:
+之后，卸载Snapd并清除残余目录：
 ```bash
 sudo apt purge snapd
 sudo apt autoremove
@@ -131,7 +131,7 @@ sudo rm -rf ~/snap /var/snap /var/lib/snapd /var/cache/snapd /usr/lib/snapd /sna
 # 若部分目录不存在，删掉即可
 ```
 
-最后还需要阻止其重装。您需要编辑`/etc/apt/preferences.d/nosnap.pref`，并写入:
+最后还需要阻止其重装。您需要编辑`/etc/apt/preferences.d/nosnap.pref`，并写入：
 ```bash
 Package: snapd
 Pin: release a=*
@@ -139,6 +139,6 @@ Pin-Priority: -10
 ```
 或者运行`sudo apt-mark hold snapd`。
 
-最后，更新软件包列表: `sudo apt update`
+最后，更新软件包列表：`sudo apt update`
 
 **请注意，经过系统大版本更新等操作，Snap仍然有恢复的可能。**

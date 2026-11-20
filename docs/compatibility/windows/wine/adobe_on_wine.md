@@ -14,7 +14,7 @@
 
 ## 需要的文件
 
-我们显然需要两个文件，修改好的 Proton 和 Photoshop 。
+我们显然需要两个文件，修改好的 Proton 和 Photoshop。
 
 [修改好的 Proton 分支](https://github.com/PhialsBasement/wine-adobe-installers)可以在[这里](https://github.com/PhialsBasement/wine-adobe-installers/releases/download/proton-10.0-adobe/proton-wine-adobe-linux-x86_64.tar.xz)下载：
 ``

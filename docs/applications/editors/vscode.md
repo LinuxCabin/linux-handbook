@@ -1,6 +1,6 @@
 # VS Code / VSCodium
 
-全称: Visual Studio Code
+全称：Visual Studio Code
 
 ## 概述
 

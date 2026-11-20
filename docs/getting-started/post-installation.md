@@ -10,14 +10,14 @@
     在换源之前，我们强烈建议您首先了解发行版对应包管理器的基本命令。您可以参照“[应用与工具](../applications/apps.md)”一节。
 
 ???+ note "快捷脚本"
-    您可以使用[LinuxMirrors项目](https://linuxmirrors.cn/)的换源脚本，更方便，快捷。
+    您可以使用[LinuxMirrors项目](https://linuxmirrors.cn/)的换源脚本，更方便、快捷。
 
 
 国内主要的开源软件镜像站有以下这些：
 
- - [TUNA（清华源）](https://mirrors.tuna.tsinghua.edu.cn/): 由清华大学TUNA协会维护，是国内最主流的软件镜像源，以极高的下载速度著称。
+ - [TUNA（清华源）](https://mirrors.tuna.tsinghua.edu.cn/)：由清华大学TUNA协会维护，是国内最主流的软件镜像源，以极高的下载速度著称。
  - [USTC（中科大源）](https://mirrors.ustc.edu.cn/) : 由中国科学技术大学与中科大LUG服务器维护小组维护，镜像收录十分广泛，容纳了包括Rocky等（TUNA不愿加）的镜像。
- - [MirrorZ（校园网联合镜像站）](https://mirrors.cernet.edu.cn/): 由中国教育和科研计算机网网络中心（CERNET）提供服务，收录了各大高校所创立的开源镜像站，能够自动重定向至地理位置最近的镜像站。
+ - [MirrorZ（校园网联合镜像站）](https://mirrors.cernet.edu.cn/)：由中国教育和科研计算机网网络中心（CERNET）提供服务，收录了各大高校所创立的开源镜像站，能够自动重定向至地理位置最近的镜像站。
 
 简单来说，TUNA快，USTC广，MirrorZ兜底。您可以任意选择三者中的一个。
 
@@ -26,12 +26,12 @@
     这里举Fedora作为例子，我们使用 [TUNA源](https://mirrors.tuna.tsinghua.edu.cn/)
 
     - **访问镜像站**
-        首先打开镜像站, 也就是访问 => https://mirrors.tuna.tsinghua.edu.cn/
+        首先打开镜像站，也就是访问 => https://mirrors.tuna.tsinghua.edu.cn/
 
     - **搜索发行版**
         这个时候我们在搜索框里面输入 Fedora
 
-        然后就会出现筛选结果， 这个时候我们不要直接点Fedora, 而是点旁边的那个 `?` (也就是tuna给的换源官方手册)
+        然后就会出现筛选结果，这个时候我们不要直接点Fedora，而是点旁边的那个 `?`（也就是tuna给的换源官方手册）
 
         ![TUNA搜索界面](../img/mirrors/pic1.png)
 
@@ -44,11 +44,11 @@
     ???+ note "权限问题" 
         TUNA默认提供的是使用 root 进行操作的指令，如果直接输入，大概率会有 Permission denied 的报错。
 
-        这时我们只需要在前面先加上一个 `sudo` (记得是 sudo 然后空一个再粘贴命令)就可以了， 当然T您也可以直接打开上面的“是否使用sudo的”开关，之后复制并执行命令。
+        这时我们只需要在前面先加上一个 `sudo`（记得是 sudo 然后空一个再粘贴命令）就可以了，当然T您也可以直接打开上面的“是否使用sudo的”开关，之后复制并执行命令。
 
         ![启动sudo](../img/mirrors/pic3.png)
 
-    替换完成之后， 我们可以直接进行系统的**软件更新，见证魔法** => 我刚开始用的时候，也感觉直接更新所有软件是一个很酷的事情。
+    替换完成之后，我们可以直接进行系统的**软件更新，见证魔法** => 我刚开始用的时候，也感觉直接更新所有软件是一个很酷的事情。
 
     ```bash
     sudo dnf update # 检查并更新
@@ -73,7 +73,7 @@
      - MirrorZ: https://help.mirrors.cernet.edu.cn/flathub
 
 !!! warning "已知问题"
-    Flatpak与宿主机互通目前不够完善，例如QQ的剪贴板问题，拖拽文件识别等。
+    Flatpak与宿主机互通目前不够完善，例如QQ的剪贴板问题、拖拽文件识别等。
 
     要解决这一问题，请使用Flatpak安装Flatseal后，找到对应软件，关闭“回退到X11”，并且打开允许访问全部文件。
     
@@ -89,7 +89,7 @@
 
 这是由于Windows采用的时间制是本地时间，也就是BIOS设置中的时间，而Linux默认使用UTC时间（格林尼治标准时间），由于中国属于GMT+8时区，每次切换系统都会导致8个小时的差异。
 
-要解决这个问题也很简单，请在Windows下以管理员权限启动PowerShell，并执行：`reg add "HKLM\SYSTEM\CurrentControlSet\Control\TimeZoneInformation" /v` 。
+要解决这个问题也很简单，请在Windows下以管理员权限启动PowerShell，并执行：`reg add "HKLM\SYSTEM\CurrentControlSet\Control\TimeZoneInformation" /v`。
 
 !!! warning "已知问题"
     您也可以在Linux终端中输入：`timedatectl set-local-rtc 1`来解决。
